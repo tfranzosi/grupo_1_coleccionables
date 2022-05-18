@@ -1,0 +1,1208 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="3924" viewBox="0 0 1600 3924">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="457" height="136" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="521" height="151" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.212" x2="0.5" y2="0.326" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <clipPath id="clip-path-3">
+      <rect width="1140" height="347.57" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect width="306.5" height="596.5" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect width="700.5" height="613.5" fill="none"/>
+    </clipPath>
+    <filter id="Rectángulo_2" x="-9" y="60" width="1618" height="161" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.098"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-DETAIL_PAGE">
+      <rect width="1600" height="3924"/>
+    </clipPath>
+  </defs>
+  <g id="DETAIL_PAGE" data-name="DETAIL PAGE" clip-path="url(#clip-DETAIL_PAGE)">
+    <rect width="1600" height="3924" fill="#f7f7f7"/>
+    <rect id="Rectángulo_49" data-name="Rectángulo 49" width="1600" height="488" transform="translate(0 2969)" fill="#fff"/>
+    <g id="Componente_1_2" data-name="Componente 1 – 2" transform="translate(0 3457)">
+      <g id="Grupo_67" data-name="Grupo 67" transform="translate(0 -2759)">
+        <rect id="Rectángulo_40" data-name="Rectángulo 40" width="1600" height="373" transform="translate(0 2759)" fill="#e8e8e8"/>
+        <g id="Grupo_54" data-name="Grupo 54" transform="translate(174)">
+          <text id="CLIENTES" transform="translate(525 2848)" font-size="20" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="-73" y="0">CLIENTES</tspan></text>
+          <text id="Mi_cuenta" data-name="Mi cuenta" transform="translate(502 2895)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-49.882" y="0">Mi cuenta</tspan></text>
+          <text id="Mi_carrito" data-name="Mi carrito" transform="translate(502 2937)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-49.826" y="0">Mi carrito</tspan></text>
+          <text id="Mis_pedidos" data-name="Mis pedidos" transform="translate(512 2979)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-59.794" y="0">Mis pedidos</tspan></text>
+          <text id="Consejos_útiles" data-name="Consejos útiles" transform="translate(528 3021)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-75.894" y="0">Consejos útiles</tspan></text>
+        </g>
+        <g id="Grupo_56" data-name="Grupo 56" transform="translate(340)">
+          <text id="SOPORTE" transform="translate(452 2844)" font-size="20" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">SOPORTE</tspan></text>
+          <text id="Cómo_comprar" data-name="Cómo comprar" transform="translate(452 2892)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Cómo comprar</tspan></text>
+          <text id="Medios_de_pago" data-name="Medios de pago" transform="translate(452 2934)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Medios de pago</tspan></text>
+          <text id="Medios_de_envío" data-name="Medios de envío" transform="translate(452 2976)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Medios de envío</tspan></text>
+          <text id="Preguntas_frecuentes" data-name="Preguntas frecuentes" transform="translate(452 3018)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Preguntas frecuentes</tspan></text>
+          <text id="Cambios_y_devoluciones" data-name="Cambios y devoluciones" transform="translate(452 3060)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Cambios y devoluciones</tspan></text>
+        </g>
+        <g id="Grupo_60" data-name="Grupo 60">
+          <text id="LOGO" transform="translate(232 2854)" font-size="33" font-family="Oswald-Bold, Oswald" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
+          <g id="Grupo_980" data-name="Grupo 980" transform="translate(-62 289)">
+            <g id="Grupo_41" data-name="Grupo 41">
+              <path id="Unión_1" data-name="Unión 1" d="M854.688,29.125A1.681,1.681,0,0,1,853,27.437V15.062a1.681,1.681,0,0,1,1.688-1.688h12.375a1.681,1.681,0,0,1,1.688,1.688V27.437a1.681,1.681,0,0,1-1.687,1.688Zm4.113-3.3a6.468,6.468,0,0,0,3.586-1.02,6.359,6.359,0,0,0,2.215-2.5,6.76,6.76,0,0,0,.739-3.058v-.282a5.141,5.141,0,0,0,1.16-1.2,4.743,4.743,0,0,1-1.337.352,2.364,2.364,0,0,0,1.02-1.266,4.364,4.364,0,0,1-1.476.563,2.139,2.139,0,0,0-1.652-.738,2.262,2.262,0,0,0-1.283.387,2.323,2.323,0,0,0-.861,1.037,2.24,2.24,0,0,0-.105,1.424,6.3,6.3,0,0,1-2.672-.721,6.923,6.923,0,0,1-2.11-1.7,2.183,2.183,0,0,0-.316,1.142,2.281,2.281,0,0,0,1.054,1.951,2.4,2.4,0,0,1-1.054-.316v.035a2.232,2.232,0,0,0,.527,1.476,2.335,2.335,0,0,0,1.336.809,3.153,3.153,0,0,1-1.055.035,2.15,2.15,0,0,0,.808,1.142,2.2,2.2,0,0,0,1.337.44,4.521,4.521,0,0,1-2.848.984h-.562A6.521,6.521,0,0,0,858.8,25.82Zm-23.727,3.3V22.9h2.11l.316-2.39h-2.425V19a1.391,1.391,0,0,1,.211-.843,1.214,1.214,0,0,1,.949-.317H837.5V15.73a13.255,13.255,0,0,0-1.828-.105,3.016,3.016,0,0,0-2.232.826,3.113,3.113,0,0,0-.826,2.3v1.758h-2.145V22.9h2.145v6.223h-6.925A1.679,1.679,0,0,1,824,27.437V15.062a1.679,1.679,0,0,1,1.688-1.688h12.374a1.679,1.679,0,0,1,1.688,1.688V27.437a1.679,1.679,0,0,1-1.687,1.688Zm51.852-1.16a24.927,24.927,0,0,1-4.289-.352,2.5,2.5,0,0,1-1.723-1.687,16.091,16.091,0,0,1-.351-2.918l-.035-1.758q0-.774.035-1.758a15.915,15.915,0,0,1,.351-2.883,2.461,2.461,0,0,1,1.723-1.723,25.025,25.025,0,0,1,4.289-.352l3.2-.035,3.2.035a25.014,25.014,0,0,1,4.289.352,2.456,2.456,0,0,1,1.723,1.723,15.9,15.9,0,0,1,.352,2.883l.035,1.758-.035,1.758a16.072,16.072,0,0,1-.352,2.918,2.494,2.494,0,0,1-1.723,1.688,24.916,24.916,0,0,1-4.289.352l-3.2.035Zm1.23-3.832,5.027-2.883L888.156,18.4Z" transform="translate(-503 2571)" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+            </g>
+          </g>
+        </g>
+        <g id="Grupo_64" data-name="Grupo 64" transform="translate(-119)">
+          <g id="Grupo_58" data-name="Grupo 58" transform="translate(660)">
+            <text id="NEWSLETTER" transform="translate(452 2844)" font-size="20" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">NEWSLETTER</tspan></text>
+          </g>
+          <text id="Suscríbete_a_nuestro_newsletter_y_se_el_primero_en_enterarte_de_nuevas_ofertas_y_promociones." data-name="Suscríbete a nuestro newsletter y se el primero en enterarte de nuevas ofertas y promociones." transform="translate(1112 2876)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Suscríbete a nuestro newsletter y se el primero en enterarte de nuevas </tspan><tspan x="0" y="38">ofertas y promociones.</tspan></text>
+          <g id="Grupo_63" data-name="Grupo 63" transform="translate(0 10)">
+            <g id="Grupo_61" data-name="Grupo 61">
+              <g id="Rectángulo_41" data-name="Rectángulo 41" transform="translate(1112 2935)" fill="#fff" stroke="#000" stroke-width="1">
+                <rect width="380" height="50" stroke="none"/>
+                <rect x="0.5" y="0.5" width="379" height="49" fill="none"/>
+              </g>
+              <text id="Ingresar_dirección_de_e-mail" data-name="Ingresar dirección de e-mail" transform="translate(1280 2967)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-162.704" y="0">Ingresar dirección de e-mail</tspan></text>
+            </g>
+            <g id="Grupo_62" data-name="Grupo 62">
+              <rect id="Rectángulo_39" data-name="Rectángulo 39" width="118" height="48" transform="translate(1373 2936)"/>
+              <text id="SUSCRIBIRSE" transform="translate(1390 2967)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">SUSCRIBIRSE</tspan></text>
+            </g>
+          </g>
+        </g>
+        <g id="Grupo_958" data-name="Grupo 958" transform="translate(226)">
+          <text id="LA_EMPRESA" data-name="LA EMPRESA" transform="translate(327 2844)" font-size="20" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="-99.3" y="0">LA EMPRESA</tspan></text>
+          <text id="Comunidad" transform="translate(287 2937)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-56.532" y="0">Comunidad</tspan></text>
+          <text id="Trabaja_con_nosotros" data-name="Trabaja con nosotros" transform="translate(335 2979)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-105.182" y="0">Trabaja con nosotros</tspan></text>
+          <text id="Política_de_privacidad" data-name="Política de privacidad" transform="translate(338 3021)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-109.256" y="0">Política de privacidad</tspan></text>
+          <text id="Nosotros" transform="translate(273 2895)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-44.52" y="0">Nosotros</tspan></text>
+          <text id="Términos_y_condiciones_" data-name="Términos y condiciones
+" transform="translate(347 3063)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-117.39" y="0">Términos y condiciones</tspan><tspan x="0" y="21"></tspan></text>
+        </g>
+        <g id="Grupo_979" data-name="Grupo 979" transform="translate(174)">
+          <text id="CLIENTES-2" data-name="CLIENTES" transform="translate(525 2848)" font-size="20" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="-73" y="0">CLIENTES</tspan></text>
+          <text id="Mi_cuenta-2" data-name="Mi cuenta" transform="translate(502 2895)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-49.882" y="0">Mi cuenta</tspan></text>
+          <text id="Mi_carrito-2" data-name="Mi carrito" transform="translate(502 2937)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-49.826" y="0">Mi carrito</tspan></text>
+          <text id="Mis_pedidos-2" data-name="Mis pedidos" transform="translate(512 2979)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-59.794" y="0">Mis pedidos</tspan></text>
+          <text id="Arrepentimiento" transform="translate(535 3063)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-82.6" y="0">Arrepentimiento</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_66" data-name="Grupo 66" transform="translate(0 -2759)">
+        <rect id="Rectángulo_42" data-name="Rectángulo 42" width="1600" height="94" transform="translate(0 3132)" fill="#fff"/>
+        <g id="Grupo_65" data-name="Grupo 65" transform="translate(14)">
+          <g id="Visa_Inc._logo" transform="translate(1304.608 3170.191)">
+            <path id="polygon9" d="M437.894,127.695h-4.387l2.744-16.968h4.387Z" transform="translate(-414.425 -110.419)"/>
+            <path id="path11" d="M578.34,105.77a10.812,10.812,0,0,0-3.935-.722c-4.333,0-7.384,2.31-7.4,5.614-.036,2.437,2.184,3.791,3.845,4.6,1.7.83,2.274,1.372,2.274,2.112-.017,1.137-1.372,1.661-2.635,1.661a8.732,8.732,0,0,1-4.117-.9l-.578-.271-.614,3.809a13.353,13.353,0,0,0,4.893.9c4.6,0,7.6-2.275,7.636-5.795.018-1.932-1.155-3.412-3.683-4.621-1.534-.776-2.474-1.3-2.474-2.094.018-.722.795-1.462,2.527-1.462a7.454,7.454,0,0,1,3.268.65l.4.18.6-3.664Z" transform="translate(-538.965 -105.048)"/>
+            <path id="path13" d="M797.31,121.684c.361-.975,1.752-4.748,1.752-4.748-.018.036.361-.993.577-1.624l.307,1.462s.831,4.062,1.011,4.91Zm5.416-10.957h-3.394a2.165,2.165,0,0,0-2.293,1.408l-6.517,15.56h4.6l.921-2.545h5.633c.126.6.524,2.545.524,2.545h4.062l-3.54-16.968Z" transform="translate(-752.104 -110.419)"/>
+            <path id="path15" d="M176.668,110.727l-4.3,11.571-.47-2.347a12.987,12.987,0,0,0-6.066-7.112l3.936,14.838h4.64l6.9-16.95Z" transform="translate(-161.25 -110.419)"/>
+            <path id="path17" d="M88.3,110.727H81.238l-.072.343c5.506,1.408,9.153,4.8,10.651,8.882l-1.535-7.8a1.815,1.815,0,0,0-1.986-1.426Z" transform="translate(-81.166 -110.419)"/>
+          </g>
+          <g id="MasterCard_Logo" transform="translate(1245.641 3167.493)">
+            <g id="g10305" transform="translate(0 0)">
+              <path id="path2268" d="M143.632,13.28a11.4,11.4,0,0,1-22.809.006V13.28a11.4,11.4,0,1,1,22.809-.006Z" transform="translate(-105.525 -1.872)" fill="#e3e3e3"/>
+              <path id="path1350" d="M13.3,1.895a11.4,11.4,0,1,0,7.748,19.838h0a11.511,11.511,0,0,0,1.158-1.221H19.869a11.138,11.138,0,0,1-.85-1.175h4.03a11.422,11.422,0,0,0,.664-1.221H18.353a11.249,11.249,0,0,1-.477-1.2h6.313a11.455,11.455,0,0,0,.324-6.059H17.542a11.371,11.371,0,0,1,.325-1.2h6.315a11.405,11.405,0,0,0-.492-1.221H18.353a10.942,10.942,0,0,1,.654-1.2h4.027a11.429,11.429,0,0,0-.885-1.221H19.9a10.584,10.584,0,0,1,1.144-1.152,11.364,11.364,0,0,0-7.676-2.972Z" transform="translate(-1.967 -1.892)" fill="#989898"/>
+              <path id="use9412" d="M286.645,136.82a.379.379,0,0,1,.181.048.337.337,0,0,1,.138.137.369.369,0,0,1,0,.368.343.343,0,0,1-.137.137.373.373,0,0,1-.367,0,.349.349,0,0,1-.137-.137.37.37,0,0,1,0-.368.343.343,0,0,1,.138-.137.383.383,0,0,1,.182-.048m0,.061a.315.315,0,0,0-.151.04.283.283,0,0,0-.115.114.306.306,0,0,0-.042.154.313.313,0,0,0,.041.153.3.3,0,0,0,.114.114.309.309,0,0,0,.306,0,.291.291,0,0,0,.114-.114.312.312,0,0,0,.04-.153.307.307,0,0,0-.041-.154.281.281,0,0,0-.115-.114.309.309,0,0,0-.151-.04m-.162.512V137h.137a.319.319,0,0,1,.1.011.1.1,0,0,1,.05.038.1.1,0,0,1,.019.058.1.1,0,0,1-.031.076.122.122,0,0,1-.082.036.115.115,0,0,1,.034.021.437.437,0,0,1,.059.078l.048.078h-.078l-.035-.062a.32.32,0,0,0-.067-.092.084.084,0,0,0-.051-.014h-.038v.169h-.064m.064-.224h.078a.125.125,0,0,0,.076-.017.054.054,0,0,0,.02-.044.052.052,0,0,0-.01-.031.06.06,0,0,0-.027-.021.2.2,0,0,0-.064-.007h-.073v.12" transform="translate(-249.682 -119.451)" fill="#fcb340"/>
+            </g>
+            <g id="g16480" transform="translate(0.727 8.462)">
+              <g id="g13802" transform="translate(0 0.24)">
+                <path id="path13804" d="M121.01,63.744l.152-1.032c-.083,0-.205.036-.313.036-.423,0-.475-.226-.442-.391l.417-2.076h.643l.132-1.172h-.606l.123-.71h-1.267c-.027.027-.717,3.993-.717,4.476A.9.9,0,0,0,120.1,63.9,3.188,3.188,0,0,0,121.01,63.744Z" transform="translate(-106.548 -57.767)"/>
+                <path id="path13806" d="M136.706,65.667a1.906,1.906,0,0,0,2.1,2.124,3.651,3.651,0,0,0,1.358-.206l.214-1.171a4.4,4.4,0,0,1-1.364.306c-1.3,0-1.075-.972-1.075-.972l2.505.008a8.72,8.72,0,0,0,.16-1.107,1.664,1.664,0,0,0-1.769-1.783C137.61,62.865,136.706,64.181,136.706,65.667Zm2.13-1.715c.685,0,.559.77.559.833h-1.348C138.046,64.705,138.174,63.952,138.836,63.952Z" transform="translate(-121.86 -61.659)"/>
+                <path id="path13808" d="M190.545,59.468l.217-1.324a2.924,2.924,0,0,1-1,.3,1.2,1.2,0,0,1-1.207-1.364c0-1.433.741-2.222,1.566-2.222a2.162,2.162,0,0,1,1.115.347l.2-1.286a2.415,2.415,0,0,0-1.217-.426c-1.9-.007-2.984,1.314-2.984,3.6,0,1.514.8,2.544,2.253,2.544A5.615,5.615,0,0,0,190.545,59.468Z" transform="translate(-165.88 -53.492)"/>
+                <path id="path13810" d="M66.555,63.012a4.193,4.193,0,0,0-1.471.268l-.176,1.046a3.833,3.833,0,0,1,1.323-.214c.452,0,.783.051.783.418a.779.779,0,0,1-.04.306s-.357-.03-.522-.03c-1.185,0-2.153.448-2.153,1.8a1.152,1.152,0,0,0,1.172,1.309,1.5,1.5,0,0,0,1.216-.543l-.01.449h1.069l.477-3.344A1.436,1.436,0,0,0,66.555,63.012Zm.185,2.715c.023.2-.053,1.169-.784,1.169a.442.442,0,0,1-.475-.458c0-.333.181-.731,1.07-.731C66.758,65.707,66.7,65.722,66.74,65.727Z" transform="translate(-58.772 -61.787)"/>
+                <path id="path13812" d="M94.391,67.94c.274,0,1.837.07,1.837-1.544,0-1.509-1.447-1.21-1.447-1.817,0-.3.236-.4.667-.4.171,0,.83.054.83.054l.153-1.072a5.665,5.665,0,0,0-1.12-.1c-.9,0-1.81.359-1.81,1.585,0,1.39,1.52,1.251,1.52,1.836,0,.391-.425.423-.752.423a3.968,3.968,0,0,1-1.078-.185l-.162,1.061A3.866,3.866,0,0,0,94.391,67.94Z" transform="translate(-83.804 -61.837)"/>
+                <path id="path13814" d="M267.573,55.455l-.219,1.636a1.605,1.605,0,0,0-1.173-.631c-1.346,0-2.04,1.342-2.04,2.883,0,.995.495,1.97,1.506,1.97a1.518,1.518,0,0,0,1.131-.507l-.053.433h1.181l.928-5.774Zm-.522,3.179c0,.641-.318,1.5-.976,1.5-.437,0-.642-.367-.642-.943,0-.942.423-1.563.957-1.563C266.827,57.627,267.052,57.927,267.052,58.634Z" transform="translate(-232.892 -55.202)"/>
+                <path id="path13816" d="M22.57,61.181l.739-4.359.109,4.359h.837l1.561-4.359-.691,4.359h1.243l.957-5.782-1.975-.015-1.175,3.54L24.143,55.4h-1.81l-.971,5.782H22.57Z" transform="translate(-21.362 -55.14)"/>
+                <path id="path13818" d="M167.659,65.775c.353-2.01.479-3.6,1.51-3.268a7,7,0,0,1,.662-1.784s-.051-.076-.37-.076c-.544,0-1.27,1.1-1.27,1.1l.109-.682h-1.131l-.757,4.707h1.247Z" transform="translate(-147.742 -59.726)"/>
+                <g id="use14699" transform="translate(24.952 1.225)">
+                  <path id="path13810_1_" d="M-627.826,63.012a4.194,4.194,0,0,0-1.471.268l-.176,1.046a3.835,3.835,0,0,1,1.323-.214c.452,0,.783.051.783.418a.781.781,0,0,1-.04.306s-.357-.03-.522-.03c-1.186,0-2.153.448-2.153,1.8a1.152,1.152,0,0,0,1.172,1.309,1.5,1.5,0,0,0,1.215-.543l-.01.449h1.069l.477-3.344A1.436,1.436,0,0,0-627.826,63.012Zm.185,2.715c.023.2-.053,1.169-.784,1.169a.442.442,0,0,1-.475-.458c0-.333.18-.731,1.07-.731C-627.623,65.707-627.676,65.722-627.641,65.727Z" transform="translate(630.083 -63.012)"/>
+                </g>
+                <path id="use14701" d="M246.822,68.626c.194-1.479.553-3.555,1.51-3.268.148-.778.005-.776-.313-.776a5.678,5.678,0,0,0-.665.02l.109-.682h-1.131l-.757,4.707h1.247Z" transform="translate(-216.716 -62.577)"/>
+              </g>
+              <g id="g10289" transform="translate(0.354 0)">
+                <path id="path4157" d="M109.723,76.876l.152-1.032c-.083,0-.205.036-.313.036-.423,0-.469-.225-.442-.391l.341-2.106h.642l.155-1.142h-.606l.123-.71h-1.214c-.027.027-.717,3.993-.717,4.476a.9.9,0,0,0,.968,1.028A3.194,3.194,0,0,0,109.723,76.876Z" transform="translate(-95.299 -71.027)" fill="#fff"/>
+                <path id="path4155" d="M125.423,78.8a1.906,1.906,0,0,0,2.1,2.124,3.09,3.09,0,0,0,1.283-.2l.214-1.171a3.781,3.781,0,0,1-1.289.3c-1.3,0-1.076-.972-1.076-.972h2.468a8.734,8.734,0,0,0,.159-1.107A1.628,1.628,0,0,0,127.548,76C126.327,76,125.423,77.312,125.423,78.8Zm2.129-1.715c.685,0,.559.77.559.832h-1.348C126.763,77.836,126.891,77.083,127.552,77.083Z" transform="translate(-110.614 -74.918)" fill="#fff"/>
+                <path id="path4151" d="M179.723,73.466l.217-1.324a2.921,2.921,0,0,1-1,.3,1.2,1.2,0,0,1-1.207-1.364c0-1.433.741-2.222,1.566-2.222a2.162,2.162,0,0,1,1.115.347l.2-1.286a4.36,4.36,0,0,0-1.368-.3c-1.4,0-2.766,1.216-2.766,3.5,0,1.514.736,2.515,2.185,2.515A5.6,5.6,0,0,0,179.723,73.466Z" transform="translate(-155.095 -67.618)" fill="#fff"/>
+                <path id="path4149" d="M55.271,76.143a4.194,4.194,0,0,0-1.471.268l-.176,1.046a3.833,3.833,0,0,1,1.323-.214c.452,0,.783.051.783.418a.776.776,0,0,1-.041.306s-.357-.03-.522-.03c-1.05,0-2.153.448-2.153,1.8a1.152,1.152,0,0,0,1.172,1.309,1.58,1.58,0,0,0,1.246-.558l-.04.464h1.069l.477-3.344A1.436,1.436,0,0,0,55.271,76.143Zm.26,2.723c.023.2-.128,1.162-.859,1.162a.442.442,0,0,1-.475-.458c0-.332.181-.731,1.07-.731A.772.772,0,0,1,55.531,78.866Z" transform="translate(-47.525 -75.046)" fill="#fff"/>
+                <path id="path4145" d="M83.108,81.071c.274,0,1.837.07,1.837-1.544,0-1.508-1.447-1.21-1.447-1.816,0-.3.236-.4.667-.4.171,0,.83.054.83.054l.153-1.072a5.664,5.664,0,0,0-1.12-.1c-.9,0-1.81.359-1.81,1.585,0,1.39,1.52,1.251,1.52,1.836,0,.391-.425.423-.752.423a3.965,3.965,0,0,1-1.078-.185l-.162,1.061A3.854,3.854,0,0,0,83.108,81.071Z" transform="translate(-72.558 -75.096)" fill="#fff"/>
+                <path id="path4139" d="M256.332,68.655l-.262,1.625a1.6,1.6,0,0,0-1.173-.631c-1.113,0-2.04,1.341-2.04,2.883,0,.995.495,1.97,1.506,1.97a1.518,1.518,0,0,0,1.131-.507l-.053.433h1.181l.928-5.774Zm-.564,3.169c0,.641-.318,1.5-.976,1.5-.437,0-.642-.367-.642-.943,0-.941.423-1.563.956-1.563C255.544,70.817,255.769,71.117,255.769,71.824Z" transform="translate(-221.647 -68.52)" fill="#fff"/>
+                <path id="path4133" d="M11.541,74.414l.739-4.359.109,4.359h.837l1.561-4.359-.691,4.359h1.243l.957-5.782H14.373l-1.2,3.548-.062-3.548H11.341l-.971,5.782Z" transform="translate(-10.37 -68.501)" fill="#fff"/>
+                <path id="path4131" d="M156.377,81.346c.353-2.01.419-3.642,1.262-3.343a4.672,4.672,0,0,1,.451-1.408,1.281,1.281,0,0,0-.234-.016c-.544,0-.947.743-.947.743l.108-.682h-1.131l-.757,4.707Z" transform="translate(-136.497 -75.426)" fill="#fff"/>
+                <g id="use8523" transform="translate(25.173 1.097)">
+                  <path id="path4149_1_" d="M-638.806,76.143a4.2,4.2,0,0,0-1.471.268l-.176,1.046a3.834,3.834,0,0,1,1.323-.214c.452,0,.783.051.783.418a.781.781,0,0,1-.04.306s-.357-.03-.522-.03c-1.05,0-2.153.448-2.153,1.8a1.152,1.152,0,0,0,1.172,1.309,1.579,1.579,0,0,0,1.246-.558l-.04.464h1.069l.477-3.344A1.436,1.436,0,0,0-638.806,76.143Zm.26,2.723c.023.2-.128,1.162-.859,1.162a.442.442,0,0,1-.475-.458c0-.332.18-.731,1.07-.731A.777.777,0,0,1-638.546,78.866Z" transform="translate(641.063 -76.143)" fill="#fff"/>
+                </g>
+                <g id="use8525" transform="translate(28.827 1.153)">
+                  <path id="path4131_1_" d="M-206.7,81.346c.354-2.01.419-3.642,1.262-3.343a4.681,4.681,0,0,1,.452-1.408,1.281,1.281,0,0,0-.234-.016c-.544,0-.947.743-.947.743l.108-.682h-1.131l-.757,4.707Z" transform="translate(207.95 -76.579)" fill="#fff"/>
+                </g>
+                <path id="text9407" d="M286.605,107.975a.372.372,0,0,1,.181.048.334.334,0,0,1,.138.136.369.369,0,0,1,0,.368.342.342,0,0,1-.136.137.372.372,0,0,1-.367,0,.344.344,0,0,1-.136-.137.368.368,0,0,1,0-.368.338.338,0,0,1,.138-.136.377.377,0,0,1,.182-.048m0,.061a.312.312,0,0,0-.151.04.281.281,0,0,0-.115.114.308.308,0,0,0,0,.307.293.293,0,0,0,.115.114.31.31,0,0,0,.306,0,.292.292,0,0,0,.114-.114.308.308,0,0,0,0-.307.278.278,0,0,0-.115-.114.31.31,0,0,0-.151-.04m-.162.512v-.4h.137a.321.321,0,0,1,.1.011.1.1,0,0,1,.05.038.1.1,0,0,1,.019.058.105.105,0,0,1-.031.076.12.12,0,0,1-.082.036.122.122,0,0,1,.034.021.472.472,0,0,1,.059.079l.049.078H286.7l-.035-.062a.32.32,0,0,0-.067-.092.082.082,0,0,0-.051-.014h-.037v.169h-.065m.064-.223h.078a.124.124,0,0,0,.076-.017.054.054,0,0,0,.021-.044.052.052,0,0,0-.01-.031.059.059,0,0,0-.027-.021.2.2,0,0,0-.064-.007h-.073v.12" transform="translate(-250.728 -102.781)" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="noun_secure_282889" transform="translate(1152.44 3139.493)">
+          <path id="Trazado_81" data-name="Trazado 81" d="M74.017,30.867h-.1a20.109,20.109,0,0,1-7.984-2.786.293.293,0,0,0-.4,0,19.772,19.772,0,0,1-7.984,2.786h-.1a.309.309,0,0,0-.283.333v.1c.081.495,1.373,12.455,1.787,14.414.464,2.089,6,4.905,6.611,5.218l.182.081.182-.081c.646-.313,6.177-3.129,6.611-5.218.444-1.968,1.736-13.9,1.787-14.414v-.1C74.3,31.028,74.2,30.867,74.017,30.867Zm-8.66,11.789-2.685-2.645.929-.929,1.524,1.494,3.2-4.784,1.09.727Z" fill="#919191"/>
+        </g>
+        <text id="_2022._Desarrollado_por_Equipo_Coleccionistas._Todos_los_Derechos_Reservados." data-name="© 2022. Desarrollado por Equipo Coleccionistas. Todos los Derechos Reservados." transform="translate(230 3186)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">© 2022. Desarrollado por Equipo Coleccionistas. Todos los Derechos Reservados.</tspan></text>
+      </g>
+    </g>
+    <text id="Inicio" transform="translate(230 285)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Inicio</tspan></text>
+    <text id="Categoría" transform="translate(293 285)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Categoría</tspan></text>
+    <text id="Subcategoría" transform="translate(375 285)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Subcategoría</tspan></text>
+    <text id="Nombre_de_Producto" data-name="Nombre de Producto" transform="translate(471 285)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nombre de Producto</tspan></text>
+    <path id="Trazado_11" data-name="Trazado 11" d="M-4.188-5.471a.292.292,0,0,0,0-.412l-.751-.747a.287.287,0,0,0-.407,0l-2.4,2.4-2.4-2.4a.287.287,0,0,0-.407,0l-.751.747a.292.292,0,0,0,0,.412l3.358,3.353a.287.287,0,0,0,.407,0Z" transform="translate(277.715 273.897) rotate(-90)"/>
+    <path id="Trazado_12" data-name="Trazado 12" d="M-4.188-5.471a.292.292,0,0,0,0-.412l-.751-.747a.287.287,0,0,0-.407,0l-2.4,2.4-2.4-2.4a.287.287,0,0,0-.407,0l-.751.747a.292.292,0,0,0,0,.412l3.358,3.353a.287.287,0,0,0,.407,0Z" transform="translate(359.715 273.897) rotate(-90)"/>
+    <path id="Trazado_15" data-name="Trazado 15" d="M-4.188-5.471a.292.292,0,0,0,0-.412l-.751-.747a.287.287,0,0,0-.407,0l-2.4,2.4-2.4-2.4a.287.287,0,0,0-.407,0l-.751.747a.292.292,0,0,0,0,.412l3.358,3.353a.287.287,0,0,0,.407,0Z" transform="translate(455.715 273.897) rotate(-90)"/>
+    <g id="Grupo_90" data-name="Grupo 90" transform="translate(0 574)">
+      <rect id="Rectángulo_46" data-name="Rectángulo 46" width="1140" height="746" transform="translate(230 711)" fill="#fff"/>
+      <text id="Detalles_del_producto" data-name="Detalles del producto" transform="translate(259 760)" font-size="22" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Detalles del producto</tspan></text>
+      <text id="Ad_illum_natoque_volutpat_leo_curabitur_est_nisi_reprehenderit_quisque_illo_ullam_scelerisque_viverra_taciti_voluptatum_adipiscing_omnis_vel_augue_convallis_anim_dis_quis_et_molestiae_eos_aenean_corrupti_neque_Interdum_quisque_diam_molestie_porta_iaculi" data-name="Ad illum natoque volutpat leo curabitur est nisi reprehenderit quisque illo ullam scelerisque viverra taciti voluptatum adipiscing omnis vel augue convallis anim dis quis et molestiae, eos aenean corrupti neque? Interdum, quisque diam molestie porta iaculi" transform="translate(259 784)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Ad illum natoque volutpat leo curabitur est nisi reprehenderit quisque illo ullam scelerisque viverra taciti voluptatum adipiscing omnis vel augue convallis anim dis quis et molestiae, eos aenean corrupti neque? </tspan><tspan x="0" y="43">Interdum, quisque diam molestie porta iaculis earum? Non magni bibendum eum fugiat, fringilla donec! Facilis eligendi litora mattis similique laborum dictumst sapien cubilia aute. Etiam, architecto bibendum, est </tspan><tspan x="0" y="69">odit laboriosam. Tempora minim maiores voluptatum. Cillum? Posuere. Imperdiet adipisci, beatae reprehenderit bibendum optio reiciendis pellentesque inceptos, quos pulvinar pellentesque, elit sociis? Felis omnis </tspan><tspan x="0" y="95">est quis, officiis dolor accusamus fusce saepe veritatis, quo feugiat etiam lobortis laboris assumenda minus nullam molestie, proin.</tspan></text>
+      <text id="Ad_illum_natoque_volutpat_leo_curabitur_est_nisi_reprehenderit_quisque_illo_ullam_scelerisque_viverra_taciti_voluptatum_adipiscing_omnis_vel_augue_convallis_anim_dis_quis_et_molestiae_eos_aenean_corrupti_neque_Interdum_quisque_diam_molestie_porta_iaculi-2" data-name="Ad illum natoque volutpat leo curabitur est nisi reprehenderit quisque illo ullam scelerisque viverra taciti voluptatum adipiscing omnis vel augue convallis anim dis quis et molestiae, eos aenean corrupti neque? Interdum, quisque diam molestie porta iaculi" transform="translate(261 1179)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Ad illum natoque volutpat leo curabitur est nisi reprehenderit quisque illo ullam scelerisque viverra taciti voluptatum adipiscing omnis vel augue convallis anim dis quis et molestiae, eos aenean corrupti neque? </tspan><tspan x="0" y="43">Interdum, quisque diam molestie porta iaculis earum? Non magni bibendum eum fugiat, fringilla donec! Facilis eligendi litora mattis similique laborum dictumst sapien cubilia aute. Etiam, architecto bibendum, est </tspan><tspan x="0" y="69">odit laboriosam. Tempora minim maiores voluptatum. Cillum? Posuere. Imperdiet adipisci, beatae reprehenderit bibendu</tspan></text>
+      <text id="Water_Brassica_Alcohol_Glycerin_Neopentyl_Glycol_Diethylhexanoate_Propanediol_Bis-Stearyl_Dimethicone_Trimethylpentanediol_Adipic_Acid_Copolymer_Butyrospermum_Parkii_Shea_Butter_Dimethicone_Squalane_Potassium_Cetyl_Phosphate_Retinol_Polysorba" data-name="Water, Brassica Alcohol, Glycerin, Neopentyl Glycol Diethylhexanoate, Propanediol, Bis-Stearyl Dimethicone, Trimethylpentanediol/Adipic Acid Copolymer, Butyrospermum Parkii (Shea) Butter, Dimethicone, Squalane, Potassium Cetyl Phosphate, Retinol, Polysorba" transform="translate(261 1326)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Water, Brassica Alcohol, Glycerin, Neopentyl Glycol Diethylhexanoate, Propanediol, Bis-Stearyl Dimethicone, Trimethylpentanediol/Adipic Acid Copolymer, Butyrospermum Parkii (Shea) Butter, Dimethicone, </tspan><tspan x="0" y="43">Squalane, Potassium Cetyl Phosphate, Retinol, Polysorbate 20, Caprylic/Capric Triglyceride, Vitis Vinifera (Grape) Seed Oil, Helianthus Annuus (Sunflower) Seed Extract, Rosmarinus Officinalis (Rosemary) Leaf </tspan><tspan x="0" y="69">Extract, Oryza Sativa (Rice) Bran Extract, Opuntia Ficus-Indica Extract, Glycine Soja (Soybean) Extract, Saccharomyces Cerevisiae Extract, Hydrolyzed Collagen, Bakuchiol, Sodium Hyaluronate, </tspan><tspan x="0" y="95">Polymethylsilsesquioxane, HDI/Trimethylol Hexyllactone Crosspolymer, Caprylhydroxamic Acid, 1,2-Hexanediol, Xanthan Gum, Carbomer, Polysilicone-11, Disodium EDTA, Fragrance.</tspan></text>
+      <g id="Grupo_89" data-name="Grupo 89" transform="translate(0 -9)">
+        <g id="Grupo_87" data-name="Grupo 87" transform="translate(0 8)">
+          <g id="Grupo_86" data-name="Grupo 86">
+            <text id="Atributos_clave" data-name="Atributos clave" transform="translate(259 943)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Atributos clave</tspan></text>
+          </g>
+          <g id="Cuadrícula_de_repetición_2" data-name="Cuadrícula de repetición 2" transform="translate(259 968)" clip-path="url(#clip-path)">
+            <g id="Grupo_85" data-name="Grupo 85" transform="translate(-259 -961)">
+              <g id="Elipse_5" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Ingredient_-_Eget_cursus_officiis_consequuntur_adipitin_cidunt_scinimano" data-name="Ingredient  - Eget cursus officiis, consequuntur adipitin cidunt scinimano" transform="translate(277 978)" font-size="14" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">Ingredient</tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Medium, Oswald" font-weight="500">  - </tspan><tspan y="0" font-family="Oswald-Regular, Oswald" font-weight="400">Eget cursus officiis, consequuntur adipitin cidunt scinimano</tspan></text>
+            </g>
+            <g id="Grupo_85-2" data-name="Grupo 85" transform="translate(-259 -925)">
+              <g id="Elipse_5-2" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Ingredient_-_Eget_cursus_officiis_consequuntur_adipisci_tincidunt_velit_nemo_dict" data-name="Ingredient  - Eget cursus officiis, consequuntur adipisci  tincidunt, velit nemo dict" transform="translate(277 978)" font-size="14" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">Ingredient</tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Medium, Oswald" font-weight="500">  - </tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Regular, Oswald" font-weight="400">Eget cursus officiis, consequuntur adipisci  tincidunt, velit nemo dict</tspan></text>
+            </g>
+            <g id="Grupo_85-3" data-name="Grupo 85" transform="translate(-259 -889)">
+              <g id="Elipse_5-3" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Ingredient_-_Eget_cursus_officiis_consntur_adipisci_tincidunt_velit_" data-name="Ingredient  - Eget cursus officiis, consntur adipisci  tincidunt, velit " transform="translate(277 978)" font-size="14" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">Ingredient</tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Medium, Oswald" font-weight="500">  - </tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Regular, Oswald" font-weight="400">Eget cursus officiis, consntur adipisci  tincidunt, velit </tspan></text>
+            </g>
+            <g id="Grupo_85-4" data-name="Grupo 85" transform="translate(-259 -853)">
+              <g id="Elipse_5-4" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Ingredient_-_Eget_cursus_officiis_consequuntur_adipisci_" data-name="Ingredient  - Eget cursus officiis, consequuntur adipisci " transform="translate(277 978)" font-size="14" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">Ingredient</tspan><tspan y="0" xml:space="preserve" font-family="Oswald-Medium, Oswald" font-weight="500">  - </tspan><tspan y="0" font-family="Oswald-Regular, Oswald" font-weight="400">Eget cursus officiis, consequuntur adipisci </tspan></text>
+            </g>
+          </g>
+        </g>
+        <g id="Grupo_113" data-name="Grupo 113" transform="translate(0 222)">
+          <g id="Grupo_86-2" data-name="Grupo 86">
+            <text id="Cómo_descargar_e_instalar_este_juego_en_tu_consola_" data-name="Cómo descargar e instalar este juego en tu consola?" transform="translate(259 943)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Cómo descargar e instalar este juego en tu consola?</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_88" data-name="Grupo 88" transform="translate(542 15)">
+          <g id="Grupo_86-3" data-name="Grupo 86">
+            <text id="Otros_beneficios" data-name="Otros beneficios" transform="translate(259 943)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Otros beneficios</tspan></text>
+          </g>
+          <g id="Cuadrícula_de_repetición_2-2" data-name="Cuadrícula de repetición 2" transform="translate(259 962)" clip-path="url(#clip-path-2)">
+            <g id="Grupo_85-5" data-name="Grupo 85" transform="translate(-259 -961)">
+              <g id="Elipse_5-5" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Nisl_Venenatis_esse_conubia_nibh_ipsum_eiusmod_sequi_vitae_convallis_lectus_dignis" data-name="Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignis" transform="translate(277 978)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignis</tspan></text>
+            </g>
+            <g id="Grupo_85-6" data-name="Grupo 85" transform="translate(-259 -925)">
+              <g id="Elipse_5-6" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Nisl_Venenatis_esse_conubia_nibh_ipsum_eiusmod_sequi_vitae_convallis_lectus_dignissim_integer_" data-name="Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignissim integer " transform="translate(277 978)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignissim integer </tspan></text>
+            </g>
+            <g id="Grupo_85-7" data-name="Grupo 85" transform="translate(-259 -889)">
+              <g id="Elipse_5-7" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Nisl_Venenatis_esse_conubia_nibh_ipsum_eiusmod_sequi_vitae_convallis_lect" data-name="Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lect" transform="translate(277 978)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lect</tspan></text>
+            </g>
+            <g id="Grupo_85-8" data-name="Grupo 85" transform="translate(-259 -853)">
+              <g id="Elipse_5-8" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Nisl_Venenatis_esse_conubia_nibh_ipsum_eiusmod_sequi" data-name="Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi" transform="translate(277 978)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi</tspan></text>
+            </g>
+            <g id="Grupo_85-9" data-name="Grupo 85" transform="translate(-259 -817)">
+              <g id="Elipse_5-9" data-name="Elipse 5" transform="translate(259 969)" fill="#fff" stroke="#000" stroke-width="2">
+                <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+                <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+              </g>
+              <text id="Nisl_Venenatis_esse_conubia_nibh_ipsum_eiusmod_sequi_vitae_convallis_lectus_dignissim_integer_2" data-name="Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignissim integer " transform="translate(277 978)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nisl! Venenatis, esse conubia nibh ipsum, eiusmod sequi, vitae convallis lectus dignissim integer </tspan></text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Grupo_114" data-name="Grupo 114" transform="translate(2 360)">
+        <g id="Grupo_86-4" data-name="Grupo 86">
+          <text id="Competiciones_disponibles" data-name="Competiciones disponibles" transform="translate(259 943)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Competiciones disponibles</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="Grupo_937" data-name="Grupo 937" transform="translate(0 113)">
+      <rect id="Rectángulo_50" data-name="Rectángulo 50" width="1140" height="397" transform="translate(230 745)" fill="#fff"/>
+      <g id="Grupo_118" data-name="Grupo 118" transform="translate(-80 100)">
+        <text id="Mira_lo_que_otros_GamePlayers_dicen_de_este_producto" data-name="Mira lo que otros GamePlayers dicen de este producto" transform="translate(339 700)" font-size="22" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Mira lo que otros GamePlayers dicen de este producto</tspan></text>
+        <g id="Grupo_119" data-name="Grupo 119" transform="translate(-486)">
+          <g id="Grupo_94" data-name="Grupo 94" transform="translate(-4 -35)">
+            <g id="Grupo_99" data-name="Grupo 99">
+              <g id="Grupo_98" data-name="Grupo 98">
+                <g id="Grupo_91" data-name="Grupo 91" transform="translate(516.291 -1582.709)">
+                  <path id="Trazado_9" data-name="Trazado 9" d="M33.314,0A33.314,33.314,0,1,1,0,33.314,33.314,33.314,0,0,1,33.314,0Z" transform="translate(328 2347)" fill="#ebebeb"/>
+                  <path id="Trazado_10" data-name="Trazado 10" d="M21.172-33.56a5.76,5.76,0,0,1,3.5,2.653,5.966,5.966,0,0,1,.951,3.253V-26.4a3.756,3.756,0,0,1-1.151,2.753A3.756,3.756,0,0,1,21.722-22.5H3.9A3.756,3.756,0,0,1,1.151-23.65,3.756,3.756,0,0,1,0-26.4v-1.251a6.216,6.216,0,0,1,.951-3.3,5.81,5.81,0,0,1,3.5-2.6l1.051-.3a8.754,8.754,0,0,1-1.7-5.255,8.89,8.89,0,0,1,1.2-4.53,8.831,8.831,0,0,1,3.278-3.278,8.89,8.89,0,0,1,4.53-1.2,8.89,8.89,0,0,1,4.53,1.2,8.831,8.831,0,0,1,3.278,3.278,8.89,8.89,0,0,1,1.2,4.53,8.754,8.754,0,0,1-1.7,5.255ZM12.813-45.722a6.3,6.3,0,0,0-3.3.9,6.9,6.9,0,0,0-2.4,2.4,6.3,6.3,0,0,0-.9,3.3,6.3,6.3,0,0,0,.9,3.3,6.9,6.9,0,0,0,2.4,2.4,6.3,6.3,0,0,0,3.3.9,6.3,6.3,0,0,0,3.3-.9,6.9,6.9,0,0,0,2.4-2.4,6.3,6.3,0,0,0,.9-3.3,6.3,6.3,0,0,0-.9-3.3,6.9,6.9,0,0,0-2.4-2.4A6.3,6.3,0,0,0,12.813-45.722ZM23.224-26.4v-1.251a3.66,3.66,0,0,0-.751-2.252,3.66,3.66,0,0,0-1.952-1.351l-2.3-.651a8.784,8.784,0,0,1-5.406,1.8,8.784,8.784,0,0,1-5.406-1.8l-2.3.651a3.66,3.66,0,0,0-1.952,1.351A3.66,3.66,0,0,0,2.4-27.654V-26.4a1.458,1.458,0,0,0,.425,1.076A1.458,1.458,0,0,0,3.9-24.9H21.722a1.458,1.458,0,0,0,1.076-.425A1.458,1.458,0,0,0,23.224-26.4Z" transform="translate(348.501 2413.704)" fill="#d5d5d5"/>
+                </g>
+              </g>
+            </g>
+            <g id="Grupo_92" data-name="Grupo 92" transform="translate(630 -1732)">
+              <g id="Grupo_97" data-name="Grupo 97" transform="translate(-3 6)">
+                <text id="Nombre_y_apellido" data-name="Nombre y apellido" transform="translate(300 2521)" font-size="18" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+                <g id="Grupo_96" data-name="Grupo 96" transform="translate(0 -8)">
+                  <g id="Rectángulo_38" data-name="Rectángulo 38" transform="translate(300 2537)" fill="#fff" stroke="#000" stroke-width="1">
+                    <rect width="93" height="22" rx="11" stroke="none"/>
+                    <rect x="0.5" y="0.5" width="92" height="21" rx="10.5" fill="none"/>
+                  </g>
+                  <text id="_usuario" data-name="@usuario" transform="translate(329 2552)" font-size="10" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">@usuario</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="Grupo_116" data-name="Grupo 116">
+            <text id="Pede_dis_ipsum_placeat_do_exercitation_laborum_nostra_non_inceptos_sociosqu_dolorum_doloremque_commodo_ultrices_tempus" data-name="Pede dis ipsum placeat do exercitation laborum nostra non inceptos sociosqu dolorum doloremque commodo, ultrices tempus" transform="translate(869 820)" font-size="14" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="13">Pede dis ipsum placeat do exercitation laborum nostra non </tspan><tspan x="0" y="35">inceptos sociosqu dolorum doloremque commodo, ultrices tempus</tspan></text>
+            <text id="_" data-name="“" transform="translate(837 840)" font-size="40" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="0">“</tspan></text>
+            <text id="_2" data-name="”" transform="translate(1300 881)" font-size="40" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="0">”</tspan></text>
+          </g>
+          <g id="Grupo_117" data-name="Grupo 117">
+            <text id="Lo_que_más_me_gusta_de_este_producto" data-name="Lo que más me gusta de este producto" transform="translate(840 899)" font-size="18" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lo que más me gusta de este producto</tspan></text>
+            <g id="Grupo_100" data-name="Grupo 100">
+              <rect id="Rectángulo_48" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_112" data-name="Grupo 112" transform="translate(0 92)">
+              <rect id="Rectángulo_48-2" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-2" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_101" data-name="Grupo 101" transform="translate(109)">
+              <rect id="Rectángulo_48-3" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_111" data-name="Grupo 111" transform="translate(109 92)">
+              <rect id="Rectángulo_48-4" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-2" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_106" data-name="Grupo 106" transform="translate(0 46)">
+              <rect id="Rectángulo_48-5" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-3" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_103" data-name="Grupo 103" transform="translate(336)">
+              <rect id="Rectángulo_48-6" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-4" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_109" data-name="Grupo 109" transform="translate(336 92)">
+              <rect id="Rectángulo_48-7" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-5" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_107" data-name="Grupo 107" transform="translate(363 46)">
+              <rect id="Rectángulo_48-8" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-6" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_104" data-name="Grupo 104" transform="translate(242 46)">
+              <rect id="Rectángulo_48-9" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-7" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_108" data-name="Grupo 108" transform="translate(121 46)">
+              <rect id="Rectángulo_48-10" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-8" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_102" data-name="Grupo 102" transform="translate(230)">
+              <rect id="Rectángulo_48-11" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-3" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_110" data-name="Grupo 110" transform="translate(230 92)">
+              <rect id="Rectángulo_48-12" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-4" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <rect id="Rectángulo_97" data-name="Rectángulo 97" width="471" height="92" transform="translate(840 950)" fill="url(#linear-gradient)"/>
+            <g id="Grupo_902" data-name="Grupo 902" transform="translate(-11 -6)">
+              <g id="Rectángulo_98" data-name="Rectángulo 98" transform="translate(1014 982)" fill="#fff" stroke="#000" stroke-width="1">
+                <rect width="105" height="31" stroke="none"/>
+                <rect x="0.5" y="0.5" width="104" height="30" fill="none"/>
+              </g>
+              <g id="Grupo_901" data-name="Grupo 901" transform="translate(3)">
+                <text id="Ver_más" data-name="Ver más" transform="translate(1076 1003)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-20.622" y="0">Ver más</tspan></text>
+                <path id="Trazado_71" data-name="Trazado 71" d="M1024.144,992.856l7.2,7.2,7.2-7.2" transform="translate(0 1)" fill="none" stroke="#000" stroke-width="2"/>
+              </g>
+            </g>
+          </g>
+          <g id="Grupo_803" data-name="Grupo 803" transform="translate(884 -1888)">
+            <g id="Rectángulo_39-2" data-name="Rectángulo 39" transform="translate(289 2626)" stroke="#000" stroke-width="1">
+              <rect width="145" height="49" stroke="none"/>
+              <rect x="0.5" y="0.5" width="144" height="48" fill="none"/>
+            </g>
+            <text id="VER_PERFIL" data-name="VER PERFIL" transform="translate(327 2657)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">VER PERFIL</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_796" data-name="Grupo 796" transform="translate(84)">
+          <g id="Grupo_94-2" data-name="Grupo 94" transform="translate(-4 -35)">
+            <g id="Grupo_99-2" data-name="Grupo 99">
+              <g id="Grupo_98-2" data-name="Grupo 98">
+                <g id="Grupo_91-2" data-name="Grupo 91" transform="translate(516.291 -1582.709)">
+                  <path id="Trazado_9-2" data-name="Trazado 9" d="M33.314,0A33.314,33.314,0,1,1,0,33.314,33.314,33.314,0,0,1,33.314,0Z" transform="translate(328 2347)" fill="#ebebeb"/>
+                  <path id="Trazado_10-2" data-name="Trazado 10" d="M21.172-33.56a5.76,5.76,0,0,1,3.5,2.653,5.966,5.966,0,0,1,.951,3.253V-26.4a3.756,3.756,0,0,1-1.151,2.753A3.756,3.756,0,0,1,21.722-22.5H3.9A3.756,3.756,0,0,1,1.151-23.65,3.756,3.756,0,0,1,0-26.4v-1.251a6.216,6.216,0,0,1,.951-3.3,5.81,5.81,0,0,1,3.5-2.6l1.051-.3a8.754,8.754,0,0,1-1.7-5.255,8.89,8.89,0,0,1,1.2-4.53,8.831,8.831,0,0,1,3.278-3.278,8.89,8.89,0,0,1,4.53-1.2,8.89,8.89,0,0,1,4.53,1.2,8.831,8.831,0,0,1,3.278,3.278,8.89,8.89,0,0,1,1.2,4.53,8.754,8.754,0,0,1-1.7,5.255ZM12.813-45.722a6.3,6.3,0,0,0-3.3.9,6.9,6.9,0,0,0-2.4,2.4,6.3,6.3,0,0,0-.9,3.3,6.3,6.3,0,0,0,.9,3.3,6.9,6.9,0,0,0,2.4,2.4,6.3,6.3,0,0,0,3.3.9,6.3,6.3,0,0,0,3.3-.9,6.9,6.9,0,0,0,2.4-2.4,6.3,6.3,0,0,0,.9-3.3,6.3,6.3,0,0,0-.9-3.3,6.9,6.9,0,0,0-2.4-2.4A6.3,6.3,0,0,0,12.813-45.722ZM23.224-26.4v-1.251a3.66,3.66,0,0,0-.751-2.252,3.66,3.66,0,0,0-1.952-1.351l-2.3-.651a8.784,8.784,0,0,1-5.406,1.8,8.784,8.784,0,0,1-5.406-1.8l-2.3.651a3.66,3.66,0,0,0-1.952,1.351A3.66,3.66,0,0,0,2.4-27.654V-26.4a1.458,1.458,0,0,0,.425,1.076A1.458,1.458,0,0,0,3.9-24.9H21.722a1.458,1.458,0,0,0,1.076-.425A1.458,1.458,0,0,0,23.224-26.4Z" transform="translate(348.501 2413.704)" fill="#d5d5d5"/>
+                </g>
+              </g>
+            </g>
+            <g id="Grupo_92-2" data-name="Grupo 92" transform="translate(630 -1732)">
+              <g id="Grupo_97-2" data-name="Grupo 97" transform="translate(-3 6)">
+                <text id="Nombre_y_apellido-2" data-name="Nombre y apellido" transform="translate(300 2521)" font-size="18" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+                <g id="Grupo_96-2" data-name="Grupo 96" transform="translate(0 -8)">
+                  <g id="Rectángulo_38-2" data-name="Rectángulo 38" transform="translate(300 2537)" fill="#fff" stroke="#000" stroke-width="1">
+                    <rect width="93" height="22" rx="11" stroke="none"/>
+                    <rect x="0.5" y="0.5" width="92" height="21" rx="10.5" fill="none"/>
+                  </g>
+                  <text id="_usuario-2" data-name="@usuario" transform="translate(329 2552)" font-size="10" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">@usuario</tspan></text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="Grupo_116-2" data-name="Grupo 116">
+            <text id="Pede_dis_ipsum_placeat_do_exercitation_laborum_nostra_non_inceptos_sociosqu_dolorum_doloremque_commodo_ultrices_tempus-2" data-name="Pede dis ipsum placeat do exercitation laborum nostra non inceptos sociosqu dolorum doloremque commodo, ultrices tempus" transform="translate(869 820)" font-size="14" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="13">Pede dis ipsum placeat do exercitation laborum nostra non </tspan><tspan x="0" y="35">inceptos sociosqu dolorum doloremque commodo, ultrices tempus</tspan></text>
+            <text id="_3" data-name="“" transform="translate(837 840)" font-size="40" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="0">“</tspan></text>
+            <text id="_4" data-name="”" transform="translate(1300 881)" font-size="40" font-family="Georgia-Italic, Georgia" font-style="italic"><tspan x="0" y="0">”</tspan></text>
+          </g>
+          <g id="Grupo_804" data-name="Grupo 804" transform="translate(884 -1888)">
+            <g id="Rectángulo_39-3" data-name="Rectángulo 39" transform="translate(289 2626)" stroke="#000" stroke-width="1">
+              <rect width="145" height="49" stroke="none"/>
+              <rect x="0.5" y="0.5" width="144" height="48" fill="none"/>
+            </g>
+            <text id="VER_PERFIL-2" data-name="VER PERFIL" transform="translate(327 2657)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">VER PERFIL</tspan></text>
+          </g>
+          <g id="Grupo_903" data-name="Grupo 903">
+            <text id="Lo_que_más_me_gusta_de_este_producto-2" data-name="Lo que más me gusta de este producto" transform="translate(840 899)" font-size="18" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lo que más me gusta de este producto</tspan></text>
+            <g id="Grupo_100-2" data-name="Grupo 100">
+              <rect id="Rectángulo_48-13" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-5" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_112-2" data-name="Grupo 112" transform="translate(0 92)">
+              <rect id="Rectángulo_48-14" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-6" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_101-2" data-name="Grupo 101" transform="translate(109)">
+              <rect id="Rectángulo_48-15" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-9" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_111-2" data-name="Grupo 111" transform="translate(109 92)">
+              <rect id="Rectángulo_48-16" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-10" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_106-2" data-name="Grupo 106" transform="translate(0 46)">
+              <rect id="Rectángulo_48-17" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-11" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_103-2" data-name="Grupo 103" transform="translate(336)">
+              <rect id="Rectángulo_48-18" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-12" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_109-2" data-name="Grupo 109" transform="translate(336 92)">
+              <rect id="Rectángulo_48-19" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-13" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_107-2" data-name="Grupo 107" transform="translate(363 46)">
+              <rect id="Rectángulo_48-20" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-14" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_104-2" data-name="Grupo 104" transform="translate(242 46)">
+              <rect id="Rectángulo_48-21" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-15" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_108-2" data-name="Grupo 108" transform="translate(121 46)">
+              <rect id="Rectángulo_48-22" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem_Se-16" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+            </g>
+            <g id="Grupo_102-2" data-name="Grupo 102" transform="translate(230)">
+              <rect id="Rectángulo_48-23" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-7" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <g id="Grupo_110-2" data-name="Grupo 110" transform="translate(230 92)">
+              <rect id="Rectángulo_48-24" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+              <text id="Lorem_Ipsem-8" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+            </g>
+            <rect id="Rectángulo_97-2" data-name="Rectángulo 97" width="471" height="92" transform="translate(840 950)" fill="url(#linear-gradient)"/>
+            <g id="Grupo_902-2" data-name="Grupo 902" transform="translate(-11 -6)">
+              <g id="Rectángulo_98-2" data-name="Rectángulo 98" transform="translate(1014 982)" fill="#fff" stroke="#000" stroke-width="1">
+                <rect width="105" height="31" stroke="none"/>
+                <rect x="0.5" y="0.5" width="104" height="30" fill="none"/>
+              </g>
+              <g id="Grupo_901-2" data-name="Grupo 901" transform="translate(3)">
+                <text id="Ver_más-2" data-name="Ver más" transform="translate(1076 1003)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-20.622" y="0">Ver más</tspan></text>
+                <path id="Trazado_71-2" data-name="Trazado 71" d="M1024.144,992.856l7.2,7.2,7.2-7.2" transform="translate(0 1)" fill="none" stroke="#000" stroke-width="2"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="PRODUCTOS_RELACIONADOS" data-name="PRODUCTOS RELACIONADOS" transform="translate(230 3029)" font-size="26" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">PRODUCTOS RELACIONADOS</tspan></text>
+    <g id="Grupo_115" data-name="Grupo 115" transform="translate(-1 2306)">
+      <g id="Cuadrícula_de_repetición_1" data-name="Cuadrícula de repetición 1" transform="translate(231 760)" clip-path="url(#clip-path-3)">
+        <g id="Grupo_19" data-name="Grupo 19" transform="translate(-231 -760)">
+          <path id="Trazado_17" data-name="Trazado 17" d="M0,0H261.892V97.57H0Z" transform="translate(231 1010)" fill="#f7f7f7"/>
+          <rect id="Rectángulo_28" data-name="Rectángulo 28" width="262" height="250" transform="translate(231 760)" fill="#e3e3e3"/>
+          <path id="Trazado_6" data-name="Trazado 6" d="M-148.524-173.659a.806.806,0,0,1,.56.28.806.806,0,0,1,.28.56v34.138a.806.806,0,0,1-.28.56.806.806,0,0,1-.56.28H-200.57a.806.806,0,0,1-.56-.28.806.806,0,0,1-.28-.56v-34.138a.806.806,0,0,1,.28-.56.806.806,0,0,1,.56-.28Zm.839-6.716h-53.725a6.476,6.476,0,0,0-4.757,1.959,6.476,6.476,0,0,0-1.959,4.757v35.817a6.476,6.476,0,0,0,1.959,4.757,6.476,6.476,0,0,0,4.757,1.959h53.725a6.476,6.476,0,0,0,4.757-1.959,6.476,6.476,0,0,0,1.959-4.757v-35.817a6.476,6.476,0,0,0-1.959-4.757A6.476,6.476,0,0,0-147.684-180.375ZM-184.62-164.7a5.415,5.415,0,0,0-1.609-3.987,5.415,5.415,0,0,0-3.987-1.609,5.415,5.415,0,0,0-3.987,1.609,5.415,5.415,0,0,0-1.609,3.987,5.415,5.415,0,0,0,1.609,3.987,5.415,5.415,0,0,0,3.987,1.609,5.415,5.415,0,0,0,3.987-1.609A5.415,5.415,0,0,0-184.62-164.7Zm-10.073,13.431v6.716H-154.4V-155.75l-10.074-10.074a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42l-14.551,14.551-5.6-5.6a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42Z" transform="translate(536.484 1041)" fill="#cecece"/>
+          <g id="Grupo_13" data-name="Grupo 13" transform="translate(8 -9)">
+            <g id="Grupo_14" data-name="Grupo 14" transform="translate(1 -1)">
+              <g id="Rectángulo_29" data-name="Rectángulo 29" transform="translate(237 980)" stroke="#000" stroke-width="1">
+                <rect width="66" height="24" stroke="none"/>
+                <rect x="0.5" y="0.5" width="65" height="23" fill="none"/>
+              </g>
+              <text id="CATEGORÍA-2" data-name="CATEGORÍA" transform="translate(291 996)" fill="#fff" font-size="10" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-43.61" y="0">CATEGORÍA</tspan></text>
+            </g>
+          </g>
+          <g id="Grupo_15" data-name="Grupo 15" transform="translate(4 -2)">
+            <text id="Nombre_del_producto" data-name="Nombre del producto" transform="translate(388 1042)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-145.998" y="0">Nombre del producto</tspan></text>
+            <text id="MARCA" transform="translate(275 1063)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-32.136" y="0">MARCA</tspan></text>
+          </g>
+          <g id="Grupo_16" data-name="Grupo 16">
+            <text id="_10.000" data-name="$ 10.000" transform="translate(297 1088)" fill="#c4c4c4" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-47.208" y="0">$ 10.000</tspan></text>
+            <line id="Línea_3" data-name="Línea 3" x2="53" transform="translate(246.5 1082.5)" fill="none" stroke="#c4c4c4" stroke-width="1"/>
+          </g>
+          <g id="Grupo_17" data-name="Grupo 17" transform="translate(70)">
+            <text id="_7.000" data-name="$ 7.000" transform="translate(298 1088)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-41.482" y="0">$ 7.000</tspan></text>
+          </g>
+          <g id="Grupo_18" data-name="Grupo 18" transform="translate(35)">
+            <g id="Rectángulo_30" data-name="Rectángulo 30" transform="translate(379 1071)" fill="#fff" stroke="#000" stroke-width="1">
+              <rect width="64" height="22" stroke="none"/>
+              <rect x="0.5" y="0.5" width="63" height="21" fill="none"/>
+            </g>
+            <text id="_30_Off" data-name="30% Off" transform="translate(429 1087)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-36.63" y="0">30</tspan><tspan y="0" font-size="10">%</tspan><tspan y="0" xml:space="preserve"> Off</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_19-2" data-name="Grupo 19" transform="translate(62 -760)">
+          <path id="Trazado_17-2" data-name="Trazado 17" d="M0,0H261.892V97.57H0Z" transform="translate(231 1010)" fill="#f7f7f7"/>
+          <rect id="Rectángulo_28-2" data-name="Rectángulo 28" width="262" height="250" transform="translate(231 760)" fill="#e3e3e3"/>
+          <path id="Trazado_6-2" data-name="Trazado 6" d="M-148.524-173.659a.806.806,0,0,1,.56.28.806.806,0,0,1,.28.56v34.138a.806.806,0,0,1-.28.56.806.806,0,0,1-.56.28H-200.57a.806.806,0,0,1-.56-.28.806.806,0,0,1-.28-.56v-34.138a.806.806,0,0,1,.28-.56.806.806,0,0,1,.56-.28Zm.839-6.716h-53.725a6.476,6.476,0,0,0-4.757,1.959,6.476,6.476,0,0,0-1.959,4.757v35.817a6.476,6.476,0,0,0,1.959,4.757,6.476,6.476,0,0,0,4.757,1.959h53.725a6.476,6.476,0,0,0,4.757-1.959,6.476,6.476,0,0,0,1.959-4.757v-35.817a6.476,6.476,0,0,0-1.959-4.757A6.476,6.476,0,0,0-147.684-180.375ZM-184.62-164.7a5.415,5.415,0,0,0-1.609-3.987,5.415,5.415,0,0,0-3.987-1.609,5.415,5.415,0,0,0-3.987,1.609,5.415,5.415,0,0,0-1.609,3.987,5.415,5.415,0,0,0,1.609,3.987,5.415,5.415,0,0,0,3.987,1.609,5.415,5.415,0,0,0,3.987-1.609A5.415,5.415,0,0,0-184.62-164.7Zm-10.073,13.431v6.716H-154.4V-155.75l-10.074-10.074a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42l-14.551,14.551-5.6-5.6a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42Z" transform="translate(536.484 1041)" fill="#cecece"/>
+          <g id="Grupo_13-2" data-name="Grupo 13" transform="translate(8 -9)">
+            <g id="Grupo_14-2" data-name="Grupo 14" transform="translate(1 -1)">
+              <g id="Rectángulo_29-2" data-name="Rectángulo 29" transform="translate(237 980)" stroke="#000" stroke-width="1">
+                <rect width="66" height="24" stroke="none"/>
+                <rect x="0.5" y="0.5" width="65" height="23" fill="none"/>
+              </g>
+              <text id="CATEGORÍA-3" data-name="CATEGORÍA" transform="translate(291 996)" fill="#fff" font-size="10" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-43.61" y="0">CATEGORÍA</tspan></text>
+            </g>
+          </g>
+          <g id="Grupo_15-2" data-name="Grupo 15" transform="translate(4 -2)">
+            <text id="Nombre_del_producto-2" data-name="Nombre del producto" transform="translate(388 1042)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-145.998" y="0">Nombre del producto</tspan></text>
+            <text id="MARCA-2" data-name="MARCA" transform="translate(275 1063)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-32.136" y="0">MARCA</tspan></text>
+          </g>
+          <g id="Grupo_16-2" data-name="Grupo 16">
+            <text id="_10.000-2" data-name="$ 10.000" transform="translate(297 1088)" fill="#c4c4c4" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-47.208" y="0">$ 10.000</tspan></text>
+            <line id="Línea_3-2" data-name="Línea 3" x2="53" transform="translate(246.5 1082.5)" fill="none" stroke="#c4c4c4" stroke-width="1"/>
+          </g>
+          <g id="Grupo_17-2" data-name="Grupo 17" transform="translate(70)">
+            <text id="_7.000-2" data-name="$ 7.000" transform="translate(298 1088)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-41.482" y="0">$ 7.000</tspan></text>
+          </g>
+          <g id="Grupo_18-2" data-name="Grupo 18" transform="translate(35)">
+            <g id="Rectángulo_30-2" data-name="Rectángulo 30" transform="translate(379 1071)" fill="#fff" stroke="#000" stroke-width="1">
+              <rect width="64" height="22" stroke="none"/>
+              <rect x="0.5" y="0.5" width="63" height="21" fill="none"/>
+            </g>
+            <text id="_30_Off-2" data-name="30% Off" transform="translate(429 1087)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-36.63" y="0">30</tspan><tspan y="0" font-size="10">%</tspan><tspan y="0" xml:space="preserve"> Off</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_19-3" data-name="Grupo 19" transform="translate(355 -760)">
+          <path id="Trazado_17-3" data-name="Trazado 17" d="M0,0H261.892V97.57H0Z" transform="translate(231 1010)" fill="#f7f7f7"/>
+          <rect id="Rectángulo_28-3" data-name="Rectángulo 28" width="262" height="250" transform="translate(231 760)" fill="#e3e3e3"/>
+          <path id="Trazado_6-3" data-name="Trazado 6" d="M-148.524-173.659a.806.806,0,0,1,.56.28.806.806,0,0,1,.28.56v34.138a.806.806,0,0,1-.28.56.806.806,0,0,1-.56.28H-200.57a.806.806,0,0,1-.56-.28.806.806,0,0,1-.28-.56v-34.138a.806.806,0,0,1,.28-.56.806.806,0,0,1,.56-.28Zm.839-6.716h-53.725a6.476,6.476,0,0,0-4.757,1.959,6.476,6.476,0,0,0-1.959,4.757v35.817a6.476,6.476,0,0,0,1.959,4.757,6.476,6.476,0,0,0,4.757,1.959h53.725a6.476,6.476,0,0,0,4.757-1.959,6.476,6.476,0,0,0,1.959-4.757v-35.817a6.476,6.476,0,0,0-1.959-4.757A6.476,6.476,0,0,0-147.684-180.375ZM-184.62-164.7a5.415,5.415,0,0,0-1.609-3.987,5.415,5.415,0,0,0-3.987-1.609,5.415,5.415,0,0,0-3.987,1.609,5.415,5.415,0,0,0-1.609,3.987,5.415,5.415,0,0,0,1.609,3.987,5.415,5.415,0,0,0,3.987,1.609,5.415,5.415,0,0,0,3.987-1.609A5.415,5.415,0,0,0-184.62-164.7Zm-10.073,13.431v6.716H-154.4V-155.75l-10.074-10.074a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42l-14.551,14.551-5.6-5.6a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42Z" transform="translate(536.484 1041)" fill="#cecece"/>
+          <g id="Grupo_13-3" data-name="Grupo 13" transform="translate(8 -9)">
+            <g id="Grupo_14-3" data-name="Grupo 14" transform="translate(1 -1)">
+              <g id="Rectángulo_29-3" data-name="Rectángulo 29" transform="translate(237 980)" stroke="#000" stroke-width="1">
+                <rect width="66" height="24" stroke="none"/>
+                <rect x="0.5" y="0.5" width="65" height="23" fill="none"/>
+              </g>
+              <text id="CATEGORÍA-4" data-name="CATEGORÍA" transform="translate(291 996)" fill="#fff" font-size="10" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-43.61" y="0">CATEGORÍA</tspan></text>
+            </g>
+          </g>
+          <g id="Grupo_15-3" data-name="Grupo 15" transform="translate(4 -2)">
+            <text id="Nombre_del_producto-3" data-name="Nombre del producto" transform="translate(388 1042)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-145.998" y="0">Nombre del producto</tspan></text>
+            <text id="MARCA-3" data-name="MARCA" transform="translate(275 1063)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-32.136" y="0">MARCA</tspan></text>
+          </g>
+          <g id="Grupo_16-3" data-name="Grupo 16">
+            <text id="_10.000-3" data-name="$ 10.000" transform="translate(297 1088)" fill="#c4c4c4" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-47.208" y="0">$ 10.000</tspan></text>
+            <line id="Línea_3-3" data-name="Línea 3" x2="53" transform="translate(246.5 1082.5)" fill="none" stroke="#c4c4c4" stroke-width="1"/>
+          </g>
+          <g id="Grupo_17-3" data-name="Grupo 17" transform="translate(70)">
+            <text id="_7.000-3" data-name="$ 7.000" transform="translate(298 1088)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-41.482" y="0">$ 7.000</tspan></text>
+          </g>
+          <g id="Grupo_18-3" data-name="Grupo 18" transform="translate(35)">
+            <g id="Rectángulo_30-3" data-name="Rectángulo 30" transform="translate(379 1071)" fill="#fff" stroke="#000" stroke-width="1">
+              <rect width="64" height="22" stroke="none"/>
+              <rect x="0.5" y="0.5" width="63" height="21" fill="none"/>
+            </g>
+            <text id="_30_Off-3" data-name="30% Off" transform="translate(429 1087)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-36.63" y="0">30</tspan><tspan y="0" font-size="10">%</tspan><tspan y="0" xml:space="preserve"> Off</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_19-4" data-name="Grupo 19" transform="translate(648 -760)">
+          <path id="Trazado_17-4" data-name="Trazado 17" d="M0,0H261.892V97.57H0Z" transform="translate(231 1010)" fill="#f7f7f7"/>
+          <rect id="Rectángulo_28-4" data-name="Rectángulo 28" width="262" height="250" transform="translate(231 760)" fill="#e3e3e3"/>
+          <path id="Trazado_6-4" data-name="Trazado 6" d="M-148.524-173.659a.806.806,0,0,1,.56.28.806.806,0,0,1,.28.56v34.138a.806.806,0,0,1-.28.56.806.806,0,0,1-.56.28H-200.57a.806.806,0,0,1-.56-.28.806.806,0,0,1-.28-.56v-34.138a.806.806,0,0,1,.28-.56.806.806,0,0,1,.56-.28Zm.839-6.716h-53.725a6.476,6.476,0,0,0-4.757,1.959,6.476,6.476,0,0,0-1.959,4.757v35.817a6.476,6.476,0,0,0,1.959,4.757,6.476,6.476,0,0,0,4.757,1.959h53.725a6.476,6.476,0,0,0,4.757-1.959,6.476,6.476,0,0,0,1.959-4.757v-35.817a6.476,6.476,0,0,0-1.959-4.757A6.476,6.476,0,0,0-147.684-180.375ZM-184.62-164.7a5.415,5.415,0,0,0-1.609-3.987,5.415,5.415,0,0,0-3.987-1.609,5.415,5.415,0,0,0-3.987,1.609,5.415,5.415,0,0,0-1.609,3.987,5.415,5.415,0,0,0,1.609,3.987,5.415,5.415,0,0,0,3.987,1.609,5.415,5.415,0,0,0,3.987-1.609A5.415,5.415,0,0,0-184.62-164.7Zm-10.073,13.431v6.716H-154.4V-155.75l-10.074-10.074a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42l-14.551,14.551-5.6-5.6a1.513,1.513,0,0,0-1.119-.42,1.513,1.513,0,0,0-1.119.42Z" transform="translate(536.484 1041)" fill="#cecece"/>
+          <g id="Grupo_13-4" data-name="Grupo 13" transform="translate(8 -9)">
+            <g id="Grupo_14-4" data-name="Grupo 14" transform="translate(1 -1)">
+              <g id="Rectángulo_29-4" data-name="Rectángulo 29" transform="translate(237 980)" stroke="#000" stroke-width="1">
+                <rect width="66" height="24" stroke="none"/>
+                <rect x="0.5" y="0.5" width="65" height="23" fill="none"/>
+              </g>
+              <text id="CATEGORÍA-5" data-name="CATEGORÍA" transform="translate(291 996)" fill="#fff" font-size="10" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-43.61" y="0">CATEGORÍA</tspan></text>
+            </g>
+          </g>
+          <g id="Grupo_15-4" data-name="Grupo 15" transform="translate(4 -2)">
+            <text id="Nombre_del_producto-4" data-name="Nombre del producto" transform="translate(388 1042)" font-size="18" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-145.998" y="0">Nombre del producto</tspan></text>
+            <text id="MARCA-4" data-name="MARCA" transform="translate(275 1063)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-32.136" y="0">MARCA</tspan></text>
+          </g>
+          <g id="Grupo_16-4" data-name="Grupo 16">
+            <text id="_10.000-4" data-name="$ 10.000" transform="translate(297 1088)" fill="#c4c4c4" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-47.208" y="0">$ 10.000</tspan></text>
+            <line id="Línea_3-4" data-name="Línea 3" x2="53" transform="translate(246.5 1082.5)" fill="none" stroke="#c4c4c4" stroke-width="1"/>
+          </g>
+          <g id="Grupo_17-4" data-name="Grupo 17" transform="translate(70)">
+            <text id="_7.000-4" data-name="$ 7.000" transform="translate(298 1088)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-41.482" y="0">$ 7.000</tspan></text>
+          </g>
+          <g id="Grupo_18-4" data-name="Grupo 18" transform="translate(35)">
+            <g id="Rectángulo_30-4" data-name="Rectángulo 30" transform="translate(379 1071)" fill="#fff" stroke="#000" stroke-width="1">
+              <rect width="64" height="22" stroke="none"/>
+              <rect x="0.5" y="0.5" width="63" height="21" fill="none"/>
+            </g>
+            <text id="_30_Off-4" data-name="30% Off" transform="translate(429 1087)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="-36.63" y="0">30</tspan><tspan y="0" font-size="10">%</tspan><tspan y="0" xml:space="preserve"> Off</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Grupo_20" data-name="Grupo 20" transform="translate(203 559)">
+        <g id="Grupo_21" data-name="Grupo 21" transform="translate(-12 7)">
+          <rect id="Rectángulo_20" data-name="Rectángulo 20" width="21" height="74" transform="translate(4 305)" fill="#bababa"/>
+          <path id="Trazado_5" data-name="Trazado 5" d="M2.441-4.328a.561.561,0,0,0,0-.791L1-6.552a.551.551,0,0,0-.782,0L-4.4-1.939-9.009-6.552a.551.551,0,0,0-.782,0l-1.442,1.433a.561.561,0,0,0,0,.791L-4.787,2.11A.551.551,0,0,0-4,2.11Z" transform="translate(11.248 346.856) rotate(90)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Grupo_22" data-name="Grupo 22" transform="translate(1399 1257) rotate(180)">
+        <g id="Grupo_21-2" data-name="Grupo 21" transform="translate(-12 7)">
+          <rect id="Rectángulo_20-2" data-name="Rectángulo 20" width="21" height="74" transform="translate(4 305)" fill="#bababa"/>
+          <path id="Trazado_5-2" data-name="Trazado 5" d="M2.441-4.328a.561.561,0,0,0,0-.791L1-6.552a.551.551,0,0,0-.782,0L-4.4-1.939-9.009-6.552a.551.551,0,0,0-.782,0l-1.442,1.433a.561.561,0,0,0,0,.791L-4.787,2.11A.551.551,0,0,0-4,2.11Z" transform="translate(11.248 346.856) rotate(90)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g id="Grupo_932" data-name="Grupo 932" transform="translate(0 113)">
+      <rect id="Rectángulo_103" data-name="Rectángulo 103" width="344" height="699" transform="translate(1026 1948)" fill="#fff"/>
+      <text id="Opiniones_más_populares" data-name="Opiniones más populares" transform="translate(1049 1996)" font-size="22" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Opiniones más populares</tspan></text>
+      <g id="Cuadrícula_de_repetición_9" data-name="Cuadrícula de repetición 9" transform="translate(1045.5 2027)" clip-path="url(#clip-path-4)">
+        <g id="Grupo_930" data-name="Grupo 930" transform="translate(-1045.5 -2027)">
+          <g id="Grupo_928" data-name="Grupo 928" transform="translate(786 -2)">
+            <g id="Grupo_924" data-name="Grupo 924">
+              <path id="Trazado_73" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918" data-name="Grupo 918" transform="translate(-10 7)">
+                <text id="Nombre_y_apellido-3" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_taunt_deleniti_facilisi_est_orci_libero_aspernatur_" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad taunt deleniti facilisi, est orci libero, aspernatur " transform="translate(260 2127)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor </tspan><tspan x="0" y="38">wisi necessitatibus lorem perspiciatis repudiandae ad taunt </tspan><tspan x="0" y="59">deleniti facilisi, est orci libero, aspernatur </tspan></text>
+              <g id="Grupo_923" data-name="Grupo 923" transform="translate(93)">
+                <g id="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919" data-name="Grupo 919">
+                      <path id="Trazado_74" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-2" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-2" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-2" data-name="Grupo 919">
+                      <path id="Trazado_74-2" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-2" data-name="noun_Star_1174020" transform="translate(230.95 2078.359)">
+                  <g id="Grupo_922-2" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-2" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-2" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-3" data-name="noun_Star_1174020" transform="translate(251.95 2078.359)">
+                  <g id="Grupo_922-3" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-3" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-3" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-4" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-4" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-4" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-4" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-5" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-5" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-5" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-5" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021" data-name="5 de septiembre de 2021" transform="translate(260 2116)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+              <g id="Grupo_929" data-name="Grupo 929" transform="translate(9 -34)">
+                <text id="Read_More" data-name="Read More" transform="translate(469 2220)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Read More</tspan></text>
+                <path id="Trazado_76" data-name="Trazado 76" d="M1.307-.112h57" transform="translate(467.693 2223.5)" fill="none" stroke="#000" stroke-width="1"/>
+              </g>
+            </g>
+          </g>
+          <line id="Línea_24" data-name="Línea 24" x2="306" transform="translate(1046.5 2212.5)" fill="none" stroke="#ececec" stroke-width="1"/>
+        </g>
+        <g id="Grupo_930-2" data-name="Grupo 930" transform="translate(-1045.5 -1819)">
+          <g id="Grupo_928-2" data-name="Grupo 928" transform="translate(786 -2)">
+            <g id="Grupo_924-2" data-name="Grupo 924">
+              <path id="Trazado_73-2" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918-2" data-name="Grupo 918" transform="translate(-10 7)">
+                <text id="Nombre_y_apellido-4" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_taunt_deleniti_facilisi_est_orci_libero_aspernatur_2" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad taunt deleniti facilisi, est orci libero, aspernatur " transform="translate(260 2127)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor </tspan><tspan x="0" y="38">wisi necessitatibus lorem perspiciatis repudiandae ad taunt </tspan><tspan x="0" y="59">deleniti facilisi, est orci libero, aspernatur </tspan></text>
+              <g id="Grupo_923-2" data-name="Grupo 923" transform="translate(93)">
+                <g id="noun_Star_1174018-3" data-name="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920-3" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-3" data-name="Grupo 919">
+                      <path id="Trazado_74-3" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-4" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-4" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-4" data-name="Grupo 919">
+                      <path id="Trazado_74-4" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-6" data-name="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922-6" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-6" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-6" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-7" data-name="noun_Star_1174020" transform="translate(230.95 2078.359)">
+                  <g id="Grupo_922-7" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-7" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-7" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-8" data-name="noun_Star_1174020" transform="translate(251.95 2078.359)">
+                  <g id="Grupo_922-8" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-8" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-8" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-9" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-9" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-9" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-9" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-10" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-10" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-10" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-10" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021-2" data-name="5 de septiembre de 2021" transform="translate(260 2116)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+              <g id="Grupo_929-2" data-name="Grupo 929" transform="translate(9 -34)">
+                <text id="Read_More-2" data-name="Read More" transform="translate(469 2220)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Read More</tspan></text>
+                <path id="Trazado_76-2" data-name="Trazado 76" d="M1.307-.112h57" transform="translate(467.693 2223.5)" fill="none" stroke="#000" stroke-width="1"/>
+              </g>
+            </g>
+          </g>
+          <line id="Línea_24-2" data-name="Línea 24" x2="306" transform="translate(1046.5 2212.5)" fill="none" stroke="#ececec" stroke-width="1"/>
+        </g>
+        <g id="Grupo_930-3" data-name="Grupo 930" transform="translate(-1045.5 -1611)">
+          <g id="Grupo_928-3" data-name="Grupo 928" transform="translate(786 -2)">
+            <g id="Grupo_924-3" data-name="Grupo 924">
+              <path id="Trazado_73-3" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918-3" data-name="Grupo 918" transform="translate(-10 7)">
+                <text id="Nombre_y_apellido-5" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_taunt_deleniti_facilisi_est_orci_libero_aspernatur_3" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad taunt deleniti facilisi, est orci libero, aspernatur " transform="translate(260 2127)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor </tspan><tspan x="0" y="38">wisi necessitatibus lorem perspiciatis repudiandae ad taunt </tspan><tspan x="0" y="59">deleniti facilisi, est orci libero, aspernatur </tspan></text>
+              <g id="Grupo_923-3" data-name="Grupo 923" transform="translate(93)">
+                <g id="noun_Star_1174018-5" data-name="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920-5" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-5" data-name="Grupo 919">
+                      <path id="Trazado_74-5" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-6" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-6" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-6" data-name="Grupo 919">
+                      <path id="Trazado_74-6" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-11" data-name="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922-11" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-11" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-11" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-12" data-name="noun_Star_1174020" transform="translate(230.95 2078.359)">
+                  <g id="Grupo_922-12" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-12" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-12" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-13" data-name="noun_Star_1174020" transform="translate(251.95 2078.359)">
+                  <g id="Grupo_922-13" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-13" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-13" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-14" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-14" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-14" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-14" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-15" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-15" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-15" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-15" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021-3" data-name="5 de septiembre de 2021" transform="translate(260 2116)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+              <g id="Grupo_929-3" data-name="Grupo 929" transform="translate(9 -34)">
+                <text id="Read_More-3" data-name="Read More" transform="translate(469 2220)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Read More</tspan></text>
+                <path id="Trazado_76-3" data-name="Trazado 76" d="M1.307-.112h57" transform="translate(467.693 2223.5)" fill="none" stroke="#000" stroke-width="1"/>
+              </g>
+            </g>
+          </g>
+          <line id="Línea_24-3" data-name="Línea 24" x2="306" transform="translate(1046.5 2212.5)" fill="none" stroke="#ececec" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="Grupo_936" data-name="Grupo 936" transform="translate(0 113)">
+      <rect id="Rectángulo_102" data-name="Rectángulo 102" width="761" height="848" transform="translate(233 1948)" fill="#fff"/>
+      <text id="Opiniones_1480_" data-name="Opiniones ( 1480 )" transform="translate(260 1996)" font-size="22" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Opiniones ( 1480 )</tspan></text>
+      <g id="Cuadrícula_de_repetición_8" data-name="Cuadrícula de repetición 8" transform="translate(260 2095)" clip-path="url(#clip-path-5)">
+        <g id="Grupo_927" data-name="Grupo 927" transform="translate(-260 -2029)">
+          <g id="Grupo_926" data-name="Grupo 926">
+            <g id="Grupo_924-4" data-name="Grupo 924">
+              <path id="Trazado_73-4" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918-4" data-name="Grupo 918" transform="translate(-10 -4)">
+                <text id="Nombre_y_apellido-6" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_nesciunt_deleniti_facilisi_est_orci_libero_aspernatur_asperiores_ornare_aliquip_vehicula_Proident_Nobis_Deserunt_conubia_facilis_amet_" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet " transform="translate(314 2109)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt </tspan><tspan x="0" y="38">deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet </tspan><tspan x="0" y="59">torquent, voluptate dictum, sapien, lorem? Veniam! Vestibulum tenetur atque ultricies justo pariatur dis eget condimentum </tspan><tspan x="0" y="80">libero, occaecat! Vulputate molestias quaerat, maxime!.</tspan></text>
+              <g id="Grupo_923-4" data-name="Grupo 923" transform="translate(148 -23)">
+                <g id="noun_Star_1174018-7" data-name="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920-7" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-7" data-name="Grupo 919">
+                      <path id="Trazado_74-7" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-8" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-8" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-8" data-name="Grupo 919">
+                      <path id="Trazado_74-8" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-16" data-name="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922-16" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-16" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-16" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-17" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-17" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-17" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-17" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-18" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-18" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-18" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-18" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021-4" data-name="5 de septiembre de 2021" transform="translate(315 2093)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+            </g>
+          </g>
+          <line id="Línea_23" data-name="Línea 23" x2="700" transform="translate(260.5 2222.5)" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+        </g>
+        <g id="Grupo_927-2" data-name="Grupo 927" transform="translate(-260 -1807)">
+          <g id="Grupo_926-2" data-name="Grupo 926">
+            <g id="Grupo_924-5" data-name="Grupo 924">
+              <path id="Trazado_73-5" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918-5" data-name="Grupo 918" transform="translate(-10 -4)">
+                <text id="Nombre_y_apellido-7" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_nesciunt_deleniti_facilisi_est_orci_libero_aspernatur_asperiores_ornare_aliquip_vehicula_Proident_Nobis_Deserunt_conubia_facilis_amet_2" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet " transform="translate(314 2109)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt </tspan><tspan x="0" y="38">deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet </tspan><tspan x="0" y="59">torquent, voluptate dictum, sapien, lorem? Veniam! Vestibulum tenetur atque ultricies justo pariatur dis eget condimentum </tspan><tspan x="0" y="80">libero, occaecat! Vulputate molestias quaerat, maxime!.</tspan></text>
+              <g id="Grupo_923-5" data-name="Grupo 923" transform="translate(148 -23)">
+                <g id="noun_Star_1174018-9" data-name="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920-9" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-9" data-name="Grupo 919">
+                      <path id="Trazado_74-9" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-10" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-10" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-10" data-name="Grupo 919">
+                      <path id="Trazado_74-10" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-19" data-name="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922-19" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-19" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-19" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-20" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-20" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-20" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-20" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-21" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-21" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-21" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-21" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021-5" data-name="5 de septiembre de 2021" transform="translate(315 2093)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+            </g>
+          </g>
+          <line id="Línea_23-2" data-name="Línea 23" x2="700" transform="translate(260.5 2222.5)" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+        </g>
+        <g id="Grupo_927-3" data-name="Grupo 927" transform="translate(-260 -1585)">
+          <g id="Grupo_926-3" data-name="Grupo 926">
+            <g id="Grupo_924-6" data-name="Grupo 924">
+              <path id="Trazado_73-6" data-name="Trazado 73" d="M-3.609-21.484a20.357,20.357,0,0,1,10.5,2.837,21.22,21.22,0,0,1,7.663,7.663,20.357,20.357,0,0,1,2.837,10.5,20.357,20.357,0,0,1-2.837,10.5,21.22,21.22,0,0,1-7.663,7.663,20.357,20.357,0,0,1-10.5,2.837,20.357,20.357,0,0,1-10.5-2.837,21.22,21.22,0,0,1-7.663-7.663,20.357,20.357,0,0,1-2.837-10.5,20.357,20.357,0,0,1,2.837-10.5,21.22,21.22,0,0,1,7.663-7.663A20.357,20.357,0,0,1-3.609-21.484Zm0,4.065a16.434,16.434,0,0,0-8.468,2.286,17.078,17.078,0,0,0-6.181,6.181,16.511,16.511,0,0,0-2.286,8.51,16.062,16.062,0,0,0,2.371,8.51A8.009,8.009,0,0,1-16.48,4.85a7.887,7.887,0,0,1,3.641-2.286,10.661,10.661,0,0,1-1.609-5.673,10.908,10.908,0,0,1,1.44-5.546,10.544,10.544,0,0,1,3.937-3.937,10.747,10.747,0,0,1,5.462-1.44,10.747,10.747,0,0,1,5.462,1.44A10.544,10.544,0,0,1,5.79-8.656a10.747,10.747,0,0,1,1.44,5.462A10.809,10.809,0,0,1,5.62,2.564,7.887,7.887,0,0,1,9.262,4.85a8.009,8.009,0,0,1,1.694,3.218,16.062,16.062,0,0,0,2.371-8.51,16.511,16.511,0,0,0-2.286-8.51,17.078,17.078,0,0,0-6.181-6.181A16.434,16.434,0,0,0-3.609-17.42ZM3.165-3.194a6.523,6.523,0,0,0-1.99-4.784,6.523,6.523,0,0,0-4.784-1.99,6.523,6.523,0,0,0-4.784,1.99,6.523,6.523,0,0,0-1.99,4.784A6.523,6.523,0,0,0-8.394,1.59,6.523,6.523,0,0,0-3.609,3.58,6.523,6.523,0,0,0,1.175,1.59,6.523,6.523,0,0,0,3.165-3.194Zm-17.613,15.75A17.545,17.545,0,0,0-9.41,15.435a16.611,16.611,0,0,0,5.8,1.016,16.611,16.611,0,0,0,5.8-1.016,17.545,17.545,0,0,0,5.038-2.879V10.185a3.9,3.9,0,0,0-.762-2.329,3.562,3.562,0,0,0-2.032-1.4L2.318,5.866A10.325,10.325,0,0,1-3.609,7.645,10.325,10.325,0,0,1-9.537,5.866l-2.117.593a3.562,3.562,0,0,0-2.032,1.4,3.9,3.9,0,0,0-.762,2.329Z" transform="translate(284.609 2050.484)"/>
+              <g id="Grupo_918-6" data-name="Grupo 918" transform="translate(-10 -4)">
+                <text id="Nombre_y_apellido-8" data-name="Nombre y apellido" transform="translate(325 2050)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Nombre y apellido</tspan></text>
+              </g>
+              <text id="Porta_corporis_nibh._Adipisci_maiores_dui_torquent_porttitor_wisi_necessitatibus_lorem_perspiciatis_repudiandae_ad_nesciunt_deleniti_facilisi_est_orci_libero_aspernatur_asperiores_ornare_aliquip_vehicula_Proident_Nobis_Deserunt_conubia_facilis_amet_3" data-name="Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet " transform="translate(314 2109)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Porta corporis nibh. Adipisci maiores dui torquent porttitor wisi necessitatibus lorem perspiciatis repudiandae ad nesciunt </tspan><tspan x="0" y="38">deleniti facilisi, est orci libero, aspernatur asperiores ornare aliquip vehicula? Proident? Nobis? Deserunt, conubia facilis, amet </tspan><tspan x="0" y="59">torquent, voluptate dictum, sapien, lorem? Veniam! Vestibulum tenetur atque ultricies justo pariatur dis eget condimentum </tspan><tspan x="0" y="80">libero, occaecat! Vulputate molestias quaerat, maxime!.</tspan></text>
+              <g id="Grupo_923-6" data-name="Grupo 923" transform="translate(148 -23)">
+                <g id="noun_Star_1174018-11" data-name="noun_Star_1174018" transform="translate(231.151 2078.263)">
+                  <g id="Grupo_920-11" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-11" data-name="Grupo 919">
+                      <path id="Trazado_74-11" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174018-12" data-name="noun_Star_1174018" transform="translate(251.546 2078.263)">
+                  <g id="Grupo_920-12" data-name="Grupo 920" transform="translate(0 0)">
+                    <g id="Grupo_919-12" data-name="Grupo 919">
+                      <path id="Trazado_74-12" data-name="Trazado 74" d="M27.841,40.871l.947-5.521-4.012-3.91,5.544-.806L32.8,25.611l2.479,5.024,5.544.806-4.012,3.91.947,5.521L32.8,38.265ZM32.8,37.187l3.691,1.941-.7-4.11,2.986-2.911-4.127-.6L32.8,27.767l-1.846,3.74-4.127.6,2.986,2.911-.7,4.11Z" transform="translate(-24.777 -25.611)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-22" data-name="noun_Star_1174020" transform="translate(210.95 2078.359)">
+                  <g id="Grupo_922-22" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-22" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-22" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-23" data-name="noun_Star_1174020" transform="translate(188.986 2078.359)">
+                  <g id="Grupo_922-23" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-23" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-23" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="noun_Star_1174020-24" data-name="noun_Star_1174020" transform="translate(167.022 2078.359)">
+                  <g id="Grupo_922-24" data-name="Grupo 922" transform="translate(0 0)">
+                    <g id="Grupo_921-24" data-name="Grupo 921" transform="translate(0 0)">
+                      <path id="Trazado_75-24" data-name="Trazado 75" d="M35.973,41.575,40.9,44.166l-.941-5.487,3.987-3.886-5.509-.8L35.973,29l-2.464,4.992-5.509.8,3.987,3.886-.941,5.487Z" transform="translate(-28 -29)"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <text id="_5_de_septiembre_de_2021-6" data-name="5 de septiembre de 2021" transform="translate(315 2093)" font-size="12" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">5 de septiembre de 2021</tspan></text>
+            </g>
+          </g>
+          <line id="Línea_23-3" data-name="Línea 23" x2="700" transform="translate(260.5 2222.5)" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="Grupo_931" data-name="Grupo 931" transform="translate(523 -653)">
+        <g id="Rectángulo_39-4" data-name="Rectángulo 39" transform="translate(289 2626)" stroke="#000" stroke-width="1">
+          <rect width="145" height="49" stroke="none"/>
+          <rect x="0.5" y="0.5" width="144" height="48" fill="none"/>
+        </g>
+        <text id="DEJA_UNA_OPINIÓN" data-name="DEJA UNA OPINIÓN" transform="translate(304 2657)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">DEJA UNA OPINIÓN</tspan></text>
+      </g>
+      <g id="Grupo_934" data-name="Grupo 934" transform="translate(-78 -6)">
+        <g id="Grupo_933" data-name="Grupo 933" transform="translate(95 -40)">
+          <g id="noun_Star_1174018-13" data-name="noun_Star_1174018" transform="translate(243.189 2070.316)">
+            <g id="Grupo_920-13" data-name="Grupo 920" transform="translate(0 0)">
+              <g id="Grupo_919-13" data-name="Grupo 919">
+                <path id="Trazado_74-13" data-name="Trazado 74" d="M29.437,48.819l1.44-8.4-6.1-5.947,8.431-1.225,3.77-7.64,3.77,7.64,8.431,1.225-6.1,5.947,1.44,8.4-7.541-3.965Zm7.541-5.6,5.614,2.951L41.52,39.916l4.542-4.427-6.276-.912L36.978,28.89l-2.807,5.687-6.276.912,4.542,4.427-1.072,6.251Z" transform="translate(-24.777 -25.611)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <text id="_4_5" data-name="4 / 5" transform="translate(370 2053)" font-size="28" font-family="Oswald-Bold, Oswald" font-weight="700"><tspan x="0" y="0">4</tspan><tspan y="0" font-size="12" font-family="Oswald-Medium, Oswald" font-weight="500"> </tspan><tspan y="0" font-size="15" font-family="Oswald-Medium, Oswald" font-weight="500">/ 5</tspan></text>
+      </g>
+      <text id="Rating_promedio" data-name="Rating promedio" transform="translate(341 2045)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Rating promedio</tspan></text>
+      <g id="Grupo_935" data-name="Grupo 935" transform="translate(-11 -14)">
+        <text id="Ver_todas" data-name="Ver todas" transform="translate(598 2772)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Ver todas</tspan></text>
+        <line id="Línea_25" data-name="Línea 25" x2="54" transform="translate(598.5 2777.5)" fill="none" stroke="#000" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Grupo_940" data-name="Grupo 940" transform="translate(0 106)">
+      <rect id="Rectángulo_43" data-name="Rectángulo 43" width="1140" height="514" transform="translate(230 201)" fill="#fff"/>
+      <g id="Grupo_73" data-name="Grupo 73" transform="translate(16 15)">
+        <g id="Grupo_68" data-name="Grupo 68" transform="translate(-2)">
+          <rect id="Rectángulo_44" data-name="Rectángulo 44" width="67" height="62" transform="translate(245 220)" fill="#ededed"/>
+          <path id="Trazado_13" data-name="Trazado 13" d="M-185.543-177.83a.305.305,0,0,1,.212.106.305.305,0,0,1,.106.212v12.934a.305.305,0,0,1-.106.212.305.305,0,0,1-.212.106h-19.719a.305.305,0,0,1-.212-.106.305.305,0,0,1-.106-.212v-12.934a.305.305,0,0,1,.106-.212.305.305,0,0,1,.212-.106Zm.318-2.544h-20.355a2.454,2.454,0,0,0-1.8.742,2.454,2.454,0,0,0-.742,1.8v13.57a2.454,2.454,0,0,0,.742,1.8,2.454,2.454,0,0,0,1.8.742h20.355a2.454,2.454,0,0,0,1.8-.742,2.454,2.454,0,0,0,.742-1.8v-13.57a2.454,2.454,0,0,0-.742-1.8A2.454,2.454,0,0,0-185.225-180.375Zm-13.994,5.937a2.052,2.052,0,0,0-.61-1.511,2.052,2.052,0,0,0-1.511-.61,2.052,2.052,0,0,0-1.511.61,2.052,2.052,0,0,0-.61,1.511,2.052,2.052,0,0,0,.61,1.511,2.052,2.052,0,0,0,1.511.61,2.052,2.052,0,0,0,1.511-.61A2.052,2.052,0,0,0-199.22-174.438Zm-3.817,5.089v2.544h15.266v-4.241l-3.817-3.817a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159l-5.513,5.513-2.12-2.12a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159Z" transform="translate(474.34 422.295)" fill="#cecece"/>
+        </g>
+        <g id="Grupo_69" data-name="Grupo 69" transform="translate(-2 74)">
+          <rect id="Rectángulo_44-2" data-name="Rectángulo 44" width="67" height="62" transform="translate(245 220)" fill="#ededed"/>
+          <path id="Trazado_59" data-name="Trazado 59" d="M15.383-38.088a.909.909,0,0,1,.479.838.909.909,0,0,1-.479.838l-7.023,4.03a.891.891,0,0,1-.958,0,.909.909,0,0,1-.479-.838v-8.3a.909.909,0,0,1,.479-.838.891.891,0,0,1,.958,0Zm5.267.718a9.592,9.592,0,0,1-1.337,4.948A10,10,0,0,1,15.7-28.811a9.592,9.592,0,0,1-4.948,1.337,9.592,9.592,0,0,1-4.948-1.337A10,10,0,0,1,2.2-32.422,9.592,9.592,0,0,1,.859-37.37,9.592,9.592,0,0,1,2.2-42.318a10,10,0,0,1,3.611-3.611,9.592,9.592,0,0,1,4.948-1.337A9.592,9.592,0,0,1,15.7-45.929a10,10,0,0,1,3.611,3.611A9.592,9.592,0,0,1,20.65-37.37Zm-17.876,0a7.744,7.744,0,0,0,1.077,3.99,8.047,8.047,0,0,0,2.913,2.913,7.744,7.744,0,0,0,3.99,1.077,7.744,7.744,0,0,0,3.99-1.077,8.047,8.047,0,0,0,2.913-2.913,7.744,7.744,0,0,0,1.077-3.99,7.744,7.744,0,0,0-1.077-3.99,8.047,8.047,0,0,0-2.913-2.913,7.744,7.744,0,0,0-3.99-1.077,7.744,7.744,0,0,0-3.99,1.077A8.047,8.047,0,0,0,3.852-41.36,7.744,7.744,0,0,0,2.775-37.37Z" transform="translate(268 288.49)" fill="#cecece"/>
+        </g>
+        <g id="Grupo_70" data-name="Grupo 70" transform="translate(-2 148)">
+          <rect id="Rectángulo_44-3" data-name="Rectángulo 44" width="67" height="62" transform="translate(245 220)" fill="#ededed"/>
+          <path id="Trazado_13-2" data-name="Trazado 13" d="M-185.543-177.83a.305.305,0,0,1,.212.106.305.305,0,0,1,.106.212v12.934a.305.305,0,0,1-.106.212.305.305,0,0,1-.212.106h-19.719a.305.305,0,0,1-.212-.106.305.305,0,0,1-.106-.212v-12.934a.305.305,0,0,1,.106-.212.305.305,0,0,1,.212-.106Zm.318-2.544h-20.355a2.454,2.454,0,0,0-1.8.742,2.454,2.454,0,0,0-.742,1.8v13.57a2.454,2.454,0,0,0,.742,1.8,2.454,2.454,0,0,0,1.8.742h20.355a2.454,2.454,0,0,0,1.8-.742,2.454,2.454,0,0,0,.742-1.8v-13.57a2.454,2.454,0,0,0-.742-1.8A2.454,2.454,0,0,0-185.225-180.375Zm-13.994,5.937a2.052,2.052,0,0,0-.61-1.511,2.052,2.052,0,0,0-1.511-.61,2.052,2.052,0,0,0-1.511.61,2.052,2.052,0,0,0-.61,1.511,2.052,2.052,0,0,0,.61,1.511,2.052,2.052,0,0,0,1.511.61,2.052,2.052,0,0,0,1.511-.61A2.052,2.052,0,0,0-199.22-174.438Zm-3.817,5.089v2.544h15.266v-4.241l-3.817-3.817a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159l-5.513,5.513-2.12-2.12a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159Z" transform="translate(474.34 422.295)" fill="#cecece"/>
+        </g>
+        <g id="Grupo_71" data-name="Grupo 71" transform="translate(-2 222)">
+          <rect id="Rectángulo_44-4" data-name="Rectángulo 44" width="67" height="62" transform="translate(245 220)" fill="#ededed"/>
+          <path id="Trazado_13-3" data-name="Trazado 13" d="M-185.543-177.83a.305.305,0,0,1,.212.106.305.305,0,0,1,.106.212v12.934a.305.305,0,0,1-.106.212.305.305,0,0,1-.212.106h-19.719a.305.305,0,0,1-.212-.106.305.305,0,0,1-.106-.212v-12.934a.305.305,0,0,1,.106-.212.305.305,0,0,1,.212-.106Zm.318-2.544h-20.355a2.454,2.454,0,0,0-1.8.742,2.454,2.454,0,0,0-.742,1.8v13.57a2.454,2.454,0,0,0,.742,1.8,2.454,2.454,0,0,0,1.8.742h20.355a2.454,2.454,0,0,0,1.8-.742,2.454,2.454,0,0,0,.742-1.8v-13.57a2.454,2.454,0,0,0-.742-1.8A2.454,2.454,0,0,0-185.225-180.375Zm-13.994,5.937a2.052,2.052,0,0,0-.61-1.511,2.052,2.052,0,0,0-1.511-.61,2.052,2.052,0,0,0-1.511.61,2.052,2.052,0,0,0-.61,1.511,2.052,2.052,0,0,0,.61,1.511,2.052,2.052,0,0,0,1.511.61,2.052,2.052,0,0,0,1.511-.61A2.052,2.052,0,0,0-199.22-174.438Zm-3.817,5.089v2.544h15.266v-4.241l-3.817-3.817a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159l-5.513,5.513-2.12-2.12a.573.573,0,0,0-.424-.159.573.573,0,0,0-.424.159Z" transform="translate(474.34 422.295)" fill="#cecece"/>
+        </g>
+        <g id="Grupo_72" data-name="Grupo 72" transform="translate(9)">
+          <rect id="Rectángulo_45" data-name="Rectángulo 45" width="538" height="428" transform="translate(316 220)" fill="#ededed"/>
+          <path id="Trazado_14" data-name="Trazado 14" d="M-145.313-173.3a.85.85,0,0,1,.59.295.85.85,0,0,1,.295.59v35.977a.85.85,0,0,1-.295.59.85.85,0,0,1-.59.295h-54.85a.85.85,0,0,1-.59-.295.85.85,0,0,1-.295-.59v-35.977a.85.85,0,0,1,.295-.59.85.85,0,0,1,.59-.295Zm.885-7.077h-56.62a6.825,6.825,0,0,0-5.013,2.064,6.825,6.825,0,0,0-2.064,5.013v37.746a6.825,6.825,0,0,0,2.064,5.013,6.825,6.825,0,0,0,5.013,2.064h56.62a6.825,6.825,0,0,0,5.013-2.064,6.825,6.825,0,0,0,2.064-5.013V-173.3a6.825,6.825,0,0,0-2.064-5.013A6.825,6.825,0,0,0-144.428-180.375Zm-38.926,16.514a5.707,5.707,0,0,0-1.7-4.2,5.707,5.707,0,0,0-4.2-1.7,5.707,5.707,0,0,0-4.2,1.7,5.707,5.707,0,0,0-1.7,4.2,5.707,5.707,0,0,0,1.7,4.2,5.707,5.707,0,0,0,4.2,1.7,5.707,5.707,0,0,0,4.2-1.7A5.707,5.707,0,0,0-183.354-163.86Zm-10.616,14.155v7.077h42.465v-11.8l-10.616-10.616a1.594,1.594,0,0,0-1.18-.442,1.594,1.594,0,0,0-1.18.442l-15.334,15.335-5.9-5.9a1.594,1.594,0,0,0-1.18-.442,1.594,1.594,0,0,0-1.18.442Z" transform="translate(773.675 582.673)" fill="#cecece"/>
+        </g>
+      </g>
+      <g id="Grupo_121" data-name="Grupo 121">
+        <text id="MARCA-5" data-name="MARCA" transform="translate(910 252)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">MARCA</tspan></text>
+        <text id="Nombre_del_Producto-5" data-name="Nombre del Producto" transform="translate(909 290)" font-size="26" font-family="Oswald-SemiBold, Oswald" font-weight="600"><tspan x="0" y="0">Nombre del Producto</tspan></text>
+      </g>
+      <g id="Grupo_76" data-name="Grupo 76" transform="translate(0 -6)">
+        <text id="Añadir_a_Favoritos" data-name="Añadir a Favoritos" transform="translate(932 324)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Añadir a Favoritos</tspan></text>
+        <path id="Trazado_77" data-name="Trazado 77" d="M13.418-11.25a4.565,4.565,0,0,1,1.436,2.168,4.288,4.288,0,0,1,0,2.329A4.554,4.554,0,0,1,13.74-4.746L8.613.469A1.521,1.521,0,0,1,7.5.937,1.521,1.521,0,0,1,6.387.469L1.26-4.746A4.554,4.554,0,0,1,.146-6.753,4.107,4.107,0,0,1,.176-9.082,4.37,4.37,0,0,1,1.582-11.25a3.806,3.806,0,0,1,1.9-.879,4.5,4.5,0,0,1,2.153.176A4.647,4.647,0,0,1,7.5-10.811a4.647,4.647,0,0,1,1.86-1.143,4.5,4.5,0,0,1,2.153-.176A3.806,3.806,0,0,1,13.418-11.25Zm-.674,5.508A3.146,3.146,0,0,0,13.491-7.1a2.863,2.863,0,0,0-.015-1.6,2.894,2.894,0,0,0-.967-1.465,2.708,2.708,0,0,0-2.007-.615,2.98,2.98,0,0,0-1.978.937L7.5-8.818,6.475-9.844A2.98,2.98,0,0,0,4.5-10.781a2.708,2.708,0,0,0-2.007.615A2.894,2.894,0,0,0,1.523-8.7a2.863,2.863,0,0,0-.015,1.6,3.146,3.146,0,0,0,.747,1.362L7.412-.527q.088.117.176,0Z" transform="translate(910 324)"/>
+      </g>
+      <g id="Grupo_77" data-name="Grupo 77" transform="translate(70 40)">
+        <g id="Grupo_76-2" data-name="Grupo 76" transform="translate(651 -753)">
+          <g id="Grupo_16-5" data-name="Grupo 16" transform="translate(178.472 1115.543)">
+            <g id="Grupo_79" data-name="Grupo 79" transform="translate(10 -2)">
+              <text id="_10.000-5" data-name="$ 10.000" transform="translate(57.619 19)" fill="#c4c4c4" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-53.952" y="0">$ 10.000</tspan></text>
+              <line id="Línea_3-5" data-name="Línea 3" x2="60.028" transform="translate(1 13.231)" fill="none" stroke="#c4c4c4" stroke-width="1"/>
+            </g>
+          </g>
+          <g id="Grupo_17-5" data-name="Grupo 17" transform="translate(264.997 1105)">
+            <text id="_7.000-5" data-name="$ 7.000" transform="translate(79 28)" font-size="17" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-50.371" y="0">$ 7.000</tspan></text>
+          </g>
+        </g>
+        <g id="Grupo_77-2" data-name="Grupo 77" transform="translate(632.84 -713.836)">
+          <g id="Rectángulo_30-5" data-name="Rectángulo 30" transform="translate(379 1069)" fill="#fff" stroke="#000" stroke-width="1">
+            <rect width="92.32" height="31.672" stroke="none"/>
+            <rect x="0.5" y="0.5" width="91.32" height="30.672" fill="none"/>
+          </g>
+          <text id="_30_Off-5" data-name="30% Off" transform="translate(450.882 1091.698)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-51.216" y="0">30% Off</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_915" data-name="Grupo 915" transform="translate(0 -14)">
+        <g id="Grupo_80" data-name="Grupo 80" transform="translate(620 -2124)">
+          <g id="Rectángulo_39-5" data-name="Rectángulo 39" transform="translate(289 2626)" stroke="#000" stroke-width="1">
+            <rect width="145" height="49" stroke="none"/>
+            <rect x="0.5" y="0.5" width="144" height="48" fill="none"/>
+          </g>
+          <text id="AÑADIR_AL_CARRITO" data-name="AÑADIR AL CARRITO" transform="translate(299 2658)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">AÑADIR AL CARRITO</tspan></text>
+        </g>
+        <g id="Grupo_144" data-name="Grupo 144" transform="translate(782 -2124)">
+          <g id="Rectángulo_39-6" data-name="Rectángulo 39" transform="translate(289 2626)" stroke="#000" stroke-width="1">
+            <rect width="145" height="49" stroke="none"/>
+            <rect x="0.5" y="0.5" width="144" height="48" fill="none"/>
+          </g>
+          <text id="COMPRAR_AHORA" data-name="COMPRAR AHORA" transform="translate(306 2658)" fill="#fff" font-size="16" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">COMPRAR AHORA</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_83" data-name="Grupo 83" transform="translate(0 -56)">
+        <text id="Puede_realizar_un_seguimiento_del_precio_de_este_producto." data-name="Puede realizar un seguimiento del precio de este producto." transform="translate(909 514)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Puede realizar un seguimiento del precio de este producto.</tspan></text>
+        <g id="Grupo_82" data-name="Grupo 82" transform="translate(312 -63.75)">
+          <text id="Seguimiento" transform="translate(910 577)" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Seguimiento</tspan></text>
+          <line id="Línea_4" data-name="Línea 4" y1="0.25" x2="67" transform="translate(910.5 582.25)" fill="none" stroke="#000" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="Grupo_914" data-name="Grupo 914" transform="translate(0 30)">
+        <g id="Grupo_891" data-name="Grupo 891" transform="translate(69 -346)">
+          <rect id="Rectángulo_48-25" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-9" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+        <g id="Grupo_895" data-name="Grupo 895" transform="translate(70 -299)">
+          <rect id="Rectángulo_48-26" data-name="Rectángulo 48" width="94" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-10" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+        <g id="Grupo_892" data-name="Grupo 892" transform="translate(178 -346)">
+          <rect id="Rectángulo_48-27" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem_Se-17" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+        </g>
+        <g id="Grupo_896" data-name="Grupo 896" transform="translate(179 -299)">
+          <rect id="Rectángulo_48-28" data-name="Rectángulo 48" width="106" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem_Se-18" data-name="Lorem Ipsem Se" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem Se</tspan></text>
+        </g>
+        <g id="Grupo_894" data-name="Grupo 894" transform="translate(299 -346)">
+          <rect id="Rectángulo_48-29" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-11" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+        <g id="Grupo_900" data-name="Grupo 900" transform="translate(405 -346)">
+          <rect id="Rectángulo_48-30" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-12" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+        <g id="Grupo_898" data-name="Grupo 898" transform="translate(300 -299)">
+          <rect id="Rectángulo_48-31" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-13" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+        <g id="Grupo_899" data-name="Grupo 899" transform="translate(406 -299)">
+          <rect id="Rectángulo_48-32" data-name="Rectángulo 48" width="91" height="33" transform="translate(840 917)" fill="#e3e3e3"/>
+          <text id="Lorem_Ipsem-14" data-name="Lorem Ipsem" transform="translate(854 939)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Lorem Ipsem</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_917" data-name="Grupo 917">
+        <text id="Nisl_do_fames_consequat_adipisicing._Recusandae_platea_neque_cum_accusamus_voluptate_magni_minim_tincidunt_qui_commodo_ut_ab_Read_M" data-name="Nisl, do fames, consequat adipisicing. Recusandae platea neque, cum, accusamus voluptate magni minim tincidunt, qui commodo ut ab  Read M" transform="translate(910 334)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="0" y="17">Nisl, do fames, consequat adipisicing. Recusandae platea neque, cum, accusamus </tspan></text>
+        <g id="Grupo_913" data-name="Grupo 913" transform="translate(0 -15)">
+          <text id="Leer_más_" data-name="Leer más…" transform="translate(910 390)" font-size="12" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="0" y="0">Leer más…</tspan></text>
+          <line id="Línea_22" data-name="Línea 22" x2="48" transform="translate(910.5 393.5)" fill="none" stroke="#000" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="Grupo_939" data-name="Grupo 939" transform="translate(0 -26)">
+        <text id="Ver_mi_lista_de_favoritos" data-name="Ver mi lista de favoritos" transform="translate(933 597)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="0" y="0">Ver mi lista de favoritos</tspan></text>
+        <g id="Grupo_938" data-name="Grupo 938">
+          <path id="Trazado_78" data-name="Trazado 78" d="M14.815-11.152A5.04,5.04,0,0,1,16.4-8.759a4.735,4.735,0,0,1,0,2.571A5.027,5.027,0,0,1,15.17-3.972L9.51,1.785a1.718,1.718,0,0,1-2.458,0L1.392-3.972A5.027,5.027,0,0,1,.163-6.188,4.534,4.534,0,0,1,.195-8.759a4.825,4.825,0,0,1,1.553-2.393,4.2,4.2,0,0,1,2.1-.97,4.964,4.964,0,0,1,2.377.194,5.13,5.13,0,0,1,2.054,1.261,5.13,5.13,0,0,1,2.054-1.261,4.964,4.964,0,0,1,2.377-.194A4.2,4.2,0,0,1,14.815-11.152Zm-.744,6.081a3.474,3.474,0,0,0,.825-1.5,3.161,3.161,0,0,0-.016-1.763,3.2,3.2,0,0,0-1.067-1.617,2.99,2.99,0,0,0-2.216-.679A3.29,3.29,0,0,0,9.413-9.6L8.281-8.468,7.149-9.6a3.29,3.29,0,0,0-2.183-1.035,2.99,2.99,0,0,0-2.216.679A3.2,3.2,0,0,0,1.683-8.338a3.161,3.161,0,0,0-.016,1.763,3.474,3.474,0,0,0,.825,1.5L8.184.686q.1.129.194,0Z" transform="translate(909 596)"/>
+          <path id="Trazado_79" data-name="Trazado 79" d="M-1622.5,576.261l-3.545,2.151-3.236-2.369-3.124,2.235-.373,1.976,2.251,3.494,4.872,4.78,6.167-6.228,1.48-2.883-1.282-2.064-1.316-1.31Z" transform="translate(2543 9)" stroke="#000" stroke-width="1"/>
+        </g>
+        <line id="Línea_26" data-name="Línea 26" x2="139" transform="translate(933.5 602.5)" fill="none" stroke="#000" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Symbol_2_21" data-name="Symbol 2 – 21" transform="translate(-2 66)">
+      <g transform="matrix(1, 0, 0, 1, 2, -66)" filter="url(#Rectángulo_2)">
+        <rect id="Rectángulo_2-2" data-name="Rectángulo 2" width="1600" height="143" transform="translate(0 66)" fill="#fff"/>
+      </g>
+      <rect id="Rectángulo_1" data-name="Rectángulo 1" width="1600" height="88" fill="#f0f0f0"/>
+      <g id="Grupo_5" data-name="Grupo 5" transform="translate(2)">
+        <g id="Grupo_4" data-name="Grupo 4" transform="translate(1123.929 34)">
+          <text id="Carrito" transform="translate(77.071 19)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-40.72" y="0">Carrito</tspan></text>
+          <path id="Trazado_2" data-name="Trazado 2" d="M-15.429,0a1.942,1.942,0,0,0-1.929-1.929A1.942,1.942,0,0,0-19.286,0a1.942,1.942,0,0,0,1.929,1.929A1.942,1.942,0,0,0-15.429,0Zm13.5,0A1.942,1.942,0,0,0-3.857-1.929,1.942,1.942,0,0,0-5.786,0,1.942,1.942,0,0,0-3.857,1.929,1.942,1.942,0,0,0-1.929,0ZM0-16.393a.971.971,0,0,0-.964-.964h-18.1c-.151-.723-.181-1.929-1.19-1.929h-3.857a.971.971,0,0,0-.964.964.971.971,0,0,0,.964.964h3.074l2.667,12.4a7.761,7.761,0,0,0-.919,2.064.971.971,0,0,0,.964.964H-2.893a.971.971,0,0,0,.964-.964.971.971,0,0,0-.964-.964H-16.754a2.282,2.282,0,0,0,.362-.964,5.008,5.008,0,0,0-.2-1.055L-.859-7.714A.988.988,0,0,0,0-8.679Z" transform="translate(25.071 21)"/>
+        </g>
+        <line id="Línea_1" data-name="Línea 1" y2="26" transform="translate(1366.993 31.5)" fill="none" stroke="#000" stroke-width="1"/>
+        <line id="Línea_2" data-name="Línea 2" y2="26" transform="translate(1230.675 31.5)" fill="none" stroke="#000" stroke-width="1"/>
+        <g id="Grupo_145" data-name="Grupo 145" transform="translate(1241.053 33)">
+          <path id="Trazado_1" data-name="Trazado 1" d="M-12.5-21.484a11.738,11.738,0,0,1,6.055,1.636A12.236,12.236,0,0,1-2.026-15.43,11.738,11.738,0,0,1-.391-9.375,11.738,11.738,0,0,1-2.026-3.32,12.236,12.236,0,0,1-6.445,1.1,11.738,11.738,0,0,1-12.5,2.734,11.738,11.738,0,0,1-18.555,1.1,12.236,12.236,0,0,1-22.974-3.32a11.738,11.738,0,0,1-1.636-6.055,11.738,11.738,0,0,1,1.636-6.055,12.236,12.236,0,0,1,4.419-4.419A11.738,11.738,0,0,1-12.5-21.484Zm0,2.344a9.476,9.476,0,0,0-4.883,1.318,9.848,9.848,0,0,0-3.564,3.564,9.521,9.521,0,0,0-1.318,4.907A9.262,9.262,0,0,0-20.9-4.443,4.618,4.618,0,0,1-19.922-6.3a4.548,4.548,0,0,1,2.1-1.318,6.148,6.148,0,0,1-.928-3.271,6.29,6.29,0,0,1,.83-3.2,6.08,6.08,0,0,1,2.271-2.271,6.2,6.2,0,0,1,3.149-.83,6.2,6.2,0,0,1,3.149.83A6.08,6.08,0,0,1-7.08-14.087a6.2,6.2,0,0,1,.83,3.149,6.233,6.233,0,0,1-.928,3.32A4.548,4.548,0,0,1-5.078-6.3,4.618,4.618,0,0,1-4.1-4.443,9.262,9.262,0,0,0-2.734-9.351a9.521,9.521,0,0,0-1.318-4.907,9.848,9.848,0,0,0-3.564-3.564A9.476,9.476,0,0,0-12.5-19.141Zm3.906,8.2A3.761,3.761,0,0,0-9.741-13.7,3.761,3.761,0,0,0-12.5-14.844,3.761,3.761,0,0,0-15.259-13.7a3.761,3.761,0,0,0-1.147,2.759,3.761,3.761,0,0,0,1.147,2.759A3.761,3.761,0,0,0-12.5-7.031,3.761,3.761,0,0,0-9.741-8.179,3.761,3.761,0,0,0-8.594-10.937ZM-18.75-1.855A10.117,10.117,0,0,0-15.845-.2,9.579,9.579,0,0,0-12.5.391,9.579,9.579,0,0,0-9.155-.2,10.117,10.117,0,0,0-6.25-1.855V-3.223a2.247,2.247,0,0,0-.439-1.343,2.054,2.054,0,0,0-1.172-.806l-1.221-.342A5.954,5.954,0,0,1-12.5-4.687a5.954,5.954,0,0,1-3.418-1.025l-1.221.342a2.054,2.054,0,0,0-1.172.806,2.247,2.247,0,0,0-.439,1.343Z" transform="translate(24.609 22)"/>
+          <text id="Crear_cuenta" data-name="Crear cuenta" transform="translate(106.946 19)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-74.848" y="0">Crear cuenta</tspan></text>
+        </g>
+        <g id="Grupo_960" data-name="Grupo 960" transform="translate(1385.986 33)">
+          <path id="Trazado_1-2" data-name="Trazado 1" d="M-12.5-21.484a11.738,11.738,0,0,1,6.055,1.636A12.236,12.236,0,0,1-2.026-15.43,11.738,11.738,0,0,1-.391-9.375,11.738,11.738,0,0,1-2.026-3.32,12.236,12.236,0,0,1-6.445,1.1,11.738,11.738,0,0,1-12.5,2.734,11.738,11.738,0,0,1-18.555,1.1,12.236,12.236,0,0,1-22.974-3.32a11.738,11.738,0,0,1-1.636-6.055,11.738,11.738,0,0,1,1.636-6.055,12.236,12.236,0,0,1,4.419-4.419A11.738,11.738,0,0,1-12.5-21.484Zm0,2.344a9.476,9.476,0,0,0-4.883,1.318,9.848,9.848,0,0,0-3.564,3.564,9.521,9.521,0,0,0-1.318,4.907A9.262,9.262,0,0,0-20.9-4.443,4.618,4.618,0,0,1-19.922-6.3a4.548,4.548,0,0,1,2.1-1.318,6.148,6.148,0,0,1-.928-3.271,6.29,6.29,0,0,1,.83-3.2,6.08,6.08,0,0,1,2.271-2.271,6.2,6.2,0,0,1,3.149-.83,6.2,6.2,0,0,1,3.149.83A6.08,6.08,0,0,1-7.08-14.087a6.2,6.2,0,0,1,.83,3.149,6.233,6.233,0,0,1-.928,3.32A4.548,4.548,0,0,1-5.078-6.3,4.618,4.618,0,0,1-4.1-4.443,9.262,9.262,0,0,0-2.734-9.351a9.521,9.521,0,0,0-1.318-4.907,9.848,9.848,0,0,0-3.564-3.564A9.476,9.476,0,0,0-12.5-19.141Zm3.906,8.2A3.761,3.761,0,0,0-9.741-13.7,3.761,3.761,0,0,0-12.5-14.844,3.761,3.761,0,0,0-15.259-13.7a3.761,3.761,0,0,0-1.147,2.759,3.761,3.761,0,0,0,1.147,2.759A3.761,3.761,0,0,0-12.5-7.031,3.761,3.761,0,0,0-9.741-8.179,3.761,3.761,0,0,0-8.594-10.937ZM-18.75-1.855A10.117,10.117,0,0,0-15.845-.2,9.579,9.579,0,0,0-12.5.391,9.579,9.579,0,0,0-9.155-.2,10.117,10.117,0,0,0-6.25-1.855V-3.223a2.247,2.247,0,0,0-.439-1.343,2.054,2.054,0,0,0-1.172-.806l-1.221-.342A5.954,5.954,0,0,1-12.5-4.687a5.954,5.954,0,0,1-3.418-1.025l-1.221.342a2.054,2.054,0,0,0-1.172.806,2.247,2.247,0,0,0-.439,1.343Z" transform="translate(24.609 22)"/>
+          <text id="Iniciar_sesión" data-name="Iniciar sesión" transform="translate(106.946 19)" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-76.704" y="0">Iniciar sesión</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_6" data-name="Grupo 6" transform="translate(55 -4)">
+        <g id="Rectángulo_17" data-name="Rectángulo 17" transform="translate(588 23)" fill="#fff" stroke="#000" stroke-width="1">
+          <rect width="442" height="50" stroke="none"/>
+          <rect x="0.5" y="0.5" width="441" height="49" fill="none"/>
+        </g>
+        <g id="Grupo_7" data-name="Grupo 7" transform="translate(-15.298)">
+          <path id="Trazado_3" data-name="Trazado 3" d="M-9.129-11.035a5.484,5.484,0,0,1-5.478,5.478,5.484,5.484,0,0,1-5.478-5.478,5.484,5.484,0,0,1,5.478-5.478A5.484,5.484,0,0,1-9.129-11.035ZM-2.869-.863a1.574,1.574,0,0,0-.452-1.1L-7.515-6.157A8.588,8.588,0,0,0-6-11.035a8.6,8.6,0,0,0-8.608-8.608,8.6,8.6,0,0,0-8.608,8.608,8.6,8.6,0,0,0,8.608,8.608A8.588,8.588,0,0,0-9.728-3.944L-5.534.238A1.534,1.534,0,0,0-4.434.7,1.576,1.576,0,0,0-2.869-.863Z" transform="translate(1033.167 57.643)" fill="#959595"/>
+          <text id="Buscar_productos_" data-name="Buscar productos…" transform="translate(720.298 55)" fill="#959595" font-size="16" font-family="Oswald-Regular, Oswald"><tspan x="-109.92" y="0">Buscar productos…</tspan></text>
+        </g>
+      </g>
+      <g id="Grupo_8" data-name="Grupo 8" transform="translate(-192 0.5)">
+        <text id="VIDEOJUEGOS" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-70.336" y="0">VIDEOJUEGOS</tspan></text>
+        <path id="Trazado_4" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <rect id="Rectángulo_18" data-name="Rectángulo 18" width="156" height="55" transform="translate(1217 88)"/>
+      <text id="PREVENTA" transform="translate(1321 121)" fill="#fff" font-size="14" font-family="Oswald-Medium, Oswald" font-weight="500"><tspan x="-55.104" y="0">PREVENTA</tspan></text>
+      <text id="LOGO-2" data-name="LOGO" transform="translate(232 58)" font-size="39" font-family="Oswald-Bold, Oswald" font-weight="700"><tspan x="0" y="0">LOGO</tspan></text>
+      <text id="PLUS_PSN" data-name="PLUS &amp; PSN" transform="translate(993 123)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-62.132" y="0">PLUS &amp; PSN</tspan></text>
+      <text id="SERVICIO_TÉCNICO" data-name="SERVICIO TÉCNICO" transform="translate(1112 122)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-95.872" y="0">SERVICIO TÉCNICO</tspan></text>
+      <text id="CONTACTO" transform="translate(1189 122)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-55.272" y="0">CONTACTO</tspan></text>
+      <g id="Grupo_973" data-name="Grupo 973" transform="translate(-12 0.5)">
+        <text id="CONSOLAS_Y_HARDWARE" data-name="CONSOLAS Y HARDWARE" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-127.554" y="0">CONSOLAS Y HARDWARE</tspan></text>
+        <path id="Trazado_4-2" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <g id="Grupo_974" data-name="Grupo 974" transform="translate(151 2)">
+        <text id="ACCESORIOS_GAMING" data-name="ACCESORIOS GAMING" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-111.202" y="0">ACCESORIOS GAMING</tspan></text>
+        <path id="Trazado_4-3" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <g id="Grupo_975" data-name="Grupo 975" transform="translate(217 2)">
+        <text id="PC" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-13.93" y="0">PC</tspan></text>
+        <path id="Trazado_4-4" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <g id="Grupo_976" data-name="Grupo 976" transform="translate(585 2)">
+        <text id="COLECCIONABLES" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-90.944" y="0">COLECCIONABLES</tspan></text>
+        <path id="Trazado_4-5" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <g id="Grupo_977" data-name="Grupo 977" transform="translate(442 2)">
+        <text id="SEMI_NUEVOS" data-name="SEMI NUEVOS" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-70.056" y="0">SEMI NUEVOS</tspan></text>
+        <path id="Trazado_4-6" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+      <g id="Grupo_978" data-name="Grupo 978" transform="translate(320 2)">
+        <text id="DIGITALES" transform="translate(294 121)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-52.332" y="0">DIGITALES</tspan></text>
+        <path id="Trazado_4-7" data-name="Trazado 4" d="M-.73-4.875a.432.432,0,0,0,0-.609l-1.112-1.1a.424.424,0,0,0-.6,0L-6-3.033-9.556-6.589a.424.424,0,0,0-.6,0l-1.112,1.1a.432.432,0,0,0,0,.609L-6.3.087a.424.424,0,0,0,.6,0Z" transform="translate(324 119)"/>
+      </g>
+    </g>
+    <g id="Rectángulo_107" data-name="Rectángulo 107" fill="#1f1813" stroke="#707070" stroke-width="1">
+      <rect width="1600" height="66" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1599" height="65" fill="none"/>
+    </g>
+    <g id="Icon_feather-mail" data-name="Icon feather-mail" transform="translate(1526 16)">
+      <path id="Trazado_83" data-name="Trazado 83" d="M6,6H30a3.009,3.009,0,0,1,3,3V27a3.009,3.009,0,0,1-3,3H6a3.009,3.009,0,0,1-3-3V9A3.009,3.009,0,0,1,6,6Z" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Trazado_84" data-name="Trazado 84" d="M33,9,18,19.5,3,9" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+    <path id="Icon_awesome-whatsapp" data-name="Icon awesome-whatsapp" d="M26.782,6.827A15.614,15.614,0,0,0,2.215,25.664L0,33.75l8.276-2.173a15.562,15.562,0,0,0,7.46,1.9h.007A15.76,15.76,0,0,0,31.5,17.866,15.671,15.671,0,0,0,26.782,6.827ZM15.743,30.846a12.951,12.951,0,0,1-6.609-1.807l-.471-.281L3.755,30.045l1.308-4.788-.309-.492a13,13,0,1,1,24.11-6.9,13.119,13.119,0,0,1-13.12,12.98Zm7.116-9.717c-.387-.2-2.306-1.139-2.665-1.266s-.619-.2-.879.2-1.005,1.266-1.237,1.533-.457.3-.844.1a10.617,10.617,0,0,1-5.309-4.641c-.4-.689.4-.64,1.146-2.13a.723.723,0,0,0-.035-.682c-.1-.2-.879-2.116-1.2-2.9-.316-.759-.64-.654-.879-.668s-.485-.014-.745-.014a1.445,1.445,0,0,0-1.041.485A4.383,4.383,0,0,0,7.8,14.4a7.641,7.641,0,0,0,1.589,4.036c.2.26,2.749,4.2,6.666,5.892,2.475,1.069,3.445,1.16,4.683.977a4,4,0,0,0,2.63-1.856,3.262,3.262,0,0,0,.225-1.856C23.505,21.417,23.245,21.319,22.859,21.129Z" transform="translate(1467.15 15)" fill="#fff"/>
+    <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" d="M28.125,2.25H3.375A3.375,3.375,0,0,0,0,5.625v24.75A3.375,3.375,0,0,0,3.375,33.75h9.65V23.041H8.6V18h4.43V14.158c0-4.37,2.6-6.784,6.586-6.784a26.836,26.836,0,0,1,3.9.34V12h-2.2a2.521,2.521,0,0,0-2.842,2.723V18h4.836l-.773,5.041H18.475V33.75h9.65A3.375,3.375,0,0,0,31.5,30.375V5.625A3.375,3.375,0,0,0,28.125,2.25Z" transform="translate(71.198 15)" fill="#fff"/>
+    <path id="Icon_awesome-instagram" data-name="Icon awesome-instagram" d="M15.757,9.914a8.079,8.079,0,1,0,8.079,8.079A8.066,8.066,0,0,0,15.757,9.914Zm0,13.331a5.252,5.252,0,1,1,5.252-5.252,5.262,5.262,0,0,1-5.252,5.252ZM26.051,9.584A1.884,1.884,0,1,1,24.166,7.7,1.88,1.88,0,0,1,26.051,9.584ZM31.4,11.5a9.325,9.325,0,0,0-2.545-6.6,9.387,9.387,0,0,0-6.6-2.545c-2.6-.148-10.4-.148-13,0a9.373,9.373,0,0,0-6.6,2.538,9.356,9.356,0,0,0-2.545,6.6c-.148,2.6-.148,10.4,0,13a9.325,9.325,0,0,0,2.545,6.6,9.4,9.4,0,0,0,6.6,2.545c2.6.148,10.4.148,13,0a9.325,9.325,0,0,0,6.6-2.545,9.387,9.387,0,0,0,2.545-6.6c.148-2.6.148-10.392,0-12.994ZM28.041,27.281a5.318,5.318,0,0,1-3,3c-2.074.823-7,.633-9.288.633s-7.221.183-9.288-.633a5.318,5.318,0,0,1-3-3c-.823-2.074-.633-7-.633-9.288s-.183-7.221.633-9.288a5.318,5.318,0,0,1,3-3c2.074-.823,7-.633,9.288-.633s7.221-.183,9.288.633a5.318,5.318,0,0,1,3,3c.823,2.074.633,7,.633,9.288S28.863,25.214,28.041,27.281Z" transform="translate(29.807 16.007)" fill="#fff"/>
+    <path id="Icon_awesome-twitter-square" data-name="Icon awesome-twitter-square" d="M28.125,2.25H3.375A3.376,3.376,0,0,0,0,5.625v24.75A3.376,3.376,0,0,0,3.375,33.75h24.75A3.376,3.376,0,0,0,31.5,30.375V5.625A3.376,3.376,0,0,0,28.125,2.25ZM24.687,13.416c.014.2.014.4.014.6a13.031,13.031,0,0,1-13.12,13.12A13.06,13.06,0,0,1,4.5,25.066a9.715,9.715,0,0,0,1.111.056,9.246,9.246,0,0,0,5.723-1.969,4.618,4.618,0,0,1-4.31-3.2,4.97,4.97,0,0,0,2.081-.084,4.612,4.612,0,0,1-3.691-4.528v-.056A4.608,4.608,0,0,0,7.5,15.87,4.6,4.6,0,0,1,5.442,12.03,4.554,4.554,0,0,1,6.068,9.7a13.094,13.094,0,0,0,9.506,4.823,4.621,4.621,0,0,1,7.868-4.212A9.036,9.036,0,0,0,26.367,9.2a4.6,4.6,0,0,1-2.025,2.538A9.177,9.177,0,0,0,27,11.025,9.707,9.707,0,0,1,24.687,13.416Z" transform="translate(158.45 15.995)" fill="#fff"/>
+    <path id="Icon_ionic-logo-youtube" data-name="Icon ionic-logo-youtube" d="M35.761,10.462a5.466,5.466,0,0,0-5.2-5.709C26.663,4.57,22.69,4.5,18.633,4.5H17.367c-4.05,0-8.03.07-11.925.253a5.478,5.478,0,0,0-5.2,5.723C.07,12.98-.007,15.483,0,17.986S.07,22.992.239,25.5a5.484,5.484,0,0,0,5.2,5.73c4.092.19,8.29.274,12.558.267q6.412.021,12.558-.267a5.485,5.485,0,0,0,5.2-5.73c.169-2.51.246-5.013.239-7.523Q36.014,14.224,35.761,10.462ZM14.555,24.884V11.067l10.2,6.9Z" transform="translate(112.577 14.999)" fill="#fff"/>
+    <g id="Icon_feather-mail-2" data-name="Icon feather-mail" transform="translate(205 3678)">
+      <path id="Trazado_83-2" data-name="Trazado 83" d="M6,6H30a3.009,3.009,0,0,1,3,3V27a3.009,3.009,0,0,1-3,3H6a3.009,3.009,0,0,1-3-3V9A3.009,3.009,0,0,1,6,6Z" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Trazado_84-2" data-name="Trazado 84" d="M33,9,18,19.5,3,9" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+    <path id="Icon_awesome-whatsapp-2" data-name="Icon awesome-whatsapp" d="M26.782,6.827A15.614,15.614,0,0,0,2.215,25.664L0,33.75l8.276-2.173a15.562,15.562,0,0,0,7.46,1.9h.007A15.76,15.76,0,0,0,31.5,17.866,15.671,15.671,0,0,0,26.782,6.827ZM15.743,30.846a12.951,12.951,0,0,1-6.609-1.807l-.471-.281L3.755,30.045l1.308-4.788-.309-.492a13,13,0,1,1,24.11-6.9,13.119,13.119,0,0,1-13.12,12.98Zm7.116-9.717c-.387-.2-2.306-1.139-2.665-1.266s-.619-.2-.879.2-1.005,1.266-1.237,1.533-.457.3-.844.1a10.617,10.617,0,0,1-5.309-4.641c-.4-.689.4-.64,1.146-2.13a.723.723,0,0,0-.035-.682c-.1-.2-.879-2.116-1.2-2.9-.316-.759-.64-.654-.879-.668s-.485-.014-.745-.014a1.445,1.445,0,0,0-1.041.485A4.383,4.383,0,0,0,7.8,14.4a7.641,7.641,0,0,0,1.589,4.036c.2.26,2.749,4.2,6.666,5.892,2.475,1.069,3.445,1.16,4.683.977a4,4,0,0,0,2.63-1.856,3.262,3.262,0,0,0,.225-1.856C23.505,21.417,23.245,21.319,22.859,21.129Z" transform="translate(211.15 3630)"/>
+    <text id="Atención_al_Cliente" data-name="Atención al Cliente" transform="translate(346 3655)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-95.746" y="0">Atención al Cliente</tspan></text>
+    <text id="Seguimiento_de_envíos" data-name="Seguimiento de envíos" transform="translate(363 3701)" font-size="14" font-family="Oswald-Regular, Oswald"><tspan x="-113.246" y="0">Seguimiento de envíos</tspan></text>
+    <path id="Icon_awesome-instagram-2" data-name="Icon awesome-instagram" d="M10.046,7.133A5.152,5.152,0,1,0,15.2,12.284,5.143,5.143,0,0,0,10.046,7.133Zm0,8.5a3.349,3.349,0,1,1,3.349-3.349,3.355,3.355,0,0,1-3.349,3.349ZM16.61,6.922a1.2,1.2,0,1,1-1.2-1.2A1.2,1.2,0,0,1,16.61,6.922Zm3.412,1.22A5.946,5.946,0,0,0,18.4,3.931a5.985,5.985,0,0,0-4.21-1.623c-1.659-.094-6.631-.094-8.29,0a5.977,5.977,0,0,0-4.21,1.619A5.966,5.966,0,0,0,.065,8.137c-.094,1.659-.094,6.631,0,8.29a5.946,5.946,0,0,0,1.623,4.21A5.993,5.993,0,0,0,5.9,22.26c1.659.094,6.631.094,8.29,0a5.946,5.946,0,0,0,4.21-1.623,5.985,5.985,0,0,0,1.623-4.21c.094-1.659.094-6.627,0-8.286ZM17.878,18.207a3.391,3.391,0,0,1-1.91,1.91c-1.323.525-4.461.4-5.923.4s-4.6.117-5.923-.4a3.391,3.391,0,0,1-1.91-1.91c-.525-1.323-.4-4.461-.4-5.923s-.117-4.6.4-5.923a3.391,3.391,0,0,1,1.91-1.91c1.323-.525,4.461-.4,5.923-.4s4.6-.117,5.923.4a3.391,3.391,0,0,1,1.91,1.91c.525,1.323.4,4.461.4,5.923S18.4,16.889,17.878,18.207Z" transform="translate(229.908 3567.18)"/>
+  </g>
+</svg>
