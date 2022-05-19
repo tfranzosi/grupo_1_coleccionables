@@ -1,5 +1,5 @@
 # Grupo_1_coleccionables 
-## _GamePlay Juegos & collecionables🎮🔥_
+## _GamePlay Juegos & coleccionables🎮🔥_
 
 ![Image text](https://github.com/tfranzosi/grupo_1_coleccionables/blob/main/GamePlay-Logo-e-Isologo.png)
 
@@ -34,8 +34,8 @@ electrónica de consumo y servicios inalámbricos)
 
 ## Sitios de Referencia 
 
-- https://www.cdmarket.com.ar/
-- https://www.playxfun.com/
-- https://www.gamestop.com/
-- https://www.blinktrashh.com.ar/
-- https://dixgamer.com/
+- https://www.cdmarket.com.ar/  (tiene un buscador que permite pre filtrar por categoría antes de buscar.)
+- https://www.playxfun.com/  (tiene una funcionalidad que muestra en tiempo real quienes están comprando y que compran)
+- https://www.gamestop.com/ (es líder de la industria y tiene una interfaz amigable con el usuario.)
+- https://www.blinktrashh.com.ar/  (ofrece coleccionables y nos sirve para crear el master de productos a subir al sitio.)
+- https://dixgamer.com/ (tiene un buscador que devuelve productos con su foto y por la estética de los carrouseles de producto, muy responsivos para celular.)
