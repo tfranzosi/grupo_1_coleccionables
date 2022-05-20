@@ -26,7 +26,7 @@ electrónica de consumo y servicios inalámbricos)
 
 - Pablo: 39 años. Lic. en Administración y Consultor E-commerce. Fanático de Playstation y toda la saga de Call of Duty. Encargado del desarrollo del shop, categorías y productos a ofrecer.
 - Santiago: 25 años. Tesorero Jr en Colon Seguros SA. Fanatico del FIFA y God of War, coleccionista de FunkoPops. Encargado de desarrollar la presentacion del proyecto
-- Maximiliano: 
+- Maximiliano: 27 años. De casi médico a programador, redescubriendo mi pasion por la informatica. Amante del deporte, la musica, la montaña y de aprender todos los dias algo nuevo. 
 - Tomás: 34 años. Ing. Electrónico y Docente secundario. Amante de la programación y robótica. Encargado de base de datos y backend de sitio.
 - Franco: 
 
@@ -34,8 +34,13 @@ electrónica de consumo y servicios inalámbricos)
 
 ## Sitios de Referencia 
 
-- https://www.cdmarket.com.ar/  (tiene un buscador que permite pre filtrar por categoría antes de buscar.)
-- https://www.playxfun.com/  (tiene una funcionalidad que muestra en tiempo real quienes están comprando y que compran)
-- https://www.gamestop.com/ (es líder de la industria y tiene una interfaz amigable con el usuario.)
-- https://www.blinktrashh.com.ar/  (ofrece coleccionables y nos sirve para crear el master de productos a subir al sitio.)
-- https://dixgamer.com/ (tiene un buscador que devuelve productos con su foto y por la estética de los carrouseles de producto, muy responsivos para celular.)
+- GameStop: https://www.gamestop.com/
+  Es líder de la industria. Destaca una interfaz limpia, donde el producto es el protagonista y es amigable con el usuario.
+- CD Market: https://www.cdmarket.com.ar/  
+  Facilita mucho la tarea de encontrar lo que desea al usuario, ya sea con un filtro en el buscador o con un menu con diferentes niveles de especificidad.
+- Play X Fun: https://www.playxfun.com/  
+  Va mas alla y desplega funcionalidades como mostrar en tiempo real quienes están comprando, de donde son y qué productos.
+- BlinkTrashh: https://www.blinktrashh.com.ar/  
+  Ofrece coleccionables y sirve para crear el master de productos a subir al sitio.
+- DixGamer: https://dixgamer.com/
+  Integra resultados con foto y precio-precio oferta a medida que se va escribiendo en el buscador. Además, destaca la estética de los carrouseles de producto, muy       responsivos para celular.
