@@ -34,7 +34,7 @@ electrónica de consumo y servicios inalámbricos)
 
 ## Sitios de Referencia 
 
-- GameStop: https://www.gamestop.com/
+- GameStop: https://www.gamestop.com/  
   Es líder de la industria. Destaca una interfaz limpia, donde el producto es el protagonista y es amigable con el usuario.
 - CD Market: https://www.cdmarket.com.ar/  
   Facilita mucho la tarea de encontrar lo que desea al usuario, ya sea con un filtro en el buscador o con un menu con diferentes niveles de especificidad.
@@ -42,5 +42,5 @@ electrónica de consumo y servicios inalámbricos)
   Va mas alla y desplega funcionalidades como mostrar en tiempo real quienes están comprando, de donde son y qué productos.
 - BlinkTrashh: https://www.blinktrashh.com.ar/  
   Ofrece coleccionables y sirve para crear el master de productos a subir al sitio.
-- DixGamer: https://dixgamer.com/
+- DixGamer: https://dixgamer.com/  
   Integra resultados con foto y precio-precio oferta a medida que se va escribiendo en el buscador. Además, destaca la estética de los carrouseles de producto, muy       responsivos para celular.
