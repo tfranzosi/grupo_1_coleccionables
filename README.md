@@ -1,7 +1,7 @@
 # Grupo_1_coleccionables 
 ## _GamePlay Juegos & coleccionables🎮🔥_
 
-![Image text](https://github.com/tfranzosi/grupo_1_coleccionables/blob/main/GamePlay-Logo-e-Isologo.png)
+![Image text](https://github.com/tfranzosi/grupo_1_coleccionables/blob/main/00-GamePlay-Isologo-fondo-blanco.jpg)
 
 ## Propósito
 
