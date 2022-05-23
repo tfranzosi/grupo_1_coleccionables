@@ -28,7 +28,7 @@ electrónica de consumo y servicios inalámbricos)
 - Santiago: 25 años. Tesorero Jr en Colon Seguros SA. Fanatico del FIFA y God of War, coleccionista de FunkoPops. Encargado de desarrollar la presentacion del proyecto
 - Maximiliano: 27 años. De casi médico a programador, redescubriendo mi pasion por la informatica. Amante del deporte, la musica, la montaña y de aprender todos los dias algo nuevo. 
 - Tomás: 34 años. Ing. Electrónico y Docente secundario. Amante de la programación y robótica. Encargado de base de datos y backend de sitio.
-- Franco: 
+- Franco: 21 Años, Auxiliar Administrativo y juvenil de Berazategui, en la 3° división de Argentina. Me encanta ver partidos de fútbol en los ratos libres y tomar mate. Fanático hincha de Boca Juniors. 
 
 
 
