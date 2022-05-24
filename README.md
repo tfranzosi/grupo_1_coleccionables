@@ -45,4 +45,6 @@ electrónica de consumo y servicios inalámbricos)
 - DixGamer: https://dixgamer.com/  
   Integra resultados con foto y precio-precio oferta a medida que se va escribiendo en el buscador. Además, destaca la estética de los carrouseles de producto, muy       responsivos para celular.
   
-  ## Link al Board de Trello: https://trello.com/b/w4kLqrWq y a un video explicativo sobre el funcioanmiento del mismo https://comisin20.slack.com/files/U03B37B273L/F03F1GR3XHV/tour_trello_gameplay.mov 
+  ## Tablero de Trello
+  - Link al Board de Trello: https://trello.com/b/w4kLqrWq
+  - Link a un video explicativo sobre el funcioanmiento del mismo: https://comisin20.slack.com/files/U03B37B273L/F03F1GR3XHV/tour_trello_gameplay.mov 
