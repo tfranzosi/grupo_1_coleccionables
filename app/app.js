@@ -24,10 +24,10 @@ app.get('/carrito', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/productCart.html'));
 });
 
-app.get('/login', (req, res) => {
+app.get('/inicioSesion', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/login.html'));
 });
 
-app.get('/register', (req, res) => {
+app.get('/registro', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/register.html'));
 });

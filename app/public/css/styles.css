@@ -1,58 +1,179 @@
 :root{
     /*    ---  Colores    ----     */
-    --letra-header: #808080;
+    --fondo-social-media: #000000;
+    --fondo-logo: #efefef;
+    --letra-header: #252525;
+
+    /*    ---  Parametros    ----     */
+    --altura-header-nav:30px;
+    --altura-header-logo: 50px;
+    --altura-footer: 200px;
 }
 
 *{
     box-sizing: border-box;
+    text-decoration: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+
 }
 
 body{
-    padding: 2vw 4vw;
     font-family: 'Exo', sans-serif;
+    font-size: 16px;
 }
 
 header{
     display: flex;
     flex-direction: column;
-}
+    font-size: 12px;
+}    
 
-header .logo-login{
+header ul{
+    list-style-type: none;
+    text-align: left;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}      
+
+header li{
+    margin-right: 10px;
+}        
+
+header a,
+footer a{
+    color: var(--letra-header);
+}        
+
+header div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}            
+header .social-media{
+    padding: 0vw 2vw;
+    background-color: var(--fondo-social-media);
+    height: var(--altura-header-nav);
+}            
+
+header .social-media i{
+    color: var(--fondo-logo);
+    font-size: 18px;
+}    
+header .logo-login{
+    height: var(--altura-header-logo);
+    background-color: var(--fondo-logo);
+    padding: 0vw 5vw;
+}            
+
+header img.isologotipo{          
+    height: 40px;
 }
 
-.logo-login img{
-    width: 160px;
-    height: auto;
-}
-
-.logo-login a{
-    text-decoration: none;
+header .logo-login a{
     color: var(--letra-header);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0px 5px;
     border-radius: 5px;
-    border: var(--letra-header) 1px solid;
-}
+}        
 
-.logo-login span{
+header .logo-login span{
     display: none;
 }
 
+header .navegacion-carrito{
+    font-size: 16px;
+    padding: 0vw 2vw;
+    height: var(--altura-header-nav);
+    border-bottom: 1px var(--fondo-logo) solid;
+}            
+
+
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    height: var(--altura-footer);
+    background-color: var(--fondo-logo);
+    padding: 25px 8vw;
+}    
+
+footer .logo{
+    width: 125%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer a.isologotipo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .isologotipo img{
+    height: 30px;
+}
+
+footer ul{
+    list-style-type: none;
+    text-align: left;
+} 
+
+ul.social-media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .empresa{
+    width: 100%;
+    background-color: blue;
+}
+
+footer .cliente{
+    width: 100%;
+    background-color: red;
+}
+
+footer .soporte{
+    width: 100%;
+    background-color: pink;
+}
+
+footer .newsletter{
+    width: 200%;
+    background-color: orange;
+}
+
+
+
+
 /*  ---     Media Queries     ---- */
+
 @media(min-width: 576px){
-    .logo-login span{
+    header .logo-login span{
         display: block;
     }
 }
 
 @media(min-width: 992px){
-    
+    footer .isologotipo img{
+        height: 45px;
+    }    
 }
 
 @media(min-width: 1200){
