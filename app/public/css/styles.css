@@ -1,0 +1,60 @@
+:root{
+    /*    ---  Colores    ----     */
+    --letra-header: #808080;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2vw 4vw;
+    font-family: 'Exo', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header .logo-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-login img{
+    width: 160px;
+    height: auto;
+}
+
+.logo-login a{
+    text-decoration: none;
+    color: var(--letra-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 5px;
+    border-radius: 5px;
+    border: var(--letra-header) 1px solid;
+}
+
+.logo-login span{
+    display: none;
+}
+
+/*  ---     Media Queries     ---- */
+@media(min-width: 576px){
+    .logo-login span{
+        display: block;
+    }
+}
+
+@media(min-width: 992px){
+    
+}
+
+@media(min-width: 1200){
+    
+}
