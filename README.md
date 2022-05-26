@@ -47,4 +47,4 @@ electrónica de consumo y servicios inalámbricos)
   
   ## Tablero de Trello
   - Link al Board de Trello: https://trello.com/b/w4kLqrWq
-  - Link a un video explicativo sobre el funcioanmiento del mismo: https://comisin20.slack.com/files/U03B37B273L/F03F1GR3XHV/tour_trello_gameplay.mov 
+  - Link a un video explicativo sobre el funcionamiento del mismo: https://comisin20.slack.com/files/U03B37B273L/F03F1GR3XHV/tour_trello_gameplay.mov 
