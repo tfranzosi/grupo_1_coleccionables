@@ -90,7 +90,7 @@ header .logo-login span{
 }
 
 header .navegacion-carrito{
-    font-size: 16px;
+    font-size: 14px;
     padding: 0vw 2vw;
     height: var(--altura-header-nav);
     border-bottom: 1px var(--fondo-logo) solid;
