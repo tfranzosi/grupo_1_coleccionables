@@ -7,7 +7,7 @@
     /*    ---  Parametros    ----     */
     --altura-header-nav:30px;
     --altura-header-logo: 50px;
-    --altura-footer: 200px;
+    --altura-footer: 250px;
 }
 
 *{
@@ -105,11 +105,22 @@ footer{
     font-size: 12px;
     height: var(--altura-footer);
     background-color: var(--fondo-logo);
-    padding: 25px 8vw;
+    padding: 25px 2vw;
 }    
 
+footer .logo *{
+    margin: 2px 0px;
+}
+
+footer .empresa *,
+footer .soporte *,
+footer .newsletter *{
+    margin: 4px 0px;
+}
+
 footer .logo{
-    width: 125%;
+    width: 40%;
+    height: 80%;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,7 +130,7 @@ footer a.isologotipo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
@@ -133,6 +144,7 @@ footer ul{
 } 
 
 ul.social-media{
+    width: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -140,23 +152,30 @@ ul.social-media{
 }
 
 footer .empresa{
-    width: 100%;
-    background-color: blue;
-}
-
-footer .cliente{
-    width: 100%;
-    background-color: red;
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 footer .soporte{
-    width: 100%;
-    background-color: pink;
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 footer .newsletter{
-    width: 200%;
-    background-color: orange;
+    width: 35%;
+    display: none;
+}
+
+footer input{
+    padding: 3px;
+}
+footer .subscripcion{
+    background: var(--fondo-social-media);
+    color: var(--fondo-logo);
 }
 
 
@@ -168,12 +187,28 @@ footer .newsletter{
     header .logo-login span{
         display: block;
     }
+
+    footer{
+        padding: 25px 8vw;
+    }   
+
+    footer .logo{
+        width: 30%;
+    }
+    
 }
 
 @media(min-width: 992px){
     footer .isologotipo img{
         height: 45px;
     }    
+
+    footer .newsletter{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    
+    } 
 }
 
 @media(min-width: 1200){
