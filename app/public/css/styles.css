@@ -96,9 +96,6 @@ header .navegacion-carrito{
     border-bottom: 1px var(--fondo-logo) solid;
 }            
 
-
-
-
 footer{
     display: flex;
     flex-direction: row;
