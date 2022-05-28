@@ -7,6 +7,7 @@
     /*    ---  Parametros    ----     */
     --altura-header-nav:30px;
     --altura-header-logo: 50px;
+    --altura-header-logo2: 100px;
     --altura-footer: 250px;
 }
 
@@ -51,13 +52,14 @@ footer a{
 }        
 
 header div{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }            
 header .social-media{
-    padding: 0vw 2vw;
+    padding: 0% 2%;
     background-color: var(--fondo-social-media);
     height: var(--altura-header-nav);
 }            
@@ -67,9 +69,8 @@ header .social-media i{
     font-size: 18px;
 }    
 header .logo-login{
-    height: var(--altura-header-logo);
     background-color: var(--fondo-logo);
-    padding: 0vw 5vw;
+    padding: 0% 5%;
 }            
 
 header img.isologotipo{          
@@ -91,13 +92,10 @@ header .logo-login span{
 
 header .navegacion-carrito{
     font-size: 14px;
-    padding: 0vw 2vw;
+    padding: 0% 2%;
     height: var(--altura-header-nav);
     border-bottom: 1px var(--fondo-logo) solid;
 }            
-
-
-
 
 footer{
     display: flex;
@@ -199,6 +197,13 @@ footer .subscripcion{
 }
 
 @media(min-width: 992px){
+    header{
+        font-size: 16px;
+    }  
+    header img.isologotipo{          
+        height: 80px;
+    }
+
     footer .isologotipo img{
         height: 45px;
     }    
