@@ -175,6 +175,9 @@ input[type="file"]{
     border: 0;
     cursor:pointer;
 }
+.contenedor-fotoperfil{
+    padding-bottom: 2rem;
+}
 .fotoPerfil{ 
     border: 1px solid black;
     display: inline-block;
@@ -186,10 +189,20 @@ input[type="file"]{
     font-size: 1.2rem;
 }
     /*otros datos*/
+    
 .registro .categoria{
     padding-left: 7vh;
     padding-right: 7vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
 }
+/* label[for="telefono1"], label[for="telefonos2"] {
+    display: block;
+    width:50%
+
+} */
+
+
 label.datos, label.genero {
     display: block;
     text-align:left;
@@ -200,6 +213,18 @@ input[type="radio"]{
 .registro .categoria input{
     width:100%;
 }
+.registro .categoria input[type="tel"]#telefono1{
+    width: 23%;
+}
+.registro .categoria input[type="tel"]#telefono2{
+    width: 73%;
+}
+.categoria .generos{
+    display: block;
+    width: 30%;
+    float: left;
+}
+
 .busca, .intereses{
     padding-left: 7vh;
     padding-right: 7vh;
@@ -207,7 +232,10 @@ input[type="radio"]{
 .busca h4, .intereses h4{
     text-align: left;
 }
-
+.tyc{
+    text-align: left;
+    margin-top: 0.5rem;
+}
 
 
 footer{
@@ -298,7 +326,21 @@ footer .subscripcion{
     header .logo-login span{
         display: block;
     }
-    
+    .form-registro{         /* Esto es para hacer 2 inputs por fila */
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .form-registro .categoria{
+        display: block;
+        width: 50%;
+        padding-left: 3vh;
+        padding-right: 3vh;
+        float: left;
+        
+        
+
+    }
 
     footer{
         padding: 25px 8vw;

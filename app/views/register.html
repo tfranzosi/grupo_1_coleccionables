@@ -81,47 +81,71 @@
                         <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
                         <input type="file" accept=".jpg, .png" id="fotoPerfil">
                     </div>
+
                     <div class="categoria"> 
                         <label for="nombre" class="datos">Nombre</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Juan" required>
-                    </div><br>
+                    </div>
+
                     <div class="categoria"> 
                         <label for="apellido" class="datos">Apellido</label>
                         <input type="text" name="apellid" id="apellido" placeholder="Gameplayer" required>
-                    </div><br>
-                    <div class="categoria">
-                        <label for="apodo" class="datos">Apodo</label>
-                        <input type="text" name="apodo" id="apodo" placeholder="Juanito">
-                    </div><br>
+                    </div>
+
                     <div class="categoria">
                         <label for="usuario" class="datos">Nombre de usuario</label>
                         <input type="text" name="usuario" id="user" placeholder="Usuario" required>
-                    </div><br>
+                    </div>
+
+                    <div class="categoria">
+                        <div class="telefonos">
+                            <span class = "telefonos">
+                                <label for="telefono1" class="datos">Telefono</label>
+                            </span>
+                        </div>
+                        <div class="telefonos">
+                            <span>
+                                <input type="tel" name="telefono1" id="telefono1" placeholder="+54"></span>
+                            <span>
+                                <input type="tel" name="telefono2" id="telefono2" placeholder="1234 5678">
+                            </span>
+                        </div>
+                    </div>
+                                    
                     <div class="categoria">
                         <label for="nacimiento" class="datos">Fecha de nacimiento</label>
                         <input type="date" name="nacimiento" id="nacimiento" min="2004-05-30" max="2022-05-30" required>
                     </div><br>
+
                     <div class="categoria">
                         <label for="domicilio" class="datos">Domicilio</label>
-                        <input type="text" name="domicilio" id="domicilio" placeholder="Av. Gameplay 150" required>
+                        <input type="text" name="domicilio" id="domicilio" placeholder="Av. Gameplay 150">
                     </div><br>
                     
                     <div class="categoria">
                         <label class="genero">Genero</label>
+                        <div class="generos">
+                            <label for="varon">Varon</label>
+                            <input type="radio" name="genero" value="varon" id="varon">
+                        </div>
+                        <div class="generos">
+                            <label for="mujer">Mujer</label>
+                            <input type="radio" name="genero" value="mujer" id="mujer">
+                        </div>
+                        <div class="generos">
+                            <label for="otro">Otro</label>
+                            <input type="radio" name="genero" value="otro" id="otro">
+                        </div>
+                    </div>
 
-                        <label for="varon">Varon</label>
-                        <input type="radio" name="genero" value="varon" id="varon">
-                        <label for="mujer">Mujer</label>
-                        <input type="radio" name="profile" value="mujer" id="mujer">
-                        
-                    </div>
-                    <div class="busca">
-                        <h4>Busca:</h4>
-                        <input type="radio" name="profile" value="juegos" id="buy">
-                        <label for="buy">Juegos</label><br>
-                        <input type="radio" name="profile" value="coleccionables" id="sell">
-                        <label for="sell">Coleccionables</label>
-                    </div>
+                     <div class="preferencias"> <!-- Div abajo de los datos -->
+                        <div class="intereses">
+                            <h4>Busca:</h4>
+                            <input type="radio" name="profile" value="juegos" id="buy">
+                            <label for="buy">Juegos</label><br>
+                            <input type="radio" name="profile" value="coleccionables" id="sell">
+                            <label for="sell">Coleccionables</label>
+                        </div>
 
                     
                     <div class="intereses">
@@ -147,6 +171,7 @@
                             <label for="e">Social</label>
                         </div>
                     </div><br>
+                </div>
                     <div class="categoria">
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password">
@@ -154,6 +179,10 @@
                     <div class="categoria">
                         <label for="password">Confirme contraseña</label>
                         <input type="password" name="password" id="password">
+                    </div><br>
+                    <div class="tyc">
+                        <input type="checkbox" name="tyc" value="tyc" id="tyc" required>
+                        <label for="tyc">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
                     </div><br>
                     <div>
                         <button type="submit">REGISTRATE</button>
