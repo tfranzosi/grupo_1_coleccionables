@@ -50,19 +50,19 @@ main.product-detail {
         /* max-width: 40%; */
 }
 
-h5.brand {
+main h5.brand {
     font-size: 20px;
     padding-top: 60px;  
     padding-bottom: 15px;
 }
 
-h2 {
+main h2 {
     font-size: 40px;
     padding-bottom: 20px;
 
 }
 
-p {
+main p {
     padding-bottom: 20px;
     text-align: justify;
 }
