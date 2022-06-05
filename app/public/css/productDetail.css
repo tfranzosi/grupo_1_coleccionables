@@ -50,7 +50,7 @@ main.product-detail {
         /* max-width: 40%; */
 }
 
-main h5.brand {
+h5.brand {
     font-size: 20px;
     padding-top: 60px;  
     padding-bottom: 15px;
@@ -62,11 +62,7 @@ main h2 {
 
 }
 
-<<<<<<< HEAD
-main p {
-=======
 p.short-description, .product-long-description p {
->>>>>>> 92142e61baaee327714fbf0ba6b28cfbc681f486
     padding-bottom: 20px;
     text-align: justify;
 }
