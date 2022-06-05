@@ -75,11 +75,11 @@
             <P> O sino<br>
                 Por favor completá los datos en el siguiente formulario</P><br>
             <div class="form-registro">
-                <form class="registro" action="/" method="POST">
+                <form class="registro" action="/registro" method="POST">
                     <div class="contenedor-fotoperfil">
                         <p>Foto de perfil</p><br>
                         <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
-                        <input type="file" id="fotoPerfil">
+                        <input type="file" accept=".jpg, .png" id="fotoPerfil">
                     </div>
                     <div class="categoria"> 
                         <label for="nombre" class="datos">Nombre</label>
@@ -156,11 +156,8 @@
                         <input type="password" name="password" id="password">
                     </div><br>
                     <div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit">REGISTRATE</button>
                     </div><br>
-                    <div >
-                        <button type="reset">Resetear campos</button>
-                    </div>
                 </form>
         </div>
     </div>
