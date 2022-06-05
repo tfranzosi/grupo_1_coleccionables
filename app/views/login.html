@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
     
     <title>GamePlay - Home</title>
 </head>
@@ -53,11 +54,28 @@
         </div>
     </header>
 
-                                        <!-- -----       INSERTAR PAGINA ACÁ     ------ -->
-    <section>
+<!--                                             -----       INSERTAR PAGINA ACÁ     ------ -->
+    <main>
+        <section class="formulario">
+            <form action="/">
+                <div>
+                    <label for="nombreUsuario" class="feedback"></label>
+                    <input type="text" class="text" name="nombreUsuario" placeholder="Nombre de usuario" required>
+                </div>
+                <div>
+                    <label for="password" class="feedback"></label>
+                    <input type="password" class="text" name="password" placeholder="Contraseña" required>
+                </div>
+                <div>
+                    <label for="rememberPassword" class="feedback"></label>
+                    <input type="checkbox" name="rememberPassword"> Quiero recordar mi usuario y contraseña
+                </div>
+                <button type="submit" name="submit">Ingresar</button>
+                <a href="#">Olvidé mi contraseña</a>
+            </form>
+        </section>
 
-
-    </section>
+    </main>
 
     <footer>
         <div class="logo">
