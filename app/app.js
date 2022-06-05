@@ -4,7 +4,8 @@ const path = require('path');
 
 const PUERTO = 3000;
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+
 
 app.listen(PUERTO, () => {
     console.log(`Up & Running en http://127.0.0.1:${PUERTO}`);

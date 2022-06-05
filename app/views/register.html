@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/register.css">
     
     <title>GamePlay - Home</title>
 </head>
@@ -52,13 +52,119 @@
             </nav>
         </div>
     </header>
+    <main>
+        <h3 class="tituloregistro">REGISTRO</h3>
+        <div class="contenedor-registro">
+            <div class="social-registro">
+                <button>
+                    <span class="facebook"><i class="fa-brands fa-facebook-square"></i></span>
+                    <span class="textofacebook">Registrate con Facebook</span>
+                </button>
+                <button>
+                    <span class="apple"><i class="fa-brands fa-apple"></i></span>
+                    <span class="textoapple">Registrate con Apple ID</span></button>
+                    <button>
+                        <span class="gmail"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Gmail icon</title>
+                            <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 
+                        21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 
+                            3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/></svg></span>
+                        <span class="textogmail">Registrate con Gmail</span>
+                    </button>
+            </div><br>
+            <P> O sino<br>
+                Por favor completá los datos en el siguiente formulario</P><br>
+            <div class="form-registro">
+                <form class="registro" action="/" method="POST">
+                    <div class="contenedor-fotoperfil">
+                        <p>Foto de perfil</p><br>
+                        <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
+                        <input type="file" id="fotoPerfil">
+                    </div>
+                    <div class="categoria"> 
+                        <label for="nombre" class="datos">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Juan" required>
+                    </div><br>
+                    <div class="categoria"> 
+                        <label for="apellido" class="datos">Apellido</label>
+                        <input type="text" name="apellid" id="apellido" placeholder="Gameplayer" required>
+                    </div><br>
+                    <div class="categoria">
+                        <label for="apodo" class="datos">Apodo</label>
+                        <input type="text" name="apodo" id="apodo" placeholder="Juanito">
+                    </div><br>
+                    <div class="categoria">
+                        <label for="usuario" class="datos">Nombre de usuario</label>
+                        <input type="text" name="usuario" id="user" placeholder="Usuario" required>
+                    </div><br>
+                    <div class="categoria">
+                        <label for="nacimiento" class="datos">Fecha de nacimiento</label>
+                        <input type="date" name="nacimiento" id="nacimiento" min="2004-05-30" max="2022-05-30" required>
+                    </div><br>
+                    <div class="categoria">
+                        <label for="domicilio" class="datos">Domicilio</label>
+                        <input type="text" name="domicilio" id="domicilio" placeholder="Av. Gameplay 150" required>
+                    </div><br>
+                    
+                    <div class="categoria">
+                        <label class="genero">Genero</label>
 
-                                        <!-- -----       INSERTAR PAGINA ACÁ     ------ -->
-    <section>
+                        <label for="varon">Varon</label>
+                        <input type="radio" name="genero" value="varon" id="varon">
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" name="profile" value="mujer" id="mujer">
+                        
+                    </div>
+                    <div class="busca">
+                        <h4>Busca:</h4>
+                        <input type="radio" name="profile" value="juegos" id="buy">
+                        <label for="buy">Juegos</label><br>
+                        <input type="radio" name="profile" value="coleccionables" id="sell">
+                        <label for="sell">Coleccionables</label>
+                    </div>
 
-
-    </section>
-
+                    
+                    <div class="intereses">
+                        <h4>Intereses</h4>
+                        <div>
+                            <input type="checkbox" name="interests" value="a" id="a">
+                            <label for="a">Anime</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interests" value="b" id="b">
+                            <label for="b">Accion y aventura</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interests" value="c" id="c">
+                            <label for="c">Deporte</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interests" value="d" id="d">
+                            <label for="d">RPG</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="interests" value="e" id="e">
+                            <label for="e">Social</label>
+                        </div>
+                    </div><br>
+                    <div class="categoria">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="categoria">
+                        <label for="password">Confirme contraseña</label>
+                        <input type="password" name="password" id="password">
+                    </div><br>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div><br>
+                    <div >
+                        <button type="reset">Resetear campos</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+    </main>
     <footer>
         <div class="logo">
             <nav>
