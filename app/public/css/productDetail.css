@@ -8,7 +8,7 @@ main.product-detail {
 
 .breadcrumb {
     /* margin-top: 25px; */
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     margin-left: 10px;
 }
 
@@ -62,7 +62,11 @@ main h2 {
 
 }
 
+<<<<<<< HEAD
 main p {
+=======
+p.short-description, .product-long-description p {
+>>>>>>> 92142e61baaee327714fbf0ba6b28cfbc681f486
     padding-bottom: 20px;
     text-align: justify;
 }
@@ -116,7 +120,7 @@ div.buttons{
 
 /*  ---     GamePlayer Top Reviews     ---- */
 
-.gameplayer-top-reviews {
+/* .gameplayer-top-reviews {
     margin-top: 25px;
     margin: auto;
     width: 95%;
@@ -125,7 +129,7 @@ div.buttons{
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
-}
+} */
 
 .gameplayer-top-reviews-blocks {
     margin: auto;
@@ -145,6 +149,7 @@ div.buttons{
 
 .product-long-description {
     margin: auto;
+    padding: 2.5%;
     background-color: #FFF;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -154,7 +159,7 @@ div.buttons{
 
 /*  ---     GamePlayer All Reviews     ---- */
 
-.gameplayer-all-reviews {
+/* .gameplayer-all-reviews {
     margin-top: 25px;
     margin: auto;
     width: 95%;
@@ -163,11 +168,11 @@ div.buttons{
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
-}
+} */
 
 /*  ---     Related Products     ---- */
 
-.related-products {
+/* .related-products {
     margin-top: 25px;
     margin: auto;
     width: 95%;
@@ -176,18 +181,18 @@ div.buttons{
     padding-bottom: 25px;
     padding-left: 25px;
     padding-right: 25px;
-}
+} */
 
 
-.related-products-blocks {
+/* .related-products-blocks {
     display: flex;
     flex-flow: nowrap ;
     justify-content: space-between;
-}
+} */
 
-.related-products-blocks article img {
+/* .related-products-blocks article img {
     width:80%;   
-}
+} */
 
 @media(min-width: 576px){
     div.buttons {
@@ -231,6 +236,11 @@ div.buttons{
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
+    }
+
+    .product-long-description {
+        padding-right: 200px;
+        padding-left:50px;
     }
 }
 

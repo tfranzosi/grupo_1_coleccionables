@@ -9,9 +9,10 @@
     <script src="https://kit.fontawesome.com/2da8e91210.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/productCart.css">
     <link rel="stylesheet" href="/css/styles.css">
     
-    <title>GamePlay - Home</title>
+    <title>GamePlay - Carrito</title>
 </head>
 
 <body>
@@ -53,11 +54,150 @@
         </div>
     </header>
 
-                                        <!-- -----       INSERTAR PAGINA ACÁ     ------ -->
-    <section>
+    <!-- Breadcrumb Start -->
+    <main class="cart">
+        <div class="breadcrumb">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="level-01" href="/">Inicio > </a>
+                <a class="level-02" href="/">Shop > </a>
+                <span class="active">Carrito</span>
+            </nav>
+        </div>
+        <!-- Breadcrumb End -->
+            
+        <!-- Cart Details Start -->
+        <div class="product-details">
 
+            <!-- Cart Products Start -->
+            
+            <div class="cart-products">
+                <div class="cart-products-title">
+                    <h2>Productos añadidos</h2>
+                </div>
+                <div class="product-list-general">
+                    <div class="cart-products-item">
+                        <div class="cart-picture">
+                            <img class="main-pic" src="/images/products/GPF006-uncharted-legacy-of-thieves-collection1-ps5.jpeg" alt="imagen de producto">
+                        </div>
+                        <div class="cart-name-price-qty">
+                            <div class="product-name">
+                                <h3 class="name">Nombre del producto</h3>
+                            </div>
+                            <div>
+                                <p class="regular-price">$10.000 </p>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="minus-button"><a href="javascript:alert('Restaste una unidad');"> - </a></button>
+                                </div>
+                                <input type="text" class="form-control" value="1">
+                                <div class="input-group-btn">
+                                    <button class="plus-button"><a href="javascript:alert('Sumaste una unidad');"> + </a></button>
+                                </div>
+                            </div>
+                            <div class="cart-erase-button">
+                                    <button class="erase-button"><a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');">x</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-products-item">
+                        <div class="cart-picture">
+                            <img class="main-pic" src="/images/products/GPF006-uncharted-legacy-of-thieves-collection1-ps5.jpeg" alt="imagen de producto">
+                        </div>
+                        <div class="cart-name-price-qty">
+                            <div class="product-name">
+                                <h3 class="name">Nombre del producto</h3>
+                            </div>
+                            <div>
+                                <p class="regular-price">$10.000 </p>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="minus-button"><a href="javascript:alert('Restaste una unidad');"> - </a></button>
+                                </div>
+                                <input type="text" class="form-control" value="1">
+                                <div class="input-group-btn">
+                                    <button class="plus-button"><a href="javascript:alert('Sumaste una unidad');"> + </a></button>
+                                </div>
+                            </div>
+                            <div class="cart-erase-button">
+                                    <button class="erase-button"><a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');">x</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-products-item">
+                        <div class="cart-picture">
+                            <img class="main-pic" src="/images/products/GPF006-uncharted-legacy-of-thieves-collection1-ps5.jpeg" alt="imagen de producto">
+                        </div>
+                        <div class="cart-name-price-qty">
+                            <div class="product-name">
+                                <h3 class="name">Nombre del producto</h3>
+                            </div>
+                            <div>
+                                <p class="regular-price">$10.000 </p>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="minus-button"><a href="javascript:alert('Restaste una unidad');"> - </a></button>
+                                </div>
+                                <input type="text" class="form-control" value="1">
+                                <div class="input-group-btn">
+                                    <button class="plus-button"><a href="javascript:alert('Sumaste una unidad');"> + </a></button>
+                                </div>
+                            </div>
+                            <div class="cart-erase-button">
+                                    <button class="erase-button"><a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');">x</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <!-- Cart Products End -->
 
-    </section>
+            <!-- Cart Resume Start -->
+            <div class="cart-resume">
+                <div class="resume-title">
+                    <h2>Resumen</h2>
+                </div>
+                <div class="resume-pricing">
+                    <div class="total-price">
+                        <div class="total-price-label">
+                            <h4>Precio (x items)</h4>
+                        </div>
+                        <div class="total-price-number">
+                            <p>$30.000</p>
+                        </div>
+                    </div>
+                    <div class="transport-charges">
+                        <div class="transport-charges-label">
+                            <h4>Costo por envío</h4>
+                        </div>
+                        <div class="transport-charges-number">
+                            <p>$2.000</p>
+                        </div>
+                    </div>
+                    <div class="final-price">
+                        <div class="final-price-label">
+                            <h4>Precio Total</h4>
+                        </div>
+                        <div class="final-price-number">
+                            <p>$32.000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-buttons">
+                    <div class="keep-buying-button">
+                        <button class="keep-buying"><a href="javascript:alert('Serás redireccionado al shop');">CONTINUAR COMPRANDO</a></button>
+                    </div>
+                    <div class="go-to-checkout-button">
+                        <button class="checkout"><a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');">FINALIZAR PEDIDO</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Resume End -->
+        </div>
+        <!-- Cart Details End -->
+    </main>
 
     <footer>
         <div class="logo">
