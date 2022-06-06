@@ -111,6 +111,11 @@
                             </span>
                         </div>
                     </div>
+
+                    <div class="categoria">
+                        <label for="mail" class="datos">E-mail</label>
+                        <input type="email" name="mail" id="mail" placeholder="juan@gameplay.com">
+                    </div><br>
                                     
                     <div class="categoria">
                         <label for="nacimiento" class="datos">Fecha de nacimiento</label>
@@ -123,7 +128,6 @@
                     </div><br>
                     
                     <div class="categoria">
-                        <label class="genero">Genero</label>
                         <div class="generos">
                             <label for="varon">Varon</label>
                             <input type="radio" name="genero" value="varon" id="varon">
@@ -136,42 +140,34 @@
                             <label for="otro">Otro</label>
                             <input type="radio" name="genero" value="otro" id="otro">
                         </div>
+                        
                     </div>
-
-                     <div class="preferencias"> <!-- Div abajo de los datos -->
+                                            <!-- Div abajo de los datos -->
+                    <section class="perfilusuario">
                         <div class="intereses">
-                            <h4>Busca:</h4>
-                            <input type="radio" name="profile" value="juegos" id="buy">
-                            <label for="buy">Juegos</label><br>
-                            <input type="radio" name="profile" value="coleccionables" id="sell">
-                            <label for="sell">Coleccionables</label>
+                            <h4>Intereses</h4>
+                            <div>
+                                <input type="checkbox" name="interests" value="a" id="a">
+                                <label for="a">Anime</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="b" id="b">
+                                <label for="b">Accion y aventura</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="c" id="c">
+                                <label for="c">Deporte</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="d" id="d">
+                                <label for="d">RPG</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="interests" value="e" id="e">
+                                <label for="e">Social</label>
+                            </div>
                         </div>
-
-                    
-                    <div class="intereses">
-                        <h4>Intereses</h4>
-                        <div>
-                            <input type="checkbox" name="interests" value="a" id="a">
-                            <label for="a">Anime</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests" value="b" id="b">
-                            <label for="b">Accion y aventura</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests" value="c" id="c">
-                            <label for="c">Deporte</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests" value="d" id="d">
-                            <label for="d">RPG</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interests" value="e" id="e">
-                            <label for="e">Social</label>
-                        </div>
-                    </div><br>
-                </div>
+                    </section>
                     <div class="categoria">
                         <label for="password">Contraseña</label>
                         <input type="password" name="password" id="password">

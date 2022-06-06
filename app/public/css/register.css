@@ -221,15 +221,26 @@ input[type="radio"]{
 }
 .categoria .generos{
     display: block;
+    position: relative;
+    top: 2vh;
     width: 30%;
-    float: left;
+    float:left;
+    margin-bottom: 2vh;
+    justify-content: space-between;
 }
+section.perfilusuario{
+    display:block;
+    text-align: left;
 
-.busca, .intereses{
-    padding-left: 7vh;
-    padding-right: 7vh;
 }
-.busca h4, .intereses h4{
+.intereses{
+    width:50%;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.intereses h4{
     text-align: left;
 }
 .tyc{
@@ -337,9 +348,6 @@ footer .subscripcion{
         padding-left: 3vh;
         padding-right: 3vh;
         float: left;
-        
-        
-
     }
 
     footer{
