@@ -224,6 +224,7 @@ input[type="radio"]{
     display: inline;
 }
 .registro .categoria input{
+    border-radius: 10px;
     width:100%;
 }
 .registro .categoria input[type="tel"]#telefono1{

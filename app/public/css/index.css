@@ -1,7 +1,7 @@
 :root{
     /*    ---  Colores    ----     */
     --fondo-social-media: #000000;
-    --fondo-logo: #efefef;
+    --fondo-sitio: #efefef;
     --letra-clara: #bebebe;
     --letra-header: #252525;
 
@@ -32,7 +32,7 @@ img.slider{
 
 section.main{
     width: 100%;
-    background-color: var(--fondo-logo);
+    background-color: var(--fondo-sitio);
     padding: 0px 10px;
     display: flex;
     flex-direction: column;
