@@ -101,7 +101,7 @@ header .navegacion-carrito{
 
 main{
     background-color: var(--fondo-sitio);
-    padding: 10%;
+    padding: 3% 10%;
 }
 h3{
     margin-left: 2vh;
@@ -128,9 +128,10 @@ h3{
     width:fit-content;  
     margin-right: 1vh;;
     margin-top: 1vh;
-    padding-right: 1vw;
+    padding-right: 0.5vw;
     background-color: white;
     transition: all 500ms;
+    border-radius: 4px;
 
 }
 .facebookbutton:hover{
@@ -199,6 +200,7 @@ input[type="file"]{
     padding-bottom: 2rem;
 }
 .fotoPerfil{ 
+    border-radius: 4px;
     border: 1px solid black;
     display: inline-block;
     padding: 2.2rem;
@@ -224,8 +226,11 @@ input[type="radio"]{
     display: inline;
 }
 .registro .categoria input{
-    border-radius: 10px;
+    border-radius: 4px;
     width:100%;
+    border-width: 1px;
+    border-color: black;
+    padding: 4px;
 }
 .registro .categoria input[type="tel"]#telefono1{
     width: 23%;
@@ -269,6 +274,7 @@ section.perfilusuario{
     cursor:pointer;
     transition: all 500ms;
     padding-left: 6px;
+    border-radius: 4px;
 }
 .registerbutton:hover{
     background-color: #B1272F;
