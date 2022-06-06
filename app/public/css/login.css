@@ -1,0 +1,65 @@
+:root{
+        /*    ---  Colores    ----     */
+        --fondo-social-media: #000000;
+        --fondo-logo: #efefef;
+        --letra-clara: #bebebe;
+        --letra-header: #252525;
+        --fondo-boton: #1f1813;
+        --fondo-boton-apretado: #574436;
+    
+        /*    ---  Parametros    ----     */
+        --altura-header-nav:30px;
+        --altura-header-logo: 50px;
+        --altura-footer: 250px;
+}
+
+/* main{
+    max-width: 700px;
+    margin: auto;
+} */
+main{
+    background-color: var(--fondo-logo);
+}
+
+section.formulario form{
+   width: 70%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 16px;
+}
+
+section.formulario form > div{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+section.formulario form > a{
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+main input.text{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+    min-height: 35px;
+    border: 1px solid var(--fondo-boton);
+    padding: 0px 10px;
+}
+
+main button{
+    border: none;
+    width: 100%;
+    min-height: 35px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--fondo-boton);
+    transition: background-color 400ms;
+}
+
+main button:hover{
+   background-color: var(--fondo-boton-apretado);
+}
