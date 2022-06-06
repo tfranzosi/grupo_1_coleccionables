@@ -18,7 +18,7 @@
     margin: auto;
 } */
 main{
-    background-color: var(--fondo-logo);
+    background-color: var(--fondo-sitio);
 }
 
 section.formulario form{
