@@ -56,14 +56,14 @@
         <h3 class="tituloregistro">REGISTRO</h3>
         <div class="contenedor-registro">
             <div class="social-registro">
-                <button>
+                <button class="facebookbutton">
                     <span class="facebook"><i class="fa-brands fa-facebook-square"></i></span>
                     <span class="textofacebook">Registrate con Facebook</span>
                 </button>
-                <button>
+                <button class="applebutton">
                     <span class="apple"><i class="fa-brands fa-apple"></i></span>
                     <span class="textoapple">Registrate con Apple ID</span></button>
-                    <button>
+                    <button class="gmailbutton">
                         <span class="gmail"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <title>Gmail icon</title>
                             <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 
@@ -119,7 +119,7 @@
                                     
                     <div class="categoria">
                         <label for="nacimiento" class="datos">Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" id="nacimiento" min="2004-05-30" max="2022-05-30" required>
+                        <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" required>
                     </div><br>
 
                     <div class="categoria">
@@ -181,8 +181,9 @@
                         <label for="tyc">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
                     </div><br>
                     <div>
-                        <button type="submit">REGISTRATE</button>
+                        <button type="submit" class="registerbutton">REGISTRATE</button>
                     </div><br>
+                    
                 </form>
         </div>
     </div>

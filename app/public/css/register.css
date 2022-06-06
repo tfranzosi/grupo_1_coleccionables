@@ -122,16 +122,33 @@ h3{
     text-align:center;   
 }
 .social-registro button{
+    height: 40px;
     cursor:pointer;
     padding: 1px;
     width:fit-content;  
     margin-right: 1vh;;
-    margin-top: 1vh;   
+    margin-top: 1vh;
+    padding-right: 1vw;
+    background-color: white;
+    transition: all 500ms;
+
 }
+.facebookbutton:hover{
+    background-color:#2172c4;
+}
+.applebutton:hover{
+    background-color: black;
+    color: white;
+}
+.gmailbutton:hover{
+    background-color:#D64A3A;
+}
+
+
+/*iconos d elos botones*/
 .facebook{
     position: relative;
     left:3px;
-
 }
 .textofacebook{
     position: relative;
@@ -139,19 +156,22 @@ h3{
 }
 .gmail{
     position: relative;
-    
     top: 2px;
+    left: 2px;
 }
 .apple{
     position: relative;
-    bottom: 1px;
-    left: -1px;
+    
+    left: 3px;
 }
 
 .social-registro button span{
     padding: 2px;
 }
-svg{height: 0.9rem;}
+svg{
+    height: 0.9rem;
+}
+
 
     /*FORMULARIO REGISTRO*/
 .form-registro{
@@ -164,7 +184,7 @@ svg{height: 0.9rem;}
     padding-right: 4vw;
 }
 
-        /* foto de perfil */
+    /* foto de perfil */
 input[type="file"]{
     width: 1px;
     height: 1px;
@@ -189,20 +209,13 @@ input[type="file"]{
     font-size: 1.2rem;
 }
     /*otros datos*/
-    
+
 .registro .categoria{
     padding-left: 7vh;
     padding-right: 7vh;
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
-/* label[for="telefono1"], label[for="telefonos2"] {
-    display: block;
-    width:50%
-
-} */
-
-
 label.datos, label.genero {
     display: block;
     text-align:left;
@@ -234,7 +247,7 @@ section.perfilusuario{
     padding-top: 10vh;
 }
 .intereses{
-    width:50%;
+    width:100%;
     padding-left: 7vh;
     padding-right: 3vh;
     margin-top: 2vh;
@@ -248,7 +261,20 @@ section.perfilusuario{
     margin-top: 0.5rem;
     padding-left: 8vw;
 }
+.registerbutton{
+    height: 33px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+    transition: all 500ms;
+    padding-left: 6px;
+}
+.registerbutton:hover{
+    background-color: #B1272F;
+    color: black;
+}
 
+/* -------- FIN FORMULARIO REGISTRO -------- */
 
 footer{
     display: flex;
