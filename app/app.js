@@ -7,7 +7,7 @@ const PUERTO = 3000;
 app.use(express.static(__dirname + '/public'));
 
 
-app.listen(PUERTO, () => {
+app.listen(process.env.PORT || PUERTO, () => {
     console.log(`Up & Running en http://127.0.0.1:${PUERTO}`);
 });
 
