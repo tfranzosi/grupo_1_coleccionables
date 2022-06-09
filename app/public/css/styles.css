@@ -74,7 +74,7 @@ header .logo-login{
 }            
 
 header img.isologotipo{          
-    height: 40px;
+    height: 50px;
 }
 
 header .logo-login a{
@@ -192,6 +192,10 @@ footer .subscripcion{
 
     footer .logo{
         width: 30%;
+    }
+
+    header img.isologotipo{          
+        height: 65px;
     }
     
 }
