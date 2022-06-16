@@ -66,14 +66,16 @@ section.productos article{
     height: 100%;
     align-items: flex-start;
     justify-content: space-between;
-    font-size: 8px;
+    font-size: 12px;
 }
 
+section.productos article h5{
+    font-size: 14px;
+}
 
 section.productos article div.precios{
     width: 100%;
     margin-top: 10px;
-    font-size: 7px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

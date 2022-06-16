@@ -1,7 +1,7 @@
 :root{
         /*    ---  Colores    ----     */
         --fondo-social-media: #000000;
-        --fondo-logo: #efefef;
+        --fondo-sitio: #efefef;
         --letra-clara: #bebebe;
         --letra-header: #252525;
         --fondo-boton: #1f1813;
@@ -13,14 +13,91 @@
         --altura-footer: 250px;
 }
 
-/* main{
-    max-width: 700px;
-    margin: auto;
-} */
+
 main{
     background-color: var(--fondo-sitio);
+    padding: 3% 10%;
+}
+h3{
+    margin-left: 2vw;
+}
+.contenedor-login {
+    background-color: white;
+    margin: 2vh;
+    padding: 4vh;
+    text-align: center;
+}
+.contenedor-login p{
+    margin: 1vh;
+    padding: 2vh;
+    text-align: center;
+
+}
+    /*BOTONES INGRESO*/
+.social-login{
+    display:flex wrap;
+    padding: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    text-align:center;   
+}
+.social-login button{
+    height: 40px;
+    cursor:pointer;
+    padding: 1px;
+    width:fit-content;  
+    margin-right: 1vh;;
+    margin-top: 1vh;
+    padding-right: 0.5vw;
+    background-color: white;
+    transition: all 500ms;
+    border-radius: 4px;
+
+}
+.facebookbutton:hover{
+    background-color:#2172c4;
 }
 
+.applebutton:hover{
+    background-color: black;
+    color: white;
+}
+.gmailbutton:hover{
+    background-color:#D64A3A;
+}
+
+
+/*iconos d elos botones*/
+.facebook{
+    position: relative;
+    left:3px;
+}
+.textofacebook{
+    position: relative;
+    left:3px;
+}
+.gmail{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+.apple{
+    position: relative;
+    left: 3px;
+}
+
+.social-login button span{
+    padding: 2px;
+}
+svg{
+    height: 0.9rem;
+}
+/* LOGIN */
+.contenedor-login{
+    display:flex;
+    flex-direction: column;
+    padding: 0vw,10vw;
+}
 section.formulario form{
    width: 70%;
    margin: auto;
@@ -33,33 +110,64 @@ section.formulario form{
 section.formulario form > div{
     margin: 10px 0px;
     width: 100%;
+    
 }
 
 section.formulario form > a{
-    margin: 10px 0px;
+    margin: 0px;
     font-weight: bold;
 }
 
 main input.text{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 14px;
     min-height: 35px;
     border: 1px solid var(--fondo-boton);
     padding: 0px 10px;
 }
 
-main button{
-    border: none;
-    width: 100%;
-    min-height: 35px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: var(--fondo-boton);
-    transition: background-color 400ms;
+.ingresobutton{
+    height: 33px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+    transition: all 500ms;
+    padding-left: 6px;
+    border-radius: 4px;
+    margin-bottom: 2vh;
+    align-self: center;
+
+}
+.ingresobutton:hover{
+    background-color: #B1272F;
+    color: black;
+}
+.olvide{
+    color: #B1272F;  
+    font-size: 0.8rem;
+}
+a{
+    color: #B1272F;
 }
 
-main button:hover{
-   background-color: var(--fondo-boton-apretado);
+
+@media(min-width: 576px){
+    .contenedor-login{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .olvide{
+        align-self: flex-end;
+    }
+}
+
+@media(min-width: 992px){
+    form{
+        padding-left:4vw;
+        padding-right: 4vw;
+    }
+    section.formulario{
+        display:flex;
+    }
 }

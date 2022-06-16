@@ -234,6 +234,10 @@ div.buttons{
         flex-direction: row;
     }
 
+    .buy-now-button, .add-to-cart-button {
+        margin: 5px;
+    }
+
     .product-long-description {
         padding-right: 200px;
         padding-left:50px;
