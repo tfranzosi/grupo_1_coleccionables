@@ -224,12 +224,13 @@ footer .subscripcion{
 /*  ---     Media Queries     ---- */
 
 @media(min-width: 576px){
- 
+    
     header .logo-login span{
         display: block;
+        width: max-content;
     }
     header .logo-login{
-        background-color: var(--fondo-logo);
+        background-color: var(--fondo-sitio);
         padding: 1% 4%;
         flex-wrap: nowrap;
     }  
