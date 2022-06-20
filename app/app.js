@@ -11,6 +11,10 @@ app.listen(process.env.PORT || PUERTO, () => {
     console.log(`Up & Running en http://127.0.0.1:${PUERTO}`);
 });
 
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'/app/views'))
+
 //      ---     INICIO DE LAS RUTAS    ---
 
 app.get('/', (req, res) => {
