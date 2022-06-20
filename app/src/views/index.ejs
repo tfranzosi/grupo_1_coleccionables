@@ -1,67 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs')%>
+    <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="/css/index.css">
     <title>GamePlay - Home</title>
 </head>
 
 <body>
-
-    <header>
-        <div class="social-media">
-            <nav>
-                <ul>
-                    <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li><a href="https://wa.me/3515555555" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="mailto:contacto@gamestop.com.ar"><i class="fa-regular fa-envelope"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="logo-login">
-            <a href="/"><img class="isologotipo" src="/images/imagotipo.png" alt="Gameplay"></a>
-            
-            <form action="/" method="GET" class="search-bar">
-                <div class="search-bar">
-                    <input type="text" placeholder="Buscá productos, marcas y ofertas..." class="search-bar"></input>
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </form>
-            
-            <nav>
-                <ul>
-                    <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Carrito</span></a></li>
-                    <li><a href="/registro"><i class="fa-regular fa-id-card"></i><span>&nbsp;Registrate</span></a></li>
-                    <li><a href="/inicioSesion"><i class="fa-solid fa-arrow-right-to-bracket"></i><span>&nbsp;Inicia sesión</span></a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="navegacion-carrito">
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Productos</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <section class="slider">
-            <img class="slider" src="/images/home-slider/gameplay-home-slider-01.png">
-            <div>
-                <img src="/images/home-categories-flat/home-categories-flat-01.png">
-                <img src="/images/home-categories-flat/home-categories-flat-02.png">
-                <img src="/images/home-categories-flat/home-categories-flat-03.png">
-            </div>
-        </section>
-    </header>
-
+    <%- include('./partials/header.ejs') %>
     <section class="main">
         <h4 class="titulo">OFERTAS DE LA SEMANA</h4>
         <section class="productos">
@@ -222,55 +168,7 @@
         </section>
     </section>
 
-    <footer>
-        <div class="logo">
-            <nav>
-                <ul>
-                    <li><a href="/" class="isologotipo"><img src="/images/isotipo.png"><img src="/images/logotipo.png"></a></li>
-                    <li><ul class="social-media">
-                        <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-                        <li><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                    </ul></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li><ul>
-                        <li><a href="https://wa.me/351555555" target="_blank"><i class="fa-brands fa-whatsapp"></i>&nbsp;Atencion al Cliente</a></li>
-                        <li><a href="mailto:contacto@gamestop.com.ar"><i class="fa-regular fa-envelope"></i>&nbsp;Email contacto</a></li>
-                    </ul></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="empresa">
-            <h4>LA EMPRESA</h4>
-            <p><a href="/">Nosotros</a></p>
-            <p><a href="/">Comunidad</a></p>
-            <p><a href="/">Terminos y condiciones</a></p>
-            <h4>&nbsp;</h4>
-            <h4>CLIENTE</h4>
-            <p><a href="/">Mi cuenta</a></p>
-            <p><a href="/carrito">Mi carrito</a></p>
-            <p><a href="/">Mis pedidos</a></p>
-            
-        </div>
-        <div class="soporte">
-            <h4>SOPORTE</h4>
-            <p><a href="/">¿Cómo comprar?</a></p>
-            <p><a href="/">Medios de pago</a></p>
-            <p><a href="/">Preguntas frecuentes</a></p>
-            <p><a href="/">Cambios y devoluciones</a></p>
-        </div>
-            <div class="newsletter">
-                <h4>NEWSLETTER</h4>
-                <p>Subscribete a nuestro newsletter y se el primero en enterarte de nuevas ofertas y promociones.</p>
-                <p>También conocé las novedades del mundo de los videojuegos como así también del mundo de comics y coleccionables.</p>
-                <h4>&nbsp;</h4>
-                <div><input type="text"><input class="subscripcion" type="button" value="SUSCRIBIRSE"></div>
-            </div>
-    </footer>
+    <%- include ('./partials/footer.ejs') %>
 </body>
 
 </html>
