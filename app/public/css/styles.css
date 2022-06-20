@@ -225,10 +225,7 @@ footer .subscripcion{
 
 @media(min-width: 576px){
     
-    header .logo-login span{
-        display: block;
-        width: max-content;
-    }
+    
     header .logo-login{
         background-color: var(--fondo-sitio);
         padding: 1% 4%;
@@ -238,7 +235,7 @@ footer .subscripcion{
         order:0;
         width: 80%;
     }
-    header .logo-login form.search-bar{
+    header .logo-login .search-bar{
         justify-content: center;
     }
 
@@ -256,7 +253,10 @@ footer .subscripcion{
     header{
         font-size: 16px;
     }  
-    
+    header .logo-login span{
+        display: block;
+        width: max-content;
+    }
     header img.isologotipo{          
         height: 80px;
     }
