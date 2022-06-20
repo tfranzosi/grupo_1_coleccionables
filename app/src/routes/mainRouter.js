@@ -16,4 +16,9 @@ router.get('/inicioSesion', mainController.login);
 
 router.get('/registro', mainController.register);
 
+router.get('/crear', mainController.create);
+
+router.get('/editar', mainController.edit);
+
+
 module.exports=router;

@@ -19,6 +19,14 @@ mainController={
 
     register: (req, res) => {
         res.render('register');
+    },
+
+    create: (req, res) => {
+        res.render('productCreate');
+    },
+
+    edit: (req, res) => {
+        res.render('productEdit');
     }
 
 }
