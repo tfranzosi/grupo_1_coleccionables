@@ -6,7 +6,7 @@ mainController={
     },
     
     producto: (req, res) => {
-        res.render('users/productDetail');
+        res.render('products/productDetail');
     },
     
     carrito: (req, res) => {
