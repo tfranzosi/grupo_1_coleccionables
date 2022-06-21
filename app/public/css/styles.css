@@ -238,7 +238,6 @@ footer .subscripcion{
     
     
     header .logo-login{
-        background-color: var(--fondo-sitio);
         padding: 1% 4%;
         flex-wrap: nowrap;
     }  

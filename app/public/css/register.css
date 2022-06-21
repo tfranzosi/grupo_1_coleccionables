@@ -67,11 +67,7 @@ header .social-media{
 header .social-media i{
     color: var(--fondo-sitio);
     font-size: 18px;
-}    
-header .logo-login{
-    background-color: var(--fondo-sitio);
-    padding: 0% 5%;
-}            
+}             
 
 header img.isologotipo{          
     height: 40px;
@@ -414,8 +410,8 @@ footer .subscripcion{
         height: 45px;
     }    
     .form-registro{
-        padding-left:15vw;
-        padding-right:15vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
     .tyc{
         padding-left: 1.2vw;
