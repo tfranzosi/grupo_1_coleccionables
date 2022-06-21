@@ -218,7 +218,18 @@ footer .subscripcion{
     color: var(--fondo-logo);
 }
 
+/*  ---     Breadcrumb     ---- */
 
+.breadcrumb {
+    padding-left: 25px;
+    padding-top:10px;
+    /* padding-bottom: 10px; */
+}
+
+.breadcrumb .active {
+    color: #b1262f;
+    font-weight: bold;
+}
 
 
 /*  ---     Media Queries     ---- */
