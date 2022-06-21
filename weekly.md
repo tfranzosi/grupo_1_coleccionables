@@ -38,9 +38,9 @@ TF
 **Qué va a hacer hoy:** Ponerme al dia con mi repositorio y empezar ayudando con los partials
 
 PG
-**Qué hizo ayer:** 
-**Si se encontró con algún impedimento:** 
-**Qué va a hacer hoy:** 
+**Qué hizo ayer:** Se actualizó la vista productDetail sumando botones para modificar cantidad y achicando la imagen de producto para que se vea entera al ingresar a la vista sin necesidad de scrollear.
+**Si se encontró con algún impedimento:** No 
+**Qué va a hacer hoy:** Hoy se va a trabajar en la creación de las vistas de creación y edición de productos.
 
 MV
 **Qué hizo ayer:** 
@@ -48,7 +48,7 @@ MV
 **Qué va a hacer hoy:** 
 _____
 
-## Weekly S03W03 - 27/06/2022
+## Weekly S04W01 - 27/06/2022
 SC
 **Qué hizo ayer:** 
 **Si se encontró con algún impedimento:** 
