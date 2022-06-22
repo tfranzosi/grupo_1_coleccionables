@@ -10,88 +10,7 @@
     --altura-header-logo2: 100px;
     --altura-footer: 250px;
 }
-
-*{
-    box-sizing: border-box;
-    text-decoration: none;
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
-
-}
-
-body{
-    font-family: 'Exo', sans-serif;
-    font-size: 16px;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
-}    
-
-header ul{
-    list-style-type: none;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}      
-
-header li{
-    margin-right: 10px;
-}        
-
-header a,
-footer a{
-    color: var(--letra-header);
-}        
-
-header div{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}            
-header .social-media{
-    padding: 0% 2%;
-    background-color: var(--fondo-social-media);
-    height: var(--altura-header-nav);
-}            
-
-header .social-media i{
-    color: var(--fondo-sitio);
-    font-size: 18px;
-}             
-
-header img.isologotipo{          
-    height: 40px;
-}
-
-header .logo-login a{
-    color: var(--letra-header);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0px 5px;
-    border-radius: 5px;
-}        
-
-header .logo-login span{
-    display: none;
-}
-
-header .navegacion-carrito{
-    font-size: 14px;
-    padding: 0% 2%;
-    height: var(--altura-header-nav);
-    border-bottom: 1px var(--fondo-sitio) solid;
-}            
+      
 
 /*    ----------------  FORMULARIO DE REGISTRO    ---------------     */
 
@@ -279,94 +198,10 @@ section.perfilusuario{
 
 /* -------- FIN FORMULARIO REGISTRO -------- */
 
-footer{
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
-    height: var(--altura-footer);
-    background-color: var(--fondo-sitio);
-    padding: 25px 2vw;
-}    
-
-footer .logo *{
-    margin: 2px 0px;
-}
-
-footer .empresa *,
-footer .soporte *,
-footer .newsletter *{
-    margin: 4px 0px;
-}
-
-footer .logo{
-    width: 40%;
-    height: 80%;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-footer a.isologotipo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-
-}
-
-footer .isologotipo img{
-    height: 30px;
-}
-
-footer ul{
-    list-style-type: none;
-    text-align: left;
-} 
-
-ul.social-media{
-    width: 120px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-footer .empresa{
-    width: 30%;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-footer .soporte{
-    width: 30%;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-footer .newsletter{
-    width: 35%;
-    display: none;
-}
-
-footer input{
-    padding: 3px;
-}
-footer .subscripcion{
-    background: var(--fondo-social-media);
-    color: var(--fondo-sitio);
-}
-
-
-
 
 /*  ---     Media Queries     ---- */
 
 @media(min-width: 576px){
-    header .logo-login span{
-        display: block;
-    }
     .form-registro{         /* Esto es para hacer 2 inputs por fila */
         display: flex;
         flex-wrap: wrap;
@@ -388,27 +223,10 @@ footer .subscripcion{
     .tyc{
         padding-left: 1.8vw;
     }
-    footer{
-        padding: 25px 8vw;
-    }   
-
-    footer .logo{
-        width: 30%;
-    }
     
 }
 
 @media(min-width: 992px){
-    header{
-        font-size: 16px;
-    }  
-    header img.isologotipo{          
-        height: 80px;
-    }
-
-    footer .isologotipo img{
-        height: 45px;
-    }    
     .form-registro{
         padding-left: 5vw;
         padding-right: 5vw;

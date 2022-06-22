@@ -27,18 +27,18 @@
         <!-- Shop Detail Start -->
         <div class="product-detail">
                 <div class="product-detail-left" >
-                    <img class="main-pic" src="/images/products/GPF006-uncharted-legacy-of-thieves-collection1-ps5.jpeg" alt="imagen de producto">
+                    <img class="main-pic" src="<%= producto.urlImagen %>" alt="imagen de producto">
                 </div>
                 <div class="product-detail-right">
                     <div>
                     <h5 class="brand">Marca</h5>
-                    <h2 class="product-name">Nombre del Producto</h2>
+                    <h2 class="product-name"><%= producto.titulo %> </h2>
                     </div>
                     <div>
-                        <p class="short-description"> Descripción corta del producto: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi ipsam excepturi officiis placeat velit! Dicta blanditiis laboriosam quibusdam sit aliquid odit, nesciunt cumque porro iusto, ea perferendis ex ratione totam? </p>
+                        <p class="short-description"> <%= producto.descripcionCorta %> </p>
                     </div>
                     <div>
-                        <p class="regular-price">$10.000 </p>
+                        <p class="regular-price">$<%= producto.precioOferta %> </p>
                     </div>
                     <div class="input-group">
                         <div class="input-group-btn">
@@ -71,10 +71,7 @@
         <!-- Product´s large description Start -->
         <div class="product-long-description">
             <h2>Descripción del producto</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti optio dignissimos voluptatum quaerat molestiae nemo, quidem a, assumenda voluptas illo alias, officiis libero iste quisquam blanditiis eum quam ut.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti optio dignissimos voluptatum quaerat molestiae nemo, quidem a, assumenda voluptas illo alias, officiis libero iste quisquam blanditiis eum quam ut.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti optio dignissimos voluptatum quaerat molestiae nemo, quidem a, assumenda voluptas illo alias, officiis libero iste quisquam blanditiis eum quam ut.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deleniti optio dignissimos voluptatum quaerat molestiae nemo, quidem a, assumenda voluptas illo alias, officiis libero iste quisquam blanditiis eum quam ut.</p>
+            <%= producto.descripcionLarga %>
         </div>
         <!-- Product´s large description End -->
         <div>

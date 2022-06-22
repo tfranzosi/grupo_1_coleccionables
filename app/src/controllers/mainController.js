@@ -1,8 +1,8 @@
-//CONTROLLERS.
-//Seguramente tengamos que dividir en userControllers y productControllers
+const db = require('../../public/db/db.json');
+
 mainController={
     index: (req, res) => {
-        res.render('index');
+        res.render('index', {db: db});
     }
 
 }

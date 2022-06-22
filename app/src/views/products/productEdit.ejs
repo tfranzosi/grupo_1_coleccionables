@@ -31,42 +31,42 @@
 
                     <div class="categoria"> 
                         <label for="SKU" class="datos">SKU</label>
-                        <input type="text" name="SKU" id="SKU" placeholder=" Código el producto" required>
+                        <input type="text" name="SKU" id="SKU" placeholder="<%= producto.sku %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Nombre del Producto" required>
+                        <input type="text" name="titulo" id="titulo" placeholder="<%= producto.titulo %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="short_desc" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="short_desc" id="short_desc" placeholder="Datos básicos del producto" required>
+                        <input type="textarea" name="short_desc" id="short_desc" placeholder="<%= producto.descripcionCorta %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="long_desc" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="long_desc" id="long_desc" placeholder="Datos complementarios" required>
+                        <input type="textarea" name="long_desc" id="long_desc" placeholder="<%= producto.descripcionLarga %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="normal_price" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="normal_price" id="normal_price" placeholder="Precio de lista" required>
+                        <input type="number" min="1" step="any" name="normal_price" id="normal_price" placeholder="<%= producto.precioRegular %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="offer_price" class="datos">Precio de oferta</label>
-                        <input type="number" min="1" step="any"  name="offer_price" id="offer_price" placeholder="Precio rebajado" required>
+                        <input type="number" min="1" step="any"  name="offer_price" id="offer_price" placeholder="<%= producto.precioOferta %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="discount" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="discount" id="discount" placeholder="Porcentaje de descuento" required>
+                        <input type="number" min="1" step="any" name="discount" id="discount" placeholder="<%= producto.descuento %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="cuotas" id="cuotas" placeholder="Cantidad de cuotas" required>
+                        <input type="number" min="1" step="any" name="cuotas" id="cuotas" placeholder="<%= producto.cantidadCuotas %>" required>
                     </div>
 
                     <!-- <div class="categoria"> 
@@ -81,7 +81,7 @@
 
                     <div class="categoria"> 
                         <label for="cuotas_value" class="datos">Valor de las cuotas</label>
-                        <input type="number" min="1" step="any" name="cuotas_value" id="cuotas_value" placeholder="Valor unitario de la cuota" required>
+                        <input type="number" min="1" step="any" name="cuotas_value" id="cuotas_value" placeholder="<%= producto.valorCuota %>" required>
                     </div>
 
                     <div class="categoria"> 
