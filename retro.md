@@ -55,4 +55,29 @@
     - Trabajar en Branches
     - Accionar: reunión específica para branches o video explicativo con los comandos específicos.
 
+## Retrospectiva Sprint 3 - 24/06/2022
+
+- ¿Qué problemas tuvimos?
+
+    - LLegamos muy cerca del deadline
+    - Nos cuesta normalizar el CSS
+
+
+- ¿Qué hicimos bien?
+
+- Abrir ramas
+- Mejoramos la comunicación
+- Abrimos el trabajo personal en branches y generamos una branch dev anterior a la main, donde se prueban las mejoras y una vez probados se mergean al main.
+- Más automatización (polls de horarios, peer to peer review en trello)
+- Adaptación del equipo a entorno cambiante, reaasignación de tareas y entrega a tiempo del sprint a pesar de contar con bajas temporales por enfermedad.
+
+
+- ¿Qué queremos mejorar y cómo lo vamos a hacer?
+
+- Normalizar el CSS
+- Accionar: sacar dudas con el profesor sobre la organización del CSS y si es necesario en este punto o lo vamos ver más adelante (React).
+
+- JSON de productos que coincida con los campos del form y lo mismo para usuarios.
+- Accionar: comparar archivos.
+
 
