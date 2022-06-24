@@ -65,7 +65,7 @@
 
 - ¿Qué hicimos bien?
 
-- Abrir ramas
+- Abrir ramas.
 - Mejoramos la comunicación
 - Abrimos el trabajo personal en branches y generamos una branch dev anterior a la main, donde se prueban las mejoras y una vez probados se mergean al main.
 - Más automatización (polls de horarios, peer to peer review en trello)
