@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('../partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <title>GamePlay - Detalle de producto</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+    <!-- Breadcrumb Start -->
+    <main class="product-detail">
+        <div class="breadcrumb">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="level-01" href="/">Inicio > </a>
+                <a class="level-02" href="/">Categoría > </a>
+                <a class="level-03" href="/">Subcategoría > </a>
+                <span class="active">Producto</span>
+            </nav>
+        </div>
+    <!-- Breadcrumb End -->
+
+
+        <!-- Shop Detail Start -->
+        <div class="product-detail">
+                <div class="product-detail-left" >
+                    <img class="main-pic" src="<%= producto.urlImagen %>" alt="imagen de producto">
+                </div>
+                <div class="product-detail-right">
+                    <div>
+                    <h5 class="brand">Marca</h5>
+                    <h2 class="product-name"><%= producto.titulo %> </h2>
+                    </div>
+                    <div>
+                        <p class="short-description"> <%= producto.descripcionCorta %> </p>
+                    </div>
+                    <div>
+                        <p class="regular-price">$<%= producto.precioOferta %> </p>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <a href="javascript:alert('Restaste una unidad');"><button class="minus-button"> - </button></a>
+                        </div>
+                        <input type="text" class="form-control" value="1">
+                        <div class="input-group-btn">
+                            <a href="javascript:alert('Sumaste una unidad');"><button class="plus-button"> + </button></a>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="add-to-cart">
+                            <a href="javascript:alert('¡Tu producto se ha añadido al carrito!');"><button class="add-to-cart-button">AÑADIR AL CARRITO</button></a>
+                        </div>
+                        <div class="buy-now">
+                            <a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');"><button class="buy-now-button">COMPRAR AHORA</button></a>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Cierre del product-detail-right     -->
+            </div>
+        </div>
+        <!-- Shop Detail End -->
+        <div>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <!-- Product´s large description Start -->
+        <div class="product-long-description">
+            <h2>Descripción del producto</h2>
+            <%= producto.descripcionLarga %>
+        </div>
+        <!-- Product´s large description End -->
+        <div>
+            <br>
+        </div>
+        <div>
+            <br>
+        </div>
+        <!-- Footer Start -->
+    </main>
+    <%- include ('../partials/footer.ejs') %>
+</body>
+
+</html>
+
+    <!-- Footer End -->

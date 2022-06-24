@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>GamePlay - Home</title>
+</head>
+
+<body>
+    <header>
+    <%- include('./partials/header') %>
+    <%- include('./partials/header_slider') %>
+    </header>
+    <section class="main">
+        <h4 class="titulo">OFERTAS DE LA SEMANA</h4>
+        <section class="productos">
+            <% for (let producto of db.ofertas){ %>
+
+            <a href="/productos/sku/<%= producto.sku %>"><article>
+                <div>
+                    <img src="<%= producto.urlImagen %>">
+                    <h5><%= producto.titulo %></h5>
+                    <span><%= producto.categorias %></span>
+                </div>
+                <div class="precios">
+                    <div>
+                        <span class="precio-viejo">$<%= producto.precioRegular %></span>
+                        <span class="precio-actual">$<%= producto.precioOferta %></span>
+                    </div>
+                    <span class="descuento"><%= producto.descuento %>% off</span>
+                </div>
+            </article></a>
+
+            <% } %> 
+        </section>
+
+        <h4 class="titulo">PRODUCTOS MAS VENDIDOS</h4>
+        <section class="productos">
+
+            <% for (let producto of db.masVendidos){ %>
+
+                <a href="/productos/sku/<%= producto.sku %>"><article>
+                    <div>
+                        <img src="<%= producto.urlImagen %>">
+                        <h5><%= producto.titulo %></h5>
+                        <span><%= producto.categorias %></span>
+                    </div>
+                    <div class="precios">
+                        <div>
+                            <span class="precio-viejo">$<%= producto.precioRegular %></span>
+                            <span class="precio-actual">$<%= producto.precioOferta %></span>
+                        </div>
+                        <span class="descuento"><%= producto.descuento %>% off</span>
+                    </div>
+                </article></a>
+    
+                <% } %> 
+        </section>
+        
+        <h4 class="titulo">COMENTARIOS DE USUARIOS</h4>
+        <section class="comentarios">
+            
+        <% for(let usuario = 1 ; usuario <= 4 ; usuario++){ %> 
+            <article>
+                <img src="/images/users/gamer-avatar-0<%= usuario %>.jpeg">
+                <h5>USUARIO <%= usuario %></h5>
+                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+            </article>
+        <% } %> 
+        
+        </section>
+    </section>
+
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>

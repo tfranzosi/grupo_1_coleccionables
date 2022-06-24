@@ -3,6 +3,7 @@
     --fondo-social-media: #000000;
     --fondo-logo: #efefef;
     --letra-header: #252525;
+    --rojo-gameplay: #B1272F; 
 
     /*    ---  Parametros    ----     */
     --altura-header-nav:30px;
@@ -70,7 +71,8 @@ header .social-media i{
 }    
 header .logo-login{
     background-color: var(--fondo-logo);
-    padding: 0% 5%;
+    padding: 1% 4%;
+    flex-wrap: wrap;
 }            
 
 header img.isologotipo{          
@@ -90,12 +92,52 @@ header .logo-login span{
     display: none;
 }
 
+/* Search bar del Header */
+header .logo-login .search-bar{
+    display: flex ;
+    flex-direction: row;
+    justify-content: right;
+    width: inherit;
+}
+header .logo-login form.search-bar{
+    order:1;
+    width: 90%;
+    
+}
+header .logo-login input{
+    min-width: 14px;
+    width: 65%;
+    max-width: 90%-10px;
+    padding:4px;
+    border: 0px;
+    border-radius: 4px;
+}
+header .logo-login button{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1px 1px 1px 4px;
+    width:fit-content;
+    border: 0;
+    cursor: pointer;
+}
+header .logo-login button:hover{
+    color: var(--rojo-gameplay);
+}
+header.logo-login button>i{
+    color: var(--fondo-social-media);
+}
+
+
 header .navegacion-carrito{
     font-size: 14px;
     padding: 0% 2%;
     height: var(--altura-header-nav);
     border-bottom: 1px var(--fondo-logo) solid;
 }            
+/* Para colorear iconos del header en hover */
+.logo-login li:hover i, .logo-login li:hover span{
+    color:var(--rojo-gameplay);
+}
+
 
 footer{
     display: flex;
@@ -176,14 +218,35 @@ footer .subscripcion{
     color: var(--fondo-logo);
 }
 
+/*  ---     Breadcrumb     ---- */
 
+.breadcrumb {
+    padding-left: 25px;
+    padding-top:10px;
+    /* padding-bottom: 10px; */
+}
+
+.breadcrumb .active {
+    color: #b1262f;
+    font-weight: bold;
+}
 
 
 /*  ---     Media Queries     ---- */
 
 @media(min-width: 576px){
-    header .logo-login span{
-        display: block;
+    
+    
+    header .logo-login{
+        padding: 1% 4%;
+        flex-wrap: nowrap;
+    }  
+    header .logo-login form.search-bar{
+        order:0;
+        width: 80%;
+    }
+    header .logo-login .search-bar{
+        justify-content: center;
     }
 
     footer{
@@ -194,17 +257,16 @@ footer .subscripcion{
         width: 30%;
     }
 
-    header img.isologotipo{          
-        height: 65px;
-    }
-    
 }
 
 @media(min-width: 992px){
     header{
         font-size: 16px;
     }  
-    
+    header .logo-login span{
+        display: block;
+        width: max-content;
+    }
     header img.isologotipo{          
         height: 80px;
     }
