@@ -67,7 +67,7 @@ PG
 MV
 **Qué hizo esta semana:** 
 **Si se encontró con algún impedimento:** 
-**Qué va a hacer la semana entrante:** 
+**Qué va a hacer la semana entrante:** Crear rutas para editar productos
 
 
 
