@@ -1,0 +1,122 @@
+
+                    <div class="categoria"> 
+                        <label for="SKU" class="datos">SKU</label>
+                        <input type="text" name="SKU" id="SKU" value="<%= producto.sku %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="titulo" class="datos">Título</label>
+                        <input type="text" name="titulo" id="titulo" value="<%= producto.titulo %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="short_desc" class="datos">Descr. Corta</label>
+                        <input type="textarea" name="short_desc" id="short_desc" value="<%= producto.descripcionCorta %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="long_desc" class="datos">Descr. Larga</label>
+                        <input type="textarea" name="long_desc" id="long_desc" value="<%= producto.descripcionLarga %>"required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="normal_price" class="datos">Precio normal</label>
+                        <input type="number" min="1" step="any" name="normal_price" id="normal_price" value="<%= producto.precioRegular %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="offer_price" class="datos">Precio de oferta</label>
+                        <input type="number" min="1" step="any"  name="offer_price" id="offer_price" value="<%= producto.precioOferta %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="discount" class="datos">Descuento</label>
+                        <input type="number" min="1" step="any" name="discount" id="discount" value="<%= producto.precioOferta %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="cuotas" class="datos">Cuotas</label>
+                        <input type="number" min="1" step="any" name="cuotas" id="cuotas"  value="<%= producto.cantidadCuotas %>" required>
+                    </div>
+
+                    <!-- <div class="categoria"> 
+                        <label for="cuotas" class="datos">Cuotas</label>
+                        <select name="cuotas" class="datos">
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="9">9</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div> -->
+
+                    <div class="categoria"> 
+                        <label for="cuotas_value" class="datos">Valor de las cuotas</label>
+                        <input type="number" min="1" step="any" name="cuotas_value" id="cuotas_value" value="<%= producto.valorCuota %>" required>
+                    </div>
+
+                    <div class="categoria"> 
+                        <label for="tags" class="datos">Etiquetas</label>
+                        <input type="textarea" name="tags" id="tags" placeholder="etiquetas para SEO" >
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Atributo Precio</h4>
+                        <div class="generos">
+                            <label for="regular">Regular</label>
+                            <input type="radio" name="atributo_precio" value="false" id="regular">
+                        </div>
+                        <div class="generos">
+                            <label for="offer">En Oferta</label>
+                            <input type="radio" name="atributo_precio" value="true" id="oferta">
+                        </div>
+                        
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Atributo Estado</h4>
+                        <div class="generos">
+                            <label for="fisico">Físico</label>
+                            <input type="radio" name="atributo_estado" value="true" id="físico">
+                        </div>
+                        <div class="generos">
+                            <label for="digital">Digital</label>
+                            <input type="radio" name="atributo_estado" value="false" id="digital">
+                        </div>
+                        
+                    </div>
+                                            <!-- Div abajo de los datos -->
+                    <section class="perfilusuario">
+                        <div class="intereses">
+                            <h4>Categorías</h4>
+                            <div>
+                                <input type="checkbox" name="categories" value="a" id="a">
+                                <label for="a">Juegos Físicos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="categories" value="b" id="b">
+                                <label for="b">Juegos Digitales</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="categories" value="c" id="c">
+                                <label for="c">Ofertas</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="categories" value="d" id="d">
+                                <label for="d">PS4</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="categories" value="e" id="e">
+                                <label for="e">PS5</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="categories" value="f" id="f">
+                                <label for="f">Coleccionables</label>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="contenedor-fotoproducto">
+                        <h4>Foto de producto</h4><br>
+                        <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
+                        <input type="file" accept=".jpg, .png" id="fotoPerfil" name="Imagen"> //Posiblemente hay q cambiar este name xq se comporta dif
+                    </div>
+                    <br>
