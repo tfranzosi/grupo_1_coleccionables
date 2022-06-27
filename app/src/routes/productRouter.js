@@ -7,7 +7,9 @@ router.get('/sku/:id', productController.producto);
 
 router.get('/crear', productController.create);
 
-router.get('/sku/:id/editar', productController.edit);
+//TARJETA TRELLO: CRUD 03 - Rutas EDIT (MV)
+router.get("/sku/:id/editar", productController.editForm)
 
+router.put("/sku/:id", productController.edit)
 
 module.exports = router;
