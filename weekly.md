@@ -60,9 +60,9 @@ TF
 **Qué va a hacer la semana entrante:** 
 
 PG
-**Qué hizo esta semana:** 
-**Si se encontró con algún impedimento:** 
-**Qué va a hacer la semana entrante:** 
+**Qué hizo esta semana:** Colaboré en las vistas de creación y edición de producto junto con SC. Sumé breadcrumbs a todas las vistas. Actualicé el Tablero con las tarjetas del nuevo sprint. Primeros pasos de S04T05 / S04T06 / S04T07B.
+**Si se encontró con algún impedimento:** Básicamente entendimiento de como trabajar con CRUD, repasando conceptos para poder finalizar la tarea.
+**Qué va a hacer la semana entrante:** Finalizar  S04T05 / S04T06 / S04T07B.
 
 MV
 **Qué hizo esta semana:** 
