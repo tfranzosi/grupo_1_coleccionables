@@ -27,13 +27,19 @@
         <div class="contenedor-registro">
             <br>
             <div class="form-registro">
-                <form class="registro" action="/productos/<%=productos.sku %>?_method=PUT" method="POST">
+                <form class="registro" action="/productos/?_method=PUT" method="POST">
                     <%-include ('../partials/form_fields.ejs') %>
                     <div>
                         <button type="submit" class="registerbutton">ACTUALIZAR</button>
                     </div><br>
-                    
                 </form>
+
+                <form class="registro" action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
+                    <div>
+                        <button type="submit" class="registerbutton">ELIMINAR</button>
+                    </div><br>
+                </form>
+                    
         </div>
     </div>
     </main>

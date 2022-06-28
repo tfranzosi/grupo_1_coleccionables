@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>GamePlay - Productos</title>
+</head>
+
+<body>
+    <header>
+    <%- include('../partials/header') %>
+    <%- include('../partials/header_slider') %>
+    </header>
+    <section class="main">
+        <h4 class="titulo">TODOS LOS PRODUCTOS</h4>
+        <section class="productos">
+        <% for (let producto of productos){ %>
+            <%- include ('../partials/producto',{producto}) %>
+        <% } %> 
+        </section>
+    </section>
+
+    <%- include ('../partials/footer') %>
+</body>
+
+</html>

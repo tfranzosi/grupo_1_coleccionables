@@ -1,27 +1,46 @@
 const fs = require('fs');
 const path = require('path');
-const rutaDB = path.join(__dirname,'../../public/db/db.json');
-const db = require(rutaDB);
+const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
-const dbparseada = JSON.parse(readDB);
+const dbParseada = JSON.parse(readDB);
 
 productController={
+    showAll: (req, res) => {
+        res.render('products/products',{productos: dbParseada});
+    },
     producto: (req, res) => {
-        res.render('products/productDetail',{producto: productController.buscarProductoPorId(parseInt(req.params.id))});
+        let id = parseInt(req.params.id);
+        let indice = productController.buscarProductoPorId(id);
+        res.render('products/productDetail',{producto: dbParseada[indice]});
     },
     
     create: (req, res) => {
-        res.render('products/productCreate',{producto: db});
+        let id = parseInt(req.params.id);
+        let indice = productController.buscarProductoPorId(id);
+        res.render('products/productCreate',{productos: dbParseada});
     },
 
     editForm: (req, res) => {
-        res.render('products/productEdit',{producto: productController.buscarProductoPorId(parseInt(req.params.id))});
+        let id = parseInt(req.params.id);
+        let indice = productController.buscarProductoPorId(id);
+        res.render('products/productEdit',{producto: dbParseada[indice]});
     },
-    buscarProductoPorId: function (id) { //FALTA EDITAR PARA QUE DEVUELVA INDEX, COMO HABLAMOS EN LLAMADA
-        return db.completa.find(producto => {
-            return producto.sku === id;
-        });
+
+    delete: (req, res) => {
+        let id = parseInt(req.params.id);
+        let indice = productController.buscarProductoPorId(id);
+        dbParseada.splice(indice,1);
+        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+        res.redirect('/productos');
+    
     },
+
+    buscarProductoPorId: function (id) { //devuelvo indice del producto en productdb
+        return dbParseada.findIndex(producto => {
+            return producto.id === id;
+        });          
+    },
+
     edit: (req,res) => { //MV: PUShEO LA BASE PERO LUEGO LA IMPLEMENTO
         let id = req.params.id;
         /*

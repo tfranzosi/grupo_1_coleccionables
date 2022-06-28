@@ -1,7 +1,7 @@
 
                     <div class="categoria"> 
-                        <label for="SKU" class="datos">SKU</label>
-                        <input type="text" name="SKU" id="SKU" value="<%= producto.sku %>" required>
+                        <label for="sku" class="datos">SKU</label>
+                        <input type="text" name="sku" id="sku" value="<%= producto.sku %>" required>
                     </div>
 
                     <div class="categoria"> 
@@ -10,33 +10,28 @@
                     </div>
 
                     <div class="categoria"> 
-                        <label for="short_desc" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="short_desc" id="short_desc" value="<%= producto.descripcionCorta %>" required>
+                        <label for="descripcionCorta" class="datos">Descr. Corta</label>
+                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" value="<%= producto.descripcionCorta %>" required>
                     </div>
 
                     <div class="categoria"> 
-                        <label for="long_desc" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="long_desc" id="long_desc" value="<%= producto.descripcionLarga %>"required>
+                        <label for="descripcionLarga" class="datos">Descr. Larga</label>
+                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" value="<%= producto.descripcionLarga %>"required>
                     </div>
 
                     <div class="categoria"> 
-                        <label for="normal_price" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="normal_price" id="normal_price" value="<%= producto.precioRegular %>" required>
+                        <label for="precioRegular" class="datos">Precio normal</label>
+                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" value="<%= producto.precioRegular %>" required>
                     </div>
 
                     <div class="categoria"> 
-                        <label for="offer_price" class="datos">Precio de oferta</label>
-                        <input type="number" min="1" step="any"  name="offer_price" id="offer_price" value="<%= producto.precioOferta %>" required>
-                    </div>
-
-                    <div class="categoria"> 
-                        <label for="discount" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="discount" id="discount" value="<%= producto.precioOferta %>" required>
+                        <label for="descuento" class="datos">Descuento</label>
+                        <input type="number" min="1" step="any" name="descuento" id="descuento" value="<%= producto.descuento %>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="cuotas" id="cuotas"  value="<%= producto.cantidadCuotas %>" required>
+                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas"  value="<%= producto.cantidadCuotas %>" required>
                     </div>
 
                     <!-- <div class="categoria"> 
@@ -50,38 +45,37 @@
                     </div> -->
 
                     <div class="categoria"> 
-                        <label for="cuotas_value" class="datos">Valor de las cuotas</label>
-                        <input type="number" min="1" step="any" name="cuotas_value" id="cuotas_value" value="<%= producto.valorCuota %>" required>
-                    </div>
-
-                    <div class="categoria"> 
-                        <label for="tags" class="datos">Etiquetas</label>
-                        <input type="textarea" name="tags" id="tags" placeholder="etiquetas para SEO" >
+                        <label for="etiquetas" class="datos">Etiquetas</label>
+                        <input type="textarea" name="etiquetas" id="etiquetas" placeholder="etiquetas para SEO" >
                     </div>
 
                     <div class="categoria">
-                        <h4>Atributo Precio</h4>
-                        <div class="generos">
+                        <!-- <div class="generos">
                             <label for="regular">Regular</label>
                             <input type="radio" name="atributo_precio" value="false" id="regular">
                         </div>
-                        <div class="generos">
-                            <label for="offer">En Oferta</label>
-                            <input type="radio" name="atributo_precio" value="true" id="oferta">
-                        </div>
-                        
+
+                    <div class="generos">
+                        <label for="offer">En Oferta</label>
+                        <input type="radio" name="atributo_precio" value="true" id="oferta">
+                    </div> -->
+                        <input type="checkbox" name="esOferta" value="" id="esOferta">
+                        <label for="a">Es una oferta</label>
+
+                    
                     </div>
 
                     <div class="categoria">
-                        <h4>Atributo Estado</h4>
-                        <div class="generos">
+                        <!-- <div class="generos">
                             <label for="fisico">Físico</label>
                             <input type="radio" name="atributo_estado" value="true" id="físico">
                         </div>
                         <div class="generos">
                             <label for="digital">Digital</label>
                             <input type="radio" name="atributo_estado" value="false" id="digital">
-                        </div>
+                        </div> -->
+                        <input type="checkbox" name="esFisico" value="" id="esFisico">
+                        <label for="a">Esta en formato físico</label>
                         
                     </div>
                                             <!-- Div abajo de los datos -->

@@ -1,0 +1,18 @@
+<a href="/productos/<%= producto.id %>"><article>
+    <div>
+        <img src="<%= producto.urlImagen %>">
+        <h5><%= producto.titulo %></h5>
+        <span><%= producto.categorias %></span>
+    </div>
+    <div class="precios">
+        <div>
+            <% if (producto.esOferta){ %>
+                <span class="precio-viejo">$<%= producto.precioRegular %></span>
+            <% } %> 
+            <span class="precio-actual">$<%= producto.precioRegular * ( 1 - producto.descuento/100) %></span>
+        </div>
+        <% if (producto.esOferta) { %>
+            <span class="descuento"><%= producto.descuento %>% off</span>
+        <% } %> 
+    </div>
+</article></a>
