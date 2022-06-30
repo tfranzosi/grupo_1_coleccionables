@@ -1,37 +1,44 @@
 
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
-                        <input type="text" name="sku" id="sku" value="<%= producto.sku %>" required>
+                        <input type="text" name="sku" id="sku" value="<%if(producto===null){%><%=""%>
+                            <%}else{%><%=producto.sku%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
-                        <input type="text" name="titulo" id="titulo" value="<%= producto.titulo %>" required>
+                        <input type="text" name="titulo" id="titulo" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.titulo%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" value="<%= producto.descripcionCorta %>" required>
+                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" value="<%if(producto===null){%><%=""%>
+                            <%}else{%><%=producto.descripcionCorta%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" value="<%= producto.descripcionLarga %>"required>
+                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.descripcionLarga%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="precioRegular" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" value="<%= producto.precioRegular %>" required>
+                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.precioRegular%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descuento" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="descuento" id="descuento" value="<%= producto.descuento %>" required>
+                        <input type="number" min="1" step="any" name="descuento" id="descuento" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.descuento%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas"  value="<%= producto.cantidadCuotas %>" required>
+                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas"  value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.cantidadCuotas%><%}%>" required>
                     </div>
 
                     <!-- <div class="categoria"> 
@@ -46,7 +53,8 @@
 
                     <div class="categoria"> 
                         <label for="etiquetas" class="datos">Etiquetas</label>
-                        <input type="textarea" name="etiquetas" id="etiquetas" placeholder="etiquetas para SEO" >
+                        <input type="textarea" name="etiquetas" id="etiquetas" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.etiquetas%><%}%>" >
                     </div>
 
                     <div class="categoria">
@@ -59,7 +67,8 @@
                         <label for="offer">En Oferta</label>
                         <input type="radio" name="atributo_precio" value="true" id="oferta">
                     </div> -->
-                        <input type="checkbox" name="esOferta" value="" id="esOferta">
+                        <input type="checkbox" name="esOferta" id="esOferta" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.esOferta%><%}%>">
                         <label for="a">Es una oferta</label>
 
                     
@@ -74,7 +83,8 @@
                             <label for="digital">Digital</label>
                             <input type="radio" name="atributo_estado" value="false" id="digital">
                         </div> -->
-                        <input type="checkbox" name="esFisico" value="" id="esFisico">
+                        <input type="checkbox" name="esFisico" id="esFisico" value="<%if(producto===null){%><%=""%>
+                        <%}else{%><%=producto.esFisico%><%}%>">
                         <label for="a">Esta en formato físico</label>
                         
                     </div>
