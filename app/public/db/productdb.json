@@ -168,5 +168,27 @@
       "visitas": 0,
       "vendidos": 0,
       "esMasVendido": false
+   },
+   {
+      "id": 9,
+      "sku": "GPF006                           ",
+      "titulo": "Uncharted Legacy of Thieves - PS5 fisico",
+      "descripcionCorta": "¿Estás listo para buscar tu fortuna?",
+      "descripcionLarga": "¿Estás listo para buscar tu fortuna? Busca tu legado y deja tu huella en el mapa en UNCHARTED: Legacy of Thieves Collection. Experimente la narración emocionante y cinematográfica de Naughty Dog y las escenas de acción más taquilleras de la icónica franquicia.",
+      "precioRegular": 13799,
+      "descuento": 20,
+      "cantidadCuotas": 12,
+      "etiquetas": "ps5, juegos fisicos, gameplay, juegos online, playstation, uncharted legacy of thieves",
+      "esOferta": "\r\n                        ",
+      "esFisico": "\r\n                        ",
+      "categorias": [
+         "Juegos Físicos",
+         "Ofertas",
+         "PS5"
+      ],
+      "urlImagen": "/images/products/urlImagen-1656649755317.jpeg",
+      "visitas": 0,
+      "vendidos": 0,
+      "esMasVendido": false
    }
 ]
