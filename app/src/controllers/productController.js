@@ -20,6 +20,33 @@ productController={
         res.render('products/productCreate',{productos: dbParseada});
     },
 
+    	// Create -  Method to store
+	store: (req, res) => {
+		let idMaximo = dbParseada.length
+		let nuevoProducto =  {
+			id: idMaximo + 1,
+            sku:req.body.sku,
+			titulo: req.body.titulo,
+            descripcionCorta:req.body.descripcionCorta,
+            descripcionLarga:req.body.descripcionLarga,
+			precioRegular: parseInt(req.body.precioRegular),
+			descuento: parseInt(req.body.descuento),
+            cantidadCuotas: parseInt(req.body.cantidadCuotas),
+            etiquetas:req.body.etiquetas,
+            esOferta:req.body.esOferta,
+            esFisico:req.body.esFisico,
+			categorias: req.body.categories,
+			urlImagen: "/images/products/" + req.file.filename,
+            visitas:0,
+            vendidos:0,
+            esMasVendido:false
+		}
+		dbParseada.push(nuevoProducto)
+        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+
+		res.redirect("/productos")
+	},
+
     editForm: (req, res) => {
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
