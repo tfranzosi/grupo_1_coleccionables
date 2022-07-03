@@ -1,75 +1,62 @@
 
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
-                        <input type="text" name="sku" id="sku" value="<%if(producto===null){%><%=""%>
-                            <%}else{%><%=producto.sku%><%}%>" required>
+                        <input type="text" name="sku" id="sku" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.sku%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
-                        <input type="text" name="titulo" id="titulo" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.titulo%><%}%>" required>
+                        <input type="text" name="titulo" id="titulo" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.titulo%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" value="<%if(producto===null){%><%=""%>
-                            <%}else{%><%=producto.descripcionCorta%><%}%>" required>
+                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descripcionCorta%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.descripcionLarga%><%}%>" required>
+                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descripcionLarga%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="precioRegular" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.precioRegular%><%}%>" required>
+                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.precioRegular%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descuento" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="descuento" id="descuento" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.descuento%><%}%>" required>
+                        <input type="number" min="1" step="any" name="descuento" id="descuento" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descuento%><%}%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas"  value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.cantidadCuotas%><%}%>" required>
+                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.cantidadCuotas%><%}%>" required>
                     </div>
-
-                    <!-- <div class="categoria"> 
-                        <label for="cuotas" class="datos">Cuotas</label>
-                        <select name="cuotas" class="datos">
-                            <option value="3">3</option>
-                            <option value="6">6</option>
-                            <option value="9">9</option>
-                            <option value="12">12</option>
-                        </select>
-                    </div> -->
 
                     <div class="categoria"> 
                         <label for="etiquetas" class="datos">Etiquetas</label>
-                        <input type="textarea" name="etiquetas" id="etiquetas" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.etiquetas%><%}%>" >
+                        <input type="textarea" name="etiquetas" id="etiquetas" 
+                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.etiquetas%><%}%>" >
                     </div>
                     
                     <div class="categoria">
-                        <!-- <input type="checkbox" name="esOferta" id="esOferta" value="<%//if(producto===null){%><%=//""%>
-                        <%//}else{%><%=//producto.esOferta%><%//}%>">
-                        <label for="a">Es una oferta</label> -->
-                        <input type="radio" name="esFisico" id="esFisico" value="<%if(producto===null){%><%=false%>
-                            <%}else if(producto.esFisico){%><%=producto.esFisico%><%}%>">
-                            <label for="esFisico">Fisico</label>
+                        <input type="radio" name="esFisico" id="esFisico" 
+                        value="<%if(producto===null){%><%=false%><%}else if(producto.esFisico){%><%=producto.esFisico%><%}%>">
+                        <label for="esFisico">Fisico</label>
                     </div>
                     
                     <div class="categoria">
                         
-                        <input type="radio" name="esFisico" id="esDigital" value="<%if(producto===null || producto.esFisico===false){%><%=false%>
-                        <%}else if(producto.esFisico){%><%=null%><%}%>">
+                        <input type="radio" name="esFisico" id="esDigital" 
+                        value="<%if(producto===null || producto.esFisico===false){%><%=false%><%}else if(producto.esFisico){%><%=null%><%}%>">
                         <label for="esDigital">Digital</label>
                         
                     </div>

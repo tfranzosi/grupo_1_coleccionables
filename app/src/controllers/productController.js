@@ -22,9 +22,11 @@ productController={
 
     	// Create -  Method to store
 	store: (req, res) => {
-		let idMaximo = dbParseada.length
+		let nuevoIdMaximo = dbParseada.length + 1;
+        let esOferta = productController.validarOferta(req.body.descuento);
+
 		let nuevoProducto =  {
-			id: idMaximo + 1,
+			id: nuevoIdMaximo,
             sku:req.body.sku,
 			titulo: req.body.titulo,
             descripcionCorta:req.body.descripcionCorta,
@@ -33,10 +35,10 @@ productController={
 			descuento: parseInt(req.body.descuento),
             cantidadCuotas: parseInt(req.body.cantidadCuotas),
             etiquetas:req.body.etiquetas,
-            esOferta:req.body.esOferta,
+            esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
             esFisico:req.body.esFisico,
 			categorias: req.body.categories,
-			urlImagen: "/images/products/" + req.file.filename,
+			urlImagen: path.join("images","products", req.file.filename),
             visitas:0,
             vendidos:0,
             esMasVendido:false
@@ -56,15 +58,14 @@ productController={
     edit: (req,res) => { 
         let idProd = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(idProd);
-        let visitasProd = dbParseada[indice].visitas;
-        let vendidosProd = dbParseada[indice].vendidos;
+        let visitasProd = parseInt(dbParseada[indice].visitas);
+        let vendidosProd = parseInt(dbParseada[indice].vendidos);
         let esMasVendidoProd = dbParseada[indice].esMasVendido;
-        let esOferta = req.body.esOferta; 
-        if (esOferta !== true){esOferta=false}else{esOferta=true};
+        let esOferta = productController.validarOferta(req.body.descuento); 
         let esFisico = req.body.esFisico; 
-        if (esFisico !== true){esFisico=false}else{esFisico=true};
-        requesttt=req.body
-        console.log(requesttt)
+        if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
+        request=req.body
+        console.log(request)
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
         let productoEditado = { 
@@ -74,11 +75,11 @@ productController={
             descripcionCorta: req.body.descripcionCorta, //str
             descripcionLarga: req.body.descripcionLarga,  //str
             precioRegular: parseInt(req.body.precioRegular), //int
-            descuento: req.body.descuento, //bool
+            descuento: parseInt(req.body.descuento), //int
             cantidadCuotas: parseInt(req.body.cantidadCuotas), //int
+            etiquetas: req.body.etiquetas,  //str
             esOferta: esOferta, //bool
             esFisico: esFisico, //bool
-            etiquetas: req.body.etiquetas,  //str Deberia ser array? o se muestra con substrings separados x coma?
             categorias: req.body.categories, //str Array
             urlImagen: req.body.Imagen, //str
             visitas: visitasProd, //int             /*Implementar mecanismos de contador*/
@@ -95,15 +96,22 @@ productController={
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
         dbParseada.splice(indice,1);
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
         res.redirect('/productos');
     
     },
 
-    buscarIndiceProductoPorId: function (id) { //devuelvo indice del producto en productdb
+    buscarIndiceProductoPorId: id => { //devuelvo indice del producto en productdb
         return dbParseada.findIndex(producto => {
             return producto.id === id;
         });          
+    },
+    validarOferta: reqBodyDescuento => { //Recibe req.body.descuento, si es mayor a 0 hay oferta.
+        if (reqBodyDescuento>0){
+            return true
+        }else{
+            return false
+        };
     }
 }
 
