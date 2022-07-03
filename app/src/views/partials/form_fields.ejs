@@ -56,40 +56,26 @@
                         <input type="textarea" name="etiquetas" id="etiquetas" value="<%if(producto===null){%><%=""%>
                         <%}else{%><%=producto.etiquetas%><%}%>" >
                     </div>
-
-                    <div class="categoria">
-                        <!-- <div class="generos">
-                            <label for="regular">Regular</label>
-                            <input type="radio" name="atributo_precio" value="false" id="regular">
-                        </div>
-
-                    <div class="generos">
-                        <label for="offer">En Oferta</label>
-                        <input type="radio" name="atributo_precio" value="true" id="oferta">
-                    </div> -->
-                        <input type="checkbox" name="esOferta" id="esOferta" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.esOferta%><%}%>">
-                        <label for="a">Es una oferta</label>
-
                     
-                    </div>
-
                     <div class="categoria">
-                        <!-- <div class="generos">
-                            <label for="fisico">Físico</label>
-                            <input type="radio" name="atributo_estado" value="true" id="físico">
-                        </div>
-                        <div class="generos">
-                            <label for="digital">Digital</label>
-                            <input type="radio" name="atributo_estado" value="false" id="digital">
-                        </div> -->
-                        <input type="checkbox" name="esFisico" id="esFisico" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.esFisico%><%}%>">
-                        <label for="a">Esta en formato físico</label>
+                        <!-- <input type="checkbox" name="esOferta" id="esOferta" value="<%//if(producto===null){%><%=//""%>
+                        <%//}else{%><%=//producto.esOferta%><%//}%>">
+                        <label for="a">Es una oferta</label> -->
+                        <input type="radio" name="esFisico" id="esFisico" value="<%if(producto===null){%><%=false%>
+                            <%}else if(producto.esFisico){%><%=producto.esFisico%><%}%>">
+                            <label for="esFisico">Fisico</label>
+                    </div>
+                    
+                    <div class="categoria">
+                        
+                        <input type="radio" name="esFisico" id="esDigital" value="<%if(producto===null || producto.esFisico===false){%><%=false%>
+                        <%}else if(producto.esFisico){%><%=null%><%}%>">
+                        <label for="esDigital">Digital</label>
                         
                     </div>
                                             <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
+                        
                         <div class="intereses">
                             <h4>Categorías</h4>
                             <div>
@@ -120,6 +106,10 @@
                     </section>
                     <div class="contenedor-fotoproducto">
                         <h4>Foto de producto</h4><br>
-                        <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
+                        <% if (producto===null) {%>
+                            <%-include ('../partials/form_image_create.ejs', {productos:productos,producto:null}) %> 
+                        <%}else{%>
+                            <%-include ('../partials/form_image_edit.ejs', {producto:producto}) %>
+                        <%}%>
                         <input type="file" accept=".jpg, .png" id="fotoPerfil" name="urlImagen">
                     <br>
