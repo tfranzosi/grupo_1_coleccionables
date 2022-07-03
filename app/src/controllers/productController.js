@@ -38,7 +38,7 @@ productController={
             esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
             esFisico:req.body.esFisico,
 			categorias: req.body.categories,
-			urlImagen: path.join("images","products", req.file.filename),
+			urlImagen: 'images/products/'+ req.file.filename,
             visitas:0,
             vendidos:0,
             esMasVendido:false
@@ -65,7 +65,7 @@ productController={
         let esFisico = req.body.esFisico;
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
-        let urlImagenNueva = path.join('images','products',req.file.filename);
+        let urlImagenNueva = 'images/products/'+req.file.filename;
         if (dbParseada[indice].urlImagen !== urlImagenNueva){ urlImagenNueva=path.join('images','products',req.file.filename)}
         console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
