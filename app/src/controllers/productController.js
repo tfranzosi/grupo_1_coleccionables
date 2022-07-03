@@ -62,10 +62,12 @@ productController={
         let vendidosProd = parseInt(dbParseada[indice].vendidos);
         let esMasVendidoProd = dbParseada[indice].esMasVendido;
         let esOferta = productController.validarOferta(req.body.descuento); 
-        let esFisico = req.body.esFisico; 
+        let esFisico = req.body.esFisico;
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
-        console.log(request)
+        let urlImagenNueva = path.join('images','products',req.file.filename);
+        if (dbParseada[indice].urlImagen !== urlImagenNueva){ urlImagenNueva=path.join('images','products',req.file.filename)}
+        console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
         let productoEditado = { 
@@ -81,7 +83,7 @@ productController={
             esOferta: esOferta, //bool
             esFisico: esFisico, //bool
             categorias: req.body.categories, //str Array
-            urlImagen: req.body.Imagen, //str
+            urlImagen: urlImagenNueva, //str
             visitas: visitasProd, //int             /*Implementar mecanismos de contador*/
             vendidos: vendidosProd, //int           /*Implementar mecanismos de contador*/
             esMasVendido: esMasVendidoProd //bool   /*Implementar mecanismo dependiente de anterior atributo*/
