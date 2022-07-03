@@ -48,15 +48,15 @@
                     </div>
                     
                     <div class="categoria">
-                        <input type="radio" name="esFisico" id="esFisico" 
-                        value="<%if(producto===null){%><%=false%><%}else if(producto.esFisico){%><%=producto.esFisico%><%}%>">
+                        <input type="radio" name="esFisico" id="esFisico" value="true" 
+                        <%if(producto !==null && producto.esFisico){%><%= checked="checked" %><%}%> >
                         <label for="esFisico">Fisico</label>
                     </div>
                     
                     <div class="categoria">
                         
-                        <input type="radio" name="esFisico" id="esDigital" 
-                        value="<%if(producto===null || producto.esFisico===false){%><%=false%><%}else if(producto.esFisico){%><%=null%><%}%>">
+                        <input type="radio" name="esFisico" id="esDigital" value="false" 
+                        <%if(producto !==null && !producto.esFisico){%><%= checked="checked" %><%}%>>
                         <label for="esDigital">Digital</label>
                         
                     </div>
