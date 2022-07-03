@@ -27,8 +27,8 @@
         <div class="contenedor-registro">
             <br>
             <div class="form-registro">
-                <form class="registro" action="/productos/crear" method="POST">
-                    <%-include ('../partials/form_fields.ejs') %>
+                <form class="registro" action="/productos" method="POST" enctype="multipart/form-data">
+                    <%-include ('../partials/form_fields.ejs', {productos:productos,producto:null}) %>
                     <div>
                         <button type="submit" class="registerbutton">PUBLICAR</button>
                     </div><br>
