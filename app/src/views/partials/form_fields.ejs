@@ -66,27 +66,39 @@
                         <div class="intereses">
                             <h4>Categorías</h4>
                             <div>
-                                <input type="checkbox" name="categories" value="Juegos Físicos" id="Juegos Físicos">
+                                <input type="checkbox" name="categories" value="Juegos Físicos" id="Juegos Físicos"
+                                <%if(producto !==null && producto.categorias.includes("Juegos Físicos") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="Juegos Físicos">Juegos Físicos</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="categories" value="Juegos Digitales" id="Juegos Digitales">
+                                <input type="checkbox" name="categories" value="Juegos Digitales" id="Juegos Digitales"
+                                <%if(producto !==null && producto.categorias.includes("Juegos Digitales") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="Juegos Digitales">Juegos Digitales</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="categories" value="Ofertas" id="Ofertas">
+                                <input type="checkbox" name="categories" value="Ofertas" id="Ofertas"
+                                <%if(producto !==null && producto.categorias.includes("Ofertas") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="Ofertas">Ofertas</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="categories" value="PS4" id="PS4">
+                                <input type="checkbox" name="categories" value="PS4" id="PS4"
+                                <%if(producto !==null && producto.categorias.includes("PS4") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="PS4">PS4</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="categories" value="PS5" id="PS5">
+                                <input type="checkbox" name="categories" value="PS5" id="PS5"
+                                <%if(producto !==null && producto.categorias.includes("PS5") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="PS5">PS5</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="categories" value="Coleccionables" id="Coleccionables">
+                                <input type="checkbox" name="categories" value="Coleccionables" id="Coleccionables"
+                                <%if(producto !==null && producto.categorias.includes("Coleccionables") ){%>
+                                    <%= checked="checked" %><%}%> >
                                 <label for="Coleccionables">Coleccionables</label>
                             </div>
                         </div>
