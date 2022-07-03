@@ -31,14 +31,22 @@
                 </div>
                 <div class="product-detail-right">
                     <div>
+                    <% if (producto.esOferta) { %>
+                        <span class="discount"><%= producto.descuento %>% off</span>
+                    <% } %>
                     <h5 class="brand">Marca</h5>
                     <h2 class="product-name"><%= producto.titulo %> </h2>
                     </div>
                     <div>
                         <p class="short-description"> <%= producto.descripcionCorta %> </p>
                     </div>
-                    <div>
-                        <p class="regular-price">$<%= producto.precioOferta %> </p>
+                    <div class="prices">
+                        <div>
+                            <% if (producto.esOferta){ %>
+                                <span class="regular-price">$<%= producto.precioRegular.toLocaleString('es-Ar') %></span>
+                            <% } %> 
+                            <span class="offer-price">$<%= (parseInt(producto.precioRegular * ( 1 - producto.descuento/100))).toLocaleString('es-Ar') %></span>
+                        </div> 
                     </div>
                     <div class="input-group">
                         <div class="input-group-btn">
@@ -55,6 +63,23 @@
                         </div>
                         <div class="buy-now">
                             <a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');"><button class="buy-now-button">COMPRAR AHORA</button></a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="sku"> SKU: <%= producto.sku %> </p>
+                    </div>
+                    <div>
+                        <p class="tags"> TAGS: <%= producto.etiquetas %> </p>
+                    </div>
+                    <div>
+                        <p class="categories"> CATEGORIAS: <%= producto.categorias %> </p>
+                    </div>
+                    <div class="buttons2">
+                        <div class="add-to-cart">
+                            <a href="javascript:alert('¡Vas a editar tu producto!');"><button class="add-to-cart-button">EDITAR</button></a>
+                        </div>
+                        <div class="buy-now">
+                            <a href="javascript:alert('¡Vas a borrar tu producto!');"><button class="buy-now-button">BORRAR</button></a>
                         </div>
                     </div>
                 </div> 

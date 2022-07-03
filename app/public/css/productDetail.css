@@ -57,6 +57,12 @@ h5.brand {
     font-size: 20px;
     padding-top: 60px;  
     padding-bottom: 15px;
+    display:none;
+}
+
+h2.product-name {
+    padding-top: 60px;  
+    padding-bottom: 15px;
 }
 
 main h2 {
@@ -66,15 +72,37 @@ main h2 {
 }
 
 p.short-description, .product-long-description p {
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: justify;
+}
+
+div.prices {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .regular-price {
     font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-decoration:line-through;
+}
+
+.offer-price {
+    font-size: 30px;
     color: #b1262f;
     font-weight: bold;
     padding-bottom: 20px;
+}
+
+.discount {
+    font-size: 20px;
+    color: #b1262f;
+    font-weight: bold;
+    padding-top: 60px;  
+    padding-bottom: 15px;
 }
 
 div.input-group {
@@ -121,7 +149,15 @@ div.buttons{
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+div.buttons2{
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 
@@ -158,6 +194,19 @@ div.buttons{
 
 .buy-now-button:hover{
     background-color: #f00713;
+}
+
+p.sku  {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+p.tags  {
+    padding-bottom: 5px;
+}
+
+p.categories  {
+    padding-bottom: 10px;
 }
 
 /*  ---     GamePlayer Top Reviews     ---- */
