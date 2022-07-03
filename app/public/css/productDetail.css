@@ -199,12 +199,14 @@ div.buttons2{
 p.sku  {
     padding-top: 10px;
     padding-bottom: 5px;
-
 }
 
 p.tags  {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+}
 
+p.categories  {
+    padding-bottom: 10px;
 }
 
 /*  ---     GamePlayer Top Reviews     ---- */
