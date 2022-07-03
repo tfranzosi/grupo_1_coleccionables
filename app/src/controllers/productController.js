@@ -66,7 +66,6 @@ productController={
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
         let urlImagenNueva = 'images/products/'+req.file.filename;
-        if (dbParseada[indice].urlImagen !== urlImagenNueva){ urlImagenNueva=path.join('images','products',req.file.filename)}
         console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
