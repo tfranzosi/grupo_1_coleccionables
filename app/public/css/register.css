@@ -153,7 +153,9 @@ input[type="radio"]{
     border-width: 1px;
     border-color: black;
     padding: 4px;
+    text-align: left;
 }
+
 .registro .categoria input[type="tel"]#telefono1{
     width: 23%;
 }
