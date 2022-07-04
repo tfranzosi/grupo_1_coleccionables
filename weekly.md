@@ -50,14 +50,14 @@ _____
 
 ## Weekly S04W01 - 27/06/2022
 SC
-**Qué hizo esta semana:** 
-**Si se encontró con algún impedimento:** 
-**Qué va a hacer la semana entrante:** 
+**Qué hizo esta semana:** Colaboré en las vistas de creación y edición de producto junto con PG. 
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:** Básicamente entendimiento de como trabajar con CRUD, repasando conceptos para poder finalizar la tarea.
 
 TF
-**Qué hizo esta semana:** 
-**Si se encontró con algún impedimento:** 
-**Qué va a hacer la semana entrante:** 
+**Qué hizo esta semana:** Ultimar detalles último sprint. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Trabajar en la vista general y la vista individual de producto desde la óptica de CRUD.
 
 PG
 **Qué hizo esta semana:** Colaboré en las vistas de creación y edición de producto junto con SC. Sumé breadcrumbs a todas las vistas. Actualicé el Tablero con las tarjetas del nuevo sprint. Primeros pasos de S04T05 / S04T06 / S04T07B.
@@ -65,9 +65,28 @@ PG
 **Qué va a hacer la semana entrante:** Finalizar  S04T05 / S04T06 / S04T07B.
 
 MV
-**Qué hizo esta semana:** 
-**Si se encontró con algún impedimento:** 
-**Qué va a hacer la semana entrante:** Crear rutas para editar productos
+**Qué hizo esta semana:** Ultimar detalles último sprint. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Crear rutas para editar productos.
 
+## Weekly S04W02 - 04/07/2022
 
+SC
+**Qué hizo esta semana:** Repaso de conceptos de CRUD para colaborar con PG en la tarea CRUD de Alta de productos.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Desarrollo de funcionalidad Search.
 
+TF
+**Qué hizo esta semana:** Tarea CRUD vista general e individual de productos. Revisión de BD de producto y users. Armonización de CSS.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Tarea Crud Baja productos, revisión integral de CRUD y push a main.
+
+PG
+**Qué hizo esta semana:** Repaso de conceptos de CRUD para colaborar con SC en la tarea CRUD de Alta de productos. Generación de BD de productos y users. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Actualización de vista individual de productos con los datos faltantes de la BD de productos, agregado de botones de editar y borrar. Desarrollo funcionalidad Search junto con SC.
+
+MV
+**Qué hizo esta semana:** Desarrollo tarea CRUD de edición de productos,  Actualización del controlador de producto. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Armonización de los forms tanto para alta como edición.
