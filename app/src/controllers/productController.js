@@ -4,6 +4,16 @@ const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
 
+const categorias = [
+    "Juegos Físicos",
+    "Juegos Digitales",
+    "Ofertas",
+    "PS4",
+    "PS5",
+    "Coleccionables"
+];
+
+
 productController={
     showAll: (req, res) => {
         res.render('products/products',{productos: dbParseada});
@@ -15,9 +25,13 @@ productController={
     },
     
     create: (req, res) => {
+        //Defino producto vacio segun mi base de datos
+        let productoVacio = {};
+        for (let key in dbParseada[0]) productoVacio[key] = "";
+
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
-        res.render('products/productCreate',{productos: dbParseada});
+        res.render('products/productCreate',{producto: productoVacio, categorias});
     },
 
     	// Create -  Method to store
@@ -38,7 +52,7 @@ productController={
             esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
             esFisico:req.body.esFisico,
 			categorias: req.body.categories,
-			urlImagen: 'images/products/'+ req.file.filename,
+			urlImagen: '/images/products/'+ req.file.filename,
             visitas:0,
             vendidos:0,
             esMasVendido:false
@@ -52,7 +66,7 @@ productController={
     editForm: (req, res) => {
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
-        res.render('products/productEdit',{producto: dbParseada[indice]});
+        res.render('products/productEdit',{producto: dbParseada[indice], categorias});
     },
 
     edit: (req,res) => { 
@@ -65,12 +79,14 @@ productController={
         let esFisico = req.body.esFisico;
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
-        let urlImagenNueva = 'images/products/'+req.file.filename;
+        let urlImagenNueva;
+        if (req.file !== undefined) urlImagenNueva = 'images/products/' + req.file.filename;
+        else urlImagenNueva = dbParseada[indice].urlImagen;
         console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
         let productoEditado = { 
-            id:idProd, //int
+            id: idProd, //int
             sku: req.body.sku, //str
             titulo: req.body.titulo, //str
             descripcionCorta: req.body.descripcionCorta, //str
