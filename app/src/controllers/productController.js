@@ -80,9 +80,6 @@ productController={
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
         let urlImagenNueva;
-        console.log("-----FILE-------");
-        console.log(req.file);
-        console.log("----------------\n");
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
         else urlImagenNueva = dbParseada[indice].urlImagen;
         console.log(request);
