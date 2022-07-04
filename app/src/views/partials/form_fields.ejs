@@ -2,61 +2,59 @@
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
                         <input type="text" name="sku" id="sku" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.sku%><%}%>" required>
+                        value="<%=producto.sku%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
                         <input type="text" name="titulo" id="titulo" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.titulo%><%}%>" required>
+                        value="<%=producto.titulo%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descripcionCorta%><%}%>" required>
+                        <textarea type="textarea" name="descripcionCorta" id="descripcionCorta" required><%=producto.descripcionCorta%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descripcionLarga%><%}%>" required>
+                        <textarea name="descripcionLarga" id="descripcionLarga" required><%=producto.descripcionLarga%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="precioRegular" class="datos">Precio normal</label>
                         <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.precioRegular%><%}%>" required>
+                        value="<%=producto.precioRegular%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descuento" class="datos">Descuento</label>
                         <input type="number" min="1" step="any" name="descuento" id="descuento" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.descuento%><%}%>" required>
+                        value="<%=producto.descuento%>">
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
                         <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.cantidadCuotas%><%}%>" required>
+                        value="<%=producto.cantidadCuotas%>">
                     </div>
 
                     <div class="categoria"> 
                         <label for="etiquetas" class="datos">Etiquetas</label>
                         <input type="textarea" name="etiquetas" id="etiquetas" 
-                        value="<%if(producto===null){%><%=""%><%}else{%><%=producto.etiquetas%><%}%>" >
+                        value="<%=producto.etiquetas%>">
                     </div>
                     
                     <div class="categoria">
                         <input type="radio" name="esFisico" id="esFisico" value="true" 
-                        <%if(producto !==null && producto.esFisico){%><%= checked="checked" %><%}%> >
+                        <%if(producto.esFisico === true){%><%= checked="checked" %><%}%> >
                         <label for="esFisico">Fisico</label>
                     </div>
                     
                     <div class="categoria">
                         
                         <input type="radio" name="esFisico" id="esDigital" value="false" 
-                        <%if(producto !==null && !producto.esFisico){%><%= checked="checked" %><%}%>>
+                        <%if(producto.esFisico === false){%><%= checked="checked" %><%}%>>
                         <label for="esDigital">Digital</label>
                         
                     </div>
@@ -65,48 +63,21 @@
                         
                         <div class="intereses">
                             <h4>Categorías</h4>
+                            <% for (let categoria of categorias){%> 
                             <div>
-                                <input type="checkbox" name="categories" value="Juegos Físicos" id="Juegos Físicos"
-                                <%if(producto !==null && producto.categorias.includes("Juegos Físicos") ){%>
+                                <input type="checkbox" name="categories" value="<%= categoria %>" id="<%= categoria %>"
+                                <%if (producto.categorias.includes(categoria) ){%>
                                     <%= checked="checked" %><%}%> >
-                                <label for="Juegos Físicos">Juegos Físicos</label>
+                                <label for="<%= categoria %>"><%= categoria %> </label>
                             </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Juegos Digitales" id="Juegos Digitales"
-                                <%if(producto !==null && producto.categorias.includes("Juegos Digitales") ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="Juegos Digitales">Juegos Digitales</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Ofertas" id="Ofertas"
-                                <%if(producto !==null && producto.categorias.includes("Ofertas") ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="Ofertas">Ofertas</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="PS4" id="PS4"
-                                <%if(producto !==null && producto.categorias.includes("PS4") ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="PS4">PS4</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="PS5" id="PS5"
-                                <%if(producto !==null && producto.categorias.includes("PS5") ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="PS5">PS5</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Coleccionables" id="Coleccionables"
-                                <%if(producto !==null && producto.categorias.includes("Coleccionables") ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="Coleccionables">Coleccionables</label>
-                            </div>
+                            <%}%>                          
                         </div>
                     </section>
+
                     <div class="contenedor-fotoproducto">
                         <h4>Foto de producto</h4><br>
-                        <% if (producto===null) {%>
-                            <%-include ('../partials/form_image_create.ejs', {productos:productos,producto:null}) %> 
+                        <% if (producto.id==='') {%>
+                            <%-include ('../partials/form_image_create.ejs', {producto:null}) %> 
                         <%}else{%>
                             <%-include ('../partials/form_image_edit.ejs', {producto:producto}) %>
                         <%}%>

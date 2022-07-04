@@ -171,42 +171,22 @@
   },
   {
     "id": 9,
-    "sku": "GPF006                           ",
+    "sku": "GPF006",
     "titulo": "Uncharted Legacy of Thieves - PS5 fisico",
     "descripcionCorta": "¿Estás listo para buscar tu fortuna?",
     "descripcionLarga": "¿Estás listo para buscar tu fortuna? Busca tu legado y deja tu huella en el mapa en UNCHARTED: Legacy of Thieves Collection. Experimente la narración emocionante y cinematográfica de Naughty Dog y las escenas de acción más taquilleras de la icónica franquicia.",
     "precioRegular": 13799,
-    "descuento": 20,
+    "descuento": null,
     "cantidadCuotas": 12,
     "etiquetas": "ps5, juegos fisicos, gameplay, juegos online, playstation, uncharted legacy of thieves",
-    "esOferta": "\r\n                        ",
-    "esFisico": "\r\n                        ",
+    "esOferta": false,
+    "esFisico": false,
     "categorias": [
       "Juegos Físicos",
       "Ofertas",
       "PS5"
     ],
     "urlImagen": "/images/products/urlImagen-1656649755317.jpeg",
-    "visitas": 0,
-    "vendidos": 0,
-    "esMasVendido": false
-  },
-  {
-    "id": 10,
-    "sku": "ARG2022",
-    "titulo": "FIFA 2023 - ME22I CHAMPION EDITION",
-    "descripcionCorta": "Dale Messi en Qatar",
-    "descripcionLarga": "Brasil, decime que se siente Tener en casa a tu papá Te juro que aunque pasen los años Nunca nos vamos a olvidar Que el Diego te gambeteó Que Cani te vacunó Que estás llorando desde Italia hasta hoy A Messi lo vas a ver La copa nos va a traer Maradona es más grande que Pelé",
-    "precioRegular": 10000,
-    "descuento": 10,
-    "cantidadCuotas": 10,
-    "etiquetas": "messi, campe*n, qatar, ",
-    "esOferta": true,
-    "esFisico": false,
-    "categorias": [
-      "PS5",
-      "Coleccionables"
-    ],
     "visitas": 0,
     "vendidos": 0,
     "esMasVendido": false

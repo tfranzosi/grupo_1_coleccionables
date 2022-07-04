@@ -147,7 +147,8 @@ label.datos, label.genero {
 input[type="radio"]{
     display: inline;
 }
-.registro .categoria input{
+.registro .categoria input,
+.registro .categoria textarea{
     border-radius: 4px;
     width:100%;
     border-width: 1px;

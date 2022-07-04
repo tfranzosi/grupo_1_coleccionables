@@ -27,8 +27,8 @@
         <div class="contenedor-registro">
             <br>
             <div class="form-registro">
-                <form class="registro" action="/productos/<%=producto.id%>?_method=PUT" method="POST">
-                    <%-include ('../partials/form_fields.ejs', {producto:producto}) %> 
+                <form class="registro" action="/productos/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <%-include ('../partials/form_fields.ejs', {producto: producto}) %> 
                     <div>
                         <button type="submit" class="registerbutton">ACTUALIZAR</button>
                     </div><br>
