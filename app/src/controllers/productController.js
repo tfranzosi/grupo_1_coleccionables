@@ -36,7 +36,7 @@ productController={
 
     	// Create -  Method to store
 	store: (req, res) => {
-		let nuevoIdMaximo = dbParseada.length + 1;
+        let nuevoIdMaximo = productController.buscarMaximoId() + 1;
         let esOferta = productController.validarOferta(req.body.descuento);
 
 		let nuevoProducto =  {
@@ -129,6 +129,13 @@ productController={
         }else{
             return false
         };
+    },
+    buscarMaximoId: () => {
+        let maximo = 0;
+        dbParseada.forEach(producto => {
+            if (producto.id > maximo) maximo = producto.id;
+        });
+        return maximo;
     }
 }
 
