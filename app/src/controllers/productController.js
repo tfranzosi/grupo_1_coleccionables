@@ -38,8 +38,12 @@ productController={
 	store: (req, res) => {
         let nuevoIdMaximo = productController.buscarMaximoId() + 1;
         let esOferta = productController.validarOferta(req.body.descuento);
+        let esFisico = true;
+        if (req.body.esFisico !== true) esFisico = false;
         let urlImagenNueva = '/images/products/default.jpg';
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
+        let categories = [];
+        if (req.body.categories !== undefined) categories = req.body.categories;
 
 
 		let nuevoProducto =  {
@@ -53,12 +57,12 @@ productController={
             cantidadCuotas: parseInt(req.body.cantidadCuotas),
             etiquetas:req.body.etiquetas,
             esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
-            esFisico:req.body.esFisico,
-			categorias: req.body.categories,
+            esFisico: esFisico,
+			categorias: categories,
 			urlImagen: urlImagenNueva,
             visitas:0,
             vendidos:0,
-            esMasVendido:false
+            esMasVendido: false
 		}
 		dbParseada.push(nuevoProducto)
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
@@ -80,7 +84,7 @@ productController={
         let esMasVendidoProd = dbParseada[indice].esMasVendido;
         let esOferta = productController.validarOferta(req.body.descuento); 
         let esFisico = req.body.esFisico;
-        if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
+        if (req.body.esFisico !== true){esFisico=false}else{esFisico=true};
         request=req.body
         let urlImagenNueva = dbParseada[indice].urlImagen;
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
@@ -114,6 +118,15 @@ productController={
     delete: (req, res) => {
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
+        const image = path.join(__dirname,'../../public') + dbParseada[indice].urlImagen;
+// Elimino imagen jpg
+        if(image !== '/images/products/default.jpg'){                         
+            try {
+                fs.unlinkSync(image)
+            } catch(err) {
+                console.error(err)
+            }
+        }       
         dbParseada.splice(indice,1);
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
         res.redirect('/productos');
