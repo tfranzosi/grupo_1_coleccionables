@@ -38,6 +38,9 @@ productController={
 	store: (req, res) => {
         let nuevoIdMaximo = productController.buscarMaximoId() + 1;
         let esOferta = productController.validarOferta(req.body.descuento);
+        let urlImagenNueva = '/images/products/default.jpg';
+        if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
+
 
 		let nuevoProducto =  {
 			id: nuevoIdMaximo,
@@ -52,7 +55,7 @@ productController={
             esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
             esFisico:req.body.esFisico,
 			categorias: req.body.categories,
-			urlImagen: '/images/products/'+ req.file.filename,
+			urlImagen: urlImagenNueva,
             visitas:0,
             vendidos:0,
             esMasVendido:false
@@ -79,9 +82,8 @@ productController={
         let esFisico = req.body.esFisico;
         if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
         request=req.body
-        let urlImagenNueva;
+        let urlImagenNueva = dbParseada[indice].urlImagen;
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        else urlImagenNueva = dbParseada[indice].urlImagen;
         console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
