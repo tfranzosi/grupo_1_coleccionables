@@ -18,7 +18,7 @@ const storage = multer.diskStorage ({
     }
 })
 
-const upload = multer({ storage });
+const upload = multer({ storage : storage});
 
 
 //MOSTRAR TODOS LOS PRODUCTOS
@@ -35,7 +35,7 @@ router.get('/:id', productController.producto);
 router.get("/:id/editar", productController.editForm)
 
 //ENVIO INFORMACION PARA EDITAR Y GRABAR EN DB
-router.put("/:id", productController.edit)
+router.put("/:id", upload.single('urlImagen'), productController.edit)
 
 //ELIMINAR 1 ARTICULO
 router.delete("/:id", productController.delete)

@@ -1,194 +1,194 @@
 [
-   {
-      "id": 1,
-      "sku": "GPC001",
-      "titulo": "Almanaque Sports Almanac Volver Al Futuro Back To The Future",
-      "descripcionCorta": "Almanac Back to the future Sports 1950 - 2000",
-      "descripcionLarga": "Almanac Back to the future Sports 1950 - 2000",
-      "precioRegular": 2815,
-      "descuento": null,
-      "cantidadCuotas": 6,
-      "esOferta": false,
-      "esFisico": true,
-      "etiquetas": "coleccionables, gameplay, volver al futuro,  almanaque sports",
-      "categorias": [
-         "Coleccionables"
-      ],
-      "urlImagen": "/images/products/GPC001-Almanaque-Sports-Almanac-Volver-Al-Futuro-Back-To-The-Future.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 2,
-      "sku": "GPC004",
-      "titulo": "Figura de acción Sonic With ring 20146 de Funko Pop! Games",
-      "descripcionCorta": "Figura de acción Sonic With ring 20146 de Funko Pop! Games",
-      "descripcionLarga": "La empresa estadounidense Funko sostiene que \"todos son fanáticos de algo\". Por ende, se dedica a la creación de figuras coleccionables para generar felicidad a los fans de todas las edades.",
-      "precioRegular": 7000,
-      "descuento": null,
-      "cantidadCuotas": 12,
-      "esOferta": false,
-      "esFisico": true,
-      "etiquetas": "coleccionables, gameplay, bandai, saint seya, sonic, muñecos de juguete,  figura de acción,  funko pop",
-      "categorias": [
-         "Coleccionables",
-         "Figura de accion"
-      ],
-      "urlImagen": "/images/products/GPC004-Figura-de-accion-Sonic-With-ring-20146-de-Funko-Pop-Games.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 3,
-      "sku": "GPF002",
-      "titulo": "Gran Turismo 7 - PS4 fisico",
-      "descripcionCorta": "Gran Turismo 7 combina las mejores funciones del simulador de conducción real.\n",
-      "descripcionLarga": "Gran Turismo 7 combina las mejores funciones del simulador de conducción real.\n",
-      "precioRegular": 13199,
-      "descuento": null,
-      "cantidadCuotas": 12,
-      "esOferta": false,
-      "esFisico": true,
-      "etiquetas": "ps4, juegos fisicos, gameplay, juegos online, playstation, gran turismo 7",
-      "categorias": [
-         "Juegos Físicos",
-         "PS4"
-      ],
-      "urlImagen": "/images/products/GPF002-gran-turismo-7-ps4.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 4,
-      "sku": "GPC002",
-      "titulo": "Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth",
-      "descripcionCorta": "Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth",
-      "descripcionLarga": "Bandai es una de las mayores empresas representantes de la cultura animé en Japón. Con sus juguetes y figuras de acción es una de las preferidas por los más pequeños y por quienes se dedican a coleccionar.",
-      "precioRegular": 38500,
-      "descuento": null,
-      "cantidadCuotas": 12,
-      "esOferta": false,
-      "esFisico": true,
-      "etiquetas": "coleccionables, gameplay, bandai, saint seya, caballeros del zodiaco, muñecos de juguete,  figura de acción",
-      "categorias": [
-         "Coleccionables",
-         "Figura de accion"
-      ],
-      "urlImagen": "/images/products/GPC002-Figura-de-acción-Saint-Seiya-Capricorn-Shura-de-Bandai-Myth-Cloth.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": true
-   },
-   {
-      "id": 5,
-      "sku": "GPF004",
-      "titulo": "Marvel's Spiderman: Miles Morales - PS5",
-      "descripcionCorta": "En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales se está adaptando a su nuevo hogar mientras sigue los pasos de su mentor, Peter Parker, como un nuevo Spider-Man.",
-      "descripcionLarga": "En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales se está adaptando a su nuevo hogar mientras sigue los pasos de su mentor, Peter Parker, como un nuevo Spider-Man.",
-      "precioRegular": 12999,
-      "descuento": 15,
-      "cantidadCuotas": 12,
-      "esOferta": true,
-      "esFisico": false,
-      "etiquetas": "ps5, juegos digitales, gameplay, juegos online, playstation, marvel, spiderman miles morales",
-      "categorias": [
-         "Juegos Digitales",
-         "Ofertas",
-         "PS5"
-      ],
-      "urlImagen": "/images/products/GPF004-spiderman-miles-morales1-ps5.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": true
-   },
-   {
-      "id": 6,
-      "sku": "GPF008",
-      "titulo": "Sackboy: a Big Adventure - PS5",
-      "descripcionCorta": "Enfréntate a desafíos emocionantes e impredecibles mientras exploras tierras distintivas hechas a mano a través de controles profundamente envolventes y expresivos.\n",
-      "descripcionLarga": "Enfréntate a desafíos emocionantes e impredecibles mientras exploras tierras distintivas hechas a mano a través de controles profundamente envolventes y expresivos.\n",
-      "precioRegular": 14999,
-      "descuento": 27,
-      "cantidadCuotas": 12,
-      "esOferta": true,
-      "esFisico": false,
-      "etiquetas": "ps5, juegos digitales, gameplay, juegos online, playstation, sackboy a big adventure",
-      "categorias": [
-         "Juegos Digitales",
-         "Ofertas",
-         "PS5"
-      ],
-      "urlImagen": "/images/products/GPF008-sack-boy1-ps5.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 7,
-      "sku": "GPC003",
-      "titulo": "Figura de acción Dragon Ball Broly BAN91047 de Bandai S.H. Figuarts",
-      "descripcionCorta": "Figura de acción Dragon Ball Broly BAN91047 de Bandai S.H. Figuarts",
-      "descripcionLarga": "Accesorios incluidos: 2 expresiones faciales, Manos intercambiables, 3 partes únicas de efecto de esfera de energía",
-      "precioRegular": 71500,
-      "descuento": null,
-      "cantidadCuotas": 12,
-      "esOferta": false,
-      "esFisico": true,
-      "etiquetas": "coleccionables, gameplay, bandai, saint seya, dragon ball z, muñecos de juguete,  figura de acción",
-      "categorias": [
-         "Coleccionables",
-         "Figura de accion"
-      ],
-      "urlImagen": "/images/products/GPC003-Figura-de-acción-Dragon-Ball-Broly-BAN91047-de-Bandai-S.H.-Figuarts.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 8,
-      "sku": "GPF001",
-      "titulo": "FIFA 2022 - PS4 fisico",
-      "descripcionCorta": "Con la potencia de Football™, EA SPORTS FIFA 22 mejora la experiencia con tecnología de juego HyperMotion de última generación.\n",
-      "descripcionLarga": "Con la potencia de Football™, EA SPORTS FIFA 22 mejora la experiencia con tecnología de juego HyperMotion de última generación.\n",
-      "precioRegular": 11999,
-      "descuento": 17,
-      "cantidadCuotas": 12,
-      "esOferta": true,
-      "esFisico": true,
-      "etiquetas": "ps4, juegos fisicos, gameplay, juegos online, playstation, fifa22",
-      "categorias": [
-         "Juegos Físicos",
-         "Ofertas",
-         "PS4"
-      ],
-      "urlImagen": "/images/products/GPF001-fifa-22-ps4.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   },
-   {
-      "id": 9,
-      "sku": "GPF006                           ",
-      "titulo": "Uncharted Legacy of Thieves - PS5 fisico",
-      "descripcionCorta": "¿Estás listo para buscar tu fortuna?",
-      "descripcionLarga": "¿Estás listo para buscar tu fortuna? Busca tu legado y deja tu huella en el mapa en UNCHARTED: Legacy of Thieves Collection. Experimente la narración emocionante y cinematográfica de Naughty Dog y las escenas de acción más taquilleras de la icónica franquicia.",
-      "precioRegular": 13799,
-      "descuento": 20,
-      "cantidadCuotas": 12,
-      "etiquetas": "ps5, juegos fisicos, gameplay, juegos online, playstation, uncharted legacy of thieves",
-      "esOferta": "\r\n                        ",
-      "esFisico": "\r\n                        ",
-      "categorias": [
-         "Juegos Físicos",
-         "Ofertas",
-         "PS5"
-      ],
-      "urlImagen": "/images/products/urlImagen-1656649755317.jpeg",
-      "visitas": 0,
-      "vendidos": 0,
-      "esMasVendido": false
-   }
+  {
+    "id": 1,
+    "sku": "GPC001",
+    "titulo": "Almanaque Sports Almanac Volver Al Futuro Back To The Future",
+    "descripcionCorta": "Almanac Back to the future Sports 1950 - 2000",
+    "descripcionLarga": "Almanac Back to the future Sports 1950 - 2000",
+    "precioRegular": 2815,
+    "descuento": null,
+    "cantidadCuotas": 6,
+    "esOferta": false,
+    "esFisico": true,
+    "etiquetas": "coleccionables, gameplay, volver al futuro,  almanaque sports",
+    "categorias": [
+      "Coleccionables"
+    ],
+    "urlImagen": "/images/products/GPC001-Almanaque-Sports-Almanac-Volver-Al-Futuro-Back-To-The-Future.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 2,
+    "sku": "GPC004",
+    "titulo": "Figura de acción Sonic With ring 20146 de Funko Pop! Games",
+    "descripcionCorta": "Figura de acción Sonic With ring 20146 de Funko Pop! Games",
+    "descripcionLarga": "La empresa estadounidense Funko sostiene que \"todos son fanáticos de algo\". Por ende, se dedica a la creación de figuras coleccionables para generar felicidad a los fans de todas las edades.",
+    "precioRegular": 7000,
+    "descuento": null,
+    "cantidadCuotas": 12,
+    "esOferta": false,
+    "esFisico": true,
+    "etiquetas": "coleccionables, gameplay, bandai, saint seya, sonic, muñecos de juguete,  figura de acción,  funko pop",
+    "categorias": [
+      "Coleccionables",
+      "Figura de accion"
+    ],
+    "urlImagen": "/images/products/GPC004-Figura-de-accion-Sonic-With-ring-20146-de-Funko-Pop-Games.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 3,
+    "sku": "GPF002",
+    "titulo": "Gran Turismo 7 - PS4 fisico",
+    "descripcionCorta": "Gran Turismo 7 combina las mejores funciones del simulador de conducción real.\n",
+    "descripcionLarga": "Gran Turismo 7 combina las mejores funciones del simulador de conducción real.\n",
+    "precioRegular": 13199,
+    "descuento": null,
+    "cantidadCuotas": 12,
+    "esOferta": false,
+    "esFisico": true,
+    "etiquetas": "ps4, juegos fisicos, gameplay, juegos online, playstation, gran turismo 7",
+    "categorias": [
+      "Juegos Físicos",
+      "PS4"
+    ],
+    "urlImagen": "/images/products/GPF002-gran-turismo-7-ps4.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 4,
+    "sku": "GPC002",
+    "titulo": "Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth",
+    "descripcionCorta": "Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth",
+    "descripcionLarga": "Bandai es una de las mayores empresas representantes de la cultura animé en Japón. Con sus juguetes y figuras de acción es una de las preferidas por los más pequeños y por quienes se dedican a coleccionar.",
+    "precioRegular": 38500,
+    "descuento": null,
+    "cantidadCuotas": 12,
+    "esOferta": false,
+    "esFisico": true,
+    "etiquetas": "coleccionables, gameplay, bandai, saint seya, caballeros del zodiaco, muñecos de juguete,  figura de acción",
+    "categorias": [
+      "Coleccionables",
+      "Figura de accion"
+    ],
+    "urlImagen": "/images/products/GPC002-Figura-de-acción-Saint-Seiya-Capricorn-Shura-de-Bandai-Myth-Cloth.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": true
+  },
+  {
+    "id": 5,
+    "sku": "GPF004",
+    "titulo": "Marvel's Spiderman: Miles Morales - PS5",
+    "descripcionCorta": "En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales se está adaptando a su nuevo hogar mientras sigue los pasos de su mentor, Peter Parker, como un nuevo Spider-Man.",
+    "descripcionLarga": "En la última aventura del universo de Spider-Man de Marvel, el adolescente Miles Morales se está adaptando a su nuevo hogar mientras sigue los pasos de su mentor, Peter Parker, como un nuevo Spider-Man.",
+    "precioRegular": 12999,
+    "descuento": 15,
+    "cantidadCuotas": 12,
+    "esOferta": true,
+    "esFisico": false,
+    "etiquetas": "ps5, juegos digitales, gameplay, juegos online, playstation, marvel, spiderman miles morales",
+    "categorias": [
+      "Juegos Digitales",
+      "Ofertas",
+      "PS5"
+    ],
+    "urlImagen": "/images/products/GPF004-spiderman-miles-morales1-ps5.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": true
+  },
+  {
+    "id": 6,
+    "sku": "GPF008",
+    "titulo": "Sackboy: a Big Adventure - PS5",
+    "descripcionCorta": "Enfréntate a desafíos emocionantes e impredecibles mientras exploras tierras distintivas hechas a mano a través de controles profundamente envolventes y expresivos.\n",
+    "descripcionLarga": "Enfréntate a desafíos emocionantes e impredecibles mientras exploras tierras distintivas hechas a mano a través de controles profundamente envolventes y expresivos.\n",
+    "precioRegular": 14999,
+    "descuento": 27,
+    "cantidadCuotas": 12,
+    "esOferta": true,
+    "esFisico": false,
+    "etiquetas": "ps5, juegos digitales, gameplay, juegos online, playstation, sackboy a big adventure",
+    "categorias": [
+      "Juegos Digitales",
+      "Ofertas",
+      "PS5"
+    ],
+    "urlImagen": "/images/products/GPF008-sack-boy1-ps5.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 7,
+    "sku": "GPC003",
+    "titulo": "Figura de acción Dragon Ball Broly BAN91047 de Bandai S.H. Figuarts",
+    "descripcionCorta": "Figura de acción Dragon Ball Broly BAN91047 de Bandai S.H. Figuarts",
+    "descripcionLarga": "Accesorios incluidos: 2 expresiones faciales, Manos intercambiables, 3 partes únicas de efecto de esfera de energía",
+    "precioRegular": 71500,
+    "descuento": null,
+    "cantidadCuotas": 12,
+    "esOferta": false,
+    "esFisico": true,
+    "etiquetas": "coleccionables, gameplay, bandai, saint seya, dragon ball z, muñecos de juguete,  figura de acción",
+    "categorias": [
+      "Coleccionables",
+      "Figura de accion"
+    ],
+    "urlImagen": "/images/products/GPC003-Figura-de-acción-Dragon-Ball-Broly-BAN91047-de-Bandai-S.H.-Figuarts.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 8,
+    "sku": "GPF001",
+    "titulo": "FIFA 2022 - PS4 fisico",
+    "descripcionCorta": "Con la potencia de Football™, EA SPORTS FIFA 22 mejora la experiencia con tecnología de juego HyperMotion de última generación.\n",
+    "descripcionLarga": "Con la potencia de Football™, EA SPORTS FIFA 22 mejora la experiencia con tecnología de juego HyperMotion de última generación.\n",
+    "precioRegular": 11999,
+    "descuento": 17,
+    "cantidadCuotas": 12,
+    "esOferta": true,
+    "esFisico": true,
+    "etiquetas": "ps4, juegos fisicos, gameplay, juegos online, playstation, fifa22",
+    "categorias": [
+      "Juegos Físicos",
+      "Ofertas",
+      "PS4"
+    ],
+    "urlImagen": "/images/products/GPF001-fifa-22-ps4.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  },
+  {
+    "id": 9,
+    "sku": "GPF006",
+    "titulo": "Uncharted Legacy of Thieves - PS5 fisico",
+    "descripcionCorta": "¿Estás listo para buscar tu fortuna?",
+    "descripcionLarga": "¿Estás listo para buscar tu fortuna? Busca tu legado y deja tu huella en el mapa en UNCHARTED: Legacy of Thieves Collection. Experimente la narración emocionante y cinematográfica de Naughty Dog y las escenas de acción más taquilleras de la icónica franquicia.",
+    "precioRegular": 13799,
+    "descuento": null,
+    "cantidadCuotas": 12,
+    "etiquetas": "ps5, juegos fisicos, gameplay, juegos online, playstation, uncharted legacy of thieves",
+    "esOferta": false,
+    "esFisico": false,
+    "categorias": [
+      "Juegos Físicos",
+      "Ofertas",
+      "PS5"
+    ],
+    "urlImagen": "/images/products/urlImagen-1656649755317.jpeg",
+    "visitas": 0,
+    "vendidos": 0,
+    "esMasVendido": false
+  }
 ]

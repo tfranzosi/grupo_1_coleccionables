@@ -1,125 +1,86 @@
 
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
-                        <input type="text" name="sku" id="sku" value="<%if(producto===null){%><%=""%>
-                            <%}else{%><%=producto.sku%><%}%>" required>
+                        <input type="text" name="sku" id="sku" 
+                        value="<%=producto.sku%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
-                        <input type="text" name="titulo" id="titulo" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.titulo%><%}%>" required>
+                        <input type="text" name="titulo" id="titulo" 
+                        value="<%=producto.titulo%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <input type="textarea" name="descripcionCorta" id="descripcionCorta" value="<%if(producto===null){%><%=""%>
-                            <%}else{%><%=producto.descripcionCorta%><%}%>" required>
+                        <textarea type="textarea" name="descripcionCorta" id="descripcionCorta" required><%=producto.descripcionCorta%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <input type="textarea" name="descripcionLarga" id="descripcionLarga" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.descripcionLarga%><%}%>" required>
+                        <textarea name="descripcionLarga" id="descripcionLarga" required><%=producto.descripcionLarga%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="precioRegular" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.precioRegular%><%}%>" required>
+                        <input type="number" min="1" step="any" name="precioRegular" id="precioRegular" 
+                        value="<%=producto.precioRegular%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descuento" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="descuento" id="descuento" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.descuento%><%}%>" required>
+                        <input type="number" min="1" step="any" name="descuento" id="descuento" 
+                        value="<%=producto.descuento%>">
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas"  value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.cantidadCuotas%><%}%>" required>
+                        <input type="number" min="1" step="any" name="cantidadCuotas" id="cantidadCuotas" 
+                        value="<%=producto.cantidadCuotas%>">
                     </div>
-
-                    <!-- <div class="categoria"> 
-                        <label for="cuotas" class="datos">Cuotas</label>
-                        <select name="cuotas" class="datos">
-                            <option value="3">3</option>
-                            <option value="6">6</option>
-                            <option value="9">9</option>
-                            <option value="12">12</option>
-                        </select>
-                    </div> -->
 
                     <div class="categoria"> 
                         <label for="etiquetas" class="datos">Etiquetas</label>
-                        <input type="textarea" name="etiquetas" id="etiquetas" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.etiquetas%><%}%>" >
+                        <input type="textarea" name="etiquetas" id="etiquetas" 
+                        value="<%=producto.etiquetas%>">
                     </div>
-
-                    <div class="categoria">
-                        <!-- <div class="generos">
-                            <label for="regular">Regular</label>
-                            <input type="radio" name="atributo_precio" value="false" id="regular">
-                        </div>
-
-                    <div class="generos">
-                        <label for="offer">En Oferta</label>
-                        <input type="radio" name="atributo_precio" value="true" id="oferta">
-                    </div> -->
-                        <input type="checkbox" name="esOferta" id="esOferta" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.esOferta%><%}%>">
-                        <label for="a">Es una oferta</label>
-
                     
-                    </div>
-
                     <div class="categoria">
-                        <!-- <div class="generos">
-                            <label for="fisico">Físico</label>
-                            <input type="radio" name="atributo_estado" value="true" id="físico">
-                        </div>
-                        <div class="generos">
-                            <label for="digital">Digital</label>
-                            <input type="radio" name="atributo_estado" value="false" id="digital">
-                        </div> -->
-                        <input type="checkbox" name="esFisico" id="esFisico" value="<%if(producto===null){%><%=""%>
-                        <%}else{%><%=producto.esFisico%><%}%>">
-                        <label for="a">Esta en formato físico</label>
+                        <input type="radio" name="esFisico" id="esFisico" value="true" 
+                        <%if(producto.esFisico === true){%><%= checked="checked" %><%}%> >
+                        <label for="esFisico">Fisico</label>
+                    </div>
+                    
+                    <div class="categoria">
+                        
+                        <input type="radio" name="esFisico" id="esDigital" value="false" 
+                        <%if(producto.esFisico === false){%><%= checked="checked" %><%}%>>
+                        <label for="esDigital">Digital</label>
                         
                     </div>
                                             <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
+                        
                         <div class="intereses">
                             <h4>Categorías</h4>
+                            <% for (let categoria of categorias){%> 
                             <div>
-                                <input type="checkbox" name="categories" value="Juegos Físicos" id="Juegos Físicos">
-                                <label for="Juegos Físicos">Juegos Físicos</label>
+                                <input type="checkbox" name="categories" value="<%= categoria %>" id="<%= categoria %>"
+                                <%if (producto.categorias.includes(categoria) ){%>
+                                    <%= checked="checked" %><%}%> >
+                                <label for="<%= categoria %>"><%= categoria %> </label>
                             </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Juegos Digitales" id="Juegos Digitales">
-                                <label for="Juegos Digitales">Juegos Digitales</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Ofertas" id="Ofertas">
-                                <label for="Ofertas">Ofertas</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="PS4" id="PS4">
-                                <label for="PS4">PS4</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="PS5" id="PS5">
-                                <label for="PS5">PS5</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="categories" value="Coleccionables" id="Coleccionables">
-                                <label for="Coleccionables">Coleccionables</label>
-                            </div>
+                            <%}%>                          
                         </div>
                     </section>
+
                     <div class="contenedor-fotoproducto">
                         <h4>Foto de producto</h4><br>
-                        <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
+                        <% if (producto.id==='') {%>
+                            <%-include ('../partials/form_image_create.ejs', {producto:null}) %> 
+                        <%}else{%>
+                            <%-include ('../partials/form_image_edit.ejs', {producto:producto}) %>
+                        <%}%>
                         <input type="file" accept=".jpg, .png" id="fotoPerfil" name="urlImagen">
+                    </div>
                     <br>

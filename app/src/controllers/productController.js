@@ -4,27 +4,43 @@ const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
 
+const categorias = [
+    "Juegos Físicos",
+    "Juegos Digitales",
+    "Ofertas",
+    "PS4",
+    "PS5",
+    "Coleccionables"
+];
+
+
 productController={
     showAll: (req, res) => {
         res.render('products/products',{productos: dbParseada});
     },
     producto: (req, res) => {
         let id = parseInt(req.params.id);
-        let indice = productController.buscarProductoPorId(id);
+        let indice = productController.buscarIndiceProductoPorId(id);
         res.render('products/productDetail',{producto: dbParseada[indice]});
     },
     
     create: (req, res) => {
+        //Defino producto vacio segun mi base de datos
+        let productoVacio = {};
+        for (let key in dbParseada[0]) productoVacio[key] = "";
+
         let id = parseInt(req.params.id);
-        let indice = productController.buscarProductoPorId(id);
-        res.render('products/productCreate',{productos: dbParseada});
+        let indice = productController.buscarIndiceProductoPorId(id);
+        res.render('products/productCreate',{producto: productoVacio, categorias});
     },
 
     	// Create -  Method to store
 	store: (req, res) => {
-		let idMaximo = dbParseada.length
+        let nuevoIdMaximo = productController.buscarMaximoId() + 1;
+        let esOferta = productController.validarOferta(req.body.descuento);
+
 		let nuevoProducto =  {
-			id: idMaximo + 1,
+			id: nuevoIdMaximo,
             sku:req.body.sku,
 			titulo: req.body.titulo,
             descripcionCorta:req.body.descripcionCorta,
@@ -33,10 +49,10 @@ productController={
 			descuento: parseInt(req.body.descuento),
             cantidadCuotas: parseInt(req.body.cantidadCuotas),
             etiquetas:req.body.etiquetas,
-            esOferta:req.body.esOferta,
+            esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
             esFisico:req.body.esFisico,
 			categorias: req.body.categories,
-			urlImagen: "/images/products/" + req.file.filename,
+			urlImagen: '/images/products/'+ req.file.filename,
             visitas:0,
             vendidos:0,
             esMasVendido:false
@@ -49,52 +65,77 @@ productController={
 
     editForm: (req, res) => {
         let id = parseInt(req.params.id);
-        let indice = productController.buscarProductoPorId(id);
-        res.render('products/productEdit',{producto: dbParseada[indice]});
+        let indice = productController.buscarIndiceProductoPorId(id);
+        res.render('products/productEdit',{producto: dbParseada[indice], categorias});
+    },
+
+    edit: (req,res) => { 
+        let idProd = parseInt(req.params.id);
+        let indice = productController.buscarIndiceProductoPorId(idProd);
+        let visitasProd = parseInt(dbParseada[indice].visitas);
+        let vendidosProd = parseInt(dbParseada[indice].vendidos);
+        let esMasVendidoProd = dbParseada[indice].esMasVendido;
+        let esOferta = productController.validarOferta(req.body.descuento); 
+        let esFisico = req.body.esFisico;
+        if (req.body.esFisic !== true){esFisico=false}else{esFisico=true};
+        request=req.body
+        let urlImagenNueva;
+        if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
+        else urlImagenNueva = dbParseada[indice].urlImagen;
+        console.log(request);
+        //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
+        //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
+        let productoEditado = { 
+            id: idProd, //int
+            sku: req.body.sku, //str
+            titulo: req.body.titulo, //str
+            descripcionCorta: req.body.descripcionCorta, //str
+            descripcionLarga: req.body.descripcionLarga,  //str
+            precioRegular: parseInt(req.body.precioRegular), //int
+            descuento: parseInt(req.body.descuento), //int
+            cantidadCuotas: parseInt(req.body.cantidadCuotas), //int
+            etiquetas: req.body.etiquetas,  //str
+            esOferta: esOferta, //bool
+            esFisico: esFisico, //bool
+            categorias: req.body.categories, //str Array
+            urlImagen: urlImagenNueva, //str
+            visitas: visitasProd, //int             /*Implementar mecanismos de contador*/
+            vendidos: vendidosProd, //int           /*Implementar mecanismos de contador*/
+            esMasVendido: esMasVendidoProd //bool   /*Implementar mecanismo dependiente de anterior atributo*/
+        }
+        console.log(productoEditado);
+        dbParseada[indice]=productoEditado;
+        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
+        res.redirect(`/productos/${idProd}`);  
     },
 
     delete: (req, res) => {
         let id = parseInt(req.params.id);
-        let indice = productController.buscarProductoPorId(id);
+        let indice = productController.buscarIndiceProductoPorId(id);
         dbParseada.splice(indice,1);
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
         res.redirect('/productos');
     
     },
 
-    buscarProductoPorId: function (id) { //devuelvo indice del producto en productdb
+    buscarIndiceProductoPorId: id => { //devuelvo indice del producto en productdb
         return dbParseada.findIndex(producto => {
             return producto.id === id;
         });          
     },
-
-    edit: (req,res) => { //MV: PUShEO LA BASE PERO LUEGO LA IMPLEMENTO
-        let id = req.params.id;
-        /*
-
-        let productoEditado = {
-            sku:req.body.SKU,
-            titulo:req.body.titulo,
-            descripcionCorta:req.body.short_desc,
-            descripcionLarga:req.body.long_desc,
-            precioRegular:req.body.normal_price,
-            precioOferta:req.body.offer_price,
-            descuento:req.body.discount,
-            cantidadCuotas:req.body.cuotas,
-            valorCuota:req.body.cuotas_value,
-            esOferta:req.body.atributo_precio,
-            esFisico:req.body.atributo_estado,
-            categorias:req.body.categories,
-            urlImagen:req.body.imagen
-        }
-        
-        // for(let atributo in readDBparseada.completa[indice]){
-        //     if readDBparseada.completa[indice].atributo === productoEditado.atributo
-        // }
-        
-        readDBparsed.completa[id-1]=productoEditado;
-        fs.writeFileSync(rutaDB,JSON.stringify(readDBparsed,null,2));    */ 
-        res.redirect(`/productos/sku/${id}`);  
+    validarOferta: reqBodyDescuento => { //Recibe req.body.descuento, si es mayor a 0 hay oferta.
+        if (reqBodyDescuento>0){
+            return true
+        }else{
+            return false
+        };
+    },
+    buscarMaximoId: () => {
+        let maximo = 0;
+        dbParseada.forEach(producto => {
+            if (producto.id > maximo) maximo = producto.id;
+        });
+        return maximo;
     }
 }
 

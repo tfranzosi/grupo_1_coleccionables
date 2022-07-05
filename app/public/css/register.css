@@ -121,6 +121,13 @@ input[type="file"]{
     padding: 2.2rem;
     cursor: pointer;
 }
+.fotoPerfil2{
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    max-width: 10rem;
+
+}
 .fa-add:before, .fa-plus:before {
     color: var(--fondo-sitio);
     font-size: 1.2rem;
@@ -140,13 +147,16 @@ label.datos, label.genero {
 input[type="radio"]{
     display: inline;
 }
-.registro .categoria input{
+.registro .categoria input,
+.registro .categoria textarea{
     border-radius: 4px;
     width:100%;
     border-width: 1px;
     border-color: black;
     padding: 4px;
+    text-align: left;
 }
+
 .registro .categoria input[type="tel"]#telefono1{
     width: 23%;
 }

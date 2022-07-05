@@ -76,10 +76,12 @@
                     </div>
                     <div class="buttons2">
                         <div class="add-to-cart">
-                            <a href="javascript:alert('¡Vas a editar tu producto!');"><button class="add-to-cart-button">EDITAR</button></a>
+                            <a href="/productos/<%= producto.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
                         </div>
                         <div class="buy-now">
-                            <a href="javascript:alert('¡Vas a borrar tu producto!');"><button class="buy-now-button">BORRAR</button></a>
+                            <form class="registro" action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="buy-now-button">ELIMINAR</button>
+                            </form>
                         </div>
                     </div>
                 </div> 
