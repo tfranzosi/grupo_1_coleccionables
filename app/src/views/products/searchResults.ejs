@@ -16,25 +16,7 @@
         <section class="productos">
             <% if (searchResults.length > 0){ %>
                 <% for (let producto of searchResults){ %>
-            <a href="/productos/<%= producto.id %>"><article>
-                <div>
-                    <img src="<%= producto.urlImagen %>">
-                    <h5><%= producto.titulo %></h5>
-                    <span><%= producto.categorias %></span>
-                </div>
-                <div class="precios">
-                    <div>
-                        <% if (producto.esOferta){ %>
-                            <span class="precio-viejo">$<%= producto.precioRegular.toLocaleString('es-Ar') %></span>
-                        <% } %> 
-                        <span class="precio-actual">$<%= (parseInt(producto.precioRegular * ( 1 - producto.descuento/100))).toLocaleString('es-Ar') %></span>
-                    </div>
-                    <% if (producto.esOferta) { %>
-                        <span class="descuento"><%= producto.descuento %>% off</span>
-                    <% } %> 
-                </div>
-            </article></a>
-                <!-- <%- include ('../partials/producto',{producto}) %> -->
+                <%- include ('../partials/producto',{producto}) %>
         <% } %> 
         <% } else {%>	
 			<div class="col-12">
