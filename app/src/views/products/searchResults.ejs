@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>GamePlay - Productos</title>
+</head>
+
+<body>
+    <header>
+    <%- include('../partials/header') %>
+    <!-- <%- include('../partials/header_slider') %> -->
+    </header>
+    <section class="main">
+        <h4 class="titulo">RESULTADOS DE BÚSQUEDA</h4>
+        <section class="productos">
+            <% if (searchResults.length > 0){ %>
+                <% for (let producto of searchResults){ %>
+            <a href="/productos/<%= producto.id %>"><article>
+                <div>
+                    <img src="<%= producto.urlImagen %>">
+                    <h5><%= producto.titulo %></h5>
+                    <span><%= producto.categorias %></span>
+                </div>
+                <div class="precios">
+                    <div>
+                        <% if (producto.esOferta){ %>
+                            <span class="precio-viejo">$<%= producto.precioRegular.toLocaleString('es-Ar') %></span>
+                        <% } %> 
+                        <span class="precio-actual">$<%= (parseInt(producto.precioRegular * ( 1 - producto.descuento/100))).toLocaleString('es-Ar') %></span>
+                    </div>
+                    <% if (producto.esOferta) { %>
+                        <span class="descuento"><%= producto.descuento %>% off</span>
+                    <% } %> 
+                </div>
+            </article></a>
+                <!-- <%- include ('../partials/producto',{producto}) %> -->
+        <% } %> 
+        <% } else {%>	
+			<div class="col-12">
+				<h2 class="products-title" style="color: #b1262f;">No hay productos que coincidan con esa búsqueda</h2>
+			</div>
+		<% } %>
+        </section>
+    </section>
+
+    <%- include ('../partials/footer') %>
+</body>
+
+</html>
