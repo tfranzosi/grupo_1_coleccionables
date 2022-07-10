@@ -30,7 +30,6 @@ productController={
         for (let key in dbParseada[0]) productoVacio[key] = "";
 
         let id = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(id);
         res.render('products/productCreate',{producto: productoVacio, categorias});
     },
 

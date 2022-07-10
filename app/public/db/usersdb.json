@@ -1,70 +1,87 @@
 [
- {
-  "ID": 1,
-  "Nombre": "Santiago",
-  "Apellido": "Chaves",
-  "usuario": "scgameplay",
-  "telefono_pais": 54,
-  "telefono": 1199999999,
-  "Email": "sjchaves97@gmail.com",
-  "nacimiento": "01/01/2001",
-  "domicilio": "Av. Siempreviva 1945",
-  "genero": "h",
-  "contraseña": "gameplaySC",
-  "intereses": ["Coleccionables","PS4"],
-  "imagen": "/images/users/gamer-avatar-01-min.jpeg",
-  "ultimaVisita": "06/27/2022",
-  "ultimosVisitados": [1,3,5]
- },
- {
-  "ID": 2,
-  "Nombre": "Tomás",
-  "Apellido": "Franzosi",
-  "usuario": "tfgameplay",
-  "telefono_pais": 54,
-  "telefono": 1199999999,
-  "Email": "tomas@franzosi.com.ar",
-  "nacimiento": "01/01/2001",
-  "domicilio": "Av. Siempreviva 1945",
-  "genero": "h",
-  "contraseña": "gameplayTF",
-  "intereses": "PS5",
-  "imagen": "/images/users/gamer-avatar-02-min.jpeg",
-  "ultimaVisita": "06/27/2022",
-  "ultimosVisitados": [2,4,6]
- },
- {
-  "ID": 3,
-  "Nombre": "Maximiliano",
-  "Apellido": "Vilchez",
-  "usuario": "mvgameplay",
-  "telefono_pais": 54,
-  "telefono": 1199999999,
-  "Email": "maximiliano.vilchez@outlook.com",
-  "nacimiento": "01/01/2001",
-  "domicilio": "Av. Siempreviva 1945",
-  "genero": "h",
-  "contraseña": "gameplayMV",
-  "intereses": "PS4",
-  "imagen": "/images/users/gamer-avatar-03-min.jpeg",
-  "ultimaVisita": "06/27/2022",
-  "ultimosVisitados": [6,7]
- },
- {
-  "ID": 4,
-  "Nombre": "Pablo",
-  "Apellido": "Gianferro",
-  "usuario": "pggameplay",
-  "telefono_pais": 54,
-  "telefono": 1199999999,
-  "Email": "pablogianferro@gmail.com",
-  "nacimiento": "01/01/2001",
-  "domicilio": "Av. Siempreviva 1945",
-  "genero": "h",
-  "contraseña": "gameplayPG",
-  "intereses": "Coleccionables",
-  "imagen": "/images/users/gamer-avatar-04-min.jpeg",
-  "ultimaVisita": "06/27/2022",
-  "ultimosVisitados": [8,9]
- }
+   {
+      "id": 1,
+      "nombre": "Santiago",
+      "apellido": "Chaves",
+      "usuario": "scgameplay",
+      "telefono_pais": 54,
+      "telefono": 1199999999,
+      "email": "sjchaves97@gmail.com",
+      "nacimiento": "01/01/2001",
+      "domicilio": "Av. Siempreviva 1945",
+      "genero": "h",
+      "contrasenia": "gameplaySC",
+      "intereses": [
+         "Coleccionables",
+         "PS4"
+      ],
+      "urlImagen": "/images/users/gamer-avatar-01-min.jpeg",
+      "ultimaVisita": "06/27/2022",
+      "ultimosVisitados": [
+         1,
+         3,
+         5
+      ]
+   },
+   {
+      "id": 2,
+      "nombre": "Tomás",
+      "apellido": "Franzosi",
+      "usuario": "tfgameplay",
+      "telefono_pais": 54,
+      "telefono": 1199999999,
+      "email": "tomas@franzosi.com.ar",
+      "nacimiento": "01/01/2001",
+      "domicilio": "Av. Siempreviva 1945",
+      "genero": "h",
+      "contrasenia": "gameplayTF",
+      "intereses": "PS5",
+      "urlImagen": "/images/users/gamer-avatar-02-min.jpeg",
+      "ultimaVisita": "06/27/2022",
+      "ultimosVisitados": [
+         2,
+         4,
+         6
+      ]
+   },
+   {
+      "id": 3,
+      "nombre": "Maximiliano",
+      "apellido": "Vilchez",
+      "usuario": "mvgameplay",
+      "telefono_pais": 54,
+      "telefono": 1199999999,
+      "email": "maximiliano.vilchez@outlook.com",
+      "nacimiento": "01/01/2001",
+      "domicilio": "Av. Siempreviva 1945",
+      "genero": "h",
+      "contrasenia": "gameplayMV",
+      "intereses": "PS4",
+      "urlImagen": "/images/users/gamer-avatar-03-min.jpeg",
+      "ultimaVisita": "06/27/2022",
+      "ultimosVisitados": [
+         6,
+         7
+      ]
+   },
+   {
+      "id": 4,
+      "nombre": "Pablo",
+      "apellido": "Gianferro",
+      "usuario": "pggameplay",
+      "telefono_pais": 54,
+      "telefono": 1199999999,
+      "email": "pablogianferro@gmail.com",
+      "nacimiento": "01/01/2001",
+      "domicilio": "Av. Siempreviva 1945",
+      "genero": "h",
+      "contrasenia": "gameplayPG",
+      "intereses": "Coleccionables",
+      "urlImagen": "/images/users/gamer-avatar-04-min.jpeg",
+      "ultimaVisita": "06/27/2022",
+      "ultimosVisitados": [
+         8,
+         9
+      ]
+   }
 ]
