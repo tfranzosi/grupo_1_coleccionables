@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/header.ejs',{usuario}) %>
     </header>
             <!-- Breadcrumb Start -->
             <main class="product-detail">
@@ -44,17 +44,20 @@
                     <span class="textogmail">Ingresá con Gmail</span>
                 </button>
             </div><br>
-            <P> O sino<br>
-                Ingresá tu usuario y contraseña</P><br>
+            <p> O sino<br>
+                Ingresá tu usuario y contraseña</p>
+            <% if( errorInicioSesion === true ) {%> 
+                <p class="error">Ingresaste mal el usuario o contraseña</p>
+            <% } %> 
             <section class="formulario">
-                <form action="/">
+                <form action="/usuarios/inicioSesion" method="POST">
                     <div>
-                        <label for="nombreUsuario" class="feedback"></label>
-                        <input type="text" class="text" name="nombreUsuario" placeholder="Nombre de usuario" required>
+                        <label for="usuario" class="feedback"></label>
+                        <input type="text" class="text" name="usuario" placeholder="Nombre de usuario" required>
                     </div>
                     <div>
-                        <label for="password" class="feedback"></label>
-                        <input type="password" class="text" name="password" placeholder="Contraseña" required>
+                        <label for="contrasenia" class="feedback"></label>
+                        <input type="password" class="text" name="contrasenia" placeholder="Contraseña" required>
                     </div>
                     <a href="#" class="olvide">Olvidé mi contraseña</a>
                     <div>
@@ -62,7 +65,7 @@
                         <input type="checkbox" name="rememberPassword" id="rememberPassword"> Quiero recordar mi usuario y contraseña
                     </div>
                     <button type="submit" name ="ingreso" class="ingresobutton">INGRESAR</button>
-                    <p>Nuevo Gameplayer? <b><s><a href="/registro"class="registro">Registrate Ahora</a></s></b></p>
+                    <p>Nuevo Gameplayer? <b><s><a href="/usuarios/registro"class="registro">Registrate Ahora</a></s></b></p>
                     
                 </form>
             </section>

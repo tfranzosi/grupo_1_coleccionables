@@ -83,5 +83,26 @@
          8,
          9
       ]
+   },
+   {
+      "id": 5,
+      "nombre": "Tomas",
+      "apellido": "Franzosi",
+      "usuario": "tfranzosi",
+      "telefono_pais": 54,
+      "telefono": 3515326498,
+      "email": "tomas@franzosi.com.ar",
+      "nacimiento": "1987-06-09",
+      "domicilio": "Cordoba - Argentina",
+      "genero": "varon",
+      "contrasenia": "$2a$10$iem9UhLFqXzehxX4tZCNaeZYVEVGml11X9hkVmze.IULD5ZOwwdda",
+      "intereses": [
+         "b",
+         "c",
+         "e"
+      ],
+      "urlImagen": "/images/users/urlImagen-1657482052021.png",
+      "ultimaVisita": "",
+      "ultimosVisitados": ""
    }
 ]

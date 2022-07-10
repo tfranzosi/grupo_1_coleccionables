@@ -1,20 +1,25 @@
+const PUERTO = 3000;
+
 //Modulos
 const express = require('express');
 const app  = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+
 // Routers
 const mainRouter = require('./src/routes/mainRouter');
 const productRouter = require('./src/routes/productRouter');
 const userRouter = require('./src/routes/userRouter');
 
-const PUERTO = 3000;
 
 // MIDDLEWARES
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}));
+app.use(session( {secret: 'gamestore2022'} ));
+
 
 
 // Inicio Servidor

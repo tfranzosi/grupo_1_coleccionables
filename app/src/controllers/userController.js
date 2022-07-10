@@ -3,14 +3,33 @@ const path = require('path');
 const rutaDB = path.join(__dirname,'../../public/db/usersdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
+const bcrypt = require('bcryptjs');
+
 
 userController={
     login: (req, res) => {
-        res.render('users/login');
+        res.render('users/login',{usuario: req.session.usuario,
+            errorInicioSesion: false});
+    },
+    logout: (req, res) => {
+        req.session.usuario = undefined;
+        res.redirect('/');
     },
 
     register: (req, res) => {
-        res.render('users/register');
+        let usuario = req.session.usuario;
+        res.render('users/register',{usuario});
+    },
+
+    userAuth: (req, res) => {
+        let usuario = userController.buscarUsuario(req.body.usuario);
+        if (usuario !== undefined && bcrypt.compareSync(req.body.contrasenia,usuario.contrasenia)){
+            req.session.usuario = req.body.usuario;
+            res.redirect('/');
+        } else {
+            res.render('users/login', {usuario: req.session.usuario,
+                errorInicioSesion : true});
+        }
     },
 
     carrito: (req, res) => {
@@ -18,7 +37,6 @@ userController={
     },
     store: (req, res) => {
         let nuevoIdMaximo = userController.buscarMaximoId() + 1;
-        console.log(nuevoIdMaximo);
         let urlImagenNueva = '/images/users/default.jpg';
         if (req.file !== undefined) urlImagenNueva = '/images/users/' + req.file.filename;
 
@@ -33,7 +51,7 @@ userController={
         }
         usuarioNuevo.id = nuevoIdMaximo;
         usuarioNuevo.urlImagen = urlImagenNueva;
-        usuarioNuevo.contrasenia = req.body.contrasenia[0];
+        usuarioNuevo.contrasenia = bcrypt.hashSync(req.body.contrasenia[0],10);
 
 
 		dbParseada.push(usuarioNuevo)
@@ -41,14 +59,22 @@ userController={
 
 		res.redirect("/")
 	},
+
     buscarMaximoId: () => {
         let maximo = 0;
         dbParseada.forEach(usuario => {
             if (usuario.id > maximo) maximo = usuario.id;
         });
         return maximo;
-    }
+    },
 
+    buscarUsuario: (usuario) => {
+        let usuarioSeleccionado = dbParseada.find( elemento => {
+            return elemento.usuario === usuario;
+        });
+        if (usuarioSeleccionado === undefined ) return undefined;
+        else return usuarioSeleccionado;
+    }
 
 }
 

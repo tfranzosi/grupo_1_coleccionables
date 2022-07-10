@@ -25,10 +25,15 @@ const upload = multer({ storage : storage});
 router.get('/registro', userController.register);
 router.post('/registro', upload.single('urlImagen'), userController.store);
 
+//FORMULARIO DE LOGIN USUARIO
+router.get('/inicioSesion', userController.login);
+router.post('/inicioSesion', userController.userAuth);
+
+//CERRAR SESION
+router.get('/cerrarSesion', userController.logout);
 
 router.get('/carrito', userController.carrito);
 
-router.get('/inicioSesion', userController.login);
 
 
 
