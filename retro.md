@@ -81,3 +81,20 @@
 - Accionar: comparar archivos.
 
 
+## Retrospectiva Sprint 4 - 11/07/2022
+
+- ¿Qué problemas tuvimos?
+
+Normalización de estilos, continuamos en la tarea de armonizarlo.
+
+
+- ¿Qué hicimos bien?
+
+Divsión de tareas.
+Orden de prioridades y coordinación de las tareas entre los miembros del equipo para llegar el objetivo.
+
+
+- ¿Qué queremos mejorar y cómo lo vamos a hacer?
+
+
+
