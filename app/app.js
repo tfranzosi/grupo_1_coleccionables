@@ -11,6 +11,7 @@ const session = require('express-session');
 const mainRouter = require('./src/routes/mainRouter');
 const productRouter = require('./src/routes/productRouter');
 const userRouter = require('./src/routes/userRouter');
+const cookieParser = require('cookie-parser');
 
 
 // MIDDLEWARES
@@ -19,6 +20,7 @@ app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(session( {secret: 'gamestore2022'} ));
+app.use(cookieParser());
 
 
 

@@ -104,5 +104,25 @@
       "urlImagen": "/images/users/urlImagen-1657482052021.png",
       "ultimaVisita": "",
       "ultimosVisitados": ""
+   },
+   {
+      "id": 6,
+      "nombre": "Pablo",
+      "apellido": "Gianferro",
+      "usuario": "pgianferro82",
+      "telefono_pais": 1151150490,
+      "telefono": null,
+      "email": "pablogianferro@gmail.com",
+      "nacimiento": "1982-07-15",
+      "domicilio": "Francia 473, San Isidro",
+      "genero": "varon",
+      "contrasenia": "$2a$10$dk51E4Vg98pvBuz448uFDeyt7VgxSjNfYay.EqOBy7dWp3FlF7JGa",
+      "intereses": [
+         "a",
+         "b"
+      ],
+      "urlImagen": "/images/users/default.jpg",
+      "ultimaVisita": "",
+      "ultimosVisitados": ""
    }
 ]

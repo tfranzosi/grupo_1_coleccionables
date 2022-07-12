@@ -13,6 +13,7 @@ userController={
     },
     logout: (req, res) => {
         req.session.usuario = undefined;
+        res.cookie("usuario",undefined,{ maxAge: -1, httpOnly: true })
         res.redirect('/');
     },
 
@@ -25,6 +26,9 @@ userController={
         let usuario = userController.buscarUsuario(req.body.usuario);
         if (usuario !== undefined && bcrypt.compareSync(req.body.contrasenia,usuario.contrasenia)){
             req.session.usuario = req.body.usuario;
+            if(req.body.rememberPassword !== undefined){
+                res.cookie("usuario",req.body.usuario,{ maxAge: 900000, httpOnly: true })
+            }
             res.redirect('/');
         } else {
             res.render('users/login', {usuario: req.session.usuario,
