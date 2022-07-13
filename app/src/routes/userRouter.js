@@ -3,6 +3,7 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 const multer = require('multer');
 const path = require('path');
+const modoInvitado = require('../middlewares/modoInvitado');
 
 //MULTER REQUIRE
 
@@ -22,11 +23,11 @@ const upload = multer({ storage : storage});
 
 
 //FORMULARIO DE REGISTRO USUARIO
-router.get('/registro', userController.register);
+router.get('/registro',modoInvitado, userController.register);
 router.post('/registro', upload.single('urlImagen'), userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
-router.get('/inicioSesion', userController.login);
+router.get('/inicioSesion',modoInvitado, userController.login);
 router.post('/inicioSesion', userController.userAuth);
 
 //CERRAR SESION
