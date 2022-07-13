@@ -231,6 +231,12 @@ footer .subscripcion{
     font-weight: bold;
 }
 
+/*  ---     Comunes a todos     ---- */
+.error {
+    background-color: red;
+    font-weight: bold;
+    color: white;
+}
 
 /*  ---     Media Queries     ---- */
 
