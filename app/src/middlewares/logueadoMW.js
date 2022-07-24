@@ -11,4 +11,4 @@ const logueado = (req, res, next) => {
     next();
 }
 
-module.exports = invitado;
+module.exports = logueado;
