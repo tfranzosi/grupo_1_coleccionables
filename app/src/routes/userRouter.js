@@ -28,8 +28,8 @@ router.get('/registro',logueadoMW, userController.register);
 router.post('/registro', upload.single('urlImagen'), userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
-router.get('/inicioSesion',logueadoMW, userController.login);
-router.post('/inicioSesion', userController.userAuth);
+router.get('/inicioSesion',logueadoMW, userController.loginForm);
+router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
 // TODAVIA NO ESTA CREADO EL CONTROLLER Y LA VISTA

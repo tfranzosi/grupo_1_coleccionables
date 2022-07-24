@@ -8,6 +8,19 @@ const bcrypt = require('bcryptjs');
 
 userController={
     login: (req, res) => {
+        let usuario = userController.buscarUsuario(req.body.usuario);
+        if (usuario !== undefined && bcrypt.compareSync(req.body.contrasenia,usuario.contrasenia)){
+            req.session.usuario = req.body.usuario;
+            if(req.body.rememberPassword !== undefined){
+                res.cookie("usuario",req.body.usuario,{ maxAge: 900000, httpOnly: true })
+            }
+            res.redirect('/');
+        } else {
+            res.render('users/login', {usuario: req.session.usuario,
+                errorInicioSesion : true});
+        }
+    },
+    loginForm: (req, res) => {
         res.render('users/login',{usuario: req.session.usuario,
             errorInicioSesion: false});
     },
@@ -22,19 +35,6 @@ userController={
         res.render('users/register',{usuario});
     },
 
-    userAuth: (req, res) => {
-        let usuario = userController.buscarUsuario(req.body.usuario);
-        if (usuario !== undefined && bcrypt.compareSync(req.body.contrasenia,usuario.contrasenia)){
-            req.session.usuario = req.body.usuario;
-            if(req.body.rememberPassword !== undefined){
-                res.cookie("usuario",req.body.usuario,{ maxAge: 900000, httpOnly: true })
-            }
-            res.redirect('/');
-        } else {
-            res.render('users/login', {usuario: req.session.usuario,
-                errorInicioSesion : true});
-        }
-    },
 
     carrito: (req, res) => {
         res.render('users/productCart');
@@ -83,10 +83,10 @@ userController={
         else return usuarioSeleccionado;
     },
 
-    buscarPorCampo: (campo,texto) {
+    buscarPorCampo: (campo,texto) => {
         let userBuscado = dbParseada.find( user => {  (user[campo] === texto);
             return userBuscado;
-        }
+        })
     }
 
 }

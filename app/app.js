@@ -6,6 +6,7 @@ const app  = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+const authMiddleware = require('./src/middlewares/authMiddleware')
 
 // Routers
 const mainRouter = require('./src/routes/mainRouter');
@@ -23,6 +24,7 @@ app.use(session( {secret: 'gamestore2022',resave:false,
 saveUninitialized: false
 }));
 app.use(cookieParser());
+app.use(authMiddleware);
 
 
 
