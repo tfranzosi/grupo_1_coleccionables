@@ -81,6 +81,12 @@ userController={
         });
         if (usuarioSeleccionado === undefined ) return undefined;
         else return usuarioSeleccionado;
+    },
+
+    buscarPorCampo: (campo,texto) {
+        let userBuscado = dbParseada.find( user => {  (user[campo] === texto);
+            return userBuscado;
+        }
     }
 
 }
