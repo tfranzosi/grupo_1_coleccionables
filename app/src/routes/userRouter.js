@@ -3,7 +3,8 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 const multer = require('multer');
 const path = require('path');
-const modoInvitado = require('../middlewares/modoInvitado');
+const logueadoMW = require('../middlewares/logueadoMW');
+const invitadoMW = require('../middlewares/invitadoMW');
 
 //MULTER REQUIRE
 
@@ -23,12 +24,16 @@ const upload = multer({ storage : storage});
 
 
 //FORMULARIO DE REGISTRO USUARIO
-router.get('/registro',modoInvitado, userController.register);
+router.get('/registro',logueadoMW, userController.register);
 router.post('/registro', upload.single('urlImagen'), userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
-router.get('/inicioSesion',modoInvitado, userController.login);
+router.get('/inicioSesion',logueadoMW, userController.login);
 router.post('/inicioSesion', userController.userAuth);
+
+//PERFIL USUARIO
+// TODAVIA NO ESTA CREADO EL CONTROLLER Y LA VISTA
+//router.get('/profile',invitadoMW, userController.profile);
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);
