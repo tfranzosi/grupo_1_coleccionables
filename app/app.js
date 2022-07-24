@@ -19,7 +19,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(session( {secret: 'gamestore2022'} ));
+app.use(session( {secret: 'gamestore2022',resave:false,
+saveUninitialized: false
+}));
 app.use(cookieParser());
 
 
