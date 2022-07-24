@@ -39,6 +39,7 @@ userController={
     carrito: (req, res) => {
         res.render('users/productCart');
     },
+
     store: (req, res) => {
         let nuevoIdMaximo = userController.buscarMaximoId() + 1;
         let urlImagenNueva = '/images/users/default.jpg';
@@ -63,6 +64,8 @@ userController={
 
 		res.redirect("/")
 	},
+
+    /* METODOS ACCESORIOS*/
 
     buscarMaximoId: () => {
         let maximo = 0;
