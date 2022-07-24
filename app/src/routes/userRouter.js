@@ -33,7 +33,7 @@ router.post('/inicioSesion', userController.userAuth);
 
 //PERFIL USUARIO
 // TODAVIA NO ESTA CREADO EL CONTROLLER Y LA VISTA
-//router.get('/profile',invitadoMW, userController.profile);
+//router.get('/perfil',invitadoMW, userController.profile);
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);

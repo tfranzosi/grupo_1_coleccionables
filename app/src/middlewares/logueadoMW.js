@@ -6,7 +6,7 @@ es prudente eliminar el acceso a un usuario logueado que ingrese con la url dire
 const logueado = (req, res, next) => {
     //req.session.usuario fue creado en userControllers.login
     if (req.session.usuario){
-        res.redirect('/'); //CAMBIAR A /USER/PROFILE cuando este creado
+        res.redirect('/'); 
     }
     next();
 }

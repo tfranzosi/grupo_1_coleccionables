@@ -3,7 +3,7 @@
  
 const invitadoMW = (req,res,next) => {
     if (!req.session.usuario){
-        res.redirect('/inicioSesion');
+        res.redirect('/usuarios/inicioSesion');
     }
     next();
 }
