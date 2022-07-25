@@ -124,5 +124,22 @@
       "urlImagen": "/images/users/default.jpg",
       "ultimaVisita": "",
       "ultimosVisitados": ""
+   },
+   {
+      "id": 7,
+      "nombre": "Maxi",
+      "apellido": "Vilchez",
+      "usuario": "mvilchez",
+      "telefono_pais": 54,
+      "telefono": 1151152000,
+      "email": "maxi@prueba.com",
+      "nacimiento": "1994-12-10",
+      "domicilio": "Av. GamePlay 150",
+      "genero": "varon",
+      "contrasenia": "$2a$10$cNamKIkq9kgt6VHwGW8tIuP4oXx1oVTOZUUuAI7ITuaF/47qDSVBO",
+      "intereses": "d",
+      "urlImagen": "/images/users/urlImagen-1658708531610.png",
+      "ultimaVisita": "",
+      "ultimosVisitados": ""
    }
 ]
