@@ -61,7 +61,7 @@ userController={
 
 		dbParseada.push(usuarioNuevo)
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
-
+        res.cookie('usuario',req.body.usuario,{ maxAge: 1000*3600, httpOnly: true })
 		res.redirect("/")
 	},
 
