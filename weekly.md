@@ -90,3 +90,49 @@ MV
 **Qué hizo esta semana:** Desarrollo tarea CRUD de edición de productos,  Actualización del controlador de producto. 
 **Si se encontró con algún impedimento:** No.
 **Qué va a hacer la semana entrante:** Armonización de los forms tanto para alta como edición.
+
+## Weekly S05W01 - 11/07/2022
+
+SC
+**Qué hizo esta semana:** Desarrollo de la funcionalidad search con PG.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Repaso de conceptos de validaciones para conlaborar con PG en la tarea de validaciones de formularios.
+
+TF
+**Qué hizo esta semana:** Tarea Crud Baja productos, revisión integral de CRUD y push a main.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Implementar la entidad usuarios y la funcionalidad registro.
+
+PG
+**Qué hizo esta semana:** Actualización de vista individual de productos con los datos faltantes de la BD de productos, agregado de botones de editar y borrar. Desarrollo funcionalidad Search junto con SC.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Validaciones de formulario de registro con SC.
+
+MV
+**Qué hizo esta semana:** Armonización de los forms tanto para alta como edición.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Implementar el login de usuarios.
+
+## Weekly S05W02 - 18/07/2022
+
+SC
+**Qué hizo esta semana:** Repaso de conceptos de validaciones para conlaborar con PG en la tarea de validaciones de formularios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Validación de formularios.
+
+TF
+**Qué hizo esta semana:** Implementar la entidad usuarios y la funcionalidad registro.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Implementar rutas de huéspedes y de usuarios.
+
+PG
+**Qué hizo esta semana:** Validaciones de formulario de registro con SC. Repaso del proceso completo de login en video y reproducción paso a paso de todo el proceso, anotación de minutos en los que se realiza cada paso para conceptualizar y tener a mano ante dudas.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Finalizar validaciones de formulario. Implementación de cookies y session a nivel global y pulido de la navbar según se esté logueado o no, junto con MV.
+
+MV
+**Qué hizo esta semana:** Implementar el login de usuarios. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Implementación de cookies y session a nivel global y pulido de la navbar según se esté logueado o no. Completar la vista de perfil, trabajo del CSS de la vista de registro para mostrar correctamente las validaciones.
+
+## Weekly S05W03 - 25/07/2022
