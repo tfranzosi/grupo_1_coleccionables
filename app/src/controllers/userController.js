@@ -65,6 +65,10 @@ userController={
 		res.redirect("/")
 	},
 
+    profile: (req, res) => {
+        res.render('users/profile');
+    },
+
     /* METODOS ACCESORIOS*/
 
     buscarMaximoId: () => {
