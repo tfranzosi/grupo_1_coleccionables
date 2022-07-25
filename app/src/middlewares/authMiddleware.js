@@ -4,6 +4,10 @@ const userController = require ("../controllers/userController")
 function authMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
+    if(req.cookies.usuario) {
+        req.session.usuario = req.cookies.usuario;
+    }
+
     let userLogged = userController.buscarUsuario(req.session.usuario);
 
     if(userLogged) {
