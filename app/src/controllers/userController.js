@@ -67,13 +67,35 @@ userController={
         usuarioNuevo.id = nuevoIdMaximo;
         usuarioNuevo.urlImagen = urlImagenNueva;
         usuarioNuevo.contrasenia = bcrypt.hashSync(req.body.contrasenia[0],10);
-
+        for (let int in usuarioNuevo.intereses){
+            switch (usuarioNuevo.intereses[int]){
+                case "a":
+                    usuarioNuevo.intereses[int] = "Anime";
+                    break;
+                case "b":
+                    usuarioNuevo.intereses[int] = "Acción";
+                    break;
+                case "c":
+                    usuarioNuevo.intereses[int] = "Deporte";
+                    break;
+                case "d":
+                    usuarioNuevo.intereses[int] = "RPG";
+                    break;
+                case "e":
+                    usuarioNuevo.intereses[int] = "Social";
+                    break;
+            }
+        }
 
 		dbParseada.push(usuarioNuevo)
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
-
+        res.cookie('usuario',req.body.usuario,{ maxAge: 1000*3600, httpOnly: true })
 		res.redirect("/")
 	},
+
+    profile: (req, res) => {
+        res.render('users/profile');
+    },
 
     /* METODOS ACCESORIOS*/
 

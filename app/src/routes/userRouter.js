@@ -66,8 +66,7 @@ router.get('/inicioSesion',logueadoMW, userController.loginForm);
 router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
-// TODAVIA NO ESTA CREADO EL CONTROLLER Y LA VISTA
-//router.get('/perfil',invitadoMW, userController.profile);
+router.get('/perfil',invitadoMW, userController.profile);
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);

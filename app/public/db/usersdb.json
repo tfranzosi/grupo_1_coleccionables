@@ -97,9 +97,9 @@
       "genero": "varon",
       "contrasenia": "$2a$10$iem9UhLFqXzehxX4tZCNaeZYVEVGml11X9hkVmze.IULD5ZOwwdda",
       "intereses": [
-         "b",
-         "c",
-         "e"
+         "Accion",
+         "Deporte",
+         "Social"
       ],
       "urlImagen": "/images/users/urlImagen-1657482052021.png",
       "ultimaVisita": "",
@@ -118,8 +118,9 @@
       "genero": "varon",
       "contrasenia": "$2a$10$dk51E4Vg98pvBuz448uFDeyt7VgxSjNfYay.EqOBy7dWp3FlF7JGa",
       "intereses": [
-         "a",
-         "b"
+         "E-Commerce",
+         "Racing",
+         "Consoladores"
       ],
       "urlImagen": "/images/users/default.jpg",
       "ultimaVisita": "",
@@ -137,7 +138,7 @@
       "domicilio": "Av. GamePlay 150",
       "genero": "varon",
       "contrasenia": "$2a$10$cNamKIkq9kgt6VHwGW8tIuP4oXx1oVTOZUUuAI7ITuaF/47qDSVBO",
-      "intereses": "d",
+      "intereses": "Deporte",
       "urlImagen": "/images/users/urlImagen-1658708531610.png",
       "ultimaVisita": "",
       "ultimosVisitados": ""

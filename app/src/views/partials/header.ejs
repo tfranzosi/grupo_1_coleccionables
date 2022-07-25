@@ -28,7 +28,7 @@
             <ul>
                 <li><a href="/usuarios/carrito"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Carrito</span></a></li>
                 <% if (locals.isLogged) { %> 
-                    <li>Bienvenido <%= locals.userLogged.usuario %> </li>
+                    <li><a href="/usuarios/perfil">Bienvenido <%= locals.userLogged.usuario %></a> </li>
                     <li><a href="/usuarios/cerrarSesion"><i class="fa-solid fa-arrow-left-to-bracket"></i><span>&nbsp;Cerrar sesión</span></a></li>
                     <% } else { %>
                         <li><a href="/usuarios/registro"><i class="fa-regular fa-id-card"></i><span>&nbsp;Registrate</span></a></li>
