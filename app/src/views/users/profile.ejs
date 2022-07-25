@@ -54,6 +54,18 @@
                         <h3>Genero:</h3>
                         <p><%=locals.userLogged.genero%></p>
                     </div>
+                    <div class="profile-container-content">
+                        <h3>Intereses:</h3>
+                        <p>
+                            <% if (locals.userLogged.intereses){ %>
+                             <% for (let x in locals.userLogged.intereses) { %>
+                                <div>
+                                    <%= locals.userLogged.intereses[x]%>
+                                </div>
+                                <% } %>
+                            <% } %>
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="edit-button">
