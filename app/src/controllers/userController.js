@@ -4,6 +4,7 @@ const rutaDB = path.join(__dirname,'../../public/db/usersdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 
 userController={
@@ -41,6 +42,15 @@ userController={
     },
 
     store: (req, res) => {
+        const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
         let nuevoIdMaximo = userController.buscarMaximoId() + 1;
         let urlImagenNueva = '/images/users/default.jpg';
         if (req.file !== undefined) urlImagenNueva = '/images/users/' + req.file.filename;
