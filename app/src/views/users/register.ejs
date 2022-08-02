@@ -45,56 +45,84 @@
             <P> O sino<br>
                 Por favor completá los datos en el siguiente formulario</P><br>
             <div class="form-registro">
-                <form class="registro" action="/registro" method="POST">
+                <form class="registro" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
                     <div class="contenedor-fotoperfil">
                         <p>Foto de perfil</p><br>
-                        <label for="fotoPerfil" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
-                        <input type="file" accept=".jpg, .png" id="fotoPerfil">
+                        <label for="urlImagen" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
+                        <input type="file" id="urlImagen" name="urlImagen">
+                        <div class="danger">  <% if (locals.errors && errors.urlImagen) { %>
+                            <%= errors.urlImagen.msg %>
+                        <% } %> </div>
                     </div>
 
                     <div class="categoria"> 
                         <label for="nombre" class="datos">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder=" Juan" required>
+                        <input type="text" name="nombre" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
+                        <!-- <div class="danger">  <% if (locals.errors && errors.nombre) { %>
+                            <%= errors.nombre.msg %>
+                        <% } %> </div> -->
                     </div>
 
                     <div class="categoria"> 
                         <label for="apellido" class="datos">Apellido</label>
-                        <input type="text" name="apellid" id="apellido" placeholder=" Gameplayer" required>
+                        <input type="text" name="apellido" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
+                        <!-- <div class="danger">  <% if (locals.errors && errors.apellido) { %>
+                            <%= errors.apellido.msg %>
+                        <% } %> </div> -->
                     </div>
 
                     <div class="categoria">
                         <label for="usuario" class="datos">Nombre de usuario</label>
-                        <input type="text" name="usuario" id="user" placeholder=" Usuario" required>
+                        <input type="text" name="usuario" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.usuario : "" %>" >
+                        <!-- <div class="danger">  <% if (locals.errors && errors.usuario) { %>
+                            <%= errors.usuario.msg %>
+                        <% } %> </div> -->
                     </div>
 
                     <div class="categoria">
                         <div class="telefonos">
                             <span class = "telefonos">
-                                <label for="telefono1" class="datos">Telefono</label>
+                                <label for="telefono_pais" class="datos">Telefono</label>
                             </span>
+                            
                         </div>
                         <div class="telefonos">
                             <span>
-                                <input type="tel" name="telefono1" id="telefono1" placeholder=" +54"></span>
-                            <span>
-                                <input type="tel" name="telefono2" id="telefono2" placeholder=" 1234 5678">
+                                <input type="tel" name="telefono_pais" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.telefono_pais : "" %>"></span>
+                                <!-- <div class="danger">  <% if (locals.errors && errors.telefono_pais) { %>
+                                    <%= errors.telefono_pais.msg %>
+                                <% } %> </div> -->
+                            <span> 
+                                <input type="tel" name="telefono" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.telefono : "" %>">
                             </span>
+                            <!-- <div class="danger">  <% if (locals.errors && errors.telefono) { %>
+                                <%= errors.telefono.msg %>
+                            <% } %> </div> -->
                         </div>
                     </div>
 
                     <div class="categoria">
                         <label for="mail" class="datos">E-mail</label>
-                        <input type="email" name="mail" id="mail" placeholder=" juan@gameplay.com">
+                        <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : "" %>">
+                        <!-- <div class="danger">  <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>
+                        <% } %> </div> -->
                     </div><br>
                                     
                     <div class="categoria">
                         <label for="nacimiento" class="datos">Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" required>
+                        <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.nacimiento : "" %>">
+                        <!-- <div class="danger">  <% if (locals.errors && errors.nacimiento) { %>
+                            <%= errors.nacimiento.msg %>
+                        <% } %> </div> -->
                     </div><br>
 
                     <div class="categoria">
                         <label for="domicilio" class="datos">Domicilio</label>
-                        <input type="text" name="domicilio" id="domicilio" placeholder=" Av. Gameplay 150">
+                        <input type="text" name="domicilio" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.domicilio : "" %>">
+                        <!-- <div class="danger">  <% if (locals.errors && errors.domicilio) { %>
+                            <%= errors.domicilio.msg %>
+                        <% } %> </div> -->
                     </div><br>
                     
                     <div class="categoria">
@@ -110,46 +138,63 @@
                             <label for="otro">Otro</label>
                             <input type="radio" name="genero" value="otro" id="otro">
                         </div>
-                        
+                        <br>
+                        <br>
+                        <br>
+                        <!-- <div class="danger">  <% if (locals.errors && errors.genero) { %>
+                            <%= errors.genero.msg %>
+                        <% } %> </div> -->
                     </div>
                                             <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
                         <div class="intereses">
                             <h4>Intereses</h4>
                             <div>
-                                <input type="checkbox" name="interests" value="a" id="a">
+                                <input type="checkbox" name="intereses" value="a" id="a">
                                 <label for="a">Anime</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="b" id="b">
+                                <input type="checkbox" name="intereses" value="b" id="b">
                                 <label for="b">Accion</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="c" id="c">
+                                <input type="checkbox" name="intereses" value="c" id="c">
                                 <label for="c">Deporte</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="d" id="d">
+                                <input type="checkbox" name="intereses" value="d" id="d">
                                 <label for="d">RPG</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="interests" value="e" id="e">
+                                <input type="checkbox" name="intereses" value="e" id="e">
                                 <label for="e">Social</label>
                             </div>
                         </div>
+                        <!-- <div class="danger">  <% if (locals.errors && errors.intereses) { %>
+                            <%= errors.intereses.msg %>
+                        <% } %> </div> -->
                     </section>
                     <div class="categoria">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder=" ********">
+                        <label for="contrasenia">Contraseña</label>
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
                     </div>
+                    <!-- <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
+                        <%= errors.contrasenia.msg %>
+                    <% } %> </div> -->
                     <div class="categoria">
                         <label for="password">Confirme contraseña</label>
-                        <input type="password" name="password" id="password" placeholder=" ********">
-                    </div><br>
+                        <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
+                    </div>
+                    <!-- <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
+                        <%= errors.contrasenia.msg %>
+                    <% } %> </div><br> -->
                     <div class="tyc">
-                        <input type="checkbox" name="tyc" value="tyc" id="tyc" required>
-                        <label for="tyc">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
-                    </div><br>
+                        <input type="checkbox" name="condiciones" value="condiciones" id="condiciones" >
+                        <label for="condiciones">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
+                    </div>
+                    <!-- <div class="danger">  <% if (locals.errors && errors.condiciones) { %>
+                        <%= errors.condiciones.msg %>
+                    <% } %> </div><br><br> -->
                     <div>
                         <button type="submit" class="registerbutton">REGISTRATE</button>
                     </div><br>

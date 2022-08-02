@@ -80,6 +80,21 @@
 - JSON de productos que coincida con los campos del form y lo mismo para usuarios.
 - Accionar: comparar archivos.
 
+## Retrospectiva Sprint 4 - 11/07/2022
+
+- ¿Qué problemas tuvimos?
+- Normalización de estilos, continuamos en la tarea de armonizarlo.
+- Escritura "Spanglish", también a mejorar.
+
+
+¿Qué hicimos bien?
+- Divsión de tareas. Orden de prioridades y coordinación de las tareas entre los miembros del equipo para llegar el objetivo.
+- Llegamos más holgados para el deadline.
+- Pudimos ir más allá del sprint y generar funcionalidades aparte como el buscador de productos.
+
+¿Qué queremos mejorar y cómo lo vamos a hacer?
+- Normalizar el CSS y la escritura en un solo idioma, preferentemente inglés.
+- Mejorar la responsividad.
 
 ## Retrospectiva Sprint 4 - 11/07/2022
 

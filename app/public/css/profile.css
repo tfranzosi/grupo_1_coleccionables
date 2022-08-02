@@ -1,0 +1,52 @@
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+
+}
+.first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    margin-bottom: 1vh;
+    font-size: 1.2rem;
+    
+
+}
+.first-row-content{
+    display: flex;
+    flex-direction: column;
+    padding:1.5vw;
+
+}
+.second-row{ 
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-bottom: 1vh;
+    font-size: 1.2rem;
+
+}
+.profile-container-content{
+    padding:2vw;
+    display:flex;
+    flex-direction: column;
+
+    
+}
+h3{
+    margin:0;
+}
+
+.avatar{
+    margin:15px;
+    max-width: 200px;
+    border-radius: 30px;
+    border: 1px solid #B1272F ;
+    box-shadow: #B1272F 0px 0px 10px;
+}
+
+.edit-button{
+    padding:1.5vw;
+}

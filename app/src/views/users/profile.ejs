@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <%- include('../partials/head.ejs')%>
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/profile.css">
+        <title>GamePlay - Perfil</title>
+    </head>
+    <body>
+        <header>
+            <%- include('../partials/header.ejs') %>
+        </header>
+        <main>
+            <div class="breadcrumb">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="level-01" href="/">Inicio</a><span> > </span>
+                    <span class="active">Perfil</span>
+                </nav>
+            </div>
+            <div class="profile-container">
+                <div class="profile-container-title">
+                    <h2>Perfil</h2>
+                </div>
+                <div class="first-row">
+                    <div class="profile-avatar">
+                        <img src="<%=locals.userLogged.urlImagen%>" alt="avatar" class="avatar">
+                    </div>
+                    <div class="first-row-content">
+                        <div class="first-row-content">
+                            <h3>Nombre:</h3>
+                            <p><%=locals.userLogged.nombre%></p>
+                        </div>
+                        <div class="first-row-content">
+                            <h3>Apellido:</h3>
+                            <p><%=locals.userLogged.apellido%></p> 
+                        </div>
+                        <div class="first-row-content">
+                            <h3>Nombre de usuario:</h3>
+                            <p><%=locals.userLogged.usuario%></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <div class="profile-container-content">
+                        <h3>Email:</h3> 
+                        <p><%=locals.userLogged.email%></p>
+                    </div>
+                    <div class="profile-container-content">
+                        <h3>Fecha de nacimiento:</h3> 
+                        <p><%=locals.userLogged.nacimiento%></p>
+                    </div>
+                    <div class="profile-container-content">
+                        <h3>Genero:</h3>
+                        <p><%=locals.userLogged.genero%></p>
+                    </div>
+                    <div class="profile-container-content">
+                        <h3>Intereses:</h3>
+                        <p>
+                            <% if (locals.userLogged.intereses){ %>
+                             <% for (let x in locals.userLogged.intereses) { %>
+                                <div>
+                                    <%= locals.userLogged.intereses[x]%>
+                                </div>
+                                <% } %>
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-button">
+            <a href="/usuarios/"><button type="button" name ="ingreso" class="ingresobutton">EDITAR</button></a>
+            </div>
+        </main>
+                <!-- Breadcrumb Start -->
+
+
+        <%- include ('../partials/footer.ejs') %>
+    </body>
+    
+    </html>

@@ -30,7 +30,6 @@ productController={
         for (let key in dbParseada[0]) productoVacio[key] = "";
 
         let id = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(id);
         res.render('products/productCreate',{producto: productoVacio, categorias});
     },
 
@@ -119,7 +118,7 @@ productController={
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);
         const image = path.join(__dirname,'../../public') + dbParseada[indice].urlImagen;
-// Elimino imagen jpg
+        // Elimino imagen jpg
         if(image !== '/images/products/default.jpg'){                         
             try {
                 fs.unlinkSync(image)
@@ -133,11 +132,14 @@ productController={
     
     },
 
+    /* METODOS ACCESORIOS*/
+
     buscarIndiceProductoPorId: id => { //devuelvo indice del producto en productdb
         return dbParseada.findIndex(producto => {
             return producto.id === id;
         });          
     },
+
     validarOferta: reqBodyDescuento => { //Recibe req.body.descuento, si es mayor a 0 hay oferta.
         if (reqBodyDescuento>0){
             return true
@@ -145,6 +147,7 @@ productController={
             return false
         };
     },
+
     buscarMaximoId: () => {
         let maximo = 0;
         dbParseada.forEach(producto => {
