@@ -3,6 +3,8 @@ const router = express.Router();
 const productController = require('../controllers/productController');
 const multer = require('multer');
 const path = require('path');
+const productMiddleware = require('../middlewares/productMiddleware');
+
 
 //MULTER REQUIRE
 
@@ -26,7 +28,7 @@ router.get('/', productController.showAll);
 
 //FORMULARIO PARA CREAR PRODUCTO
 router.get('/crear', productController.create);
-router.post('/crear', upload.single('urlImagen') , productController.store); 
+router.post('/crear', upload.single('urlImagen') , productMiddleware, productController.store); 
 
 //DETALLE DE 1 PRODUCTO
 router.get('/:id', productController.producto);
