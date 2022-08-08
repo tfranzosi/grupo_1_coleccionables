@@ -54,98 +54,114 @@
                             <%= errors.urlImagen.msg %>
                         <% } %> </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="nombre" class="datos">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
-                        <!-- <div class="danger">  <% if (locals.errors && errors.nombre) { %>
-                            <%= errors.nombre.msg %>
-                        <% } %> </div> -->
-                    </div>
-
-                    <div class="categoria"> 
-                        <label for="apellido" class="datos">Apellido</label>
-                        <input type="text" name="apellido" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
-                        <!-- <div class="danger">  <% if (locals.errors && errors.apellido) { %>
-                            <%= errors.apellido.msg %>
-                        <% } %> </div> -->
-                    </div>
-
-                    <div class="categoria">
-                        <label for="usuario" class="datos">Nombre de usuario</label>
-                        <input type="text" name="usuario" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.usuario : "" %>" >
-                        <!-- <div class="danger">  <% if (locals.errors && errors.usuario) { %>
-                            <%= errors.usuario.msg %>
-                        <% } %> </div> -->
-                    </div>
-
-                    <div class="categoria">
-                        <div class="telefonos">
-                            <span class = "telefonos">
-                                <label for="telefono_pais" class="datos">Telefono</label>
-                            </span>
+                    <div class="rowform">
+                        <div class="colform">
+                            <div class="categoria"> 
+                                <label for="nombre" class="datos">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
+                                <div class="danger">  <% if (locals.errors && errors.nombre) { %>
+                                    <%= errors.nombre.msg %>
+                                <% } %> </div>
+                            </div>
                             
                         </div>
-                        <div class="telefonos">
-                            <span>
-                                <input type="tel" name="telefono_pais" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.telefono_pais : "" %>"></span>
-                                <!-- <div class="danger">  <% if (locals.errors && errors.telefono_pais) { %>
-                                    <%= errors.telefono_pais.msg %>
-                                <% } %> </div> -->
-                            <span> 
-                                <input type="tel" name="telefono" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.telefono : "" %>">
-                            </span>
-                            <!-- <div class="danger">  <% if (locals.errors && errors.telefono) { %>
-                                <%= errors.telefono.msg %>
-                            <% } %> </div> -->
+                        <div class="colform">
+                            <div class="categoria"> 
+                                <label for="apellido" class="datos">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
+                                <div class="danger">  <% if (locals.errors && errors.apellido) { %>
+                                    <%= errors.apellido.msg %>
+                                <% } %> </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="categoria">
-                        <label for="mail" class="datos">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : "" %>">
-                        <!-- <div class="danger">  <% if (locals.errors && errors.email) { %>
-                            <%= errors.email.msg %>
-                        <% } %> </div> -->
-                    </div><br>
-                                    
-                    <div class="categoria">
-                        <label for="nacimiento" class="datos">Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.nacimiento : "" %>">
-                        <!-- <div class="danger">  <% if (locals.errors && errors.nacimiento) { %>
-                            <%= errors.nacimiento.msg %>
-                        <% } %> </div> -->
-                    </div><br>
-
-                    <div class="categoria">
-                        <label for="domicilio" class="datos">Domicilio</label>
-                        <input type="text" name="domicilio" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.domicilio : "" %>">
-                        <!-- <div class="danger">  <% if (locals.errors && errors.domicilio) { %>
-                            <%= errors.domicilio.msg %>
-                        <% } %> </div> -->
-                    </div><br>
-                    
-                    <div class="categoria">
-                        <div class="generos">
-                            <label for="varon">Varon</label>
-                            <input type="radio" name="genero" value="varon" id="varon">
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria">
+                            <label for="usuario" class="datos">Nombre de usuario</label>
+                            <input type="text" name="usuario" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.usuario : "" %>" >
+                            <div class="danger">  <% if (locals.errors && errors.usuario) { %>
+                                <%= errors.usuario.msg %>
+                            <% } %> </div>
                         </div>
-                        <div class="generos">
-                            <label for="mujer">Mujer</label>
-                            <input type="radio" name="genero" value="mujer" id="mujer">
-                        </div>
-                        <div class="generos">
-                            <label for="otro">Otro</label>
-                            <input type="radio" name="genero" value="otro" id="otro">
-                        </div>
-                        <br>
-                        <br>
-                        <br>
-                        <!-- <div class="danger">  <% if (locals.errors && errors.genero) { %>
-                            <%= errors.genero.msg %>
-                        <% } %> </div> -->
                     </div>
-                                            <!-- Div abajo de los datos -->
+                    <div class="colform">
+                        <div class="categoria">
+                            <div class="telefonos">
+                                <span class = "telefonos">
+                                    <label for="telefono_pais" class="datos">Telefono</label>
+                                </span>
+                                
+                            </div>
+                            <div class="telefonos">
+                                <span>
+                                    <input type="tel" name="telefono_pais" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.telefono_pais : "" %>"></span>
+                                    <div class="danger">  <% if (locals.errors && errors.telefono_pais) { %>
+                                        <%= errors.telefono_pais.msg %>
+                                    <% } %> </div>
+                                <span> 
+                                    <input type="tel" name="telefono" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.telefono : "" %>">
+                                </span>
+                                <div class="danger">  <% if (locals.errors && errors.telefono) { %>
+                                    <%= errors.telefono.msg %>
+                                <% } %> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rowform"> 
+                    <div class="colform">   
+                        <div class="categoria">
+                            <label for="mail" class="datos">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : "" %>">
+                            <div class="danger">  <% if (locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                    <div class="colform">                     
+                        <div class="categoria">
+                            <label for="nacimiento" class="datos">Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.nacimiento : "" %>">
+                            <div class="danger">  <% if (locals.errors && errors.nacimiento) { %>
+                                <%= errors.nacimiento.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                </div>
+                <div class="rowform">
+                    <div class="colform">      
+                        <div class="categoria">
+                            <label for="domicilio" class="datos">Domicilio</label>
+                            <input type="text" name="domicilio" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.domicilio : "" %>">
+                            <div class="danger">  <% if (locals.errors && errors.domicilio) { %>
+                                <%= errors.domicilio.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                    <div class="colform"> 
+                        <div class="categoria">
+                            <div class="generos">
+                                <label for="varon">Varon</label>
+                                <input type="radio" name="genero" value="varon" id="varon">
+                            </div>
+                            <div class="generos">
+                                <label for="mujer">Mujer</label>
+                                <input type="radio" name="genero" value="mujer" id="mujer">
+                            </div>
+                            <div class="generos">
+                                <label for="otro">Otro</label>
+                                <input type="radio" name="genero" value="otro" id="otro">
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="danger">  <% if (locals.errors && errors.genero) { %>
+                                <%= errors.genero.msg %>
+                            <% } %> </div>
+                        </div>
+                    </div>
+                </div>                            <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
                         <div class="intereses">
                             <h4>Intereses</h4>
@@ -170,31 +186,39 @@
                                 <label for="e">Social</label>
                             </div>
                         </div>
-                        <!-- <div class="danger">  <% if (locals.errors && errors.intereses) { %>
+                        <div class="danger">  <% if (locals.errors && errors.intereses) { %>
                             <%= errors.intereses.msg %>
-                        <% } %> </div> -->
+                        <% } %> </div>
                     </section>
-                    <div class="categoria">
-                        <label for="contrasenia">Contraseña</label>
-                        <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria">
+                            <label for="contrasenia">Contraseña</label>
+                            <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
+                            <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
+                                <%= errors.contrasenia.msg %>
+                            <% } %> </div>
+                        </div><br>
                     </div>
-                    <!-- <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
-                        <%= errors.contrasenia.msg %>
-                    <% } %> </div> -->
-                    <div class="categoria">
-                        <label for="password">Confirme contraseña</label>
-                        <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
+                    <div class="colform">
+                        <div class="categoria">
+                            <label for="password">Confirme contraseña</label>
+                            <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
+                            <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
+                                <%= errors.contrasenia.msg %>
+                            <% } %> </div><br>
+                        </div>
                     </div>
-                    <!-- <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
-                        <%= errors.contrasenia.msg %>
-                    <% } %> </div><br> -->
+                </div>
+                <div class="rowform2">    
                     <div class="tyc">
                         <input type="checkbox" name="condiciones" value="condiciones" id="condiciones" >
                         <label for="condiciones">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
                     </div>
-                    <!-- <div class="danger">  <% if (locals.errors && errors.condiciones) { %>
+                    <div class="danger">  <% if (locals.errors && errors.condiciones) { %>
                         <%= errors.condiciones.msg %>
-                    <% } %> </div><br><br> -->
+                    <% } %> </div><br><br>
+                </div>
                     <div>
                         <button type="submit" class="registerbutton">REGISTRATE</button>
                     </div><br>

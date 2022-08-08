@@ -103,6 +103,8 @@ svg{
 .danger {
     color: #b1262f;
     font-weight: bold;
+    font-size: 10px;
+    margin-top: 5px;
 }
 
     /* foto de perfil */
@@ -180,7 +182,7 @@ input[type="radio"]{
 section.perfilusuario{
     display: block;
     text-align: left;
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
 }
 .intereses{
     width:100%;
@@ -219,12 +221,21 @@ section.perfilusuario{
 @media(min-width: 576px){
     .form-registro{         /* Esto es para hacer 2 inputs por fila */
         display: flex;
-        flex-wrap: wrap;
-
+        flex-wrap: wrap; 
+    }
+    .colform {
+        display:flex;
+        flex-direction: column;
+    }
+    .rowform {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        
     }
     .form-registro .categoria{
         display: block;
-        width: 50%;
+        /* width: 50%; */
         padding-left: 3vh;
         padding-right: 3vh;
         float: left;
@@ -242,12 +253,25 @@ section.perfilusuario{
 }
 
 @media(min-width: 992px){
+    .form-registro .categoria{
+        display: block;
+        width: 120%;
+        /* padding-left: 3vh;
+        padding-right: 3vh; */
+        /* float: left; */
+    }
     .form-registro{
         padding-left: 5vw;
         padding-right: 5vw;
     }
+    .rowform {
+        justify-content: space-evenly;
+    }
+    section.perfilusuario{
+        padding-left: 10vh;
+        }
     .tyc{
-        padding-left: 1.2vw;
+        padding-left: 10vw;
     }
     footer .newsletter{
         display: flex;
@@ -258,5 +282,4 @@ section.perfilusuario{
 }
 
 @media(min-width: 1200){
-    
 }
