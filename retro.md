@@ -96,6 +96,7 @@
 - Normalizar el CSS y la escritura en un solo idioma, preferentemente inglés.
 - Mejorar la responsividad.
 
+<<<<<<< HEAD
 ## Retrospectiva Sprint 4 - 11/07/2022
 
 - ¿Qué problemas tuvimos?
@@ -113,3 +114,19 @@ Orden de prioridades y coordinación de las tareas entre los miembros del equipo
 
 
 
+=======
+## Retrospectiva Sprint 5 - 03/08/2022
+
+- ¿Qué problemas tuvimos?
+- No dividimos las tareas de manera anticipada.
+
+
+¿Qué hicimos bien?
+- Coordinación de las tareas entre los miembros del equipo para llegar el objetivo.
+- Nos pudimos adaptar a realizar tareas con código de otro compañero.
+
+
+¿Qué queremos mejorar y cómo lo vamos a hacer?
+- Repartir las tareas de manera anticipada y con un cronograma estable.
+- Compartir los accesos de heroku para eventuales contingencias.
+>>>>>>> 52a75a0643bad6d8eeb2fe6f17e685d81faad308

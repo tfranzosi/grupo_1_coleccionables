@@ -3,6 +3,7 @@ const path = require('path');
 const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
+const { validationResult } = require('express-validator');
 
 const categorias = [
     "Juegos Físicos",
@@ -35,6 +36,15 @@ productController={
 
     	// Create -  Method to store
 	store: (req, res) => {
+        const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('partials/form_fields', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+
         let nuevoIdMaximo = productController.buscarMaximoId() + 1;
         let esOferta = productController.validarOferta(req.body.descuento);
         let esFisico = true;
