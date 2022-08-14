@@ -31,11 +31,11 @@ module.exports = (sequelize, dataTypes) => {
 
     Option.associate = function (models) {
         Option.belongsToMany(models.Product, { // models.Product -> Product es el valor de alias en movie.js
-            as: 'products',
+            as: 'products_options',
             through: 'product_options',
             foreignKey: 'product_id',
             otherKey: 'option_id',
-            timestamps: false
+            timestamps: true
         })
     }
 

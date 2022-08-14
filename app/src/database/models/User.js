@@ -31,7 +31,8 @@ module.exports = (sequelize, dataTypes) => {
         },
         email: {
             type: dataTypes.STRING(50),
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         birth_date: {
             type: dataTypes.DATEONLY,
@@ -72,22 +73,22 @@ module.exports = (sequelize, dataTypes) => {
 
     User.associate = function(models) {
         User.hasMany(models.Order, { // models.Order -> Order es el valor de alias en movie.js
-            as: 'orders', // El nombre del modelo pero en plural
+            as: 'orders_user', // El nombre del modelo pero en plural
             foreignKey: 'user_id'
         })
         User.belongsToMany(models.Product, { // models.Product -> Product es el valor de alias en movie.js
-            as: 'products',
-            through: 'product_options',
+            as: 'products_users',
+            through: 'user_visited_products',
             foreignKey: 'product_id',
             otherKey: 'user_id',
-            timestamps: false
+            timestamps: true
         })
         User.belongsToMany(models.Interest, { // models.Interest -> Interest es el valor de alias en movie.js
             as: 'interests',
             through: 'user_interests',
             foreignKey: 'user_id',
             otherKey: 'interest_id',
-            timestamps: false
+            timestamps: true
         })
         User.belongsTo(models.Gender, { // models.Gender -> Gender es el valor de alias en genres.js
             as: 'genders',

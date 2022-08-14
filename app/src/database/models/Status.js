@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Status.associate = function(models) {
         Status.hasMany(models.Order, { // models.Order -> Order es el valor de alias en movie.js
-            as: "orders", // El nombre del modelo pero en plural
+            as: "orders_status", // El nombre del modelo pero en plural
             foreignKey: "status_id"
         })
     }

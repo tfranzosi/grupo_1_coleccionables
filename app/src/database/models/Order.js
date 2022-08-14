@@ -49,20 +49,20 @@ module.exports = (sequelize, dataTypes) => {
 
     Order.associate = function (models) {
         Order.belongsToMany(models.Product, { // models.Product -> Product es el valor de alias en movie.js
-            as: 'products',
-            through: 'product_options',
+            as: 'products_orders',
+            through: 'order_details',
             foreignKey: 'product_id',
-            otherKey: 'category_id',
-            timestamps: false
+            otherKey: 'order_id',
+            timestamps: true
         })
 
         Order.belongsTo(models.Status, { // models.Status -> Status es el valor de alias en genres.js
-            as: "status",
+            as: "status_orders",
             foreignKey: "status_id"
         })
 
         Order.belongsTo(models.User, { // models.User -> User es el valor de alias en genres.js
-            as: "users",
+            as: "user_orders",
             foreignKey: "user_id"
         })
 

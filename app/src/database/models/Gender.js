@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Gender.associate = function(models) {
         Gender.hasMany(models.User, { // models.User -> User es el valor de alias en movie.js
-            as: "users", // El nombre del modelo pero en plural
+            as: "users_gender", // El nombre del modelo pero en plural
             foreignKey: "gender"
         })
     }

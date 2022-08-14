@@ -31,13 +31,13 @@ module.exports = (sequelize, dataTypes) => {
 
     Interest.associate = function (models) {
         Interest.belongsToMany(models.User, { // models.User -> User es el valor de alias en movie.js
-            as: 'users',
+            as: 'users_interests',
             through: 'user_interests',
             foreignKey: 'user_id',
             otherKey: 'interest_id',
-            timestamps: false
+            timestamps: true
         })
     }
 
-    return Category
+    return Interest
 };
