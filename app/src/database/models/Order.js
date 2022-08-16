@@ -9,16 +9,19 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         user_id: dataTypes.BIGINT(10),
-        status_id: dataTypes.BIGINT(10),
         ammount: {
             type: dataTypes.DECIMAL(10, 2).UNSIGNED,
+            allowNull: false
+        },
+        items_q: {
+            type: dataTypes.MEDIUMINT.UNSIGNED,
             allowNull: false
         },
         shipping_address: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
-        address: {
+        billing_address: {
             type: dataTypes.STRING(50),
             allowNull: false
         },
@@ -30,16 +33,10 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATEONLY,
             allowNull: false
         },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        }
+        status_id: dataTypes.BIGINT(10)
     };
     let config = {
+        tableName:'orders',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

@@ -8,20 +8,14 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        category_name: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
-        },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
         }
     };
+
     let config = {
+        tableName:'interests',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

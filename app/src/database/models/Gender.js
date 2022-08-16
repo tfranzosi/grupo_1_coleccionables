@@ -7,20 +7,14 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        gender: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
-        },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
         }
     };
+
     let config = {
+        tableName: 'genders',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

@@ -8,20 +8,13 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        option_name: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
-        },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
         }
     };
     let config = {
+        tableName: 'options',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -32,7 +25,7 @@ module.exports = (sequelize, dataTypes) => {
     Option.associate = function (models) {
         Option.belongsToMany(models.Product, { // models.Product -> Product es el valor de alias en movie.js
             as: 'products_options',
-            through: 'product_options',
+            through: 'products_options',
             foreignKey: 'product_id',
             otherKey: 'option_id',
             timestamps: true

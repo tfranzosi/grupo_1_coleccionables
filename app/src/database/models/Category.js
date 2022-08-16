@@ -8,20 +8,14 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        category_name: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
-        },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
         }
     };
+
     let config = {
+        tableName: 'categories',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
@@ -32,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
     Category.associate = function (models) {
         Category.belongsToMany(models.Product, { // models.Product -> Product es el valor de alias en movie.js
             as: 'products_categories',
-            through: 'product_categories',
+            through: 'products_categories',
             foreignKey: 'product_id',
             otherKey: 'category_id',
             timestamps: true

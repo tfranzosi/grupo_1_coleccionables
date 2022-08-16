@@ -7,14 +7,12 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        user_role_id: dataTypes.BIGINT(10),
-        gender: dataTypes.BIGINT(10),
         first_name: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         last_name: {
-            type: dataTypes.STRING(50),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         user: {
@@ -22,12 +20,10 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         phone_country: {
-            type: dataTypes.BIGINT(2).UNSIGNED,
-            allowNull: false
+            type: dataTypes.STRING(5)
         },
         phone_number: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false
+            type: dataTypes.STRING(20)
         },
         email: {
             type: dataTypes.STRING(50),
@@ -38,8 +34,12 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATEONLY,
             allowNull: false
         },
-        billing_address: {
+        address: {
             type: dataTypes.STRING(50),
+            defaultValue: null
+        },
+        gender: {
+            type: dataTypes.BIGINT(10),
             allowNull: false
         },
         password: {
@@ -48,22 +48,20 @@ module.exports = (sequelize, dataTypes) => {
         },
         image_url: {
             type: dataTypes.STRING(200),
-            allowNull: false
+            defaultValue: null
         },
         last_visit_date: {
             type: dataTypes.DATEONLY,
             defaultValue: null
         },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
+        user_role_id: {
+            type:dataTypes.BIGINT(10),
+            allowNull: false
         }
+        
     };
     let config = {
+        tableName: 'users',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',

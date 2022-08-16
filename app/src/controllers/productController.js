@@ -4,6 +4,9 @@ const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const categorias = [
     "Juegos Físicos",
@@ -17,8 +20,12 @@ const categorias = [
 
 productController={
     showAll: (req, res) => {
-        res.render('products/products',{productos: dbParseada});
-    },
+            db.Product.findAll()
+                .then(products => {
+                    res.send(products)
+                })
+        },
+        // res.render('products/products',{productos: dbParseada})
     producto: (req, res) => {
         let id = parseInt(req.params.id);
         let indice = productController.buscarIndiceProductoPorId(id);

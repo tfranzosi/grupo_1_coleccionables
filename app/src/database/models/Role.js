@@ -7,20 +7,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        role: {
+        name: {
             type: dataTypes.STRING(50),
             allowNull: false
-        },
-        created_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
-        },
-        updated_at: {
-            type: dataTypes.TIMESTAMP,
-            defaultValue: null,
         }
     };
     let config = {
+        tableName: 'users_roles',
         timestamps: true,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
