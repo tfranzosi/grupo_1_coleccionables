@@ -139,8 +139,8 @@ INSERT INTO orders_status (name) VALUES ('Enviado');
 INSERT INTO orders_status (name) VALUES ('Finalizado');
 
 -- Poblar la tabla de ORDENES (CARRITOS)
-INSERT INTO orders (user_id, ammount, shipping_address, billing_address, email, date, status_id) VALUES (2, 16014, 'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'tomas@franzosi.com.ar', '2022-08-08', 1);
-INSERT INTO orders (user_id, ammount, shipping_address, billing_address, email, date, status_id) VALUES (1, 12630, 'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'sjchaves97@gmail.com', '2022-08-13', 1);
+INSERT INTO orders (user_id, ammount, items_q, shipping_address, billing_address, email, date, status_id) VALUES (2, 16014, 2,'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'tomas@franzosi.com.ar', '2022-08-08', 1);
+INSERT INTO orders (user_id, ammount, items_q, shipping_address, billing_address, email, date, status_id) VALUES (1, 12630, 3,'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'sjchaves97@gmail.com', '2022-08-13', 1);
 
 -- Estructura de la tabla intermedia ORDENES (CARRITOS) - PRODUCTOS
 INSERT INTO orders_details (order_id, product_id, price, quantity) VALUES (1, 2, 13199, 1);

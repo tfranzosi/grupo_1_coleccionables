@@ -11,7 +11,7 @@ CREATE TABLE products (
   product_name varchar(240) NOT NULL,
   short_description TEXT,
   long_description TEXT,
-  regular_price MEDIUMINT UNSIGNED NOT NULL,
+  regular_price DECIMAL UNSIGNED NOT NULL,
   discount MEDIUMINT UNSIGNED,
   fee_q MEDIUMINT UNSIGNED,
   tags varchar(200) DEFAULT NULL,
@@ -181,7 +181,8 @@ DROP TABLE IF EXISTS orders;
 CREATE TABLE orders (
   id INTEGER NOT NULL AUTO_INCREMENT,
   user_id INTEGER NOT NULL,
-  ammount MEDIUMINT,
+  ammount DECIMAL,
+  items_q MEDIUMINT,
   shipping_address varchar(50),
   billing_address varchar(50),
   email varchar(50),
