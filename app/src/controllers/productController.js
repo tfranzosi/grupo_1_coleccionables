@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const queries = require('../database/queries');
+const productQueries = require('../database/productQueries');
+
 const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
@@ -23,8 +24,7 @@ productController={
     showAll: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [products] = await Promise.all([queries.showAllProducts]);
-
+            const [products] = await Promise.all([productQueries.showAll]);
             res.render('products/products' , { products , title: 'Productos'});
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
@@ -35,7 +35,7 @@ productController={
 
     detail: async (req, res) => {
         try{
-            const [product] = await Promise.all([queries.findProduct(req.params.id)]);
+            const [product] = await Promise.all([productQueries.find(req.params.id)]);
 
             if(product !== null){
                 res.render('products/productDetail' , { product });
@@ -46,7 +46,7 @@ productController={
             //Si hay algun error, los atajo y muestro todo vacio
             console.log('error,' , e);
             res.render('products/productDetail' , { products: {} });
-}
+        }
     },
     
     create: (req, res) => {
@@ -148,22 +148,16 @@ productController={
         res.redirect(`/productos/${idProd}`);  
     },
 
-    delete: (req, res) => {
-        let id = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(id);
-        const image = path.join(__dirname,'../../public') + dbParseada[indice].urlImagen;
-        // Elimino imagen jpg
-        if(image !== '/images/products/default.jpg'){                         
-            try {
-                fs.unlinkSync(image)
-            } catch(err) {
-                console.error(err)
-            }
-        }       
-        dbParseada.splice(indice,1);
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
-        res.redirect('/productos');
-    
+    delete: async (req, res) => {
+
+        try{
+            await Promise.all([productQueries.delete(req.params.id)]);
+            res.redirect('/productos')
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('error' , { error: e });
+        }
     },
 
     /* METODOS ACCESORIOS*/

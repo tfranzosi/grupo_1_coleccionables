@@ -4,6 +4,7 @@
 <head>
     <%- include('../partials/head.ejs')%>
     <link rel="stylesheet" href="/css/productDetail.css">
+    <script src="/js/productDetail.js"></script>
     <title>GamePlay - Detalle de producto</title>
 </head>
 
@@ -86,7 +87,7 @@
                         </div>
                         <div class="buy-now">
                             <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="buy-now-button">ELIMINAR</button>
+                                    <button type="submit" class="buy-now-button" id="delete-button">ELIMINAR</button>
                             </form>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-const queries = require('../database/queries');
+const productQueries = require('../database/productQueries');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -8,7 +8,7 @@ mainController = {
     index: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [offers, bestSellers] = await Promise.all([queries.offers, queries.bestSellers]);
+            const [offers, bestSellers] = await Promise.all([productQueries.offers, productQueries.bestSellers]);
 
             res.render('index', {
                 offers,
@@ -29,7 +29,7 @@ mainController = {
     search: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [products] = await Promise.all([queries.searchProducts(req.query.search)]);
+            const [products] = await Promise.all([productQueries.search(req.query.search)]);
 
             res.render('products/products' , { products , title: 'Resultados de busqueda'});
         } catch (e) {

@@ -1,9 +1,9 @@
-const db = require('../database/models');
+const db = require('./models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 module.exports = {
-    showAllProducts: db.Product.findAll({
+    showAll: db.Product.findAll({
         include: [
             {association: 'categories'}
         ]
@@ -29,7 +29,7 @@ module.exports = {
         ]
     }),
 
-    findProduct: (id) =>  db.Product.findOne({
+    find: (id) =>  db.Product.findOne({
         where: {
             id: id
         },
@@ -38,7 +38,7 @@ module.exports = {
         ]
     }),
 
-    searchProducts: (query) => db.Product.findAll({
+    search: (query) => db.Product.findAll({
         where: {
             [Op.or]: [
                 {product_name: { [Op.like]: '%' + query + '%' }},
@@ -47,11 +47,16 @@ module.exports = {
 
             ]
         },
-        include: [{
-            association: 'categories'
-        }
+        include: [
+            {association: 'categories'}
         ]
     }),
+
+    delete: (id) => db.Product.destroy({
+        where: {
+            id: id
+        }
+    })
 
 
 }
