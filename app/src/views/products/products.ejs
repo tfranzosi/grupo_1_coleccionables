@@ -3,7 +3,7 @@
 <head>
     <%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/index.css">
-    <title>GamePlay - Productos</title>
+    <title>GamePlay - <%= title %></title>
 </head>
 
 <body>
@@ -12,11 +12,15 @@
     <!-- <%- include('../partials/header_slider') %> -->
     </header>
     <section class="main">
-        <h4 class="titulo">TODOS LOS PRODUCTOS</h4>
+        <h4 class="titulo"><%= title %></h4>
         <section class="productos">
-        <% for (let producto of productos){ %>
-            <%- include ('../partials/producto',{producto}) %>
-        <% } %> 
+        <% if (products.length === 0) { %>
+            Ups... No hay nada por aquí
+        <% } else { %>
+            <% for (let product of products){ %>
+                <%- include ('../partials/producto',{product}) %>
+            <% } %> 
+        <% } %>
         </section>
     </section>
 

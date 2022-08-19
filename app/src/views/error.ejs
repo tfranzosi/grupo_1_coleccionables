@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>GamePlay - Home</title>
+</head>
+
+<body>
+    <header>
+    <%- include('./partials/header', {usuario: ''}) %>
+    </header>
+    <section class="main">
+        <h1 class="titulo">Hubo un error</h1>
+        <section class="productos">
+            <h2><%=  error %></h2>
+        </section>
+        <img src="/images/error.jpeg">
+    </section>
+
+
+    <%- include ('./partials/footer') %>
+</body>
+
+</html>

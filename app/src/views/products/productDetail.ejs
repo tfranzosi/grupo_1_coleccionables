@@ -27,25 +27,25 @@
         <!-- Shop Detail Start -->
         <div class="product-detail">
                 <div class="product-detail-left" >
-                    <img class="main-pic" src="<%= producto.urlImagen %>" alt="imagen de producto">
+                    <img class="main-pic" src="<%= product.image_url %>" alt="imagen de producto">
                 </div>
                 <div class="product-detail-right">
                     <div>
-                    <% if (producto.esOferta) { %>
-                        <span class="discount"><%= producto.descuento %>% off</span>
+                    <% if (product.is_offer) { %>
+                        <span class="discount"><%= product.discount %>% off</span>
                     <% } %>
                     <h5 class="brand">Marca</h5>
-                    <h2 class="product-name"><%= producto.titulo %> </h2>
+                    <h2 class="product-name"><%= product.product_name %> </h2>
                     </div>
                     <div>
-                        <p class="short-description"> <%= producto.descripcionCorta %> </p>
+                        <p class="short-description"> <%= product.short_description %> </p>
                     </div>
                     <div class="prices">
                         <div>
-                            <% if (producto.esOferta){ %>
-                                <span class="regular-price">$<%= producto.precioRegular.toLocaleString('es-Ar') %></span>
+                            <% if (product.is_offer){ %>
+                                <span class="regular-price">$<%= product.regular_price.toLocaleString('es-Ar') %></span>
                             <% } %> 
-                            <span class="offer-price">$<%= (parseInt(producto.precioRegular * ( 1 - producto.descuento/100))).toLocaleString('es-Ar') %></span>
+                            <span class="offer-price">$<%= (parseInt(product.regular_price * ( 1 - product.discount/100))).toLocaleString('es-Ar') %></span>
                         </div> 
                     </div>
                     <div class="input-group">
@@ -66,20 +66,26 @@
                         </div>
                     </div>
                     <div>
-                        <p class="sku"> SKU: <%= producto.sku %> </p>
+                        <p class="sku"> SKU: <%= product.sku %> </p>
                     </div>
+                    <br>
                     <div>
-                        <p class="tags"> TAGS: <%= producto.etiquetas %> </p>
+                        <p class="tags"> TAGS: <%= product.tags %> </p>
                     </div>
+                    <br>
                     <div>
-                        <p class="categories"> CATEGORIAS: <%= producto.categorias %> </p>
+                        <p class="categories"> CATEGORIAS: 
+                            <span><% for (let categorie of product.categories){ %>
+                                - <%= categorie.name %> -
+                            <% } %></span>
+                        </p>
                     </div>
                     <div class="buttons2">
                         <div class="add-to-cart">
-                            <a href="/productos/<%= producto.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
+                            <a href="/productos/<%= product.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
                         </div>
                         <div class="buy-now">
-                            <form class="registro" action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
+                            <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
                                     <button type="submit" class="buy-now-button">ELIMINAR</button>
                             </form>
                         </div>
@@ -98,7 +104,7 @@
         <!-- Product´s large description Start -->
         <div class="product-long-description">
             <h2>Descripción del producto</h2>
-            <%= producto.descripcionLarga %>
+            <%= product.long_description %>
         </div>
         <!-- Product´s large description End -->
         <div>

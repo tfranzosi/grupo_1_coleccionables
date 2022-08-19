@@ -31,7 +31,7 @@ router.get('/crear', productController.create);
 router.post('/crear', upload.single('urlImagen') , productMiddleware, productController.store); 
 
 //DETALLE DE 1 PRODUCTO
-router.get('/:id', productController.producto);
+router.get('/:id', productController.detail);
 
 //FORMULARIO EDITAR 1 PRODUCTO
 router.get("/:id/editar", productController.editForm)

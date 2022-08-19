@@ -1,18 +1,21 @@
-<a href="/productos/<%= producto.id %>"><article>
+<a href="/productos/<%= product.id %>"><article>
     <div>
-        <img src="<%= producto.urlImagen %>">
-        <h5><%= producto.titulo %></h5>
-        <span><%= producto.categorias %></span>
+        <img src="<%= product.image_url %>">
+        <h5><%= product.product_name %></h5>
+        <span><% for (let categorie of product.categories){ %>
+            - <%= categorie.name %> -
+        <% } %></span>
+
     </div>
     <div class="precios">
         <div>
-            <% if (producto.esOferta){ %>
-                <span class="precio-viejo">$<%= producto.precioRegular.toLocaleString('es-Ar') %></span>
+            <% if (product.is_offer){ %>
+                <span class="precio-viejo">$<%= product.regular_price.toLocaleString('es-Ar') %></span>
             <% } %> 
-            <span class="precio-actual">$<%= (parseInt(producto.precioRegular * ( 1 - producto.descuento/100))).toLocaleString('es-Ar') %></span>
+            <span class="precio-actual">$<%= (parseInt(product.regular_price * ( 1 - product.discount/100))).toLocaleString('es-Ar') %></span>
         </div>
-        <% if (producto.esOferta) { %>
-            <span class="descuento"><%= producto.descuento %>% off</span>
+        <% if (product.is_offer) { %>
+            <span class="descuento"><%= product.discount %>% off</span>
         <% } %> 
     </div>
 </article></a>

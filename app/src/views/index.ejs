@@ -14,16 +14,16 @@
     <section class="main">
         <h4 class="titulo">OFERTAS DE LA SEMANA</h4>
         <section class="productos">
-        <% for (let producto of ofertas){ %>
-            <%- include ('./partials/producto',{producto}) %>
+        <% for (let product of offers){ %>
+            <%- include ('./partials/producto',{product}) %>
         <% } %> 
         </section>
 
         <h4 class="titulo">PRODUCTOS MAS VENDIDOS</h4>
         <section class="productos">
 
-        <% for (let producto of masVendidos){ %>
-            <%- include ('./partials/producto',{producto}) %>
+        <% for (let product of bestSellers){ %>
+            <%- include ('./partials/producto',{product}) %>
         <% } %> 
         
         </section>

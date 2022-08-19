@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const queries = require('../database/queries');
 const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
@@ -19,17 +20,33 @@ const categorias = [
 
 
 productController={
-    showAll: (req, res) => {
-            db.Product.findAll()
-                .then(products => {
-                    res.send(products)
-                })
-        },
-        // res.render('products/products',{productos: dbParseada})
-    producto: (req, res) => {
-        let id = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(id);
-        res.render('products/productDetail',{producto: dbParseada[indice]});
+    showAll: async (req, res) => {
+        try {
+            //Hago los pedidos a la Base de Datos
+            const [products] = await Promise.all([queries.showAllProducts]);
+
+            res.render('products/products' , { products , title: 'Productos'});
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('products/products' , { products: [], title: 'Productos'});
+        }
+    },
+
+    detail: async (req, res) => {
+        try{
+            const [product] = await Promise.all([queries.findProduct(req.params.id)]);
+
+            if(product !== null){
+                res.render('products/productDetail' , { product });
+            } else {
+                res.render('error',{error: 'No existe el producto seleccionado'})
+            }
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('products/productDetail' , { products: {} });
+}
     },
     
     create: (req, res) => {
