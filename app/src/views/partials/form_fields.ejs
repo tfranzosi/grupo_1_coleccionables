@@ -1,5 +1,5 @@
 
-                                        <p><%=producto%></p>
+
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
                         <input type="text" name="sku" id="sku" 
@@ -67,12 +67,12 @@
                         
                         <div class="intereses">
                             <h4>Categorías</h4>
-                            <% for (let categoria of categorias){%> 
+                            <% for (let category of categories){%> 
                             <div>
-                                <input type="checkbox" name="categories" value="<%= categoria %>" id="<%= categoria %>"
-                                <%if (producto.categorias.includes(categoria) ){%>
+                                <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category %>"
+                                <%if (producto.categorias.includes(category) ){%>
                                     <%= checked="checked" %><%}%> >
-                                <label for="<%= categoria %>"><%= categoria %> </label>
+                                <label for="<%= category %>"><%= category.name %> </label>
                             </div>
                             <%}%>                          
                         </div>

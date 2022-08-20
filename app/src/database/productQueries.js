@@ -9,6 +9,10 @@ module.exports = {
         ]
     }),
 
+    showAllCategories: () => {
+        db.Category.findAll();
+    },
+
     offers: db.Product.findAll({
         where: {
             is_offer: true
@@ -53,9 +57,7 @@ module.exports = {
     }),
 
     create: (product) => {
-        console.log(product);
         db.Product.create(product);
-
     },
     delete: (id) => db.Product.destroy({
         where: {

@@ -10,14 +10,14 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
-const categorias = [
-    "Juegos Físicos",
-    "Juegos Digitales",
-    "Ofertas",
-    "PS4",
-    "PS5",
-    "Coleccionables"
-];
+// const categorias = [
+//     "Juegos Físicos",
+//     "Juegos Digitales",
+//     "Ofertas",
+//     "PS4",
+//     "PS5",
+//     "Coleccionables"
+// ];
 
 
 productController={
@@ -49,15 +49,23 @@ productController={
         }
     },
     
-    create: (req, res) => {
-        //Defino producto vacio segun mi base de datos
+    create: async (req, res) => {
         let productoVacio = {};
-        for (let key in dbParseada[0]) productoVacio[key] = "";
-        console.log("------------------------",productoVacio);
-        let id = parseInt(req.params.id);
-        res.render('products/productCreate',{producto: productoVacio, categorias});
+        try{
+            //Defino producto vacio segun mi base de datos
+            for (let key in dbParseada[0]) productoVacio[key] = "";
+            let id = parseInt(req.params.id);
+            await Promise.all([db.Category.findAll()]).then(([categories])=>{
+                console.log(categories);
+                console.table(categories.dataValues);
+                return res.render('products/productCreate', {producto: productoVacio, categories});
+            });
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('products/productCreate' , { producto: productoVacio, title: 'Productos'});
+        }
     },
-
     	// Create -  Method to store
 	store: async (req, res) => {
         const resultValidation = validationResult(req);
@@ -193,27 +201,10 @@ productController={
         });
         return maximo;
     },
-    prueba: (req,res) => {
-        db.Product.create({
-            sku: 'ACM1PT',
-            product_name: '1',
-            short_description: '1',
-            long_description: '1',
-            regular_price: '1',
-            discount: '1',
-            fee_q: '1',
-            tags: '1',
-            is_physical: 'false',
-            categories: {id:2},
-            is_offer: false,
-            image_url: '/images/products/default.jpg',
-            visits_q: 0,
-            sales_q: 0,
-            best_seller: 0
-          },{
-            include: [{association: 
-                'categories'}]
-          })
+
+    prueba: async (req,res) => {
+        let [categories]= await Promise.all([db.Category.findAll()])
+        res.send(categories);
     }
 }
 
