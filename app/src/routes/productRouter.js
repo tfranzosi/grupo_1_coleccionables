@@ -20,7 +20,6 @@ const storage = multer.diskStorage ({
 
 const upload = multer({ storage : storage});
 
-router.get('/prueba',productController.prueba);
 //MOSTRAR TODOS LOS PRODUCTOS
 router.get('/', productController.showAll);
 

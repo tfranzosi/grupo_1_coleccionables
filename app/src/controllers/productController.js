@@ -10,15 +10,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
-// const categorias = [
-//     "Juegos Físicos",
-//     "Juegos Digitales",
-//     "Ofertas",
-//     "PS4",
-//     "PS5",
-//     "Coleccionables"
-// ];
-
 
 productController={
     showAll: async (req, res) => {
@@ -55,7 +46,7 @@ productController={
             //Defino producto vacio segun mi base de datos
             for (let key in dbParseada[0]) productoVacio[key] = "";
             let id = parseInt(req.params.id);
-            await Promise.all([db.Category.findAll()]).then(([categories])=>{
+            await Promise.all([db.Category.findAll()]).then(([categories])=>{ //Deberia venir de productQueries pero no andaba
                 console.log(categories);
                 console.table(categories.dataValues);
                 return res.render('products/productCreate', {producto: productoVacio, categories});
@@ -89,37 +80,6 @@ productController={
 
 
         const [product] = await Promise.all([productQueries.create(producto)]);
-        // let nuevoIdMaximo = productController.buscarMaximoId() + 1;
-        // let esOferta = productController.validarOferta(req.body.descuento);
-        // let esFisico = true;
-        // if (req.body.esFisico !== true) esFisico = false;
-        // let urlImagenNueva = '/images/products/default.jpg';
-        // if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        // let categories = [];
-        // if (req.body.categories !== undefined) categories = req.body.categories;
-
-
-		// let nuevoProducto =  {
-		// 	id: nuevoIdMaximo,
-        //     sku:req.body.sku,
-		// 	titulo: req.body.titulo,
-        //     descripcionCorta:req.body.descripcionCorta,
-        //     descripcionLarga:req.body.descripcionLarga,
-		// 	precioRegular: parseInt(req.body.precioRegular),
-		// 	descuento: parseInt(req.body.descuento),
-        //     cantidadCuotas: parseInt(req.body.cantidadCuotas),
-        //     etiquetas:req.body.etiquetas,
-        //     esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
-        //     esFisico: esFisico,
-		// 	categorias: categories,
-		// 	urlImagen: urlImagenNueva,
-        //     visitas:0,
-        //     vendidos:0,
-        //     esMasVendido: false
-		// }
-		// dbParseada.push(nuevoProducto)
-        // fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
-
 		res.redirect("/productos")
 	},
 
@@ -141,25 +101,23 @@ productController={
         request=req.body
         let urlImagenNueva = dbParseada[indice].urlImagen;
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
-        //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
         let productoEditado = { 
-            id: idProd, //int
-            sku: req.body.sku, //str
-            titulo: req.body.titulo, //str
-            descripcionCorta: req.body.descripcionCorta, //str
-            descripcionLarga: req.body.descripcionLarga,  //str
-            precioRegular: parseInt(req.body.precioRegular), //int
-            descuento: parseInt(req.body.descuento), //int
-            cantidadCuotas: parseInt(req.body.cantidadCuotas), //int
-            etiquetas: req.body.etiquetas,  //str
-            esOferta: esOferta, //bool
-            esFisico: esFisico, //bool
-            categorias: req.body.categories, //str Array
-            urlImagen: urlImagenNueva, //str
-            visitas: visitasProd, //int             /*Implementar mecanismos de contador*/
-            vendidos: vendidosProd, //int           /*Implementar mecanismos de contador*/
-            esMasVendido: esMasVendidoProd //bool   /*Implementar mecanismo dependiente de anterior atributo*/
+            id: idProd,
+            sku: req.body.sku,
+            titulo: req.body.titulo,
+            descripcionCorta: req.body.descripcionCorta,
+            descripcionLarga: req.body.descripcionLarga,
+            precioRegular: parseInt(req.body.precioRegular),
+            descuento: parseInt(req.body.descuento),
+            cantidadCuotas: parseInt(req.body.cantidadCuotas),
+            etiquetas: req.body.etiquetas,
+            esOferta: esOferta,
+            esFisico: esFisico,
+            categorias: req.body.categories,
+            urlImagen: urlImagenNueva,
+            visitas: visitasProd,
+            vendidos: vendidosProd,
+            esMasVendido: esMasVendidoProd
         }
         dbParseada[indice]=productoEditado;
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
@@ -167,7 +125,6 @@ productController={
     },
 
     delete: async (req, res) => {
-
         try{
             await Promise.all([productQueries.delete(req.params.id)]);
             res.redirect('/productos')
@@ -200,11 +157,6 @@ productController={
             if (producto.id > maximo) maximo = producto.id;
         });
         return maximo;
-    },
-
-    prueba: async (req,res) => {
-        let [categories]= await Promise.all([db.Category.findAll()])
-        res.send(categories);
     }
 }
 

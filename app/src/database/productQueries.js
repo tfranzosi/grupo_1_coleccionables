@@ -8,11 +8,7 @@ module.exports = {
             {association: 'categories'}
         ]
     }),
-
-    showAllCategories: () => {
-        db.Category.findAll();
-    },
-
+    
     offers: db.Product.findAll({
         where: {
             is_offer: true
