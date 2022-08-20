@@ -1,11 +1,12 @@
 module.exports = {
   "development": {
     "username": 'root',
-    "password": '',
+    "password": 'root',
     "database": "coleccionables_db",
     "host": "127.0.0.1",
     "port":8889,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false
   },
   "test": {
     "username": "root",

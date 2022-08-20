@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const userQueries = require('../database/userQueries');
+
 const rutaDB = path.join(__dirname,'../../public/db/usersdb.json');
 const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
@@ -8,10 +10,13 @@ const { validationResult } = require('express-validator');
 
 
 userController={
-    login: (req, res) => {
-        let usuario = userController.buscarUsuario(req.body.usuario);
-        if (usuario !== undefined && bcrypt.compareSync(req.body.contrasenia,usuario.contrasenia)){
-            req.session.usuario = req.body.usuario;
+    login: async (req, res) => {
+        // Busco el usuario por id
+        const [user] = await Promise.all([userQueries.findByUser(req.body.user)]);
+
+        if (user !== null && bcrypt.compareSync(req.body.password,user.password)){
+            req.session.usuario = user.user;
+            console.log('Usuario en Login: ', req.session.usuario);
             if(req.body.rememberPassword){
                 res.cookie("usuario",req.body.usuario,{ maxAge: 900000, httpOnly: true })
             }
@@ -27,6 +32,7 @@ userController={
     },
     logout: (req, res) => {
         res.clearCookie("usuario");
+        res.locals.isLogged = false;
         req.session.destroy();
         res.redirect('/');
     },
@@ -93,7 +99,7 @@ userController={
 		res.redirect("/")
 	},
 
-    profile: (req, res) => {
+    profile: async (req, res) => {
         res.render('users/profile');
     },
 
@@ -107,12 +113,11 @@ userController={
         return maximo;
     },
 
-    buscarUsuario: (usuario) => {
-        let usuarioSeleccionado = dbParseada.find( elemento => {
-            return elemento.usuario === usuario;
-        });
-        if (usuarioSeleccionado === undefined ) return undefined;
-        else return usuarioSeleccionado;
+    buscarUsuario: async (usuario) => {
+        // const [user] = await Promise.all([userQueries.findByUser(usuario)]);
+        // console.log('Usuario', user);
+        // if (user === undefined || user ===null) return undefined;
+        // else return user;
     },
 
     buscarPorCampo: (campo,texto) => {

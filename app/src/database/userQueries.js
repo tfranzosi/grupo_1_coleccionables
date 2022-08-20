@@ -4,14 +4,12 @@ const { Op } = require("sequelize");
 
 module.exports = {
 
-    find: (id) =>  db.User.findOne({
+    find: (id) =>  db.User.findByPk(id),
+    findByUser: (user) => db.User.findOne({
         where: {
-            id: id
-        },
-        include: [
-            //{association: 'categories'}
-        ]
-    }),
+            'user': user
+        }
+    })
     
 
 

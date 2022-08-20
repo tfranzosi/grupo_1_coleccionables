@@ -24,20 +24,20 @@
                 </div>
                 <div class="first-row">
                     <div class="profile-avatar">
-                        <img src="<%=locals.userLogged.urlImagen%>" alt="avatar" class="avatar">
+                        <img src="<%=locals.userLogged.image_url%>" alt="avatar" class="avatar">
                     </div>
                     <div class="first-row-content">
                         <div class="first-row-content">
                             <h3>Nombre:</h3>
-                            <p><%=locals.userLogged.nombre%></p>
+                            <p><%=locals.userLogged.first_name%></p>
                         </div>
                         <div class="first-row-content">
                             <h3>Apellido:</h3>
-                            <p><%=locals.userLogged.apellido%></p> 
+                            <p><%=locals.userLogged.last_name%></p> 
                         </div>
                         <div class="first-row-content">
                             <h3>Nombre de usuario:</h3>
-                            <p><%=locals.userLogged.usuario%></p>
+                            <p><%=locals.userLogged.user%></p>
                         </div>
                     </div>
                 </div>
@@ -48,22 +48,16 @@
                     </div>
                     <div class="profile-container-content">
                         <h3>Fecha de nacimiento:</h3> 
-                        <p><%=locals.userLogged.nacimiento%></p>
+                        <p><%=locals.userLogged.birth_date%></p>
                     </div>
                     <div class="profile-container-content">
                         <h3>Genero:</h3>
-                        <p><%=locals.userLogged.genero%></p>
+                        <p><%=locals.userLogged.genre%></p>
                     </div>
                     <div class="profile-container-content">
                         <h3>Intereses:</h3>
                         <p>
-                            <% if (locals.userLogged.intereses){ %>
-                             <% for (let x in locals.userLogged.intereses) { %>
-                                <div>
-                                    <%= locals.userLogged.intereses[x]%>
-                                </div>
-                                <% } %>
-                            <% } %>
+
                         </p>
                     </div>
                 </div>

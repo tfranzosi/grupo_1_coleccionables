@@ -34,6 +34,8 @@ router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil',invitadoMW, userController.profile);
+// router.get('/perfil/:id',userController.profile);
+
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);
