@@ -53,52 +53,64 @@ productController={
         //Defino producto vacio segun mi base de datos
         let productoVacio = {};
         for (let key in dbParseada[0]) productoVacio[key] = "";
-
+        console.log("------------------------",productoVacio);
         let id = parseInt(req.params.id);
         res.render('products/productCreate',{producto: productoVacio, categorias});
     },
 
     	// Create -  Method to store
-	store: (req, res) => {
+	store: async (req, res) => {
         const resultValidation = validationResult(req);
 		
 		if (resultValidation.errors.length > 0) {
-			return res.render('partials/form_fields', {
+			return res.render('products/productCreate', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
-
-        let nuevoIdMaximo = productController.buscarMaximoId() + 1;
-        let esOferta = productController.validarOferta(req.body.descuento);
-        let esFisico = true;
-        if (req.body.esFisico !== true) esFisico = false;
+        let producto = req.body;
+        producto.is_offer=productController.validarOferta(req.body.descuento);
         let urlImagenNueva = '/images/products/default.jpg';
-        if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        let categories = [];
-        if (req.body.categories !== undefined) categories = req.body.categories;
+        if (req.file !== undefined){
+            urlImagenNueva = '/images/products/' + req.file.filename;
+        }
+        producto.image_url =urlImagenNueva;
+        producto.visits_q = 0;
+        producto.sales_q = 0;
+        producto.best_seller = 0;
 
 
-		let nuevoProducto =  {
-			id: nuevoIdMaximo,
-            sku:req.body.sku,
-			titulo: req.body.titulo,
-            descripcionCorta:req.body.descripcionCorta,
-            descripcionLarga:req.body.descripcionLarga,
-			precioRegular: parseInt(req.body.precioRegular),
-			descuento: parseInt(req.body.descuento),
-            cantidadCuotas: parseInt(req.body.cantidadCuotas),
-            etiquetas:req.body.etiquetas,
-            esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
-            esFisico: esFisico,
-			categorias: categories,
-			urlImagen: urlImagenNueva,
-            visitas:0,
-            vendidos:0,
-            esMasVendido: false
-		}
-		dbParseada.push(nuevoProducto)
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+        const [product] = await Promise.all([productQueries.create(producto)]);
+        // let nuevoIdMaximo = productController.buscarMaximoId() + 1;
+        // let esOferta = productController.validarOferta(req.body.descuento);
+        // let esFisico = true;
+        // if (req.body.esFisico !== true) esFisico = false;
+        // let urlImagenNueva = '/images/products/default.jpg';
+        // if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
+        // let categories = [];
+        // if (req.body.categories !== undefined) categories = req.body.categories;
+
+
+		// let nuevoProducto =  {
+		// 	id: nuevoIdMaximo,
+        //     sku:req.body.sku,
+		// 	titulo: req.body.titulo,
+        //     descripcionCorta:req.body.descripcionCorta,
+        //     descripcionLarga:req.body.descripcionLarga,
+		// 	precioRegular: parseInt(req.body.precioRegular),
+		// 	descuento: parseInt(req.body.descuento),
+        //     cantidadCuotas: parseInt(req.body.cantidadCuotas),
+        //     etiquetas:req.body.etiquetas,
+        //     esOferta: esOferta,  //Provisoriamente no se carga con el req.body sino validando arriba si descuento!=null
+        //     esFisico: esFisico,
+		// 	categorias: categories,
+		// 	urlImagen: urlImagenNueva,
+        //     visitas:0,
+        //     vendidos:0,
+        //     esMasVendido: false
+		// }
+		// dbParseada.push(nuevoProducto)
+        // fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
 
 		res.redirect("/productos")
 	},
@@ -180,6 +192,28 @@ productController={
             if (producto.id > maximo) maximo = producto.id;
         });
         return maximo;
+    },
+    prueba: (req,res) => {
+        db.Product.create({
+            sku: 'ACM1PT',
+            product_name: '1',
+            short_description: '1',
+            long_description: '1',
+            regular_price: '1',
+            discount: '1',
+            fee_q: '1',
+            tags: '1',
+            is_physical: 'false',
+            categories: {id:2},
+            is_offer: false,
+            image_url: '/images/products/default.jpg',
+            visits_q: 0,
+            sales_q: 0,
+            best_seller: 0
+          },{
+            include: [{association: 
+                'categories'}]
+          })
     }
 }
 

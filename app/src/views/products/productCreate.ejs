@@ -29,7 +29,7 @@
             <div class="form-registro">
                 <form class="registro" action="/productos/crear" method="POST" enctype="multipart/form-data">
                     <%-include ('../partials/form_fields.ejs', {producto, categorias}) %>
-                    
+                    <p><%=producto%></p>
                     <div>
                         <button type="submit" class="registerbutton">PUBLICAR</button>
                     </div><br>

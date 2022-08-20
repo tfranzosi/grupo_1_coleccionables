@@ -52,6 +52,11 @@ module.exports = {
         ]
     }),
 
+    create: (product) => {
+        console.log(product);
+        db.Product.create(product);
+
+    },
     delete: (id) => db.Product.destroy({
         where: {
             id: id
