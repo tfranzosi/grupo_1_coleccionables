@@ -83,7 +83,7 @@ module.exports = (sequelize, dataTypes) => {
         })
         User.belongsToMany(models.Interest, { // models.Interest -> Interest es el valor de alias en movie.js
             as: 'interests',
-            through: 'user_interests',
+            through: 'users_interests',
             foreignKey: 'user_id',
             otherKey: 'interest_id',
             timestamps: true

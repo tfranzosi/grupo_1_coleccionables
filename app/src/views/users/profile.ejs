@@ -24,41 +24,41 @@
                 </div>
                 <div class="first-row">
                     <div class="profile-avatar">
-                        <img src="<%=locals.userLogged.image_url%>" alt="avatar" class="avatar">
+                        <img src="<%=user.image_url%>" alt="avatar" class="avatar">
                     </div>
                     <div class="first-row-content">
                         <div class="first-row-content">
                             <h3>Nombre:</h3>
-                            <p><%=locals.userLogged.first_name%></p>
+                            <p><%=user.first_name%></p>
                         </div>
                         <div class="first-row-content">
                             <h3>Apellido:</h3>
-                            <p><%=locals.userLogged.last_name%></p> 
+                            <p><%=user.last_name%></p> 
                         </div>
                         <div class="first-row-content">
                             <h3>Nombre de usuario:</h3>
-                            <p><%=locals.userLogged.user%></p>
+                            <p><%=user.user%></p>
                         </div>
                     </div>
                 </div>
                 <div class="second-row">
                     <div class="profile-container-content">
                         <h3>Email:</h3> 
-                        <p><%=locals.userLogged.email%></p>
+                        <p><%=user.email%></p>
                     </div>
                     <div class="profile-container-content">
                         <h3>Fecha de nacimiento:</h3> 
-                        <p><%=locals.userLogged.birth_date%></p>
+                        <p><%=user.birth_date%></p>
                     </div>
                     <div class="profile-container-content">
                         <h3>Genero:</h3>
-                        <p><%=locals.userLogged.genre%></p>
+                        <p><%=user.genders.name%></p>
                     </div>
                     <div class="profile-container-content">
                         <h3>Intereses:</h3>
-                        <p>
-
-                        </p>
+                        <% for (let interest of user.interests) { %>
+                            <p><%= interest.name %> </p>    
+                        <% } %>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@ const path = require('path');
 const logueadoMW = require('../middlewares/logueadoMW');
 const invitadoMW = require('../middlewares/invitadoMW');
 const registerMiddleware = require('../middlewares/registerMiddleware');
+const { Router } = require('express');
 
 
 //MULTER REQUIRE
@@ -15,14 +16,15 @@ const storage = multer.diskStorage ({
         cb(null, path.join(__dirname, '../../public/images/users'));
     },
     filename: function(req, file, cb) {
-        console.log(file);
         let filex = file.fieldname + "-" + Date.now() + path.extname(file.originalname);
-        console.log(filex);
         cb(null, filex);     
     }
 })
 
 const upload = multer({ storage : storage});
+
+//LISTAR USUARIOS
+router.get('/', userController.showAll);
 
 //FORMULARIO DE REGISTRO USUARIO
 router.get('/registro',logueadoMW, userController.register);
@@ -34,8 +36,7 @@ router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil',invitadoMW, userController.profile);
-// router.get('/perfil/:id',userController.profile);
-
+router.get('/perfil/:id', userController.profileExt)
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);

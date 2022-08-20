@@ -121,7 +121,6 @@ productController={
         request=req.body
         let urlImagenNueva = dbParseada[indice].urlImagen;
         if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        console.log(request);
         //HAY QUE HACER VALIDACIONES AFUERA Y ADENTRO DECLARAR LAS VARIABLES MEJOR!!!!!!!!1
         //Ejemplo: en etiquetas usar metodos para separar por comas y pushear a un array
         let productoEditado = { 
@@ -142,7 +141,6 @@ productController={
             vendidos: vendidosProd, //int           /*Implementar mecanismos de contador*/
             esMasVendido: esMasVendidoProd //bool   /*Implementar mecanismo dependiente de anterior atributo*/
         }
-        console.log(productoEditado);
         dbParseada[indice]=productoEditado;
         fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
         res.redirect(`/productos/${idProd}`);  

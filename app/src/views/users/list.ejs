@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>GamePlay - Listado usuarios</title>
+</head>
+
+<body>
+    <header>
+    <%- include('../partials/header') %>
+    <!-- <%- include('../partials/header_slider') %> -->
+    </header>
+    <section class="main">
+        <h4 class="titulo">Listado de Usuarios</h4>
+        <section class="productos">
+        <% if (users.length === 0) { %>
+            Ups... No hay nada por aquí - Create un usuario!
+        <% } else { %>
+            <% for (let user of users){ %>
+                <%- include('../partials/usuario', { user } ) %> 
+            <% } %> 
+        <% } %>
+        </section>
+    </section>
+
+    <%- include ('../partials/footer') %>
+</body>
+
+</html>

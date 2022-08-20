@@ -10,19 +10,25 @@ const { validationResult } = require('express-validator');
 
 
 userController={
+    showAll: async (req,res) => {
+        const [users] = await Promise.all([userQueries.findAll]);
+        res.render('users/list',{users});
+
+    },
+
     login: async (req, res) => {
         // Busco el usuario por id
         const [user] = await Promise.all([userQueries.findByUser(req.body.user)]);
 
         if (user !== null && bcrypt.compareSync(req.body.password,user.password)){
             req.session.usuario = user.user;
-            console.log('Usuario en Login: ', req.session.usuario);
             if(req.body.rememberPassword){
-                res.cookie("usuario",req.body.usuario,{ maxAge: 900000, httpOnly: true })
+                res.cookie("usuario",req.body.user,{ maxAge: 900000, httpOnly: true })
             }
             res.redirect('/');
         } else {
-            res.render('users/login', {usuario: req.session.usuario,
+            res.render('users/login', {
+                usuario: req.session.usuario,
                 errorInicioSesion : true});
         }
     },
@@ -100,7 +106,14 @@ userController={
 	},
 
     profile: async (req, res) => {
-        res.render('users/profile');
+        res.render('users/profile', { user: res.locals.userLogged });
+    },
+
+    profileExt: async (req, res) => {
+        const [user] = await Promise.all([userQueries.findById(req.params.id)]);
+
+
+        res.render('users/profile', { user })
     },
 
     /* METODOS ACCESORIOS*/
@@ -111,13 +124,6 @@ userController={
             if (usuario.id > maximo) maximo = usuario.id;
         });
         return maximo;
-    },
-
-    buscarUsuario: async (usuario) => {
-        // const [user] = await Promise.all([userQueries.findByUser(usuario)]);
-        // console.log('Usuario', user);
-        // if (user === undefined || user ===null) return undefined;
-        // else return user;
     },
 
     buscarPorCampo: (campo,texto) => {

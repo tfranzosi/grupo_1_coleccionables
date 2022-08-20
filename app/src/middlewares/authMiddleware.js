@@ -8,6 +8,7 @@ async function authMiddleware(req, res, next) {
     if(req.cookies.usuario) {
         req.session.usuario = req.cookies.usuario;
     }
+
     let userLogged = undefined;
     if (req.session.usuario !== undefined)
     [ userLogged ] = await Promise.all([userQueries.findByUser(req.session.usuario)])
@@ -15,8 +16,8 @@ async function authMiddleware(req, res, next) {
     if(userLogged) {
         res.locals.isLogged = true;
         res.locals.userLogged = userLogged;
+
     }
-    console.log('--- HASTA ACA -----', res.locals.userLogged);
     
     next();
 }
