@@ -24,7 +24,7 @@ productController={
     showAll: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [products] = await Promise.all([productQueries.showAll]);
+            let [products] = await Promise.all([productQueries.showAll]);
             res.render('products/products' , { products , title: 'Productos'});
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
@@ -35,7 +35,7 @@ productController={
 
     detail: async (req, res) => {
         try{
-            const [product] = await Promise.all([productQueries.find(req.params.id)]);
+            let [product] = await Promise.all([productQueries.find(req.params.id)]);
 
             if(product !== null){
                 res.render('products/productDetail' , { product });
