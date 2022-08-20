@@ -47,8 +47,6 @@ productController={
             for (let key in dbParseada[0]) productoVacio[key] = "";
             let id = parseInt(req.params.id);
             await Promise.all([db.Category.findAll()]).then(([categories])=>{ //Deberia venir de productQueries pero no andaba
-                console.log(categories);
-                console.table(categories.dataValues);
                 return res.render('products/productCreate', {producto: productoVacio, categories});
             });
         } catch (e) {
