@@ -41,11 +41,14 @@ productController={
     },
     
     create: async (req, res) => {
-        let productoVacio = {};
         try{
             //Defino producto vacio segun mi base de datos
-            for (let key in dbParseada[0]) productoVacio[key] = "";
-            let id = parseInt(req.params.id);
+            let [[productoVacio]] = await Promise.all([productQueries.search('',1)]);
+            productoVacio = productoVacio['dataValues']
+            
+            for (let key in productoVacio) productoVacio[key] = '';
+            console.log(productoVacio);
+
             await Promise.all([db.Category.findAll()]).then(([categories])=>{ //Deberia venir de productQueries pero no andaba
                 return res.render('products/productCreate', {producto: productoVacio, categories});
             });
@@ -58,27 +61,21 @@ productController={
     	// Create -  Method to store
 	store: async (req, res) => {
         const resultValidation = validationResult(req);
-		
 		if (resultValidation.errors.length > 0) {
 			return res.render('products/productCreate', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
-        let producto = req.body;
-        producto.is_offer=productController.validarOferta(req.body.descuento);
-        let urlImagenNueva = '/images/products/default.jpg';
-        if (req.file !== undefined){
-            urlImagenNueva = '/images/products/' + req.file.filename;
+
+        try{
+            let product = productController.validateProduct(req.body,req.file);
+            await Promise.all([productQueries.create(product)]);
+            res.redirect("/productos");
+        } catch (e) {
+            console.log('error: ',e);
+            res.send(e);
         }
-        producto.image_url =urlImagenNueva;
-        producto.visits_q = 0;
-        producto.sales_q = 0;
-        producto.best_seller = 0;
-
-
-        const [product] = await Promise.all([productQueries.create(producto)]);
-		res.redirect("/productos")
 	},
 
     editForm: (req, res) => {
@@ -135,26 +132,22 @@ productController={
 
     /* METODOS ACCESORIOS*/
 
-    buscarIndiceProductoPorId: id => { //devuelvo indice del producto en productdb
-        return dbParseada.findIndex(producto => {
-            return producto.id === id;
-        });          
-    },
+    validateProduct: (product, imageFile) => {
+        //Veo si es oferta o no
+        product.is_offer = false;
+        if (product.discount > 0) product.is_offer = true;
+        //Veo si es fisico o no
+        product.is_physical = false;
+        if (product.is_physical == 'true') product.is_physical = true;
+        //Cambio la imagen a por defecto
+        product.image_url = '/images/products/default.jpg';
+        if (imageFile !== undefined) product.image_url = '/images/products/' + imageFile.filename;
 
-    validarOferta: reqBodyDescuento => { //Recibe req.body.descuento, si es mayor a 0 hay oferta.
-        if (reqBodyDescuento>0){
-            return true
-        }else{
-            return false
-        };
-    },
+        product.visits_q = 0;
+        product.sales_q = 0;
+        product.best_seller = 0;
 
-    buscarMaximoId: () => {
-        let maximo = 0;
-        dbParseada.forEach(producto => {
-            if (producto.id > maximo) maximo = producto.id;
-        });
-        return maximo;
+        return product
     }
 }
 

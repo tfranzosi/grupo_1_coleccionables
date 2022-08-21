@@ -70,7 +70,7 @@
                             <% for (let category of categories){%> 
                             <div>
                                 <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category %>"
-                                <%if (producto.categorias.includes(category) ){%>
+                                <%if (producto.categories.includes(category) ){%>
                                     <%= checked="checked" %><%}%> >
                                 <label for="<%= category %>"><%= category.name %> </label>
                             </div>

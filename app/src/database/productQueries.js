@@ -38,7 +38,7 @@ module.exports = {
         ]
     }),
 
-    search: (query) => db.Product.findAll({
+    search: (query,limit) => db.Product.findAll({
         where: {
             [Op.or]: [
                 {product_name: { [Op.like]: '%' + query + '%' }},
@@ -47,6 +47,7 @@ module.exports = {
 
             ]
         },
+        limit: limit,
         include: [
             {association: 'categories'}
         ]

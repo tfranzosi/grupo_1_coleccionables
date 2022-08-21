@@ -29,7 +29,7 @@ mainController = {
     search: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [products] = await Promise.all([productQueries.search(req.query.search)]);
+            const [products] = await Promise.all([productQueries.search(req.query.search,20)]);
 
             res.render('products/products' , { products , title: 'Resultados de busqueda'});
         } catch (e) {
