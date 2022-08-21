@@ -47,11 +47,13 @@ productController={
             productoVacio = productoVacio['dataValues']
             
             for (let key in productoVacio) productoVacio[key] = '';
-            console.log(productoVacio);
 
-            await Promise.all([db.Category.findAll()]).then(([categories])=>{ //Deberia venir de productQueries pero no andaba
-                return res.render('products/productCreate', {producto: productoVacio, categories});
-            });
+            const [categories] = await Promise.all([productQueries.obtainCategories]);
+
+            res.render('products/productCreate', {product: productoVacio, categories});
+
+
+
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
             console.log('error,' , e);
@@ -70,7 +72,7 @@ productController={
 
         try{
             let product = productController.validateProduct(req.body,req.file);
-            await Promise.all([productQueries.create(product)]);
+            await productQueries.create(product);
             res.redirect("/productos");
         } catch (e) {
             console.log('error: ',e);
@@ -78,45 +80,65 @@ productController={
         }
 	},
 
-    editForm: (req, res) => {
-        let id = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(id);
-        res.render('products/productEdit',{producto: dbParseada[indice], categorias});
+    //Muestra el formulario
+    editForm: async (req, res) => {
+
+        const [categories] = await Promise.all([productQueries.obtainCategories]);
+        let [product] = await Promise.all([productQueries.find(req.params.id)]);
+
+        product.categories = product.categories.map(category => {
+            return category.id
+        });
+        res.render('products/productEdit' , { product, categories } );
     },
 
-    edit: (req,res) => { 
-        let idProd = parseInt(req.params.id);
-        let indice = productController.buscarIndiceProductoPorId(idProd);
-        let visitasProd = parseInt(dbParseada[indice].visitas);
-        let vendidosProd = parseInt(dbParseada[indice].vendidos);
-        let esMasVendidoProd = dbParseada[indice].esMasVendido;
-        let esOferta = productController.validarOferta(req.body.descuento); 
-        let esFisico = req.body.esFisico;
-        if (req.body.esFisico !== true){esFisico=false}else{esFisico=true};
-        request=req.body
-        let urlImagenNueva = dbParseada[indice].urlImagen;
-        if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-        let productoEditado = { 
-            id: idProd,
-            sku: req.body.sku,
-            titulo: req.body.titulo,
-            descripcionCorta: req.body.descripcionCorta,
-            descripcionLarga: req.body.descripcionLarga,
-            precioRegular: parseInt(req.body.precioRegular),
-            descuento: parseInt(req.body.descuento),
-            cantidadCuotas: parseInt(req.body.cantidadCuotas),
-            etiquetas: req.body.etiquetas,
-            esOferta: esOferta,
-            esFisico: esFisico,
-            categorias: req.body.categories,
-            urlImagen: urlImagenNueva,
-            visitas: visitasProd,
-            vendidos: vendidosProd,
-            esMasVendido: esMasVendidoProd
+    //Actualiza la DB - UPDATE (POST)
+    edit: async (req,res) => { 
+
+        try{
+            let product = productController.validateProduct(req.body,req.file);
+            product.id = req.params.id;
+
+            await productQueries.update(product);
+            res.redirect("/productos");
+        } catch (e) {
+            console.log('error: ',e);
+            res.send(e);
         }
-        dbParseada[indice]=productoEditado;
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
-        res.redirect(`/productos/${idProd}`);  
+
+        // let idProd = parseInt(req.params.id);
+        // let indice = productController.buscarIndiceProductoPorId(idProd);
+        // let visitasProd = parseInt(dbParseada[indice].visitas);
+        // let vendidosProd = parseInt(dbParseada[indice].vendidos);
+        // let esMasVendidoProd = dbParseada[indice].esMasVendido;
+        // let esOferta = productController.validarOferta(req.body.descuento); 
+        // let esFisico = req.body.esFisico;
+        // if (req.body.esFisico !== true){esFisico=false}else{esFisico=true};
+        // request=req.body
+        // let urlImagenNueva = dbParseada[indice].urlImagen;
+        // if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
+
+        // let productoEditado = { 
+        //     id: idProd,
+        //     sku: req.body.sku,
+        //     titulo: req.body.titulo,
+        //     descripcionCorta: req.body.descripcionCorta,
+        //     descripcionLarga: req.body.descripcionLarga,
+        //     precioRegular: parseInt(req.body.precioRegular),
+        //     descuento: parseInt(req.body.descuento),
+        //     cantidadCuotas: parseInt(req.body.cantidadCuotas),
+        //     etiquetas: req.body.etiquetas,
+        //     esOferta: esOferta,
+        //     esFisico: esFisico,
+        //     categorias: req.body.categories,
+        //     urlImagen: urlImagenNueva,
+        //     visitas: visitasProd,
+        //     vendidos: vendidosProd,
+        //     esMasVendido: esMasVendidoProd
+        // }
+        // dbParseada[indice]=productoEditado;
+        // fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
+        // res.redirect(`/productos/${idProd}`);  
     },
 
     delete: async (req, res) => {
@@ -140,8 +162,11 @@ productController={
         product.is_physical = false;
         if (product.is_physical == 'true') product.is_physical = true;
         //Cambio la imagen a por defecto
-        product.image_url = '/images/products/default.jpg';
+        if(product.image_url === null) product.image_url = '/images/products/default.jpg';
         if (imageFile !== undefined) product.image_url = '/images/products/' + imageFile.filename;
+     
+        if(product.categories == null) product.categories=null;
+        else if(product.categories.length <= 1) product.categories=[product.categories];
 
         product.visits_q = 0;
         product.sales_q = 0;

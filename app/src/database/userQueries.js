@@ -19,6 +19,14 @@ module.exports = {
             { association: 'interests' },
             { association: 'genders' }
         ] 
+    }),
+    
+    create: (product) => db.user.create(product),
+
+    delete: (id) => db.User.destroy({
+        where: {
+            id: id
+        }
     })
     
 

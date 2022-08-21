@@ -1,6 +1,14 @@
 <a href="/usuarios/perfil/<%= user.id %>"><article>
+    <img src="<%= user.image_url %>">
     <div>
-        <img src="<%= user.image_url %>">
         <h5><%= user.first_name + ' ' + user.last_name%></h5>
+        <div>
+            <form action="/usuario/<%= user.id %>?_method=PUT" method="POST">
+                <button>Editar</button>
+            </form>
+            <form action="/usuario/<%= user.id %>?_method=DELETE" method="POST">
+                <button>Eliminar</button>
+            </form>
+        </div>
     </div>
 </article></a>

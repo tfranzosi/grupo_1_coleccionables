@@ -28,7 +28,7 @@ router.get('/', userController.showAll);
 
 //FORMULARIO DE REGISTRO USUARIO
 router.get('/registro',logueadoMW, userController.register);
-router.post('/registro', upload.single('urlImagen'), registerMiddleware, userController.store);
+router.post('/registro', upload.single('urlImagen'), /*registerMiddleware,*/ userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion',logueadoMW, userController.loginForm);
@@ -43,6 +43,11 @@ router.get('/cerrarSesion', userController.logout);
 
 router.get('/carrito', userController.carrito);
 
+//BORRAR USUARIO
+router.delete('/:id', userController.delete);
+
+//ENVIO INFORMACION PARA EDITAR Y GRABAR EN DB
+router.put("/:id", upload.single('image_url'), userController.edit);
 
 
 

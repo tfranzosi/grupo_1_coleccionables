@@ -53,7 +53,7 @@ userController={
         res.render('users/productCart');
     },
 
-    store: (req, res) => {
+    store: async (req, res) => {
         const resultValidation = validationResult(req);
 		
 		if (resultValidation.errors.length > 0) {
@@ -62,8 +62,15 @@ userController={
 				oldData: req.body
 			});
 		}
-
-        let nuevoIdMaximo = userController.buscarMaximoId() + 1;
+        try{
+            let user = userController.validateProduct(req.body,req.file);
+            await userQueries.create(user);
+            res.redirect("/usuarios");
+        } catch (e) {
+            console.log('error: ',e);
+            res.send(e);
+        }
+        /*
         let urlImagenNueva = '/images/users/default.jpg';
         if (req.file !== undefined) urlImagenNueva = '/images/users/' + req.file.filename;
 
@@ -98,9 +105,7 @@ userController={
                     break;
             }
         }
-
-		dbParseada.push(usuarioNuevo)
-        fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,3));
+        */
         res.cookie('usuario',req.body.usuario,{ maxAge: 1000*3600, httpOnly: true })
 		res.redirect("/")
 	},
@@ -115,7 +120,23 @@ userController={
 
         res.render('users/profile', { user })
     },
+    delete: async (req, res) => {
+        try{
+            await Promise.all([UserQueries.delete(req.params.id)]);
+            res.redirect('/usuarios')
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('error' , { error: e });
+        }
+    },
 
+    edit: async (req,res) => {
+
+        
+    },
+
+    
     /* METODOS ACCESORIOS*/
 
     buscarMaximoId: () => {
@@ -130,6 +151,26 @@ userController={
         let userBuscado = dbParseada.find( user => {  (user[campo] === texto);
             return userBuscado;
         })
+    },
+    validateProduct: (product, imageFile) => {
+        //Veo si es oferta o no
+        product.is_offer = false;
+        if (product.discount > 0) product.is_offer = true;
+        //Veo si es fisico o no
+        product.is_physical = false;
+        if (product.is_physical == 'true') product.is_physical = true;
+        //Cambio la imagen a por defecto
+        if(product.image_url === null) product.image_url = '/images/products/default.jpg';
+        if (imageFile !== undefined) product.image_url = '/images/products/' + imageFile.filename;
+     
+        if(product.categories == null) product.categories=null;
+        else if(product.categories.length <= 1) product.categories=[product.categories];
+
+        product.visits_q = 0;
+        product.sales_q = 0;
+        product.best_seller = 0;
+
+        return product
     }
 
 }

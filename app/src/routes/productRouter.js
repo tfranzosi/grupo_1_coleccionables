@@ -25,7 +25,7 @@ router.get('/', productController.showAll);
 
 //FORMULARIO PARA CREAR PRODUCTO
 router.get('/crear', productController.create);
-router.post('/crear', upload.single('urlImagen') , /*productMiddleware,*/ productController.store); 
+router.post('/crear', upload.single('image_url') , /*productMiddleware,*/ productController.store); 
 
 //DETALLE DE 1 PRODUCTO
 router.get('/:id', productController.detail);
@@ -34,7 +34,7 @@ router.get('/:id', productController.detail);
 router.get("/:id/editar", productController.editForm)
 
 //ENVIO INFORMACION PARA EDITAR Y GRABAR EN DB
-router.put("/:id", upload.single('urlImagen'), productController.edit)
+router.put("/:id", upload.single('image_url'), productController.edit)
 
 //ELIMINAR 1 ARTICULO
 router.delete("/:id", productController.delete)

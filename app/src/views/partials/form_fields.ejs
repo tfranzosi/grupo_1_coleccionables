@@ -3,7 +3,7 @@
                     <div class="categoria"> 
                         <label for="sku" class="datos">SKU</label>
                         <input type="text" name="sku" id="sku" 
-                        value="<%=producto.sku%>" required>
+                        value="<%=product.sku%>" required>
                         <!--<div class="danger"> <% if (locals.errors && errors.sku) { %>
                             <%= errors.sku.msg %>
                         <% } %> </div>-->
@@ -12,53 +12,53 @@
                     <div class="categoria"> 
                         <label for="titulo" class="datos">Título</label>
                         <input type="text" name="product_name" id="titulo" 
-                        value="<%=producto.titulo%>" required>
+                        value="<%=product.product_name%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <textarea type="textarea" name="short_description" id="descripcionCorta" required><%=producto.descripcionCorta%></textarea>
+                        <textarea type="textarea" name="short_description" id="descripcionCorta" required><%=product.short_description%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <textarea name="long_description" id="descripcionLarga" required><%=producto.descripcionLarga%></textarea>
+                        <textarea name="long_description" id="descripcionLarga" required><%=product.long_description%></textarea>
                     </div>
 
                     <div class="categoria"> 
                         <label for="precioRegular" class="datos">Precio normal</label>
                         <input type="number" min="1" step="any" name="regular_price" id="precioRegular" 
-                        value="<%=producto.precioRegular%>" required>
+                        value="<%=product.regular_price%>" required>
                     </div>
 
                     <div class="categoria"> 
                         <label for="descuento" class="datos">Descuento</label>
                         <input type="number" min="1" step="any" name="discount" id="descuento" 
-                        value="<%=producto.descuento%>">
+                        value="<%=product.discount%>">
                     </div>
 
                     <div class="categoria"> 
                         <label for="cuotas" class="datos">Cuotas</label>
                         <input type="number" min="1" step="any" name="fee_q" id="cantidadCuotas" 
-                        value="<%=producto.cantidadCuotas%>">
+                        value="<%=product.fee_q%>">
                     </div>
 
                     <div class="categoria"> 
                         <label for="etiquetas" class="datos">Etiquetas</label>
                         <input type="textarea" name="tags" id="etiquetas" 
-                        value="<%=producto.etiquetas%>">
+                        value="<%=product.tags%>">
                     </div>
                     
                     <div class="categoria">
                         <input type="radio" name="is_physical" id="esFisico" value="true" 
-                        <%if(producto.esFisico === true){%><%= checked="checked" %><%}%> required>
+                        <%if(product.is_physical === 1){%><%= checked="checked" %><%}%> required>
                         <label for="esFisico">Fisico</label>
                     </div>
                     
                     <div class="categoria">
                         
                         <input type="radio" name="is_physical" id="esDigital" value="false" 
-                        <%if(producto.esFisico === false){%><%= checked="checked" %><%}%>>
+                        <%if(product.is_physical === 0){%><%= checked="checked" %><%}%>>
                         <label for="esDigital">Digital</label>
                         
                     </div>
@@ -69,10 +69,10 @@
                             <h4>Categorías</h4>
                             <% for (let category of categories){%> 
                             <div>
-                                <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category %>"
-                                <%if (producto.categories.includes(category) ){%>
+                                <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category.name %>"
+                                <%if (product.categories.includes(category.id) ){%>
                                     <%= checked="checked" %><%}%> >
-                                <label for="<%= category %>"><%= category.name %> </label>
+                                <label for="<%= category.name %>"><%= category.name %> </label>
                             </div>
                             <%}%>                          
                         </div>
@@ -80,10 +80,10 @@
 
                     <div class="contenedor-fotoproducto">
                         <h4>Foto de producto</h4><br>
-                        <% if (producto.id==='') {%>
-                            <%-include ('../partials/form_image_create.ejs', {producto:null}) %> 
+                        <% if (product.id==='') {%>
+                            <%-include ('../partials/form_image_create.ejs', {product:null}) %> 
                         <%}else{%>
-                            <%-include ('../partials/form_image_edit.ejs', {producto:producto}) %>
+                            <%-include ('../partials/form_image_edit.ejs', {product:product}) %>
                         <%}%>
                         <input type="file" accept=".jpg, .png" id="fotoPerfil" name="image_url">
                     </div>

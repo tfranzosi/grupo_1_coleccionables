@@ -27,14 +27,14 @@
         <div class="contenedor-registro">
             <br>
             <div class="form-registro">
-                <form class="registro" action="/productos/<%=producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-                    <%-include ('../partials/form_fields.ejs', {producto: producto}) %> 
+                <form class="registro" action="/productos/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <%-include ('../partials/form_fields.ejs', { product }) %> 
                     <div>
                         <button type="submit" class="registerbutton">ACTUALIZAR</button>
                     </div><br>
                 </form>
 
-                <form class="registro" action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
+                <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
                     <div>
                         <button type="submit" class="registerbutton">ELIMINAR</button>
                     </div><br>
