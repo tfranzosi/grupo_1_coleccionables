@@ -135,4 +135,90 @@ MV
 **Si se encontró con algún impedimento:** No.
 **Qué va a hacer la semana entrante:** Implementación de cookies y session a nivel global y pulido de la navbar según se esté logueado o no. Completar la vista de perfil, trabajo del CSS de la vista de registro para mostrar correctamente las validaciones.
 
-## Weekly S05W03 - 25/07/2022
+## Weekly S06W01 - 01/08/2022
+
+SC
+**Qué hizo esta semana:** Validación de Formularios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Call de Retro y Planificación.
+
+TF
+**Qué hizo esta semana:** Implementar rutas de huéspedes y de usuarios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Call de Retro y Planificación.
+
+PG
+**Qué hizo esta semana:** Finalizar validaciones de formulario. Implementación de cookies y session a nivel global y pulido de la navbar según se esté logueado o no, junto con MV.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Call de Retro y Planificación.
+
+MV
+**Qué hizo esta semana:** Implementación de cookies y session a nivel global y pulido de la navbar según se esté logueado o no. Completar la vista de perfil, trabajo del CSS de la vista de registro para mostrar correctamente las validaciones. 
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Call de Retro y Planificación.
+
+## Weekly S06W02 - 08/08/2022
+
+SC
+**Qué hizo esta semana:** Call de Retro y Planificación.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Repaso Métodos CRUD con Sequelize para implementar métodos de vistas de productos y usuarios.
+
+TF
+**Qué hizo esta semana:** Call de Retro y Planificación.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Armado de Scripts de Creación y Población de Tablas con PG.
+
+PG
+**Qué hizo esta semana:** Call de Retro y Planificación.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Armado del Diagrama Entidad Relación, Pre diseño del script de población y creación de tablas con Mookaroo para trabajar en conjunto con TF diseño Final.
+
+MV
+**Qué hizo esta semana:** Call de Retro y Planificación.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Repaso Métodos CRUD con Sequelize para implementar métodos de edición y creación usuarios.
+
+## Weekly S06W02 - 15/08/2022
+
+SC
+**Qué hizo esta semana:** Repaso Métodos CRUD con Sequelize para implementar métodos de vistas de productos y usuarios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Implementación de los métodos de vista individual y listado de productos y usuarios en conjunto con PG.
+
+TF
+**Qué hizo esta semana:** Armado de Scripts de Creación y Población de Tablas con PG.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Revisión del armado de Modelos y Relaciones en Visual Code por parte de PG. Implementación de los métodos de creación, edición y borrado de productos en conjunto con MV.
+
+PG
+**Qué hizo esta semana:** Armado del Diagrama Entidad Relación, Pre diseño del script de población y creación de tablas con Mookaroo para trabajar en conjunto con TF diseño Final.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Armado de Modelos y Relaciones para los métodos de Sequelize en Visual Code. Implementación de los métodos de vista individual y listado de productos y usuarios en conjunto con SC.
+
+MV
+**Qué hizo esta semana:** Repaso Métodos CRUD con Sequelize para implementar métodos de edición y creación usuarios.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Implementación de los métodos de creación, edición y borrado de productos en conjunto con MV.
+
+## Weekly S06W02 - 22/08/2022
+
+SC
+**Qué hizo esta semana:** Implementación de los métodos de vista individual y listado de productos y usuarios en conjunto con PG.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Revisión del CSS de forms de creación y edición de productos y usuarios en conjunto con PG.
+
+TF
+**Qué hizo esta semana:** Revisión del armado de Modelos y Relaciones en Visual Code por parte de PG. Implementación de los métodos de creación, edición y borrado de productos en conjunto con MV.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Armado de métodos de creación y edición de usuarios en conjunto con MV.
+
+PG
+**Qué hizo esta semana:** Armado de Modelos y Relaciones para los métodos de Sequelize en Visual Code. Implementación de los métodos de vista individual y listado de productos y usuarios en conjunto con SC.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Revisión del CSS de forms de creación y edición de productos y usuarios en conjunto con PG. Actualización de weekly.md.
+
+MV
+**Qué hizo esta semana:** Implementación de los métodos de creación, edición y borrado de productos en conjunto con MV.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Armado de métodos de creación y edición de usuarios en conjunto con MV.
