@@ -4,6 +4,7 @@
 <head>
     <%- include('../partials/head.ejs')%>
     <link rel="stylesheet" href="/css/register.css">
+    <script src="/js/messages.js"></script>
     
     <title>GamePlay - Editar Producto</title>
 </head>
@@ -36,7 +37,7 @@
 
                 <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
                     <div>
-                        <button type="submit" class="registerbutton">ELIMINAR</button>
+                        <button type="submit" id="delete-button" class="registerbutton">ELIMINAR</button>
                     </div><br>
                 </form>
                     

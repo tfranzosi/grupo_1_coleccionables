@@ -3,17 +3,21 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 module.exports = {
-    findAll: db.User.findAll(),
+    findAll: async () => await db.User.findAll(),
 
-    findById: (id) =>  db.User.findByPk(id,{
+    findById: async (id) => await db.User.findByPk(id,{
         include: [
             { association: 'interests' },
             { association: 'genders' }
         ] 
     }),
-    findByUser: (user) => db.User.findOne({
+
+    findByUser: async (user) => await db.User.findOne({
         where: {
-            'user': user
+            [Op.or]: [
+                {user: user},
+                {email: user}
+            ]
         },
         include: [
             { association: 'interests' },
@@ -21,9 +25,9 @@ module.exports = {
         ] 
     }),
     
-    create: (product) => db.user.create(product),
+    create: async (product) => await db.user.create(product),
 
-    delete: (id) => db.User.destroy({
+    delete: async (id) => await db.User.destroy({
         where: {
             id: id
         }

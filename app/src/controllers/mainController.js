@@ -8,8 +8,9 @@ mainController = {
     index: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [offers, bestSellers] = await Promise.all([productQueries.offers, productQueries.bestSellers]);
-
+            const offers = await productQueries.offers();
+            const bestSellers = await productQueries.bestSellers();
+            
             res.render('index', {
                 offers,
                 bestSellers,
@@ -29,7 +30,7 @@ mainController = {
     search: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const [products] = await Promise.all([productQueries.search(req.query.search,20)]);
+            const products = await productQueries.search(req.query.search,20);
 
             res.render('products/products' , { products , title: 'Resultados de busqueda'});
         } catch (e) {

@@ -11,15 +11,13 @@ const { validationResult } = require('express-validator');
 
 userController={
     showAll: async (req,res) => {
-        const [users] = await Promise.all([userQueries.findAll]);
-        res.render('users/list',{users});
-
+        const users = await userQueries.findAll();
+        return res.render('users/list',{users});
     },
 
     login: async (req, res) => {
-        // Busco el usuario por id
-        const [user] = await Promise.all([userQueries.findByUser(req.body.user)]);
-
+        // Busco el usuario por usuario o email
+        const user = await userQueries.findByUser(req.body.user);
         if (user !== null && bcrypt.compareSync(req.body.password,user.password)){
             req.session.usuario = user.user;
             if(req.body.rememberPassword){
@@ -63,49 +61,14 @@ userController={
 			});
 		}
         try{
-            let user = userController.validateProduct(req.body,req.file);
+            let user = userController.validateUser(req.body,req.file);
             await userQueries.create(user);
             res.redirect("/usuarios");
         } catch (e) {
             console.log('error: ',e);
             res.send(e);
         }
-        /*
-        let urlImagenNueva = '/images/users/default.jpg';
-        if (req.file !== undefined) urlImagenNueva = '/images/users/' + req.file.filename;
 
-        //Defino usuario vacio segun mi base de datos
-        let usuarioNuevo = {};
-        for (let key in dbParseada[0]){
-            if (req.body[key] !== undefined){
-                if ( isNaN(req.body[key]) ) usuarioNuevo[key] = req.body[key];
-                else usuarioNuevo[key] = parseInt(req.body[key]);
-            }
-            else usuarioNuevo[key] = "";
-        }
-        usuarioNuevo.id = nuevoIdMaximo;
-        usuarioNuevo.urlImagen = urlImagenNueva;
-        usuarioNuevo.contrasenia = bcrypt.hashSync(req.body.contrasenia[0],10);
-        for (let int in usuarioNuevo.intereses){
-            switch (usuarioNuevo.intereses[int]){
-                case "a":
-                    usuarioNuevo.intereses[int] = "Anime";
-                    break;
-                case "b":
-                    usuarioNuevo.intereses[int] = "Acción";
-                    break;
-                case "c":
-                    usuarioNuevo.intereses[int] = "Deporte";
-                    break;
-                case "d":
-                    usuarioNuevo.intereses[int] = "RPG";
-                    break;
-                case "e":
-                    usuarioNuevo.intereses[int] = "Social";
-                    break;
-            }
-        }
-        */
         res.cookie('usuario',req.body.usuario,{ maxAge: 1000*3600, httpOnly: true })
 		res.redirect("/")
 	},
@@ -114,15 +77,17 @@ userController={
         res.render('users/profile', { user: res.locals.userLogged });
     },
 
-    profileExt: async (req, res) => {
-        const [user] = await Promise.all([userQueries.findById(req.params.id)]);
-
-
-        res.render('users/profile', { user })
+    detail: async (req, res) => {
+        const user = await userQueries.findById(req.params.id);
+        if(user !== null){
+            res.render('users/profile' , { user });
+        } else {
+            res.render('error',{error: 'Tu usuario no aparece! ... Tu usuario no aparece! ...'})
+        }
     },
     delete: async (req, res) => {
         try{
-            await Promise.all([UserQueries.delete(req.params.id)]);
+            await userQueries.delete(req.params.id);
             res.redirect('/usuarios')
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
@@ -138,37 +103,10 @@ userController={
 
     
     /* METODOS ACCESORIOS*/
-
-    buscarMaximoId: () => {
-        let maximo = 0;
-        dbParseada.forEach(usuario => {
-            if (usuario.id > maximo) maximo = usuario.id;
-        });
-        return maximo;
-    },
-
-    buscarPorCampo: (campo,texto) => {
-        let userBuscado = dbParseada.find( user => {  (user[campo] === texto);
-            return userBuscado;
-        })
-    },
-    validateProduct: (product, imageFile) => {
-        //Veo si es oferta o no
-        product.is_offer = false;
-        if (product.discount > 0) product.is_offer = true;
-        //Veo si es fisico o no
-        product.is_physical = false;
-        if (product.is_physical == 'true') product.is_physical = true;
+    validateUser: (user, imageFile) => {
         //Cambio la imagen a por defecto
-        if(product.image_url === null) product.image_url = '/images/products/default.jpg';
-        if (imageFile !== undefined) product.image_url = '/images/products/' + imageFile.filename;
-     
-        if(product.categories == null) product.categories=null;
-        else if(product.categories.length <= 1) product.categories=[product.categories];
-
-        product.visits_q = 0;
-        product.sales_q = 0;
-        product.best_seller = 0;
+        if(user.image_url === null) user.image_url = '/images/users/default.jpg';
+        if (imageFile !== undefined) user.image_url = '/images/users/' + imageFile.filename;
 
         return product
     }

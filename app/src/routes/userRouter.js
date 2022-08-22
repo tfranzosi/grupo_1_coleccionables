@@ -36,12 +36,14 @@ router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil',invitadoMW, userController.profile);
-router.get('/perfil/:id', userController.profileExt)
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);
 
 router.get('/carrito', userController.carrito);
+
+//DETALLE DE USUARIO
+router.get('/:id', userController.detail)
 
 //BORRAR USUARIO
 router.delete('/:id', userController.delete);

@@ -1,13 +1,24 @@
-<a href="/usuarios/perfil/<%= user.id %>"><article>
+<a href="/usuarios/<%= user.id %>"><article>
     <img src="<%= user.image_url %>">
-    <div>
-        <h5><%= user.first_name + ' ' + user.last_name%></h5>
+    <div class="datos">
         <div>
-            <form action="/usuario/<%= user.id %>?_method=PUT" method="POST">
-                <button>Editar</button>
+            <h3><strong>Nombre y apellido: </strong></h3>
+            <p><%= user.first_name + ' ' + user.last_name%></p>
+        </div>
+        <div>
+            <p><strong>Usuario: </strong></p>
+            <p><%= user.user %></p>
+        </div>
+        <div>
+            <p><strong>Email: </strong></p>
+            <p><%= user.email %></p>
+        </div>
+        <div class="botones">
+            <form action="/usuarios/<%= user.id %>?_method=PUT" method="POST">
+                <button type="submit">Editar</button>
             </form>
-            <form action="/usuario/<%= user.id %>?_method=DELETE" method="POST">
-                <button>Eliminar</button>
+            <form action="/usuarios/<%= user.id %>?_method=DELETE" method="POST">
+                <button type="submit" id="delete-button">Eliminar</button>
             </form>
         </div>
     </div>

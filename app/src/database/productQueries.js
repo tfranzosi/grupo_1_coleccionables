@@ -3,13 +3,13 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 module.exports = {
-    showAll: db.Product.findAll({
+    showAll: async () => await db.Product.findAll({
         include: [
             {association: 'categories'}
         ]
     }),
     
-    offers: db.Product.findAll({
+    offers: async () => await db.Product.findAll({
         where: {
             is_offer: true
         },
@@ -19,7 +19,7 @@ module.exports = {
         limit: 6
     }),
 
-    bestSellers: db.Product.findAll({
+    bestSellers: async () => await db.Product.findAll({
         order: [
             ['sales_q','DESC']
         ],
@@ -29,7 +29,7 @@ module.exports = {
         ]
     }),
 
-    find: (id) =>  db.Product.findOne({
+    find: async (id) =>  await db.Product.findOne({
         where: {
             id: id
         },
@@ -38,7 +38,7 @@ module.exports = {
         ]
     }),
 
-    search: (query,limit) => db.Product.findAll({
+    search: async (query,limit) => await db.Product.findAll({
         where: {
             [Op.or]: [
                 {product_name: { [Op.like]: '%' + query + '%' }},
@@ -96,13 +96,13 @@ module.exports = {
         }
     },
 
-    delete: (id) => db.Product.destroy({
+    delete: async (id) => await db.Product.destroy({
         where: {
             id: id
         }
     }),
 
-    obtainCategories: db.Category.findAll()
+    obtainCategories: async () => await db.Category.findAll()
 
 
 }

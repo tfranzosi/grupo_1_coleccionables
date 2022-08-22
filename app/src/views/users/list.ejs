@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/usersList.css">
+    <script src="/js/messages.js"></script>
     <title>GamePlay - Listado usuarios</title>
 </head>
 
@@ -13,7 +14,7 @@
     </header>
     <section class="main">
         <h4 class="titulo">Listado de Usuarios</h4>
-        <section class="productos">
+        <section class="usuarios">
         <% if (users.length === 0) { %>
             Ups... No hay nada por aquí - Create un usuario!
         <% } else { %>

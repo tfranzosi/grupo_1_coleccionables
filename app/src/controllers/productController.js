@@ -1,21 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const productQueries = require('../database/productQueries');
-
-const rutaDB = path.join(__dirname,'../../public/db/productdb.json');
-const readDB = fs.readFileSync(rutaDB,'utf-8');
-const dbParseada = JSON.parse(readDB);
 const { validationResult } = require('express-validator');
+
+//Configuro DB a usar
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const productQueries = require('../database/productQueries');
 
 
 productController={
+    //Muestra vista de todos los productos
     showAll: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            let [products] = await Promise.all([productQueries.showAll]);
+            products = await productQueries.showAll();
             res.render('products/products' , { products , title: 'Productos'});
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
@@ -24,10 +21,11 @@ productController={
         }
     },
 
+    //Muesta vista del detalle producto
     detail: async (req, res) => {
         try{
-            let [product] = await Promise.all([productQueries.find(req.params.id)]);
-
+            //Hago los pedidos a la Base de Datos
+            let product = await productQueries.find(req.params.id);
             if(product !== null){
                 res.render('products/productDetail' , { product });
             } else {
@@ -40,15 +38,16 @@ productController={
         }
     },
     
+    //Muestra el formulario para creacion de producto
     create: async (req, res) => {
         try{
             //Defino producto vacio segun mi base de datos
-            let [[productoVacio]] = await Promise.all([productQueries.search('',1)]);
+            let [productoVacio] = await productQueries.search('',1);
             productoVacio = productoVacio['dataValues']
             
             for (let key in productoVacio) productoVacio[key] = '';
 
-            const [categories] = await Promise.all([productQueries.obtainCategories]);
+            const categories = await productQueries.obtainCategories;
 
             res.render('products/productCreate', {product: productoVacio, categories});
 
@@ -60,8 +59,9 @@ productController={
             res.render('products/productCreate' , { producto: productoVacio, title: 'Productos'});
         }
     },
-    	// Create -  Method to store
+    // Guarda en la DB
 	store: async (req, res) => {
+        //Realizo las validaciones
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
 			return res.render('products/productCreate', {
@@ -80,19 +80,23 @@ productController={
         }
 	},
 
-    //Muestra el formulario
+    //Muestra el formulario para edicion producto
     editForm: async (req, res) => {
-
-        const [categories] = await Promise.all([productQueries.obtainCategories]);
-        let [product] = await Promise.all([productQueries.find(req.params.id)]);
-
-        product.categories = product.categories.map(category => {
-            return category.id
-        });
-        res.render('products/productEdit' , { product, categories } );
+        try{
+            const categories = await productQueries.obtainCategories();
+            let product = await productQueries.find(req.params.id);
+    
+            product.categories = product.categories.map(category => {
+                return category.id
+            });
+            res.render('products/productEdit' , { product, categories } );
+        } catch (e) {
+            console.log('error: ',e);
+            res.send(e);
+        }
     },
 
-    //Actualiza la DB - UPDATE (POST)
+    //Actualiza de la DB
     edit: async (req,res) => { 
 
         try{
@@ -105,45 +109,12 @@ productController={
             console.log('error: ',e);
             res.send(e);
         }
-
-        // let idProd = parseInt(req.params.id);
-        // let indice = productController.buscarIndiceProductoPorId(idProd);
-        // let visitasProd = parseInt(dbParseada[indice].visitas);
-        // let vendidosProd = parseInt(dbParseada[indice].vendidos);
-        // let esMasVendidoProd = dbParseada[indice].esMasVendido;
-        // let esOferta = productController.validarOferta(req.body.descuento); 
-        // let esFisico = req.body.esFisico;
-        // if (req.body.esFisico !== true){esFisico=false}else{esFisico=true};
-        // request=req.body
-        // let urlImagenNueva = dbParseada[indice].urlImagen;
-        // if (req.file !== undefined) urlImagenNueva = '/images/products/' + req.file.filename;
-
-        // let productoEditado = { 
-        //     id: idProd,
-        //     sku: req.body.sku,
-        //     titulo: req.body.titulo,
-        //     descripcionCorta: req.body.descripcionCorta,
-        //     descripcionLarga: req.body.descripcionLarga,
-        //     precioRegular: parseInt(req.body.precioRegular),
-        //     descuento: parseInt(req.body.descuento),
-        //     cantidadCuotas: parseInt(req.body.cantidadCuotas),
-        //     etiquetas: req.body.etiquetas,
-        //     esOferta: esOferta,
-        //     esFisico: esFisico,
-        //     categorias: req.body.categories,
-        //     urlImagen: urlImagenNueva,
-        //     visitas: visitasProd,
-        //     vendidos: vendidosProd,
-        //     esMasVendido: esMasVendidoProd
-        // }
-        // dbParseada[indice]=productoEditado;
-        // fs.writeFileSync(rutaDB,JSON.stringify(dbParseada,null,2),"utf-8");
-        // res.redirect(`/productos/${idProd}`);  
     },
 
+    //Elimina de la DB
     delete: async (req, res) => {
         try{
-            await Promise.all([productQueries.delete(req.params.id)]);
+            await productQueries.delete(req.params.id);
             res.redirect('/productos')
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
