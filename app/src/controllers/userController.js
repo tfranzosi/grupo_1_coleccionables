@@ -21,7 +21,7 @@ userController={
         const pageCount = Math.ceil(usersCount/itemsPerPage);
         const users = await userQueries.search('',itemsPerPage,pageNumber - 1);
 
-        return res.render('users/list',{
+        return res.render('users/userList',{
             users,
             pageCount,
             url: '/usuarios?'
@@ -38,13 +38,13 @@ userController={
             }
             res.redirect('/');
         } else {
-            res.render('users/login', {
+            res.render('users/userLogin', {
                 usuario: req.session.usuario,
                 errorInicioSesion : true});
         }
     },
     loginForm: (req, res) => {
-        res.render('users/login',{usuario: req.session.usuario,
+        res.render('users/userLogin',{usuario: req.session.usuario,
             errorInicioSesion: false});
     },
     logout: (req, res) => {
@@ -55,19 +55,19 @@ userController={
     },
 
     carrito: (req, res) => {
-        res.render('users/productCart');
+        res.render('users/userShoppingCart');
     },
 
     register: (req, res) => {
         let usuario = req.session.usuario;
-        res.render('users/register',{usuario});
+        res.render('users/userRegister',{usuario});
     },
 
     store: async (req, res) => {
         const resultValidation = validationResult(req);
 		
 		if (resultValidation.errors.length > 0) {
-			return res.render('users/register', {
+			return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
@@ -86,18 +86,19 @@ userController={
 	},
 
     profile: async (req, res) => {
-        res.render('users/profile', { user: res.locals.userLogged });
+        res.render('users/userProfile', { user: res.locals.userLogged });
     },
 
     detail: async (req, res) => {
         const user = await userQueries.findById(req.params.id);
         if(user !== null){
-            res.render('users/profile' , { user });
+            res.render('users/userProfile' , { user });
         } else {
             res.render('error',{error: 'Tu usuario no aparece! ... Tu usuario no aparece! ...'})
         }
     },
     delete: async (req, res) => {
+        userController.logout(req,res);
         try{
             await userQueries.delete(req.params.id);
             res.redirect('/usuarios')
