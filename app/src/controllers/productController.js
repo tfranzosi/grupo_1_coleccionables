@@ -11,13 +11,53 @@ productController={
     //Muestra vista de todos los productos
     showAll: async (req, res) => {
         try {
+            let pageNumber = 1;
+            if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
+            let itemsPerPage = 5;
+            if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
+
             //Hago los pedidos a la Base de Datos
-            products = await productQueries.showAll();
-            res.render('products/products' , { products , title: 'Productos'});
+            const productCount = await productQueries.searchCount('');
+            const pageCount = Math.ceil(productCount/itemsPerPage);
+            const products = await productQueries.search('',itemsPerPage,pageNumber - 1);
+
+            return res.render('products/products' , { 
+                products, 
+                title: 'Productos',
+                url: '/productos?',
+                pageCount
+            })
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
             console.log('error,' , e);
-            res.render('products/products' , { products: [], title: 'Productos'});
+            return res.render('products/products' , { products: [], title: 'Productos'});
+        }
+    },
+
+    search: async (req, res) => {
+        try {
+            //Hago los pedidos a la Base de Datos
+            let pageNumber = 1;
+            if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
+            let itemsPerPage = 5;
+            if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
+            let searchQuery = req.query.query;
+            if (searchQuery == undefined) searchQuery = '';
+            
+            const productCount = await productQueries.searchCount(searchQuery);
+            const pageCount = Math.ceil(productCount/itemsPerPage)
+            const products = await productQueries.search(searchQuery,itemsPerPage,pageNumber - 1);
+
+            return res.render('products/products' , { 
+                products, 
+                title: 'Resultados de busqueda',
+                url: `/search?query=${searchQuery.replace(/ /g,'+')}`,
+                pageCount
+            });
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            return res.render('products/products' , { products: [], title: 'Productos'});
         }
     },
 
@@ -42,12 +82,12 @@ productController={
     create: async (req, res) => {
         try{
             //Defino producto vacio segun mi base de datos
-            let [productoVacio] = await productQueries.search('',1);
+            let [productoVacio] = await productQueries.search('',1,0);
             productoVacio = productoVacio['dataValues']
             
             for (let key in productoVacio) productoVacio[key] = '';
 
-            const categories = await productQueries.obtainCategories;
+            const categories = await productQueries.obtainCategories();
 
             res.render('products/productCreate', {product: productoVacio, categories});
 

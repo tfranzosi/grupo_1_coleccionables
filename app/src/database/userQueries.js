@@ -3,13 +3,36 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 module.exports = {
-    findAll: async () => await db.User.findAll(),
+    search: async (query,limit,page) => await db.User.findAll({
+        where: {
+            // [Op.or]: [
+            //     {first_name: { [Op.like]: '%' + query + '%' }},
+            //     {last_name: { [Op.like]: '%' + query + '%' }},
+            //     {user: { [Op.like]: '%' + query + '%' }},
+            //     {email: { [Op.like]: '%' + query + '%' }}
+            // ]
+        },
+        limit,
+        offset: limit * page
+    }),
 
     findById: async (id) => await db.User.findByPk(id,{
         include: [
             { association: 'interests' },
             { association: 'genders' }
         ] 
+    }),
+
+    searchCount: async (query) => await db.User.count({
+        where: {
+            [Op.or]: [
+                {first_name: { [Op.like]: '%' + query + '%' }},
+                {last_name: { [Op.like]: '%' + query + '%' }},
+                {user: { [Op.like]: '%' + query + '%' }},
+                {email: { [Op.like]: '%' + query + '%' }}
+
+            ]
+        }
     }),
 
     findByUser: async (user) => await db.User.findOne({

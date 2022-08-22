@@ -11,8 +11,21 @@ const { validationResult } = require('express-validator');
 
 userController={
     showAll: async (req,res) => {
-        const users = await userQueries.findAll();
-        return res.render('users/list',{users});
+        let pageNumber = 1;
+        if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
+        let itemsPerPage = 5;
+        if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
+
+        //Hago los pedidos a la Base de Datos
+        const usersCount = await userQueries.searchCount('');
+        const pageCount = Math.ceil(usersCount/itemsPerPage);
+        const users = await userQueries.search('',itemsPerPage,pageNumber - 1);
+
+        return res.render('users/list',{
+            users,
+            pageCount,
+            url: '/usuarios?'
+        });
     },
 
     login: async (req, res) => {
@@ -41,14 +54,13 @@ userController={
         res.redirect('/');
     },
 
+    carrito: (req, res) => {
+        res.render('users/productCart');
+    },
+
     register: (req, res) => {
         let usuario = req.session.usuario;
         res.render('users/register',{usuario});
-    },
-
-
-    carrito: (req, res) => {
-        res.render('users/productCart');
     },
 
     store: async (req, res) => {

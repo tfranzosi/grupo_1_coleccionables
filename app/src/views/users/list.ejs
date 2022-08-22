@@ -13,6 +13,11 @@
     <!-- <%- include('../partials/header_slider') %> -->
     </header>
     <section class="main">
+        <span>- 
+            <% for (let page = 1; page <= pageCount; page++) { %>
+                <a href="<%= url %>&page=<%= page %> "><%= page %></a> - 
+            <% } %> 
+            </span>    
         <h4 class="titulo">Listado de Usuarios</h4>
         <section class="usuarios">
         <% if (users.length === 0) { %>
