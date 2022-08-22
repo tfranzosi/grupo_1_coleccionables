@@ -25,7 +25,7 @@ module.exports = {
         ] 
     }),
     
-    create: async (product) => await db.user.create(product),
+    create: async (product) => await db.User.create(product),
 
     delete: async (id) => await db.User.destroy({
         where: {

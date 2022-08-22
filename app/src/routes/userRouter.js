@@ -28,7 +28,7 @@ router.get('/', userController.showAll);
 
 //FORMULARIO DE REGISTRO USUARIO
 router.get('/registro',logueadoMW, userController.register);
-router.post('/registro', upload.single('urlImagen'), /*registerMiddleware,*/ userController.store);
+router.post('/registro', upload.single('urlImagen'), registerMiddleware, userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion',logueadoMW, userController.loginForm);

@@ -53,23 +53,23 @@ userController={
 
     store: async (req, res) => {
         const resultValidation = validationResult(req);
-		
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
+        
         try{
             let user = userController.validateUser(req.body,req.file);
             await userQueries.create(user);
-            res.redirect("/usuarios");
+            res.redirect("/perfil");
         } catch (e) {
             console.log('error: ',e);
             res.send(e);
         }
 
-        res.cookie('usuario',req.body.usuario,{ maxAge: 1000*3600, httpOnly: true })
+        res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
 		res.redirect("/")
 	},
 
@@ -108,7 +108,7 @@ userController={
         if(user.image_url === null) user.image_url = '/images/users/default.jpg';
         if (imageFile !== undefined) user.image_url = '/images/users/' + imageFile.filename;
 
-        return product
+        return user;
     }
 
 }
