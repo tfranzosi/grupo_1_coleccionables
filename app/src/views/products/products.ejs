@@ -9,9 +9,13 @@
 <body>
     <header>
     <%- include('../partials/header') %>
-    <!-- <%- include('../partials/header_slider') %> -->
     </header>
     <section class="main">
+        <span>- 
+        <% for (let page = 1; page <= pageCount; page++) { %>
+            <a href="<%= url %>&page=<%= page %> "><%= page %></a> - 
+        <% } %> 
+        </span>
         <h4 class="titulo"><%= title %></h4>
         <section class="productos">
         <% if (products.length === 0) { %>

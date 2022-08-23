@@ -38,7 +38,7 @@ module.exports = {
         ]
     }),
 
-    search: async (query,limit) => await db.Product.findAll({
+    search: async (query,limit,page) => await db.Product.findAll({
         where: {
             [Op.or]: [
                 {product_name: { [Op.like]: '%' + query + '%' }},
@@ -48,9 +48,21 @@ module.exports = {
             ]
         },
         limit: limit,
+        offset: page * limit,
         include: [
             {association: 'categories'}
         ]
+    }),
+
+    searchCount: async (query) => await db.Product.count({
+        where: {
+            [Op.or]: [
+                {product_name: { [Op.like]: '%' + query + '%' }},
+                {short_description: { [Op.like]: '%' + query + '%' }},
+                {long_description: { [Op.like]: '%' + query + '%' }}
+
+            ]
+        }
     }),
 
     create: async (product) => {

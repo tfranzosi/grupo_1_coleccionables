@@ -4,10 +4,11 @@
 const express = require('express');
 const router = express.Router();
 const mainController = require('../controllers/mainController');
+const productController = require('../controllers/productController');
 
 
 router.get('/', mainController.index);
-router.get("/search", mainController.search);
+router.get("/search", productController.search);
 router.get('/error', mainController.error);
 
 module.exports = router;

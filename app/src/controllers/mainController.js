@@ -27,19 +27,6 @@ mainController = {
         }
     },
 
-    search: async (req, res) => {
-        try {
-            //Hago los pedidos a la Base de Datos
-            const products = await productQueries.search(req.query.search,20);
-
-            res.render('products/products' , { products , title: 'Resultados de busqueda'});
-        } catch (e) {
-            //Si hay algun error, los atajo y muestro todo vacio
-            console.log('error,' , e);
-            res.render('products/products' , { products: [], title: 'Productos'});
-        }
-    },
-
     error: (req, res) => {
         res.render('error', { error })
     }

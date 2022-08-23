@@ -11,8 +11,21 @@ const { validationResult } = require('express-validator');
 
 userController={
     showAll: async (req,res) => {
-        const users = await userQueries.findAll();
-        return res.render('users/list',{users});
+        let pageNumber = 1;
+        if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
+        let itemsPerPage = 5;
+        if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
+
+        //Hago los pedidos a la Base de Datos
+        const usersCount = await userQueries.searchCount('');
+        const pageCount = Math.ceil(usersCount/itemsPerPage);
+        const users = await userQueries.search('',itemsPerPage,pageNumber - 1);
+
+        return res.render('users/userList',{
+            users,
+            pageCount,
+            url: '/usuarios?'
+        });
     },
 
     login: async (req, res) => {
@@ -25,13 +38,13 @@ userController={
             }
             res.redirect('/');
         } else {
-            res.render('users/login', {
+            res.render('users/userLogin', {
                 usuario: req.session.usuario,
                 errorInicioSesion : true});
         }
     },
     loginForm: (req, res) => {
-        res.render('users/login',{usuario: req.session.usuario,
+        res.render('users/userLogin',{usuario: req.session.usuario,
             errorInicioSesion: false});
     },
     logout: (req, res) => {
@@ -41,20 +54,19 @@ userController={
         res.redirect('/');
     },
 
-    register: (req, res) => {
-        let usuario = req.session.usuario;
-        res.render('users/register',{usuario});
+    carrito: (req, res) => {
+        res.render('users/userShoppingCart');
     },
 
-
-    carrito: (req, res) => {
-        res.render('users/productCart');
+    register: (req, res) => {
+        let usuario = req.session.usuario;
+        res.render('users/userRegister',{usuario});
     },
 
     store: async (req, res) => {/*
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
-			return res.render('users/register', {
+			return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
@@ -74,18 +86,19 @@ userController={
 	},
 
     profile: async (req, res) => {
-        res.render('users/profile', { user: res.locals.userLogged });
+        res.render('users/userProfile', { user: res.locals.userLogged });
     },
 
     detail: async (req, res) => {
         const user = await userQueries.findById(req.params.id);
         if(user !== null){
-            res.render('users/profile' , { user });
+            res.render('users/userProfile' , { user });
         } else {
             res.render('error',{error: 'Tu usuario no aparece! ... Tu usuario no aparece! ...'})
         }
     },
     delete: async (req, res) => {
+        userController.logout(req,res);
         try{
             await userQueries.delete(req.params.id);
             res.redirect('/usuarios')
