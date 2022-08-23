@@ -7,6 +7,7 @@ const readDB = fs.readFileSync(rutaDB,'utf-8');
 const dbParseada = JSON.parse(readDB);
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 
 userController={
@@ -54,8 +55,37 @@ userController={
         res.redirect('/');
     },
 
-    carrito: (req, res) => {
-        res.render('users/userShoppingCart');
+    // viewOrders: async (req, res) => {
+    //     let orders = await db.Order.findAll({
+    //         where:{
+    //             user_id: res.locals.userLogged.id,
+    //             status_id: 1
+    //         },
+    //         include:
+    //         { association: 'status_orders'}
+    //     });
+
+    //     res.render('users/userOrders',{ orders });
+    // },
+
+    shoppingCart: async (req, res) => {
+        //Le pregunto a la tabla Orders, que orden tiene pendiente para el usuario logueado
+        const {id} = await db.Order.findOne({
+            where:{
+                status_id: 1,
+                user_id: res.locals.userLogged.id
+            }
+        })
+
+        //Busco los productos en las tablas orders_details y products que estab en la orden pendiente
+        const products = await db.OrderDetail.findAll({
+            where: {
+                order_id: id
+            },
+            include: { model: db.Product }
+        });
+        
+        res.render('users/userShoppingCart',{ products });
     },
 
     register: async (req, res) => {
@@ -99,7 +129,9 @@ userController={
         }
     },
     delete: async (req, res) => {
-        userController.logout(req,res);
+        res.clearCookie("usuario");
+        res.locals.isLogged = false;
+        req.session.destroy();
         try{
             await userQueries.delete(req.params.id);
             res.redirect('/usuarios')

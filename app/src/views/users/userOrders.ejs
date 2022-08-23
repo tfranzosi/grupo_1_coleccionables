@@ -29,30 +29,19 @@
             
             <div class="cart-products">
                 <div class="cart-products-title">
-                    <h2>Productos añadidos</h2>
+                    <h2>Ordenes de Compras</h2>
                 </div>
                 <div class="product-list-general">
 
-                    <% for (let item of products) {%>
+                    <% for (let order of orders) { %> 
                         <div class="cart-products-item">
-                            <div class="cart-picture">
-                                <img class="main-pic" src="<%= item.Product.image_url %>" alt="imagen de producto">
-                            </div> 
                             <div class="cart-name-price-qty">
                                 <div class="product-name">
-                                    <h3 class="name"><%= item.Product.product_name %></h3>
+                                    <h3 class="name">Orden numero: <%= order.id %> </h3>
                                 </div>
                                 <div>
-                                    <p class="regular-price">$<%= item.price.toLocaleString('es-Ar') %></p>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-btn">
-                                        <a href="javascript:alert('Restaste una unidad');"><button class="minus-button"> - </button></a>
-                                    </div>
-                                    <input type="text" class="form-control" value="<%= item.quantity %>">
-                                    <div class="input-group-btn">
-                                        <a href="javascript:alert('Sumaste una unidad');"><button class="plus-button"> + </button></a>
-                                    </div>
+                                    <p class="regular-price">Estado: <%= order.status_orders.name %>
+                                    <br>Total : $<%= order.ammount %>  </p>
                                 </div>
                                 <div class="cart-erase-button">
                                     <a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');"><button class="erase-button">x</button></a>
@@ -60,6 +49,7 @@
                             </div>
                         </div>
                     <% } %>
+
 
                 </div>    
             </div>

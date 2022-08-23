@@ -35,12 +35,12 @@ router.get('/inicioSesion',logueadoMW, userController.loginForm);
 router.post('/inicioSesion', userController.login);
 
 //PERFIL USUARIO
-router.get('/perfil',invitadoMW, userController.profile);
+router.get('/perfil', invitadoMW, userController.profile);
 
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);
 
-router.get('/carrito', userController.carrito);
+router.get('/carrito', invitadoMW, userController.shoppingCart);
 
 //DETALLE DE USUARIO
 router.get('/:id', userController.detail)
