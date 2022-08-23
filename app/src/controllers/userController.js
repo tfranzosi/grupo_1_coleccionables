@@ -58,9 +58,11 @@ userController={
         res.render('users/userShoppingCart');
     },
 
-    register: (req, res) => {
-        let usuario = req.session.usuario;
-        res.render('users/userRegister',{usuario});
+    register: async (req, res) => {
+        let user = req.session.usuario;
+        const interests = await userQueries.obtainInterests();
+        console.log(interests);
+        res.render('users/userRegister',{user,interests});
     },
 
     store: async (req, res) => {
@@ -73,16 +75,15 @@ userController={
 		}
         
         try{
+            req.body.user_role_id=2;
             let user = userController.validateUser(req.body,req.file);
             await userQueries.create(user);
-            res.redirect("/perfil");
+            res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
+            res.redirect("/usuarios/perfil");
         } catch (e) {
             console.log('error: ',e);
-            res.send(e);
+            res.send(e); 
         }
-
-        res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
-		res.redirect("/")
 	},
 
     profile: async (req, res) => {

@@ -146,15 +146,15 @@
                         <div class="categoria">
                             <div class="generos">
                                 <label for="varon">Varon</label>
-                                <input type="radio" name="gender" value="varon" id="varon">
+                                <input type="radio" name="gender" value="1" id="varon">
                             </div>
                             <div class="generos">
                                 <label for="mujer">Mujer</label>
-                                <input type="radio" name="gender" value="mujer" id="mujer">
+                                <input type="radio" name="gender" value="2" id="mujer">
                             </div>
                             <div class="generos">
                                 <label for="otro">Otro</label>
-                                <input type="radio" name="gender" value="otro" id="otro">
+                                <input type="radio" name="gender" value="3" id="otro">
                             </div>
                             <br>
                             <br>
@@ -168,26 +168,12 @@
                     <section class="perfilusuario">
                         <div class="intereses">
                             <h4>Intereses</h4>
+                            <% for (let interest of interests){%>
                             <div>
-                                <input type="checkbox" name="interests" value="a" id="a">
-                                <label for="a">Anime</label>
+                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.id%>">
+                                <label for="<%=interest.id%>"><%=interest.name%></label>
                             </div>
-                            <div>
-                                <input type="checkbox" name="interests" value="b" id="b">
-                                <label for="b">Accion</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="interests" value="c" id="c">
-                                <label for="c">Deporte</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="interests" value="d" id="d">
-                                <label for="d">RPG</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" name="interests" value="e" id="e">
-                                <label for="e">Social</label>
-                            </div>
+                            <%}%>
                         </div>
                         <div class="danger">  <% if (locals.errors && errors.interests) { %>
                             <%= errors.interests.msg %>

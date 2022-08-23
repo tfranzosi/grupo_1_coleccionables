@@ -26,22 +26,22 @@ const registerValidations = [
 						 }
 						 return true;
 					 }),
-	body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones'),
-	body('image_url').custom((value, { req }) => {
-		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+	body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones')
+	// body('image_url').custom((value, { req }) => {
+	// 	let file = req.file;
+	// 	let acceptedExtensions = ['.jpg', '.png', '.gif'];
 		
-		if (!file) {
-			throw new Error('Tenes que subir una imagen');
-		} else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-			}
-		}
+	// 	if (!file) {
+	// 		throw new Error('Tenes que subir una imagen');
+	// 	} else {
+	// 		let fileExtension = path.extname(file.originalname);
+	// 		if (!acceptedExtensions.includes(fileExtension)) {
+	// 			throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+	// 		}
+	// 	}
 
-		return true;
-	})
+	// 	return true;
+	// })
 ]
 
 module.exports = registerValidations;

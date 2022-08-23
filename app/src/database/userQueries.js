@@ -48,14 +48,26 @@ module.exports = {
         ] 
     }),
     
-    create: async (product) => await db.User.create(product),
+    create: async (user) => {
+        let newCustomer = await db.User.create(user);
+
+        let interests = user.interests.map(interest => {
+            return {
+                user_id: newCustomer.id,
+                interest_id: interest
+            }
+            
+        });
+        await db.UserInterest.bulkCreate(interests);
+    },
 
     delete: async (id) => await db.User.destroy({
         where: {
             id: id
         }
-    })
+    }),
     
+    obtainInterests: async () => await db.Interest.findAll()
 
 
 }
