@@ -53,17 +53,17 @@
                         
                         <input type="file" id="urlImagen" name="urlImagen" onchange="showUpload()">
 
-                        <div class="danger">  <% if (locals.errors && errors.urlImagen) { %>
-                            <%= errors.urlImagen.msg %>
+                        <div class="danger">  <% if (locals.errors && errors.image_url) { %>
+                            <%= errors.image_url.msg %>
                         <% } %> </div>
                     </div>
                     <div class="rowform">
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="nombre" class="datos">Nombre</label>
-                                <input type="text" name="nombre" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
-                                <div class="danger">  <% if (locals.errors && errors.nombre) { %>
-                                    <%= errors.nombre.msg %>
+                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
+                                <div class="danger">  <% if (locals.errors && errors.first_name) { %>
+                                    <%= errors.first_name.msg %>
                                 <% } %> </div>
                             </div>
                             
@@ -71,9 +71,9 @@
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="apellido" class="datos">Apellido</label>
-                                <input type="text" name="apellido" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
-                                <div class="danger">  <% if (locals.errors && errors.apellido) { %>
-                                    <%= errors.apellido.msg %>
+                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
+                                <div class="danger">  <% if (locals.errors && errors.last_name) { %>
+                                    <%= errors.last_name.msg %>
                                 <% } %> </div>
                             </div>
                         </div>
@@ -82,9 +82,9 @@
                     <div class="colform">
                         <div class="categoria">
                             <label for="usuario" class="datos">Nombre de usuario</label>
-                            <input type="text" name="usuario" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.usuario : "" %>" >
-                            <div class="danger">  <% if (locals.errors && errors.usuario) { %>
-                                <%= errors.usuario.msg %>
+                            <input type="text" name="user" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.user : "" %>" >
+                            <div class="danger">  <% if (locals.errors && errors.user) { %>
+                                <%= errors.user.msg %>
                             <% } %> </div>
                         </div>
                     </div>
@@ -98,15 +98,15 @@
                             </div>
                             <div class="telefonos">
                                 <span>
-                                    <input type="tel" name="telefono_pais" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.telefono_pais : "" %>"></span>
-                                    <div class="danger">  <% if (locals.errors && errors.telefono_pais) { %>
-                                        <%= errors.telefono_pais.msg %>
+                                    <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : "" %>"></span>
+                                    <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
+                                        <%= errors.phone_country.msg %>
                                     <% } %> </div>
                                 <span> 
-                                    <input type="tel" name="telefono" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.telefono : "" %>">
+                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : "" %>">
                                 </span>
-                                <div class="danger">  <% if (locals.errors && errors.telefono) { %>
-                                    <%= errors.telefono.msg %>
+                                <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
+                                    <%= errors.phone_number.msg %>
                                 <% } %> </div>
                             </div>
                         </div>
@@ -125,9 +125,9 @@
                     <div class="colform">                     
                         <div class="categoria">
                             <label for="nacimiento" class="datos">Fecha de nacimiento</label>
-                            <input type="date" name="nacimiento" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.nacimiento : "" %>">
-                            <div class="danger">  <% if (locals.errors && errors.nacimiento) { %>
-                                <%= errors.nacimiento.msg %>
+                            <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.birth_date : "" %>">
+                            <div class="danger">  <% if (locals.errors && errors.birth_date) { %>
+                                <%= errors.birth_date.msg %>
                             <% } %> </div>
                         </div><br>
                     </div>
@@ -136,9 +136,9 @@
                     <div class="colform">      
                         <div class="categoria">
                             <label for="domicilio" class="datos">Domicilio</label>
-                            <input type="text" name="domicilio" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.domicilio : "" %>">
-                            <div class="danger">  <% if (locals.errors && errors.domicilio) { %>
-                                <%= errors.domicilio.msg %>
+                            <input type="text" name="address" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.address : "" %>">
+                            <div class="danger">  <% if (locals.errors && errors.address) { %>
+                                <%= errors.address.msg %>
                             <% } %> </div>
                         </div><br>
                     </div>
@@ -146,20 +146,20 @@
                         <div class="categoria">
                             <div class="generos">
                                 <label for="varon">Varon</label>
-                                <input type="radio" name="genero" value="varon" id="varon">
+                                <input type="radio" name="gender" value="varon" id="varon">
                             </div>
                             <div class="generos">
                                 <label for="mujer">Mujer</label>
-                                <input type="radio" name="genero" value="mujer" id="mujer">
+                                <input type="radio" name="gender" value="mujer" id="mujer">
                             </div>
                             <div class="generos">
                                 <label for="otro">Otro</label>
-                                <input type="radio" name="genero" value="otro" id="otro">
+                                <input type="radio" name="gender" value="otro" id="otro">
                             </div>
                             <br>
                             <br>
                             <br>
-                            <div class="danger">  <% if (locals.errors && errors.genero) { %>
+                            <div class="danger">  <% if (locals.errors && errors.gender) { %>
                                 <%= errors.genero.msg %>
                             <% } %> </div>
                         </div>
@@ -169,57 +169,57 @@
                         <div class="intereses">
                             <h4>Intereses</h4>
                             <div>
-                                <input type="checkbox" name="intereses" value="a" id="a">
+                                <input type="checkbox" name="interests" value="a" id="a">
                                 <label for="a">Anime</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="intereses" value="b" id="b">
+                                <input type="checkbox" name="interests" value="b" id="b">
                                 <label for="b">Accion</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="intereses" value="c" id="c">
+                                <input type="checkbox" name="interests" value="c" id="c">
                                 <label for="c">Deporte</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="intereses" value="d" id="d">
+                                <input type="checkbox" name="interests" value="d" id="d">
                                 <label for="d">RPG</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="intereses" value="e" id="e">
+                                <input type="checkbox" name="interests" value="e" id="e">
                                 <label for="e">Social</label>
                             </div>
                         </div>
-                        <div class="danger">  <% if (locals.errors && errors.intereses) { %>
-                            <%= errors.intereses.msg %>
+                        <div class="danger">  <% if (locals.errors && errors.interests) { %>
+                            <%= errors.interests.msg %>
                         <% } %> </div>
                     </section>
                 <div class="rowform">
                     <div class="colform">
                         <div class="categoria">
                             <label for="contrasenia">Contraseña</label>
-                            <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
-                            <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
-                                <%= errors.contrasenia.msg %>
+                            <input type="password" name="password" id="contrasenia" placeholder=" ********">
+                            <div class="danger">  <% if (locals.errors && errors.password) { %>
+                                <%= errors.password.msg %>
                             <% } %> </div>
                         </div><br>
                     </div>
                     <div class="colform">
                         <div class="categoria">
-                            <label for="password">Confirme contraseña</label>
-                            <input type="password" name="contrasenia" id="contrasenia" placeholder=" ********">
-                            <div class="danger">  <% if (locals.errors && errors.contrasenia) { %>
-                                <%= errors.contrasenia.msg %>
+                            <label for="contrasenia2">Confirme contraseña</label>
+                            <input type="password" name="password2" id="contrasenia2" placeholder=" ********">
+                            <div class="danger">  <% if (locals.errors && errors.password2) { %>
+                                <%= errors.password2.msg %>
                             <% } %> </div><br>
                         </div>
                     </div>
                 </div>
                 <div class="rowform2">    
                     <div class="tyc">
-                        <input type="checkbox" name="condiciones" value="condiciones" id="condiciones" >
+                        <input type="checkbox" name="conditions" value="condiciones" id="condiciones" >
                         <label for="condiciones">Estoy de acuerdo con los <s>Términos y Condiciones</s></label>
                     </div>
-                    <div class="danger">  <% if (locals.errors && errors.condiciones) { %>
-                        <%= errors.condiciones.msg %>
+                    <div class="danger">  <% if (locals.errors && errors.conditions) { %>
+                        <%= errors.conditions.msg %>
                     <% } %> </div><br><br>
                 </div>
                     <div>

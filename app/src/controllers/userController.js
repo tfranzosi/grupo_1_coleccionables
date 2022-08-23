@@ -63,14 +63,14 @@ userController={
         res.render('users/userRegister',{usuario});
     },
 
-    store: async (req, res) => {/*
+    store: async (req, res) => {
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}*/
+		}
         
         try{
             let user = userController.validateUser(req.body,req.file);
