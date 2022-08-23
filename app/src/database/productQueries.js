@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 module.exports = {
     showAll: async () => await db.Product.findAll({
         include: [
-            {association: 'categories'}
+            { association: 'categories' }
         ]
     }),
     
@@ -47,7 +47,7 @@ module.exports = {
 
             ]
         },
-        limit: limit,
+        limit,
         offset: page * limit,
         include: [
             {association: 'categories'}

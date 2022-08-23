@@ -1,4 +1,5 @@
 const productQueries = require('../database/productQueries');
+
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -25,6 +26,11 @@ mainController = {
                 usuario: req.session.usuario
             });
         }
+    },
+
+    showCarts: async (req,res) => {
+        const orders = await db.Order.findAll();
+        res.json(orders);
     },
 
     error: (req, res) => {
