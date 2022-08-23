@@ -141,13 +141,14 @@ userController={
             res.render('error' , { error: e });
         }
     },
-
+    editForm: () =>{
+        res.render("user")
+    },
     edit: async (req,res) => {
 
         
     },
 
-    
     /* METODOS ACCESORIOS*/
     validateUser: (user, imageFile) => {
         //Cambio la imagen a por defecto

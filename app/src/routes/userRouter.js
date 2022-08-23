@@ -40,17 +40,20 @@ router.get('/perfil', invitadoMW, userController.profile);
 //CERRAR SESION
 router.get('/cerrarSesion', userController.logout);
 
+//VER CARRITO COMPRAS
 router.get('/carrito', invitadoMW, userController.shoppingCart);
 
 //DETALLE DE USUARIO
 router.get('/:id', userController.detail)
 
-//BORRAR USUARIO
-router.delete('/:id', userController.delete);
+//DETALLE DE USUARIO EDITABLE
+router.get("/:id/editar",userController.editForm);
 
 //ENVIO INFORMACION PARA EDITAR Y GRABAR EN DB
 router.put("/:id", upload.single('image_url'), userController.edit);
 
+//BORRAR USUARIO
+router.delete('/:id', userController.delete);
 
 
 module.exports = router;
