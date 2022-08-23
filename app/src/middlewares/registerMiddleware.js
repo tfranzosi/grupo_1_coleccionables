@@ -1,4 +1,5 @@
 const { body } = require('express-validator');
+const path = require('path');
 
 //VALIDATIONS REGISTRO
 
@@ -17,9 +18,14 @@ const registerValidations = [
     body('address').notEmpty().withMessage('Tenes que escribir un domicilio'),
     body('gender').notEmpty().withMessage('Tenes que seleccionar un género'),
     body('interests').notEmpty().withMessage('Tenes que seleccionar al menos un interés'),
-	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('password2').notEmpty().withMessage('Tienes que escribir una contraseña').bail()
-					 .custom((value, { req }) => body('password2') === body('password')).withMessage("Las contraseñas deben coincidir"),
+	body('password').trim().notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('password2').trim().notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+					 .custom((value,{req}) =>{
+						 if(value !== req.body.password){
+							 throw new Error('Las contraseñas no coinciden')
+						 }
+						 return true;
+					 }),
 	body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones'),
 	body('image_url').custom((value, { req }) => {
 		let file = req.file;
