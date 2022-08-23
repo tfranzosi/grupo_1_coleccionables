@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('../partials/head') %>
+    <%- include('../partials/all_head') %>
     <link rel="stylesheet" href="/css/index.css">
     <title>GamePlay - <%= title %></title>
 </head>
 
 <body>
     <header>
-    <%- include('../partials/header') %>
+    <%- include('../partials/all_header') %>
     </header>
     <section class="main">
         <span>- 
@@ -22,13 +22,13 @@
             Ups... No hay nada por aquí
         <% } else { %>
             <% for (let product of products){ %>
-                <%- include ('../partials/producto',{product}) %>
+                <%- include ('../partials/product_example',{product}) %>
             <% } %> 
         <% } %>
         </section>
     </section>
 
-    <%- include ('../partials/footer') %>
+    <%- include ('../partials/all_footer') %>
 </body>
 
 </html>

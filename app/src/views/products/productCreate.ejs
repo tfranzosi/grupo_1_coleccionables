@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <%- include('../partials/head.ejs')%>
+    <%- include('../partials/all_head.ejs')%>
     <link rel="stylesheet" href="/css/register.css">
     
     <title>GamePlay - Crear Producto</title>
@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/all_header.ejs') %>
     </header>
         <!-- Breadcrumb Start -->
         <main class="product-detail">
@@ -28,7 +28,7 @@
             <br>
             <div class="form-registro">
                 <form class="registro" action="/productos/crear" method="POST" enctype="multipart/form-data">
-                    <%-include ('../partials/form_fields.ejs', {product, categories}) %>
+                    <%-include ('../partials/product_form_fields.ejs', {product, categories}) %>
                     <div>
                         <button type="submit" class="registerbutton">PUBLICAR</button>
                     </div><br>
@@ -37,7 +37,7 @@
         </div>
     </div>
     </main>
-    <%- include ('../partials/footer.ejs') %>
+    <%- include ('../partials/all_footer.ejs') %>
 </body>
 
 </html>

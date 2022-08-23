@@ -15,10 +15,10 @@
         </div>
         <div class="botones">
             <form action="/usuarios/<%= user.id %>?_method=PUT" method="POST">
-                <button type="submit">Editar</button>
+                <button type="submit" class="ingresobutton">Editar</button>
             </form>
             <form action="/usuarios/<%= user.id %>?_method=DELETE" method="POST">
-                <button type="submit" id="delete-button">Eliminar</button>
+                <button type="submit" id="delete-button" class="ingresobutton">Eliminar</button>
             </form>
         </div>
     </div>

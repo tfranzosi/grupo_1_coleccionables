@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('./partials/head') %>
+    <%- include('./partials/all_head') %>
     <link rel="stylesheet" href="/css/index.css">
     <title>GamePlay - Home</title>
 </head>
 
 <body>
     <header>
-    <%- include('./partials/header', {usuario}) %>
-    <%- include('./partials/header_slider') %>
+    <%- include('./partials/all_header', {usuario}) %>
+    <%- include('./partials/all_header_slider') %>
     </header>
     <section class="main">
         <h4 class="titulo">OFERTAS DE LA SEMANA</h4>
         <section class="productos">
         <% for (let product of offers){ %>
-            <%- include ('./partials/producto',{product}) %>
+            <%- include ('./partials/product_example',{product}) %>
         <% } %> 
         </section>
 
@@ -23,13 +23,13 @@
         <section class="productos">
 
         <% for (let product of bestSellers){ %>
-            <%- include ('./partials/producto',{product}) %>
+            <%- include ('./partials/product_example',{product}) %>
         <% } %> 
         
         </section>
     </section>
 
-    <%- include ('./partials/footer') %>
+    <%- include ('./partials/all_footer') %>
 </body>
 
 </html>

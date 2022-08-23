@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('../partials/head') %>
+    <%- include('../partials/all_head') %>
     <link rel="stylesheet" href="/css/usersList.css">
     <script src="/js/messages.js"></script>
     <title>GamePlay - Listado usuarios</title>
@@ -9,8 +9,8 @@
 
 <body>
     <header>
-    <%- include('../partials/header') %>
-    <!-- <%- include('../partials/header_slider') %> -->
+    <%- include('../partials/all_header') %>
+    <!-- <%- include('../partials/all_header_slider') %> -->
     </header>
     <section class="main">
         <span>- 
@@ -24,13 +24,13 @@
             Ups... No hay nada por aquí - Create un usuario!
         <% } else { %>
             <% for (let user of users){ %>
-                <%- include('../partials/usuario', { user } ) %> 
+                <%- include('../partials/user_example', { user } ) %> 
             <% } %> 
         <% } %>
         </section>
     </section>
 
-    <%- include ('../partials/footer') %>
+    <%- include ('../partials/all_footer') %>
 </body>
 
 </html>
