@@ -151,7 +151,22 @@ section.comentarios h5{
 section.comentarios span{
     text-align: center;
 }
+.ingresobutton{
+    height: 33px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+    transition: all 500ms;
+    padding-left: 6px;
+    border-radius: 4px;
+    margin-bottom: 2vh;
+    align-self: center;
 
+}
+.ingresobutton:hover{
+    background-color: #B1272F;
+    color: black;
+}
 
                                         /*  ---     Media Queries     ---- */
 
