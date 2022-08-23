@@ -51,14 +51,14 @@ userController={
         res.render('users/productCart');
     },
 
-    store: async (req, res) => {
+    store: async (req, res) => {/*
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
-		}
+		}*/
         
         try{
             let user = userController.validateUser(req.body,req.file);

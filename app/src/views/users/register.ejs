@@ -48,8 +48,11 @@
                 <form class="registro" action="/usuarios/registro" method="POST" enctype="multipart/form-data">
                     <div class="contenedor-fotoperfil">
                         <p>Foto de perfil</p><br>
-                        <label for="urlImagen" class="fotoPerfil"><i class="fa fa-plus" aria-hidden="true"></i></label><br>
-                        <input type="file" id="urlImagen" name="urlImagen">
+                        
+                        <label for="urlImagen" class="fotoPerfil"><i class="fa fa-plus" id="plus" aria-hidden="true"></i><img id="preview" src="" width="120px"></label><br>
+                        
+                        <input type="file" id="urlImagen" name="urlImagen" onchange="showUpload()">
+
                         <div class="danger">  <% if (locals.errors && errors.urlImagen) { %>
                             <%= errors.urlImagen.msg %>
                         <% } %> </div>
@@ -228,6 +231,7 @@
     </div>
     </main>
     <%- include ('../partials/footer.ejs') %>
+    <script type="text/javascript" src="/js/tempImage.js"></script>
 </body>
 
 </html>
