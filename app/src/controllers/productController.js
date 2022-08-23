@@ -13,7 +13,7 @@ productController={
         try {
             let pageNumber = 1;
             if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
-            let itemsPerPage = 5;
+            let itemsPerPage = 6;
             if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
 
             //Hago los pedidos a la Base de Datos
