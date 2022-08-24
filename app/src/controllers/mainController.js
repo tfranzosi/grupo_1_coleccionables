@@ -1,16 +1,16 @@
-const productQueries = require('../database/productQueries');
-
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+
+const queries = require('../database/queries/index');
 
 
 mainController = {
     index: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const offers = await productQueries.offers();
-            const bestSellers = await productQueries.bestSellers();
+            const offers = await queries.Product.offers();
+            const bestSellers = await queries.Product.bestSellers();
             
             res.render('index', {
                 offers,

@@ -1,6 +1,4 @@
-const userQueries = require('../database/userQueries');
-const userController = require ("../controllers/userController")
-
+const queries = require('../database/queries/index');
 
 async function authMiddleware(req, res, next) {
      res.locals.isLogged = false;
@@ -11,7 +9,7 @@ async function authMiddleware(req, res, next) {
 
     let userLogged = undefined;
     if (req.session.usuario !== undefined)
-    [ userLogged ] = await Promise.all([userQueries.findByUser(req.session.usuario)])
+    [ userLogged ] = await [queries.user.findByUser(req.session.usuario)]
     
     if(userLogged) {
         res.locals.isLogged = true;
