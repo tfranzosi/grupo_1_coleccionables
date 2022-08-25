@@ -50,7 +50,11 @@ module.exports = {
     
     create: async (user) => await db.User.create(user),
 
-    update: async (user) => await db.User.update(user),
+    update: async (user) => await db.User.update(user,{
+        where: {
+            id: user.id
+        }
+    }),
 
     delete: async (id) => await db.User.destroy({
         where: {
