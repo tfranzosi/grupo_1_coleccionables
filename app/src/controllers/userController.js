@@ -154,8 +154,11 @@ userController={
             const user = await queries.User.findById(req.params.id);
             const interests = await queries.Interest.getAll();
 
-            
-            res.render("user",{user,interests});
+            if(req.session.usuario === user.user){
+                res.render("users/userEdit",{user,interests});
+            } else {
+                res.render("error",{error:"¡¡ No podes editar un usuario que no sea tuyo !!"})
+            }
         }catch (e){
             console.log('error: ', e);
             res.send(e)
@@ -175,9 +178,10 @@ userController={
             let user = userController.validateUser(req.body,req.file)
             user.id = req.params.id;
 
-            await queries.UserInterest.destroy(user.id);
-            await queries.UserInterest.create(user);
+            await queries.UserInterest.delete(user.id);
             await queries.User.update(user);
+            await queries.UserInterest.create(user);
+           
             
             if(req.body.user != req.session.userLogged.user){
             res.cookie.destroy('usuario');

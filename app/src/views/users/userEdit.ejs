@@ -1,72 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <%- include('../partials/all_head.ejs')%>
-        <link rel="stylesheet" href="/css/login.css">
-        <link rel="stylesheet" href="/css/profile.css">
-        <title>GamePlay - Perfil</title>
-    </head>
-    <body>
-        <header>
-            <%- include('../partials/all_header.ejs') %>
-        </header>
-        <main>
-            <div class="breadcrumb">
-                <nav class="breadcrumb bg-light mb-30">
-                    <a class="level-01" href="/">Inicio</a><span> > </span>
-                    <span class="active">Perfil</span>
-                </nav>
-            </div>
-            <div class="profile-container">
-                <div class="profile-container-title">
-                    <h2>Perfil</h2>
-                </div>
-                <div class="first-row">
-                    <div class="profile-avatar">
-                        <img src="<%=user.image_url%>" alt="avatar" class="avatar">
-                    </div>
-                    <div class="first-row-content">
-                        <div class="first-row-content">
-                            <h3>Nombre:</h3>
-                            <p><%=user.first_name%></p>
-                        </div>
-                        <div class="first-row-content">
-                            <h3>Apellido:</h3>
-                            <p><%=user.last_name%></p> 
-                        </div>
-                        <div class="first-row-content">
-                            <h3>Nombre de usuario:</h3>
-                            <p><%=user.user%></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="second-row">
-                    <div class="profile-container-content">
-                        <h3>Email:</h3> 
-                        <p><%=user.email%></p>
-                    </div>
-                    <div class="profile-container-content">
-                        <h3>Fecha de nacimiento:</h3> 
-                        <p><%=user.birth_date%></p>
-                    </div>
-                    <div class="profile-container-content">
-                        <h3>Genero:</h3>
-                        <p><%=user.genders.name%></p>
-                    </div>
-                    <div class="profile-container-content">
-                        <h3>Intereses:</h3>
-                        <% for (let interest of user.interests) { %>
-                            <p><%= interest.name %> </p>    
-                        <% } %>
-                    </div>
-                </div>
-            </div>
-            <div class="edit-button">
-            <a href="/usuarios/"><button type="button" name ="ingreso" class="ingresobutton">EDITAR</button></a>
-            </div>
-        </main>
-        <%- include ('../partials/all_footer.ejs') %>
-    </body>
+<head>
+    <%- include('../partials/all_head.ejs')%>
+    <link rel="stylesheet" href="/css/register.css">
     
-    </html>
+    <title>GamePlay - Registro</title>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/all_header.ejs') %>
+    </header>
+                <!-- Breadcrumb Start -->
+                <main class="product-detail">
+                    <div class="breadcrumb">
+                        <nav class="breadcrumb bg-light mb-30">
+                            <a class="level-01" href="/">Inicio > </a>
+                            <a class="level-02" href="/">GamePlayers > </a>
+                            <span class="active">Registrarse</span>
+                        </nav>
+                    </div>
+                <!-- Breadcrumb End -->
+                
+        <h3 class="tituloregistro">REGISTRO</h3>
+        <div class="contenedor-registro">
+            <div class="social-registro">
+                <button class="facebookbutton">
+                    <span class="facebook"><i class="fa-brands fa-facebook-square"></i></span>
+                    <span class="textofacebook">Registrate con Facebook</span>
+                </button>
+                <button class="applebutton">
+                    <span class="apple"><i class="fa-brands fa-apple"></i></span>
+                    <span class="textoapple">Registrate con Apple ID</span></button>
+                    <button class="gmailbutton">
+                        <span class="gmail"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <title>Gmail icon</title>
+                            <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 
+                        21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 
+                            3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/></svg></span>
+                        <span class="textogmail">Registrate con Gmail</span>
+                    </button>
+            </div><br>
+            <P> O sino<br>
+                Por favor completá los datos en el siguiente formulario</P><br>
+            <div class="form-registro">
+                <form class="registro" action="/usuarios/registro?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="contenedor-fotoperfil">
+                        <p>Foto de perfil</p><br>
+                        
+                        <label for="urlImagen" class="fotoPerfil"><img id="preview" src="<%=user.image_url%>" width="120px"></label><br>
+                        
+                        <input type="file" id="urlImagen" name="urlImagen" onchange="showUpload()">
+
+                        <div class="danger">  <% if (locals.errors && errors.image_url) { %>
+                            <%= errors.image_url.msg %>
+                        <% } %> </div>
+                    </div>
+                    <div class="rowform">
+                        <div class="colform">
+                            <div class="categoria"> 
+                                <label for="nombre" class="datos">Nombre</label>
+                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.first_name : user.first_name %>">
+                                <div class="danger">  <% if (locals.errors && errors.first_name) { %>
+                                    <%= errors.first_name.msg %>
+                                <% } %> </div>
+                            </div>
+                            
+                        </div>
+                        <div class="colform">
+                            <div class="categoria"> 
+                                <label for="apellido" class="datos">Apellido</label>
+                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.last_name : user.last_name %>">
+                                <div class="danger">  <% if (locals.errors && errors.last_name) { %>
+                                    <%= errors.last_name.msg %>
+                                <% } %> </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria">
+                            <label for="usuario" class="datos">Nombre de usuario</label>
+                            <input type="text" name="user" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.user : user.user %>" >
+                            <div class="danger">  <% if (locals.errors && errors.user) { %>
+                                <%= errors.user.msg %>
+                            <% } %> </div>
+                        </div>
+                    </div>
+                    <div class="colform">
+                        <div class="categoria">
+                            <div class="telefonos">
+                                <span class = "telefonos">
+                                    <label for="telefono_pais" class="datos">Telefono</label>
+                                </span>
+                                
+                            </div>
+                            <div class="telefonos">
+                                <span>
+                                    <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : user.phone_country %>"></span>
+                                    <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
+                                        <%= errors.phone_country.msg %>
+                                    <% } %> </div>
+                                <span> 
+                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : user.phone_number %>">
+                                </span>
+                                <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
+                                    <%= errors.phone_number.msg %>
+                                <% } %> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rowform"> 
+                    <div class="colform">   
+                        <div class="categoria">
+                            <label for="mail" class="datos">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : user.email %>">
+                            <div class="danger">  <% if (locals.errors && errors.email) { %>
+                                <%= errors.email.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                    <div class="colform">                     
+                        <div class="categoria">
+                            <label for="nacimiento" class="datos">Fecha de nacimiento</label>
+                            <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.birth_date : user.birth_date %>">
+                            <div class="danger">  <% if (locals.errors && errors.birth_date) { %>
+                                <%= errors.birth_date.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                </div>
+                <div class="rowform">
+                    <div class="colform">      
+                        <div class="categoria">
+                            <label for="domicilio" class="datos">Domicilio</label>
+                            <input type="text" name="address" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.address : user.address %>">
+                            <div class="danger">  <% if (locals.errors && errors.address) { %>
+                                <%= errors.address.msg %>
+                            <% } %> </div>
+                        </div><br>
+                    </div>
+                    <div class="colform"> 
+                        <div class="categoria">
+                            <div class="generos">
+                                <label for="varon">Varon</label>
+                                <input type="radio" name="gender" value="1" id="varon"
+                                <% if (user.gender===1){ %> <%= checked="checked" %> <%}%>>
+                            </div>
+                            <div class="generos">
+                                <label for="mujer">Mujer</label>
+                                <input type="radio" name="gender" value="2" id="mujer"
+                                <% if (user.gender===2){ %> <%= checked="checked" %> <%}%>>
+                            </div>
+                            <div class="generos">
+                                <label for="otro">Otro</label>
+                                <input type="radio" name="gender" value="3" id="otro"
+                                <% if (user.gender===3){ %> <%= checked="checked" %> <%}%>>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="danger">  <% if (locals.errors && errors.gender) { %>
+                                <%= errors.genero.msg %>
+                            <% } %> </div>
+                        </div>
+                    </div>
+                </div>                            <!-- Div abajo de los datos -->
+                    <section class="perfilusuario">
+                        <div class="intereses">
+                            <h4>Intereses</h4>
+                            <% for (let interest of interests){%>
+                            <div>
+                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.id%>"
+                                <%if (user.interests.includes(interest.id) ){%><%= checked="checked" %><%}%> >
+                                <label for="<%=interest.id%>"><%=interest.name%></label>
+                            </div>
+                            <%}%>
+                        </div>
+                        <div class="danger">  <% if (locals.errors && errors.interests) { %>
+                            <%= errors.interests.msg %>
+                        <% } %> </div>
+                    </section>
+                    <div>
+                        <button type="submit" class="registerbutton">EDITAR</button>
+                    </div><br>
+                    
+                </form>
+        </div>
+    </div>
+    </main>
+    <%- include ('../partials/all_footer.ejs') %>
+    <script type="text/javascript" src="/js/previewUploadedImage.js"></script>
+</body>
+
+</html>
