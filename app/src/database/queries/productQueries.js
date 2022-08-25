@@ -1,4 +1,4 @@
-const db = require('./models');
+const db = require('../models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
@@ -112,9 +112,5 @@ module.exports = {
         where: {
             id: id
         }
-    }),
-
-    obtainCategories: async () => await db.Category.findAll()
-
-
+    })
 }

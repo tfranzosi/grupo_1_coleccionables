@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const productQueries = require('../database/productQueries');
+const queries = require('../database/queries/index');
 
 
 productController={
@@ -17,9 +17,9 @@ productController={
             if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
 
             //Hago los pedidos a la Base de Datos
-            const productCount = await productQueries.searchCount('');
+            const productCount = await queries.Product.searchCount('');
             const pageCount = Math.ceil(productCount/itemsPerPage);
-            const products = await productQueries.search('',itemsPerPage,pageNumber - 1);
+            const products = await queries.Product.search('',itemsPerPage,pageNumber - 1);
 
             return res.render('products/products' , { 
                 products, 
@@ -44,9 +44,9 @@ productController={
             let searchQuery = req.query.query;
             if (searchQuery == undefined) searchQuery = '';
             
-            const productCount = await productQueries.searchCount(searchQuery);
+            const productCount = await queries.Product.searchCount(searchQuery);
             const pageCount = Math.ceil(productCount/itemsPerPage)
-            const products = await productQueries.search(searchQuery,itemsPerPage,pageNumber - 1);
+            const products = await queries.Product.search(searchQuery,itemsPerPage,pageNumber - 1);
 
             return res.render('products/products' , { 
                 products, 
@@ -65,7 +65,7 @@ productController={
     detail: async (req, res) => {
         try{
             //Hago los pedidos a la Base de Datos
-            let product = await productQueries.find(req.params.id);
+            let product = await queries.Product.find(req.params.id);
             if(product !== null){
                 res.render('products/productDetail' , { product });
             } else {
@@ -82,12 +82,12 @@ productController={
     create: async (req, res) => {
         try{
             //Defino producto vacio segun mi base de datos
-            let [productoVacio] = await productQueries.search('',1,0);
+            let [productoVacio] = await queries.Product.search('',1,0);
             productoVacio = productoVacio['dataValues']
             
             for (let key in productoVacio) productoVacio[key] = '';
 
-            const categories = await productQueries.obtainCategories();
+            const categories = await queries.Category.getAll();
 
             res.render('products/productCreate', {product: productoVacio, categories});
 
@@ -112,7 +112,7 @@ productController={
 
         try{
             let product = productController.validateProduct(req.body,req.file);
-            await productQueries.create(product);
+            await queries.Product.create(product);
             res.redirect("/productos");
         } catch (e) {
             console.log('error: ',e);
@@ -123,8 +123,8 @@ productController={
     //Muestra el formulario para edicion producto
     editForm: async (req, res) => {
         try{
-            const categories = await productQueries.obtainCategories();
-            let product = await productQueries.find(req.params.id);
+            const categories = await queries.Category.getAll();
+            let product = await queries.Product.find(req.params.id);
     
             product.categories = product.categories.map(category => {
                 return category.id
@@ -143,7 +143,7 @@ productController={
             let product = productController.validateProduct(req.body,req.file);
             product.id = req.params.id;
 
-            await productQueries.update(product);
+            await queries.Product.update(product);
             res.redirect("/productos");
         } catch (e) {
             console.log('error: ',e);
@@ -154,7 +154,7 @@ productController={
     //Elimina de la DB
     delete: async (req, res) => {
         try{
-            await productQueries.delete(req.params.id);
+            await queries.Product.delete(req.params.id);
             res.redirect('/productos')
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio

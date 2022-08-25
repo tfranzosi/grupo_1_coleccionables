@@ -1,4 +1,4 @@
-const db = require('./models');
+const db = require('../models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
@@ -48,18 +48,13 @@ module.exports = {
         ] 
     }),
     
-    create: async (user) => {
-        let newCustomer = await db.User.create(user);
+    create: async (user) => await db.User.create(user),
 
-        let interests = user.interests.map(interest => {
-            return {
-                user_id: newCustomer.id,
-                interest_id: interest
-            }
-            
-        });
-        await db.UserInterest.bulkCreate(interests);
-    },
+    update: async (user) => await db.User.update(user,{
+        where: {
+            id: user.id
+        }
+    }),
 
     delete: async (id) => await db.User.destroy({
         where: {
@@ -67,7 +62,6 @@ module.exports = {
         }
     }),
     
-    obtainInterests: async () => await db.Interest.findAll()
-
+    getInterests: async () => await db.Interest.findAll()
 
 }

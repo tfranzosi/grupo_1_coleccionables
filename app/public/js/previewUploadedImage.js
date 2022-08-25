@@ -3,13 +3,12 @@ function showUpload(){
     const uploadedPic = document.getElementById('urlImagen').files[0];
     const plusSign = document.getElementById('plus');
     const reader = new FileReader();
-    
-    
-    
+
     reader.addEventListener('load', function(){
         preview.src=reader.result;
         preview.classList.add="preview";
-        plusSign.remove();
+        plusSign.remove()
+        
     }, false);
         
     if (uploadedPic){

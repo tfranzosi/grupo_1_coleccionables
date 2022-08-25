@@ -5,6 +5,7 @@
         <%- include('../partials/all_head.ejs')%>
         <link rel="stylesheet" href="/css/login.css">
         <link rel="stylesheet" href="/css/profile.css">
+        
         <title>GamePlay - Perfil</title>
     </head>
     <body>
@@ -63,7 +64,7 @@
                 </div>
             </div>
             <div class="edit-button">
-            <a href="/usuarios/"><button type="button" name ="ingreso" class="ingresobutton">EDITAR</button></a>
+            <a href="/usuarios/<%=user.id%>/editar"><button type="button" name ="ingreso" class="ingresobutton">EDITAR</button></a>
             </div>
         </main>
         <%- include ('../partials/all_footer.ejs') %>
