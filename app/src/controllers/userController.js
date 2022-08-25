@@ -100,19 +100,28 @@ userController={
     },
 
     store: async (req, res) => {
+        const interests = await queries.Interest.getAll()
+            .catch(function(e){
+                console.log('error: ',e);
+                res.send(e); 
+            });
+
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
-				oldData: req.body
+				oldData: req.body,
+                interests
 			});
 		}
         
         try{
             req.body.user_role_id=2;
-            let user = userController.validateUser(req.body,req.file);
-            await queries.User.create(user);
-            await queries.UserInterest.create(user);
+
+            let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file);
+            let newUser = await queries.User.create(user);
+            newUser.interests=user.interests;
+            await queries.UserInterest.create(newUser);
 
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
             res.redirect("/");
@@ -135,25 +144,13 @@ userController={
         }
     },
 
-    delete: async (req, res) => {
-        res.clearCookie("usuario");
-        res.locals.isLogged = false;
-        req.session.destroy();
-        try{
-            await queries.User.delete(req.params.id);
-            res.redirect('/usuarios')
-        } catch (e) {
-            //Si hay algun error, los atajo y muestro todo vacio
-            console.log('error,' , e);
-            res.render('error' , { error: e });
-        }
-    },
-
+    
     editForm: async (req,res) =>{
         try{
             const user = await queries.User.findById(req.params.id);
+            user.interests = await queries.UserInterest.getUserInterestsById(user.id);
             const interests = await queries.Interest.getAll();
-
+            
             if(req.session.usuario === user.user){
                 res.render("users/userEdit",{user,interests});
             } else {
@@ -168,24 +165,25 @@ userController={
     edit: async (req,res) => {
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
-			return res.render('users/userEdit', {
-				errors: resultValidation.mapped(),
+            return res.render('users/userEdit', {
+                errors: resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
-
+        
         try{
-            let user = userController.validateUser(req.body,req.file)
+            let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file)
             user.id = req.params.id;
-
+            console.log(user)
             await queries.UserInterest.delete(user.id);
-            await queries.User.update(user);
             await queries.UserInterest.create(user);
-           
+            await queries.User.update(user);
+            console.log(req.body)
+            console.log(req.session.usuario)
             
-            if(req.body.user != req.session.userLogged.user){
-            res.cookie.destroy('usuario');
-            res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
+            if(user.user != req.session.usuario){
+                res.clearCookie('usuario');
+                res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
             }
             res.redirect("/usuarios/perfil");
         } catch (e) {
@@ -194,6 +192,20 @@ userController={
         }     
     },
 
+    delete: async (req, res) => {
+        res.clearCookie("usuario");
+        res.locals.isLogged = false;
+        req.session.destroy();
+        try{
+            await queries.User.delete(req.params.id);
+            res.redirect('/usuarios')
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            console.log('error,' , e);
+            res.render('error' , { error: e });
+        }
+    },
+    
     /* METODOS ACCESORIOS*/
     validateUser: (user, imageFile) => {
         //Cambio la imagen a por defecto
