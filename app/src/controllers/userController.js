@@ -90,8 +90,12 @@ userController={
     },
 
     register: async (req, res) => {
-        let user = req.session.usuario;
-        const interests = await queries.User.getInterests();
+        let user = null;
+        const interests = await queries.Interest.getAll()
+            .catch(function(e){
+                console.log('error: ',e);
+                res.send(e); 
+            });
         res.render('users/userRegister',{user,interests});
     },
 
@@ -107,15 +111,15 @@ userController={
         try{
             req.body.user_role_id=2;
             let user = userController.validateUser(req.body,req.file);
-            await queries.User.create(user)
-            .then(queries.UserInterest.create(user));
-            
+            await queries.User.create(user);
+            await queries.UserInterest.create(user);
+
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
-            res.redirect("/usuarios/perfil");
+            res.redirect("/");
         } catch (e) {
             console.log('error: ',e);
             res.send(e); 
-        }
+        } 
 	},
 
     profile: async (req, res) => {
@@ -147,12 +151,15 @@ userController={
 
     editForm: async (req,res) =>{
         try{
-            const interests = await queries.user.update(user);
+            const user = await queries.User.findById(req.params.id);
+            const interests = await queries.Interest.getAll();
+
+            
+            res.render("user",{user,interests});
         }catch (e){
             console.log('error: ', e);
             res.send(e)
         }
-        res.render("user");
     },
 
     edit: async (req,res) => {
@@ -166,11 +173,17 @@ userController={
 
         try{
             let user = userController.validateUser(req.body,req.file)
-            await queries.User.update(user)
-            .then(queries.UserInterest.destroy(user))
-            .then(queries.UserInterest.create(user))
-            res.redirect("/usuarios/perfil");
+            user.id = req.params.id;
 
+            await queries.UserInterest.destroy(user.id);
+            await queries.UserInterest.create(user);
+            await queries.User.update(user);
+            
+            if(req.body.user != req.session.userLogged.user){
+            res.cookie.destroy('usuario');
+            res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
+            }
+            res.redirect("/usuarios/perfil");
         } catch (e) {
             console.log('error: ', e);
             res.send(e);

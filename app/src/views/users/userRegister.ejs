@@ -168,9 +168,11 @@
                     <section class="perfilusuario">
                         <div class="intereses">
                             <h4>Intereses</h4>
+                            <% if (user==null || user.user=""){%> 
                             <% for (let interest of interests){%>
                             <div>
-                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.id%>">
+                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.id%>"
+                                <%if(user.interests.contains(interest)){%><%= checked="checked" %><%}%>>
                                 <label for="<%=interest.id%>"><%=interest.name%></label>
                             </div>
                             <%}%>

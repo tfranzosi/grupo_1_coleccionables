@@ -9,7 +9,7 @@ async function authMiddleware(req, res, next) {
 
     let userLogged = undefined;
     if (req.session.usuario !== undefined)
-    [ userLogged ] = await [queries.user.findByUser(req.session.usuario)]
+    [ userLogged ] = await [queries.User.findByUser(req.session.usuario)]
     
     if(userLogged) {
         res.locals.isLogged = true;

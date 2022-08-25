@@ -16,10 +16,10 @@ module.exports = {
         await db.UserInterest.bulkCreate(interests);
     },
 
-    delete: async (user) => {
+    delete: async (id) => {
         await db.UserInterest.destroy({
             where: {
-                user_id: user.id
+                user_id: id
             }
         })
     }

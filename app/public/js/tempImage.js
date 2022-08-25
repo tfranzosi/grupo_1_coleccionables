@@ -7,7 +7,6 @@ function showUpload(){
     
     
     reader.addEventListener('load', function(){
-        preview.style.display="none";
         preview.src=reader.result;
         preview.classList.add="preview";
         plusSign.remove();
