@@ -1,13 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-
 const bcrypt = require('bcryptjs');
+
 const { validationResult } = require('express-validator');
 
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+
 const queries = require('../database/queries/index');
+
 
 
 
@@ -15,7 +13,7 @@ userController={
     showAll: async (req,res) => {
         let pageNumber = 1;
         if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
-        let itemsPerPage = 5;
+        let itemsPerPage = 4;
         if (req.query.limit !== undefined) itemsPerPage = parseInt(req.query.limit);
 
         //Hago los pedidos a la Base de Datos
@@ -118,13 +116,13 @@ userController={
         try{
             req.body.user_role_id=2;
 
-            let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file);
+            let user = userController.validateUser(req.body,req.file);
             let newUser = await queries.User.create(user);
-            newUser.interests=user.interests;
+            newUser.interests = user.interests;
             await queries.UserInterest.create(newUser);
 
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
-            res.redirect("/");
+            res.redirect("/profile");
         } catch (e) {
             console.log('error: ',e);
             res.send(e); 
@@ -193,12 +191,16 @@ userController={
     },
 
     delete: async (req, res) => {
-        res.clearCookie("usuario");
-        res.locals.isLogged = false;
-        req.session.destroy();
         try{
             await queries.User.delete(req.params.id);
-            res.redirect('/usuarios')
+            console.log(`\n\nID session: ${res.locals.userLogged.id}  -  ID params: ${req.params.id}`);
+            if ( res.locals.userLogged.id === parseInt(req.params.id) ){
+                res.clearCookie("usuario");
+                res.locals.isLogged = false;
+                req.session.destroy();
+                res.redirect('/');
+            }
+            else res.redirect('/usuarios');
         } catch (e) {
             //Si hay algun error, los atajo y muestro todo vacio
             console.log('error,' , e);
@@ -209,8 +211,11 @@ userController={
     /* METODOS ACCESORIOS*/
     validateUser: (user, imageFile) => {
         //Cambio la imagen a por defecto
-        if(user.image_url === null) user.image_url = '/images/users/default.jpg';
+        console.log('\n\nimagen usuario ----> ',user.image_url);
+        if(user.image_url === undefined ) user.image_url = '/images/users/default.jpeg';
         if (imageFile !== undefined) user.image_url = '/images/users/' + imageFile.filename;
+
+        user.password = bcrypt.hashSync(user.password,10);
 
         return user;
     }

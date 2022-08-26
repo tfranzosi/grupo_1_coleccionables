@@ -173,7 +173,7 @@ productController={
         product.is_physical = false;
         if (product.is_physical == 'true') product.is_physical = true;
         //Cambio la imagen a por defecto
-        if(product.image_url === null) product.image_url = '/images/products/default.jpg';
+        if(product.image_url === undefined) product.image_url = '/images/products/default.jpg';
         if (imageFile !== undefined) product.image_url = '/images/products/' + imageFile.filename;
      
         if(product.categories == null) product.categories=null;

@@ -4,14 +4,11 @@ const { Op } = require("sequelize");
 
 module.exports = {
     search: async (query,limit,page) => await db.User.findAll({
-        where: {
-            // [Op.or]: [
-            //     {first_name: { [Op.like]: '%' + query + '%' }},
-            //     {last_name: { [Op.like]: '%' + query + '%' }},
-            //     {user: { [Op.like]: '%' + query + '%' }},
-            //     {email: { [Op.like]: '%' + query + '%' }}
-            // ]
-        },
+        include: [
+            { association: 'interests' },
+            { association: 'genders' },
+            { association: 'roles' }
+        ],
         limit,
         offset: limit * page
     }),
@@ -19,7 +16,8 @@ module.exports = {
     findById: async (id) => await db.User.findByPk(id,{
         include: [
             { association: 'interests' },
-            { association: 'genders' }
+            { association: 'genders' },
+            { association: 'roles' }
         ] 
     }),
 
@@ -44,7 +42,8 @@ module.exports = {
         },
         include: [
             { association: 'interests' },
-            { association: 'genders' }
+            { association: 'genders' },
+            { association: 'roles' }
         ] 
     }),
     
