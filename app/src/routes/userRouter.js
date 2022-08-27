@@ -4,8 +4,8 @@ const userController = require('../controllers/userController');
 const multer = require('multer');
 const path = require('path');
 const userZones = require('../middlewares/userZones');
-const registerValidation = require('../middlewares/registerValidation');
 const { Router } = require('express');
+const validations = require('../middlewares/validations')
 
 
 //MULTER REQUIRE
@@ -26,8 +26,8 @@ const upload = multer({ storage : storage});
 router.get('/',userZones.adminOnly , userController.showAll);
 
 //FORMULARIO DE REGISTRO USUARIO
-router.get('/registro',userZones.invitedOnly, userController.register);
-router.post('/registro', upload.single('urlImagen'), userZones.invitedOnly, registerValidation, userController.store);
+router.get('/registro',userZones.invitedOnly, userController.registerForm);
+router.post('/registro', upload.single('urlImagen'), userZones.invitedOnly, validations.register, userController.store);
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion', userZones.invitedOnly, userController.loginForm);
@@ -43,7 +43,7 @@ router.get('/cerrarSesion',userZones.loggedOnly, userController.logout);
 router.get('/carrito', userZones.loggedOnly, userController.shoppingCart);
 
 //DETALLE DE USUARIO
-router.get('/:id', userZones.loggedOnly, userController.detail)
+router.get('/:id', userZones.adminOnly, userController.detail);
 
 //EDICION DE USUARIO
 router.get("/:id/editar", userZones.loggedOnly, userController.editForm);

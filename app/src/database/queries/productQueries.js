@@ -9,7 +9,7 @@ module.exports = {
         ]
     }),
     
-    offers: async () => await db.Product.findAll({
+    showOnSale: async () => await db.Product.findAll({
         where: {
             is_offer: true
         },
@@ -19,7 +19,7 @@ module.exports = {
         limit: 6
     }),
 
-    bestSellers: async () => await db.Product.findAll({
+    showBestSellers: async () => await db.Product.findAll({
         order: [
             ['sales_q','DESC']
         ],
@@ -28,6 +28,20 @@ module.exports = {
             { association: 'categories' }
         ]
     }),
+
+    showLastVisited: async (userId) => await db.UserVisitedProduct.findAll({
+            include: [{ 
+                model: db.Product,
+                include: { association: 'categories'}
+            }],
+            where: {
+                user_id: userId
+            },
+            order: [
+                ['last_visited','DESC']
+            ],
+            limit: 3
+        }),
 
     find: async (id) =>  await db.Product.findOne({
         where: {
@@ -112,5 +126,32 @@ module.exports = {
         where: {
             id: id
         }
-    })
+    }),
+
+    addVisit: async (productId) => {
+        let { visits_q } = await db.Product.findOne({
+            where: {
+                id: productId
+            }
+        });
+
+        visits_q++;
+
+        await db.Product.update({
+            visits_q
+        },
+        {
+            where: {
+                id: productId
+            }
+        });
+    },
+
+    addLastVisited: async (productId , userId) => {
+        db.UserVisitedProduct.create({
+            user_id: userId,
+            product_id: productId,
+            last_visited: Date.now()
+        })
+    }
 }

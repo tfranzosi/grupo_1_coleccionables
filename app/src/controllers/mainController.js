@@ -9,11 +9,17 @@ mainController = {
     index: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
-            const offers = await queries.Product.offers();
-            const bestSellers = await queries.Product.bestSellers();
+            let lastViewed = [];
+            if (res.locals.isLogged) {
+                lastViewed = await queries.Product.showLastVisited(res.locals.userLogged.id);
+                lastViewed = lastViewed.map( visit => visit.Product['dataValues']);
+            }
+            const onSale = await queries.Product.showOnSale();
+            const bestSellers = await queries.Product.showBestSellers();
             
             res.render('index', {
-                offers,
+                lastViewed,
+                onSale,
                 bestSellers,
                 usuario: req.session.usuario
             });
@@ -21,7 +27,8 @@ mainController = {
             //Si hay algun error, los atajo y muestro todo vacio
             console.log('error,' , e)
             res.render('index', {
-                offers: [],
+                lastViewed: [],
+                onSale: [],
                 bestSellers: [],
                 usuario: req.session.usuario
             });

@@ -41,8 +41,20 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/productos/">Productos</a></li>
-                <li><a href="/productos/crear">Crear</a></li>
+                <li><strong>Productos --></strong></li>
+                <li><a href="/productos/">Ver todos</a></li>
+                <% if (locals.isLogged === true) {%> 
+                    <li><a href="/productos/crear">Crear</a></li>
+                <% } %> 
+                <li> </li>
+                <% if (locals.isLogged === true) {%>
+                    <li><strong>Usuarios --></strong></li>
+                    <% if (locals.userLogged.roles.name === 'admin') {%> 
+                        <li><a href="/usuarios">Ver todos</a></li>
+                    <% } %> 
+                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                <% } %> 
+                
             </ul>
         </nav>
     </div>

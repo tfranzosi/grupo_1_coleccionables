@@ -12,21 +12,30 @@
     <%- include('./partials/all_header_slider') %>
     </header>
     <section class="main">
-        <h4 class="titulo">OFERTAS DE LA SEMANA</h4>
-        <section class="productos">
-        <% for (let product of offers){ %>
-            <%- include ('./partials/product_example',{product}) %>
-        <% } %> 
-        </section>
 
-        <h4 class="titulo">PRODUCTOS MAS VENDIDOS</h4>
-        <section class="productos">
-
-        <% for (let product of bestSellers){ %>
-            <%- include ('./partials/product_example',{product}) %>
-        <% } %> 
+        <% if (locals.isLogged === true) {%>
+            <h4 class="titulo">Lo que estuviste viendo...</h4><br>
+            <section class="productos">
+                <% for (let product of lastViewed){ %>
+                    <%- include ('./partials/product_example',{product}) %>
+                <% } %> 
+            </section>
+        <%}%> 
         
+        <br><h4 class="titulo">Lo que la gente quiere</h4><br>
+        <section class="productos">
+            <% for (let product of bestSellers){ %>
+                <%- include ('./partials/product_example',{product}) %>
+            <% } %> 
         </section>
+
+        <br><h4 class="titulo">Estas son las ofertas!</h4><br>
+        <section class="productos">
+            <% for (let product of onSale){ %>
+                <%- include ('./partials/product_example',{product}) %>
+            <% } %> 
+        </section>
+
     </section>
 
     <%- include ('./partials/all_footer') %>

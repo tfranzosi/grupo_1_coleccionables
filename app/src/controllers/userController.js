@@ -10,6 +10,7 @@ const queries = require('../database/queries/index');
 
 
 userController={
+
     showAll: async (req,res) => {
         let pageNumber = 1;
         if (req.query.page !== undefined) pageNumber = parseInt(req.query.page);
@@ -28,6 +29,11 @@ userController={
         });
     },
 
+    loginForm: (req, res) => {
+        res.render('users/userLogin',{usuario: req.session.usuario,
+            errorInicioSesion: false});
+    },
+
     login: async (req, res) => {
         // Busco el usuario por usuario o email
         const user = await queries.User.findByUser(req.body.user);
@@ -43,10 +49,8 @@ userController={
                 errorInicioSesion : true});
         }
     },
-    loginForm: (req, res) => {
-        res.render('users/userLogin',{usuario: req.session.usuario,
-            errorInicioSesion: false});
-    },
+
+
     logout: (req, res) => {
         res.clearCookie("usuario");
         res.locals.isLogged = false;
@@ -87,7 +91,7 @@ userController={
         res.render('users/userShoppingCart',{ products });
     },
 
-    register: async (req, res) => {
+    registerForm: async (req, res) => {
         let user = null;
         const interests = await queries.Interest.getAll()
             .catch(function(e){
@@ -122,7 +126,7 @@ userController={
             await queries.UserInterest.create(newUser);
 
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
-            res.redirect("/profile");
+            res.redirect("/usuarios/perfil");
         } catch (e) {
             console.log('error: ',e);
             res.send(e); 

@@ -94,7 +94,7 @@ module.exports = (sequelize, dataTypes) => {
         }),
         Product.belongsToMany(models.User, { // models.User -> User es el valor de alias en actor.js
             as: 'users',
-            through: 'user_visited_products',
+            through: 'users_visited_products',
             foreignKey: 'product_id',
             otherKey: 'user_id',
             timestamps: true
