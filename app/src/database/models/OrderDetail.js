@@ -36,12 +36,12 @@ module.exports = (sequelize, dataTypes) => {
     const OrderDetail = sequelize.define(alias, cols, config);
     
     OrderDetail.associate = function(models) {
-        // Vinculacion M:1 con products
+        // Vinculacion 1:M con products
         OrderDetail.belongsTo(models.Product, {
             foreignKey: "product_id"
         }),
 
-        // Vinculacion M:1 con categories
+        // Vinculacion 1:M con categories
         OrderDetail.belongsTo(models.Order, {
             foreignKey: "order_id"
         })

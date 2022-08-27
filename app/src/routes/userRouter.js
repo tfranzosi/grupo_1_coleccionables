@@ -41,6 +41,7 @@ router.get('/cerrarSesion',userZones.loggedOnly, userController.logout);
 
 //VER CARRITO COMPRAS
 router.get('/carrito', userZones.loggedOnly, userController.shoppingCart);
+router.post('/carrito/:id', userController.saveCart);
 
 //DETALLE DE USUARIO
 router.get('/:id', userZones.adminOnly, userController.detail);
@@ -51,6 +52,8 @@ router.put("/:id", userZones.loggedOnly, upload.single('image_url'), userControl
 
 //BORRAR USUARIO
 router.delete('/:id', userZones.loggedOnly, userController.delete);
+
+
 
 
 module.exports = router;

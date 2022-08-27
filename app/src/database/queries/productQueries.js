@@ -129,14 +129,17 @@ module.exports = {
     }),
 
     addVisit: async (productId) => {
+        //Busco el producto y saco unicamente la cantidad de visitas en visit_q
         let { visits_q } = await db.Product.findOne({
             where: {
                 id: productId
             }
         });
 
+        //A la cantidad de visitas, le agrego uno
         visits_q++;
 
+        //Actualizo la DB solo la cantidad de visitas del producto cuyo id es el pedido
         await db.Product.update({
             visits_q
         },

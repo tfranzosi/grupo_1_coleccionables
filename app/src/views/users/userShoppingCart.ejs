@@ -26,91 +26,99 @@
         <div class="product-details">
 
             <!-- Cart Products Start -->
-            
-            <div class="cart-products">
-                <div class="cart-products-title">
-                    <h2>Productos añadidos</h2>
-                </div>
-                <div class="product-list-general">
+            <form action="/usuarios/carrito/<%= products[0].order_id %> " method="POST">
+                <div class="cart-products">
+                    <div class="cart-products-title">
+                        <h2>Productos añadidos</h2>
+                    </div>
+                    <div class="product-list-general">
 
-                    <% for (let item of products) {%>
-                        <div class="cart-products-item">
-                            <div class="cart-picture">
-                                <img class="main-pic" src="<%= item.Product.image_url %>" alt="imagen de producto">
-                            </div> 
-                            <div class="cart-name-price-qty">
-                                <div class="product-name">
-                                    <h3 class="name"><%= item.Product.product_name %></h3>
-                                </div>
-                                <div>
-                                    <p class="regular-price">$<%= item.price.toLocaleString('es-Ar') %></p>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-btn">
-                                        <a href="javascript:alert('Restaste una unidad');"><button class="minus-button"> - </button></a>
+                        <% if (products.length > 1 ) { %> 
+                            <% for (let item of products) {%>
+                                <div class="cart-products-item">
+                                    <input id="id" name="product_id" type="hidden" value="<%= item.product_id %>">
+                                    <div class="cart-picture">
+                                        <img class="main-pic" src="<%= item.Product.image_url %>" alt="imagen de producto">
+                                    </div> 
+                                    <div class="cart-name-price-qty">
+                                        <div class="product-name">
+                                            <h3 class="name"><%= item.Product.product_name %></h3>
+                                        </div>
+                                        <div>
+                                            <p class="regular-price" id="price">$<%= item.price.toLocaleString('es-Ar') %></p>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <button class="minus-button" type="button"> - </button>
+                                            </div>
+                                            <input type="text" name="quantity" class="form-control" id="quantity" value="<%= item.quantity %>">
+                                            <div class="input-group-btn">
+                                                <button class="plus-button" type="button"> + </button>
+                                            </div>
+                                        </div>
+                                        <div class="cart-erase-button">
+                                            <a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');"><button class="erase-button" type="button">x</button></a>
+                                        </div>
                                     </div>
-                                    <input type="text" class="form-control" value="<%= item.quantity %>">
-                                    <div class="input-group-btn">
-                                        <a href="javascript:alert('Sumaste una unidad');"><button class="plus-button"> + </button></a>
-                                    </div>
                                 </div>
-                                <div class="cart-erase-button">
-                                    <a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');"><button class="erase-button">x</button></a>
-                                </div>
+                            <% } %>
+                        <% } else {%>
+                            Es hora de que compres algo!
+                        <% } %> 
+
+                    </div>    
+                </div>
+                <!-- Cart Products End -->
+
+                <!-- Cart Resume Start -->
+                <div class="cart-resume">
+                    <div class="resume-title">
+                        <h2>Resumen</h2>
+                    </div>
+                    <div class="resume-pricing">
+                        <div class="total-price">
+                            <div class="total-price-label">
+                                <h4>Precio (x items)</h4>
+                            </div>
+                            <div class="total-price-number">
+                                <p>$<%= total.toLocaleString('es-Ar') %> </p>
                             </div>
                         </div>
-                    <% } %>
-
-                </div>    
-            </div>
-            <!-- Cart Products End -->
-
-            <!-- Cart Resume Start -->
-            <div class="cart-resume">
-                <div class="resume-title">
-                    <h2>Resumen</h2>
-                </div>
-                <div class="resume-pricing">
-                    <div class="total-price">
-                        <div class="total-price-label">
-                            <h4>Precio (x items)</h4>
+                        <div class="transport-charges">
+                            <div class="transport-charges-label">
+                                <h4>Costo por envío</h4>
+                            </div>
+                            <div class="transport-charges-number">
+                                <p>$2.000</p>
+                            </div>
                         </div>
-                        <div class="total-price-number">
-                            <p>$30.000</p>
+                        <div class="final-price">
+                            <div class="final-price-label">
+                                <h4>Precio Total</h4>
+                            </div>
+                            <div class="final-price-number">
+                                <p>$<%= (total + 2000).toLocaleString('es-Ar') %> </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="transport-charges">
-                        <div class="transport-charges-label">
-                            <h4>Costo por envío</h4>
+                    <div class="resume-buttons">
+                        <div class="keep-buying">
+                            <a href="javascript:alert('Serás redireccionado al shop');"><button class="keep-buying-button">CONTINUAR COMPRANDO</button></a>
                         </div>
-                        <div class="transport-charges-number">
-                            <p>$2.000</p>
-                        </div>
-                    </div>
-                    <div class="final-price">
-                        <div class="final-price-label">
-                            <h4>Precio Total</h4>
-                        </div>
-                        <div class="final-price-number">
-                            <p>$32.000</p>
+                        <div class="go-to-checkout">
+                            <button class="go-to-checkout-button" type="submit">FINALIZAR PEDIDO</button>
                         </div>
                     </div>
                 </div>
-                <div class="resume-buttons">
-                    <div class="keep-buying">
-                        <a href="javascript:alert('Serás redireccionado al shop');"><button class="keep-buying-button">CONTINUAR COMPRANDO</button></a>
-                    </div>
-                    <div class="go-to-checkout">
-                        <a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');"><button class="go-to-checkout-button">FINALIZAR PEDIDO</button></a>
-                    </div>
-                </div>
-            </div>
+            </form>
             <!-- Cart Resume End -->
         </div>
         <!-- Cart Details End -->
     </main>
 
     <%- include ('../partials/all_footer.ejs') %>
+    <script src="/js/userShoppingCart.js"></script>
+
 </body>
 
 </html>

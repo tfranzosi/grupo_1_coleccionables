@@ -35,11 +35,6 @@ mainController = {
         }
     },
 
-    showCarts: async (req,res) => {
-        const orders = await db.Order.findAll();
-        res.json(orders);
-    },
-
     error: (req, res) => {
         res.render('error', { error })
     }

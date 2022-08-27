@@ -4,9 +4,9 @@ const { validationResult } = require('express-validator');
 
 const db = require('../database/models');
 
+const sequelize = db.sequelize;
+
 const queries = require('../database/queries/index');
-
-
 
 
 userController={
@@ -58,38 +58,85 @@ userController={
         res.redirect('/');
     },
 
-    // viewOrders: async (req, res) => {
-    //     let orders = await db.Order.findAll({
-    //         where:{
-    //             user_id: res.locals.userLogged.id,
-    //             status_id: 1
-    //         },
-    //         include:
-    //         { association: 'status_orders'}
-    //     });
+    viewOrders: async (req, res) => {
+        let orders = await db.Order.findAll({
+            include:
+            { association: 'status_orders'}
+        });
 
-    //     res.render('users/userOrders',{ orders });
-    // },
+        res.render('users/userOrders',{ orders });
+    },
 
     shoppingCart: async (req, res) => {
-        //Le pregunto a la tabla Orders, que orden tiene pendiente para el usuario logueado
-        const {id} = await db.Order.findOne({
-            where:{
-                status_id: 1,
-                user_id: res.locals.userLogged.id
-            }
+
+        const products = await db.OrderDetail.findAll({
+            include:
+            [
+                {
+                    model: db.Order,
+                    where: {
+                        user_id: res.locals.userLogged.id
+                    },
+                    include: 
+                    [
+                        {
+                            association: 'status_orders',
+                            where: {
+                                name: 'Pendiente'
+                            }
+                        },
+                        { association: 'user_orders'}
+                    ],
+                    order: ['user_id','ASC']
+                },
+                { model: db.Product }
+            ],
+            order: [['order_id','ASC']]
         })
 
-        //Busco los productos en las tablas orders_details y products que estab en la orden pendiente
-        const products = await db.OrderDetail.findAll({
-            where: {
-                order_id: id
-            },
-            include: { model: db.Product }
-        });
-        
-        res.render('users/userShoppingCart',{ products });
+        let total = 0;
+
+
+        products.map(detail => total += detail.quantity * detail.price);
+
+        res.render('users/userShoppingCart',{ products, total });
     },
+    
+    saveCart: async (req,res) => {
+        let orderDetail = req.body;
+        let totalQuantity = 0;
+        for (let index in orderDetail.product_id){
+            totalQuantity += parseInt(orderDetail.quantity[index]);
+            db.OrderDetail.update(
+                {
+                    quantity: orderDetail.quantity[index]
+                },
+                {
+                    where: {
+                        order_id: parseInt(req.params.id),
+                        product_id: orderDetail.product_id[index]
+                    }
+                }
+            );
+        }
+        const [[{total}]] = await sequelize.query('SELECT SUM(price * quantity) AS total FROM orders_details WHERE order_id = ' + parseInt(req.params.id));
+
+console.log('\n\nCantidad de articulos',totalQuantity);
+
+        db.Order.update({
+                items_q: totalQuantity,
+                status_id: 3,                //Equivale a estado finalizado
+                ammount: total
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        )
+        res.send ('Terminaste la compra!!!');
+    },
+
 
     registerForm: async (req, res) => {
         let user = null;
