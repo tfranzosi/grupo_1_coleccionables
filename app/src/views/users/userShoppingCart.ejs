@@ -26,7 +26,7 @@
         <div class="product-details">
 
             <!-- Cart Products Start -->
-            <form action="/usuarios/carrito/<%= products[0].order_id %> " method="POST">
+            <form action="/usuarios/carrito/<%= products[0].order_id %>?_method=PUT " method="POST">
                 <div class="cart-products">
                     <div class="cart-products-title">
                         <h2>Productos añadidos</h2>
@@ -34,8 +34,8 @@
                     <div class="product-list-general">
 
                         <% if (products.length > 1 ) { %> 
-                            <% for (let item of products) {%>
-                                <div class="cart-products-item">
+                            <% for (let item  of products) {%>
+                                <div class="cart-products-item" id="item-<%=products.indexOf(item)%>">
                                     <input id="id" name="product_id" type="hidden" value="<%= item.product_id %>">
                                     <div class="cart-picture">
                                         <img class="main-pic" src="<%= item.Product.image_url %>" alt="imagen de producto">

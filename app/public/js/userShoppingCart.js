@@ -20,12 +20,20 @@ window.addEventListener('load', () => {
         })
 
         minusButtons[index].addEventListener('click', () => {
-            if (parseInt(quantities[index].value) > 0) quantities[index].value--;
-            updateAll (index);
+            if (parseInt(quantities[index].value) > 0){
+                quantities[index].value--;
+                updateAll (index);
+            }
+            if (parseInt(quantities[index].value)<1){
+                if (confirm("Desea quitar el producto del carrito?")) deleteItem(index);
+            }
         })
 
         quantities[index].addEventListener('change', () => {
             updateAll (index);
+            if(parseInt(quantities[index].value<1)){
+                if (confirm("Desea quitar el producto del carrito?")) deleteItem(index);
+            }
         })
     }
 
@@ -59,6 +67,11 @@ const updateAll = (index) => {
     updateLocalStorage();
     totalPriceLabel.innerText = '$' + updateTotalPrice().toLocaleString('es-Ar');
     finalPriceLabel.innerText = '$' + (updateTotalPrice()+2000).toLocaleString('es-Ar');
+}
+
+const deleteItem = (index) => {
+    let item = document.getElementById("item-"+index);
+    item.remove();
 }
 
 window.addEventListener('unload', e => {

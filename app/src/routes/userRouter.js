@@ -31,7 +31,7 @@ router.post('/registro', upload.single('urlImagen'), userZones.invitedOnly, vali
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion', userZones.invitedOnly, userController.loginForm);
-router.post('/inicioSesion', userZones.invitedOnly, userController.login);
+router.put('/inicioSesion', userZones.invitedOnly, userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil', userZones.loggedOnly, userController.profile);
