@@ -1,20 +1,22 @@
 const { body } = require('express-validator');
+const path = require('path');
+
 
 module.exports = {
     product: [
         body('sku').notEmpty().withMessage('Tenes que escribir un sku'),
-        body('titulo').notEmpty().withMessage('Tenes que escribir un titulo'),
-        body('descripcionCorta').notEmpty().withMessage('Tenes que escribir una descripcion corta del producto'),
-        body('descripcionLarga').notEmpty().withMessage('Tenes que escribir una descripcion larga del producto'),
-        body('precioRegular').notEmpty().withMessage('Tenes que escribir un precio').bail().isNumeric().withMessage('Tenes que escribir un número'),
-        body('descuento').notEmpty().withMessage('Tenes que escribir un descuento').bail().isNumeric().withMessage('Tenes que escribir un número'),
-        body('cantidadCuotas').notEmpty().withMessage('Tenes que escribir una cantidad de cuotas').bail().isNumeric().withMessage('Tenes que escribir un número'),
-        body('etiquetas').notEmpty().withMessage('Tenes que escribir una etiqueta'),
-        body('esFisico').notEmpty().withMessage('Tenes que seleccionar un modo de juego'),
+        body('product_name').notEmpty().withMessage('Tenes que escribir un titulo'),
+        body('short_description').notEmpty().withMessage('Tenes que escribir una descripcion corta del producto'),
+        body('long_description').notEmpty().withMessage('Tenes que escribir una descripcion larga del producto'),
+        body('regular_price').notEmpty().withMessage('Tenes que escribir un precio').bail().isNumeric().withMessage('Tenes que escribir un número'),
+        body('discount').notEmpty().withMessage('Tenes que escribir un descuento').bail().isNumeric().withMessage('Tenes que escribir un número'),
+        body('fee_q').notEmpty().withMessage('Tenes que escribir una cantidad de cuotas').bail().isNumeric().withMessage('Tenes que escribir un número'),
+        body('tags').notEmpty().withMessage('Tenes que escribir una etiqueta'),
+        body('is_physical').notEmpty().withMessage('Tenes que seleccionar un modo de juego'),
         body('categories').notEmpty().withMessage('Tenes que seleccionar al menos una categoria'),
-        body('urlImagen').custom((value, { req }) => {
+        body('image_url').custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png', '.gif'];
+            let acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif'];
             if (file !== undefined) {
                 let fileExtension = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(fileExtension)) {
@@ -49,7 +51,7 @@ module.exports = {
                              }
                              return true;
                          }),
-        body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones'),
+        body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones')/*,
         body('image_url').custom((value, { req }) => {
         	let file = req.file;
             let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -60,7 +62,7 @@ module.exports = {
                 }
             }
         	return true;
-        })
+        })}
+        */
     ]
-
 }

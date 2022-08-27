@@ -1,117 +1,134 @@
 
-
-                    <div class="categoria"> 
-                        <label for="sku" class="datos">SKU</label>
-                        <input type="text" name="sku" id="sku" 
-                        value="<%=product.sku%>" required>
-                        <div class="danger"> <% if (locals.errors && errors.sku) { %>
-                            <%= errors.sku.msg %>
-                        <% } %> </div>
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="sku" class="datos">SKU</label>
+                            <input type="text" name="sku" id="sku" 
+                            value="<%= locals.oldData ? oldData.sku : product.sku%>" >
+                            <div class="danger"> <% if (locals.errors && errors.sku) { %>
+                                <%= errors.sku.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="titulo" class="datos">Título</label>
-                        <input type="text" name="product_name" id="titulo" 
-                        value="<%=product.product_name%>" required>
-                        <div class="danger"> <% if (locals.errors && errors.product_name) { %>
-                            <%= errors.product_name.msg %>
-                        <% } %> </div>
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="titulo" class="datos">Título</label>
+                            <input type="text" name="product_name" id="titulo" 
+                            value="<%=product.product_name%>" >
+                            <div class="danger"> <% if (locals.errors && errors.product_name) { %>
+                                <%= errors.product_name.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="descripcionCorta" class="datos">Descr. Corta</label>
-                        <textarea type="textarea" name="short_description" id="descripcionCorta" required><%=product.short_description%></textarea>
-                        <div class="danger"> <% if (locals.errors && errors.short_description) { %>
-                            <%= errors.short_description.msg %>
-                        <% } %> </div>
+                </div>
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="descripcionCorta" class="datos">Descr. Corta</label>
+                            <textarea type="textarea" name="short_description" id="descripcionCorta" ><%=product.short_description%></textarea>
+                            <div class="danger"> <% if (locals.errors && errors.short_description) { %>
+                                <%= errors.short_description.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="descripcionLarga" class="datos">Descr. Larga</label>
-                        <textarea name="long_description" id="descripcionLarga" required><%=product.long_description%></textarea>
-                        <div class="danger"> <% if (locals.errors && errors.long_description) { %>
-                            <%= errors.long_description.msg %>
-                        <% } %> </div>
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="descripcionLarga" class="datos">Descr. Larga</label>
+                            <textarea name="long_description" id="descripcionLarga" ><%=product.long_description%></textarea>
+                            <div class="danger"> <% if (locals.errors && errors.long_description) { %>
+                                <%= errors.long_description.msg %>
+                            <% } %> </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="precioRegular" class="datos">Precio normal</label>
+                            <input type="number" min="1" step="any" name="regular_price" id="precioRegular" 
+                            value="<%=product.regular_price%>" >
+                            <div class="danger"> <% if (locals.errors && errors.regular_price) { %>
+                                <%= errors.regular_price.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="precioRegular" class="datos">Precio normal</label>
-                        <input type="number" min="1" step="any" name="regular_price" id="precioRegular" 
-                        value="<%=product.regular_price%>" required>
-                        <div class="danger"> <% if (locals.errors && errors.regular_price) { %>
-                            <%= errors.regular_price.msg %>
-                        <% } %> </div>
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="descuento" class="datos">Descuento</label>
+                            <input type="number" min="1" step="any" name="discount" id="descuento" 
+                            value="<%=product.discount%>">
+                            <div class="danger"> <% if (locals.errors && errors.discount) { %>
+                                <%= errors.discount.msg %>
+                            <% } %> </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="rowform">
+                    <div class="colform">
+                        <div class="categoria"> 
+                            <label for="cuotas" class="datos">Cuotas</label>
+                            <input type="number" min="1" step="any" name="fee_q" id="cantidadCuotas" 
+                            value="<%=product.fee_q%>">
+                            <div class="danger"> <% if (locals.errors && errors.fee_q) { %>
+                                <%= errors.fee_q.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="descuento" class="datos">Descuento</label>
-                        <input type="number" min="1" step="any" name="discount" id="descuento" 
-                        value="<%=product.discount%>">
-                        <div class="danger"> <% if (locals.errors && errors.discount) { %>
-                            <%= errors.discount.msg %>
-                        <% } %> </div>
+                    <div class="colform"> 
+                        <div class="categoria"> 
+                            <label for="etiquetas" class="datos">Etiquetas</label>
+                            <input type="textarea" name="tags" id="etiquetas" 
+                            value="<%=product.tags%>">
+                            <div class="danger"> <% if (locals.errors && errors.tags) { %>
+                                <%= errors.tags.msg %>
+                            <% } %> </div>
+                        </div>
                     </div>
-
-                    <div class="categoria"> 
-                        <label for="cuotas" class="datos">Cuotas</label>
-                        <input type="number" min="1" step="any" name="fee_q" id="cantidadCuotas" 
-                        value="<%=product.fee_q%>">
-                        <div class="danger"> <% if (locals.errors && errors.fee_q) { %>
-                            <%= errors.fee_q.msg %>
-                        <% } %> </div>
-                    </div>
-
-                    <div class="categoria"> 
-                        <label for="etiquetas" class="datos">Etiquetas</label>
-                        <input type="textarea" name="tags" id="etiquetas" 
-                        value="<%=product.tags%>">
-                        <div class="danger"> <% if (locals.errors && errors.tags) { %>
-                            <%= errors.tags.msg %>
-                        <% } %> </div>
-                    </div>
-                    
+                </div>
+                <div class="rowform">    
                     <div class="categoria">
                         <input type="radio" name="is_physical" id="esFisico" value="true" 
-                        <%if(product.is_physical === 1){%><%= checked="checked" %><%}%> required>
+                        <%if(product.is_physical == true){%><%= checked="checked" %><%}%> >
                         <label for="esFisico">Fisico</label>
                     </div>
                     
                     <div class="categoria">
                         
                         <input type="radio" name="is_physical" id="esDigital" value="false" 
-                        <%if(product.is_physical === 0){%><%= checked="checked" %><%}%>>
+                        <%if(product.is_physical == false){%><%= checked="checked" %><%}%>>
                         <label for="esDigital">Digital</label>
                         <div class="danger"> <% if (locals.errors && errors.is_physical) { %>
                             <%= errors.is_physical.msg %>
                         <% } %> </div>
                     </div>
+                </div>
                                             <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
                         
                         <div class="intereses">
                             <h4>Categorías</h4>
                             <% for (let category of categories){%> 
-                            <div>
-                                <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category.name %>"
-                                <%if (product.categories.includes(category.id) ){%>
-                                    <%= checked="checked" %><%}%> >
-                                <label for="<%= category.name %>"><%= category.name %> </label>
-                            </div>
-                            <%}%>                          
+                                <div>
+                                    <input type="checkbox" name="categories" value="<%= category.id %>" id="<%= category.name %>"
+                                        <%if (product.categories > 0 && product.categories.includes(category.id) ){%>
+                                        <%= checked="checked" %><%}%> >
+                                    <label for="<%= category.name %>"><%= category.name %> </label>
+                                </div>
+                            <%}%>                       
                         </div>
                     </section>
 
                     <div class="contenedor-fotoproducto">
                         <h4>Foto de producto</h4><br>
-                        <% if (product.id==='') {%>
+                        <% if (product.id==='' || product.id === undefined) {%>
                             <label for="fotoPerfil" class="fotoPerfil">
-                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i id="plus" class="fa fa-plus" aria-hidden="true"></i>
                             </label><br>
                             <%}else{%>
                             <label for="fotoPerfil" class="fotoPerfil2">
                                 <img src= "<%=product.image_url%>" class="fotoPerfil2">
                             </label><br>
                             <%}%>
-                        <input type="file" accept=".jpg, .png" id="fotoPerfil" name="image_url">
+                        <input type="file" accept=".jpg, .png" id="fotoPerfil" name="image_url" onchange="showUpload()">
                     </div>
                     <br>

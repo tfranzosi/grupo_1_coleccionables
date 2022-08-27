@@ -285,6 +285,14 @@ section.perfilusuario{
         justify-content: flex-start;
     
     } 
+    #contrasenia {
+        width: 90%;
+        
+    }
+    #contrasenia2 {
+        width: 75%;
+        
+    }
 }
 
 @media(min-width: 1200){

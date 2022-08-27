@@ -88,6 +88,7 @@ productController={
             for (let key in productoVacio) productoVacio[key] = '';
 
             const categories = await queries.Category.getAll();
+            console.log('Categorias',categories);
 
             res.render('products/productCreate', {product: productoVacio, categories});
 
@@ -101,12 +102,16 @@ productController={
     },
     // Guarda en la DB
 	store: async (req, res) => {
+        const categories = await queries.Category.getAll();
         //Realizo las validaciones
         const resultValidation = validationResult(req);
+        console.log(resultValidation.errors);
 		if (resultValidation.errors.length > 0) {
+            console.log(req.body);
 			return res.render('products/productCreate', {
 				errors: resultValidation.mapped(),
-				oldData: req.body
+				product: req.body,
+                categories
 			});
 		}
 

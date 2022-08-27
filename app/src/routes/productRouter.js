@@ -27,7 +27,7 @@ router.get('/', productController.showAll);
 
 //FORMULARIO PARA CREAR PRODUCTO
 router.get('/crear', userZones.loggedOnly, productController.create);
-router.post('/crear', userZones.loggedOnly, upload.single('image_url') , /*validations.product,*/ productController.store); 
+router.post('/crear', userZones.loggedOnly, upload.single('image_url') , validations.product, productController.store); 
 
 //DETALLE DE PRODUCTO
 router.get('/:id', products.visted, productController.detail);
