@@ -41,7 +41,7 @@ router.get('/cerrarSesion',userZones.loggedOnly, userController.logout);
 
 //VER CARRITO COMPRAS
 router.get('/carrito', userZones.loggedOnly, userController.shoppingCart);
-router.post('/carrito/:id', userController.saveCart);
+router.put('/carrito/:id', userController.saveCart);
 
 //DETALLE DE USUARIO
 router.get('/:id', userZones.adminOnly, userController.detail);
