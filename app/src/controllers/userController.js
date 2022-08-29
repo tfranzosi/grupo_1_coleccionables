@@ -59,10 +59,7 @@ userController={
     },
 
     viewOrders: async (req, res) => {
-        let orders = await db.Order.findAll({
-            include:
-            { association: 'status_orders'}
-        });
+        let orders = await queries.Order.showAll();
 
         res.render('users/userOrders',{ orders });
     },
