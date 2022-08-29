@@ -68,72 +68,49 @@ userController={
     },
 
     shoppingCart: async (req, res) => {
-
-        const products = await db.OrderDetail.findAll({
-            include:
-            [
-                {
-                    model: db.Order,
-                    where: {
-                        user_id: res.locals.userLogged.id
-                    },
-                    include: 
-                    [
-                        {
-                            association: 'status_orders',
-                            where: {
-                                name: 'Pendiente'
-                            }
-                        },
-                        { association: 'user_orders'}
-                    ],
-                    order: ['user_id','ASC']
-                },
-                { model: db.Product }
-            ],
-            order: [['order_id','ASC']]
-        })
-
+        const id = res.locals.userLogged.id;
+        const products = await queries.OrderDetail.getCartById(id);
+      
         let total = 0;
-
-
         products.map(detail => total += detail.quantity * detail.price);
 
         res.render('users/userShoppingCart',{ products, total });
     },
     
     saveCart: async (req,res) => {
-        let orderDetail = req.body;
-        let totalQuantity = 0;
+        const order_id = parseInt(req.params.id);
+        let orderDetail = JSON.parse(JSON.stringify(req.body));
+        let total_quantity = 0;
+
         for (let index in orderDetail.product_id){
-            totalQuantity += parseInt(orderDetail.quantity[index]);
-            db.OrderDetail.update(
-                {
-                    quantity: orderDetail.quantity[index]
-                },
-                {
-                    where: {
-                        order_id: parseInt(req.params.id),
-                        product_id: orderDetail.product_id[index]
-                    }
-                }
-            );
-        }
-        const [[{total}]] = await sequelize.query('SELECT SUM(price * quantity) AS total FROM orders_details WHERE order_id = ' + parseInt(req.params.id));
-
-console.log('\n\nCantidad de articulos',totalQuantity);
-
-        db.Order.update({
-                items_q: totalQuantity,
-                status_id: 3,                //Equivale a estado finalizado
-                ammount: total
-            },
-            {
-                where: {
-                    id: req.params.id
-                }
+            total_quantity += parseInt(orderDetail.quantity[index]);
+            
+            const productDetail = {
+                order_id: order_id,
+                product_quantity: orderDetail.quantity[index],
+                product_id: orderDetail.product_id[index],
             }
-        )
+
+            await queries.OrderDetail.update({
+                order_id: order_id,
+                product_quantity: orderDetail.quantity[index],
+                product_id: orderDetail.product_id[index],
+            });
+        }
+
+        const [[{total_price}]] = await queries.OrderDetail.getTotalPriceById(order_id);
+
+        const order = {
+            totalQuantity: total_quantity,
+            ammount: total_price,
+            id: order_id
+        }
+        await queries.Order.update({
+            totalQuantity: total_quantity,
+            ammount: total_price,
+            id: order_id
+        });
+
         res.send ('Terminaste la compra!!!');
     },
 

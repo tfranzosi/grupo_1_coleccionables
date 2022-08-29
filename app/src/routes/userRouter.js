@@ -31,7 +31,7 @@ router.post('/registro', upload.single('urlImagen'), userZones.invitedOnly, vali
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion', userZones.invitedOnly, userController.loginForm);
-router.put('/inicioSesion', userZones.invitedOnly, userController.login);
+router.post('/inicioSesion', userZones.invitedOnly, userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil', userZones.loggedOnly, userController.profile);
@@ -41,7 +41,7 @@ router.get('/cerrarSesion',userZones.loggedOnly, userController.logout);
 
 //VER CARRITO COMPRAS
 router.get('/carrito', userZones.loggedOnly, userController.shoppingCart);
-router.post('/carrito/:id', userController.saveCart);
+router.put('/carrito/:id', userController.saveCart);
 
 //DETALLE DE USUARIO
 router.get('/:id', userZones.adminOnly, userController.detail);
