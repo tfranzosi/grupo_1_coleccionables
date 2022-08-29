@@ -14,7 +14,7 @@
             <p><%= user.email %></p>
         </div>
         <div class="botones">
-            <form action="/usuarios/<%= user.id %>?_method=PUT" method="POST">
+            <form action="/usuarios/<%= user.id %>/editar" method="GET">
                 <button type="submit" class="ingresobutton">Editar</button>
             </form>
             <form action="/usuarios/<%= user.id %>?_method=DELETE" method="POST">

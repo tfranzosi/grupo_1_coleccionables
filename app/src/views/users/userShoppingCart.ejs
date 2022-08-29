@@ -21,19 +21,19 @@
             </nav>
         </div>
         <!-- Breadcrumb End -->
-            
+        <% if (products.length>0) {%> <form action="/usuarios/carrito/<%= products[0].order_id %>?_method=PUT" method="POST">
+        <% }else{ %>  <form action="/productos" method="GET"> <% } %> 
         <!-- Cart Details Start -->
-        <div class="product-details">
+            <div class="product-details">
 
             <!-- Cart Products Start -->
-            <form action="/usuarios/carrito/<%= products[0].order_id %>?_method=PUT " method="POST">
                 <div class="cart-products">
                     <div class="cart-products-title">
                         <h2>Productos añadidos</h2>
                     </div>
                     <div class="product-list-general">
 
-                        <% if (products.length > 1 ) { %> 
+                        <% if (products.length > 0 ) { %> 
                             <% for (let item  of products) {%>
                                 <div class="cart-products-item" id="item-<%=products.indexOf(item)%>">
                                     <input id="id" name="product_id" type="hidden" value="<%= item.product_id %>">
@@ -103,17 +103,17 @@
                     </div>
                     <div class="resume-buttons">
                         <div class="keep-buying">
-                            <a href="javascript:alert('Serás redireccionado al shop');"><button class="keep-buying-button">CONTINUAR COMPRANDO</button></a>
+                            <a href="/productos"><button type="button"class="keep-buying-button">CONTINUAR COMPRANDO</button></a>
                         </div>
                         <div class="go-to-checkout">
                             <button class="go-to-checkout-button" type="submit">FINALIZAR PEDIDO</button>
                         </div>
                     </div>
                 </div>
-            </form>
-            <!-- Cart Resume End -->
-        </div>
-        <!-- Cart Details End -->
+                <!-- Cart Resume End -->
+            </div>
+            <!-- Cart Details End -->
+        </form>
     </main>
 
     <%- include ('../partials/all_footer.ejs') %>

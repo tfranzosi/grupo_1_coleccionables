@@ -3,6 +3,7 @@ const quantities = document.querySelectorAll('#quantity');
 const prices = document.querySelectorAll('#price');
 const plusButtons = document.querySelectorAll('.plus-button');
 const minusButtons = document.querySelectorAll('.minus-button');
+const checkoutButton = document.querySelector('.go-to-checkout-button')
 const totalPriceLabel = document.querySelector('.total-price-number');
 const finalPriceLabel = document.querySelector('.final-price-number');
 
@@ -12,6 +13,12 @@ window.addEventListener('load', () => {
     localStorage.removeItem('products')
     let products = [];
     updateLocalStorage();
+
+    checkoutButton.addEventListener('click', (e) => {
+        const confirmation = confirm('Estás seguro que deseas finalizar tu compra?');
+        if (confirmation === true) alert('Gracias por comprar con nosotros! Te llevamos a que sigas viendo que tenemos');
+        else e.preventDefault();
+    })
 
     for (let index = 0 ; index < plusButtons.length ; index++) {
         plusButtons[index].addEventListener('click', () => {

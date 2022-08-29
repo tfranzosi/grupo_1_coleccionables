@@ -189,7 +189,21 @@ productController={
         product.best_seller = 0;
 
         return product
+    },
+
+    addToCart: async (req,res) => {
+        let currentUser = res.locals.userLogged;
+
+        //Me fijo si el usuario ya tiene una orden pendiente, sino creo una
+        let order = await queries.Order.find(currentUser.id)
+        if ( order === null ) order = await queries.Order.create(currentUser);
+
+        //Agrego el producto si no existe
+        await queries.OrderDetail.create(order.id,req.params.id)
+
+        res.redirect('/usuarios/carrito');
     }
+
 }
 
 module.exports = productController;

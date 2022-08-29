@@ -58,14 +58,16 @@
                             <a href="javascript:alert('Sumaste una unidad');"><button class="plus-button"> + </button></a>
                         </div>
                     </div>
-                    <div class="buttons">
-                        <div class="add-to-cart">
-                            <a href="javascript:alert('¡Tu producto se ha añadido al carrito!');"><button class="add-to-cart-button">AÑADIR AL CARRITO</button></a>
+                    <form action="/productos/<%= product.id %>/agregar" method="POST">
+                        <div class="buttons">
+                            <div class="add-to-cart">
+                                <button type="submit" class="add-to-cart-button">AÑADIR AL CARRITO</button></a>
+                            </div>
+                            <div class="buy-now">
+                                <button class="buy-now-button">COMPRAR AHORA</button></a>
+                            </div>
                         </div>
-                        <div class="buy-now">
-                            <a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');"><button class="buy-now-button">COMPRAR AHORA</button></a>
-                        </div>
-                    </div>
+                    </form> 
                     <div>
                         <p class="sku"> SKU: <%= product.sku %> </p>
                     </div>

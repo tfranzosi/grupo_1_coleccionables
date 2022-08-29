@@ -34,12 +34,13 @@ router.get('/:id', products.visted, productController.detail);
 
 //FORMULARIO EDITAR PRODUCTO
 router.get("/:id/editar", userZones.loggedOnly, productController.editForm)
-
-//ENVIO INFORMACION PARA EDITAR Y GRABAR EN DB
 router.put("/:id", userZones.loggedOnly, upload.single('image_url'), productController.edit)
 
 //ELIMINAR ARTICULO
 router.delete("/:id", userZones.loggedOnly, productController.delete)
+
+//FORMULARIO AGREGAR PRODUCTO A CARRITO
+router.post('/:id/agregar', userZones.loggedOnly, productController.addToCart)
 
 
 module.exports = router;

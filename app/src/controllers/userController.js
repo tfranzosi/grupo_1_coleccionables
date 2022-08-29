@@ -67,6 +67,8 @@ userController={
     shoppingCart: async (req, res) => {
         const id = res.locals.userLogged.id;
         const products = await queries.OrderDetail.getCartById(id);
+
+        console.log(products);
       
         let total = 0;
         products.map(detail => total += detail.quantity * detail.price);
@@ -81,12 +83,6 @@ userController={
 
         for (let index in orderDetail.product_id){
             total_quantity += parseInt(orderDetail.quantity[index]);
-            
-            const productDetail = {
-                order_id: order_id,
-                product_quantity: orderDetail.quantity[index],
-                product_id: orderDetail.product_id[index],
-            }
 
             await queries.OrderDetail.update({
                 order_id: order_id,
@@ -97,18 +93,13 @@ userController={
 
         const [[{total_price}]] = await queries.OrderDetail.getTotalPriceById(order_id);
 
-        const order = {
-            totalQuantity: total_quantity,
-            ammount: total_price,
-            id: order_id
-        }
         await queries.Order.update({
             totalQuantity: total_quantity,
             ammount: total_price,
             id: order_id
         });
 
-        res.send ('Terminaste la compra!!!');
+        res.redirect('/');
     },
 
 
