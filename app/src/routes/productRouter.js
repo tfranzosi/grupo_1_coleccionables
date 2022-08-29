@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
+const ShoppingCartController = require('../controllers/shoppingCartController');
 const multer = require('multer');
 const path = require('path');
 const userZones = require('../middlewares/userZones');
 const validations = require('../middlewares/validations');
 const products = require('../middlewares/products');
+const shoppingCartController = require('../controllers/shoppingCartController');
 
 
 //MULTER REQUIRE
@@ -30,7 +32,7 @@ router.get('/crear', userZones.loggedOnly, productController.create);
 router.post('/crear', userZones.loggedOnly, upload.single('image_url') , validations.product, productController.store); 
 
 //DETALLE DE PRODUCTO
-router.get('/:id', products.visted, productController.detail);
+router.get('/:id', products.vist, productController.detail);
 
 //FORMULARIO EDITAR PRODUCTO
 router.get("/:id/editar", userZones.loggedOnly, productController.editForm)
@@ -40,7 +42,7 @@ router.put("/:id", userZones.loggedOnly, upload.single('image_url'), productCont
 router.delete("/:id", userZones.loggedOnly, productController.delete)
 
 //FORMULARIO AGREGAR PRODUCTO A CARRITO
-router.post('/:id/agregar', userZones.loggedOnly, productController.addToCart)
+router.post('/:id/agregar', userZones.loggedOnly, shoppingCartController.addProduct)
 
 
 module.exports = router;

@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
+const shoppingCartController = require('../controllers/shoppingCartController');
+const products = require('../middlewares/products');
 const multer = require('multer');
 const path = require('path');
 const userZones = require('../middlewares/userZones');
 const { Router } = require('express');
-const validations = require('../middlewares/validations')
+const validations = require('../middlewares/validations');
 
 
 //MULTER REQUIRE
@@ -40,8 +42,11 @@ router.get('/perfil', userZones.loggedOnly, userController.profile);
 router.get('/cerrarSesion',userZones.loggedOnly, userController.logout);
 
 //VER CARRITO COMPRAS
-router.get('/carrito', userZones.loggedOnly, userController.shoppingCart);
-router.put('/carrito/:id', userController.saveCart);
+router.get('/carrito', userZones.loggedOnly, shoppingCartController.showPending);
+router.put('/carrito/:id', userZones.loggedOnly, products.sale, shoppingCartController.checkout);
+
+//VER TODAS LAS ORDENES DEL USUARIO
+router.get('/ordenes', userZones.loggedOnly, shoppingCartController.showByUserId)
 
 //DETALLE DE USUARIO
 router.get('/:id', userZones.adminOnly, userController.detail);

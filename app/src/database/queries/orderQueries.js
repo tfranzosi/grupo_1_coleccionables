@@ -4,8 +4,20 @@ const { Op } = require("sequelize");
 
 module.exports = {
     showAll: async () => await db.Order.findAll({
-        include:
-        { association: 'status_orders'}
+        include:[
+            { association: 'status_orders'},
+            { association: 'user_orders'}
+        ]
+    }),
+
+    search: async (userId) => await db.Order.findAll({
+        include:[
+            { association: 'status_orders'},
+            { association: 'user_orders'}
+        ],
+        where: {
+            user_id: userId
+        }
     }),
 
     find: async (userId) => await db.Order.findOne({

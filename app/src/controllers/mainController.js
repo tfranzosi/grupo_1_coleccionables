@@ -1,11 +1,8 @@
-const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
-
 const queries = require('../database/queries/index');
 
 
 mainController = {
+    //Pagina de inicio
     index: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
@@ -35,6 +32,7 @@ mainController = {
         }
     },
 
+    //Pagina de error
     error: (req, res) => {
         res.render('error', { error })
     }

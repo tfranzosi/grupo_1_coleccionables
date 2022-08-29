@@ -4,7 +4,7 @@
 <head>
     <%- include('../partials/all_head.ejs')%>
     <link rel="stylesheet" href="/css/productCart.css">
-    <title>GamePlay - Carrito</title>
+    <title>GamePlay - Ordenes</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <nav class="breadcrumb bg-light mb-30">
                 <a class="level-01" href="/">Inicio > </a>
                 <a class="level-02" href="/">Shop > </a>
-                <span class="active">Carrito</span>
+                <span class="active">Ordenes</span>
             </nav>
         </div>
         <!-- Breadcrumb End -->
@@ -35,9 +35,11 @@
 
                     <% for (let order of orders) { %> 
                         <div class="cart-products-item">
-                            <div class="cart-name-price-qty">
                                 <div class="product-name">
                                     <h3 class="name">Orden numero: <%= order.id %> </h3>
+                                </div>
+                                <div>
+                                    <p class="regular-price">Usuario: <%= order.user_orders.user %>
                                 </div>
                                 <div>
                                     <p class="regular-price">Estado: <%= order.status_orders.name %>
@@ -46,7 +48,6 @@
                                 <div class="cart-erase-button">
                                     <a href="javascript:alert('Tu producto será borrado del carrito, deseas continuar?');"><button class="erase-button">x</button></a>
                                 </div>
-                            </div>
                         </div>
                     <% } %>
 
@@ -55,47 +56,6 @@
             </div>
             <!-- Cart Products End -->
 
-            <!-- Cart Resume Start -->
-            <div class="cart-resume">
-                <div class="resume-title">
-                    <h2>Resumen</h2>
-                </div>
-                <div class="resume-pricing">
-                    <div class="total-price">
-                        <div class="total-price-label">
-                            <h4>Precio (x items)</h4>
-                        </div>
-                        <div class="total-price-number">
-                            <p>$30.000</p>
-                        </div>
-                    </div>
-                    <div class="transport-charges">
-                        <div class="transport-charges-label">
-                            <h4>Costo por envío</h4>
-                        </div>
-                        <div class="transport-charges-number">
-                            <p>$2.000</p>
-                        </div>
-                    </div>
-                    <div class="final-price">
-                        <div class="final-price-label">
-                            <h4>Precio Total</h4>
-                        </div>
-                        <div class="final-price-number">
-                            <p>$32.000</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-buttons">
-                    <div class="keep-buying">
-                        <a href="javascript:alert('Serás redireccionado al shop');"><button class="keep-buying-button">CONTINUAR COMPRANDO</button></a>
-                    </div>
-                    <div class="go-to-checkout">
-                        <a href="javascript:alert('¡Serás redireccionado al checkout para finalizar tu compra!');"><button class="go-to-checkout-button">FINALIZAR PEDIDO</button></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Cart Resume End -->
         </div>
         <!-- Cart Details End -->
     </main>

@@ -1,9 +1,5 @@
 const { validationResult } = require('express-validator');
 
-//Configuro DB a usar
-const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 const queries = require('../database/queries/index');
 
 
@@ -34,6 +30,7 @@ productController={
         }
     },
 
+    //Busqueda de productos
     search: async (req, res) => {
         try {
             //Hago los pedidos a la Base de Datos
@@ -88,8 +85,6 @@ productController={
             for (let key in productoVacio) productoVacio[key] = '';
 
             const categories = await queries.Category.getAll();
-            console.log('Categorias',categories);
-
             res.render('products/productCreate', {product: productoVacio, categories});
 
 
@@ -105,9 +100,8 @@ productController={
         const categories = await queries.Category.getAll();
         //Realizo las validaciones
         const resultValidation = validationResult(req);
-        console.log(resultValidation.errors);
+        (resultValidation.errors);
 		if (resultValidation.errors.length > 0) {
-            console.log(req.body);
 			return res.render('products/productCreate', {
 				errors: resultValidation.mapped(),
 				product: req.body,
@@ -189,21 +183,7 @@ productController={
         product.best_seller = 0;
 
         return product
-    },
-
-    addToCart: async (req,res) => {
-        let currentUser = res.locals.userLogged;
-
-        //Me fijo si el usuario ya tiene una orden pendiente, sino creo una
-        let order = await queries.Order.find(currentUser.id)
-        if ( order === null ) order = await queries.Order.create(currentUser);
-
-        //Agrego el producto si no existe
-        await queries.OrderDetail.create(order.id,req.params.id)
-
-        res.redirect('/usuarios/carrito');
     }
-
 }
 
 module.exports = productController;

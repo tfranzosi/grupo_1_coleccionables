@@ -2,10 +2,6 @@ const bcrypt = require('bcryptjs');
 
 const { validationResult } = require('express-validator');
 
-const db = require('../database/models');
-
-const sequelize = db.sequelize;
-
 const queries = require('../database/queries/index');
 
 
@@ -57,51 +53,6 @@ userController={
         req.session.destroy();
         res.redirect('/');
     },
-
-    viewOrders: async (req, res) => {
-        let orders = await queries.Order.showAll();
-
-        res.render('users/userOrders',{ orders });
-    },
-
-    shoppingCart: async (req, res) => {
-        const id = res.locals.userLogged.id;
-        const products = await queries.OrderDetail.getCartById(id);
-
-        console.log(products);
-      
-        let total = 0;
-        products.map(detail => total += detail.quantity * detail.price);
-
-        res.render('users/userShoppingCart',{ products, total });
-    },
-    
-    saveCart: async (req,res) => {
-        const order_id = parseInt(req.params.id);
-        let orderDetail = JSON.parse(JSON.stringify(req.body));
-        let total_quantity = 0;
-
-        for (let index in orderDetail.product_id){
-            total_quantity += parseInt(orderDetail.quantity[index]);
-
-            await queries.OrderDetail.update({
-                order_id: order_id,
-                product_quantity: orderDetail.quantity[index],
-                product_id: orderDetail.product_id[index],
-            });
-        }
-
-        const [[{total_price}]] = await queries.OrderDetail.getTotalPriceById(order_id);
-
-        await queries.Order.update({
-            totalQuantity: total_quantity,
-            ammount: total_price,
-            id: order_id
-        });
-
-        res.redirect('/');
-    },
-
 
     registerForm: async (req, res) => {
         let user = null;
@@ -188,12 +139,9 @@ userController={
         try{
             let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file)
             user.id = req.params.id;
-            console.log(user)
             await queries.UserInterest.delete(user.id);
             await queries.UserInterest.create(user);
             await queries.User.update(user);
-            console.log(req.body)
-            console.log(req.session.usuario)
             
             if(user.user != req.session.usuario){
                 res.clearCookie('usuario');
@@ -209,7 +157,6 @@ userController={
     delete: async (req, res) => {
         try{
             await queries.User.delete(req.params.id);
-            console.log(`\n\nID session: ${res.locals.userLogged.id}  -  ID params: ${req.params.id}`);
             if ( res.locals.userLogged.id === parseInt(req.params.id) ){
                 res.clearCookie("usuario");
                 res.locals.isLogged = false;
@@ -227,7 +174,6 @@ userController={
     /* METODOS ACCESORIOS*/
     validateUser: (user, imageFile) => {
         //Cambio la imagen a por defecto
-        console.log('\n\nimagen usuario ----> ',user.image_url);
         if(user.image_url === undefined ) user.image_url = '/images/users/default.jpeg';
         if (imageFile !== undefined) user.image_url = '/images/users/' + imageFile.filename;
 
