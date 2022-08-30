@@ -130,3 +130,21 @@ Orden de prioridades y coordinación de las tareas entre los miembros del equipo
 - Repartir las tareas de manera anticipada y con un cronograma estable.
 - Compartir los accesos de heroku para eventuales contingencias.
 >>>>>>> 52a75a0643bad6d8eeb2fe6f17e685d81faad308
+
+## Retrospectiva Sprint 6 - 29/08/2022
+
+- ¿Qué problemas tuvimos?
+- Sintaxis sequelize.
+- Elementos mezclados en diferentes idiomas.
+
+
+¿Qué hicimos bien?
+- Reorganizar la estructura del proyecto (se separó toda la parte de base de datos en queries, la parte de controladores por jerarquías).
+- Coordinación de las tareas entre los miembros del equipo para llegar el objetivo.
+- Nos pudimos adaptar a realizar tareas con código de otro compañero.
+- Más funcionalidades  que las requeridas obligatorio y opcional.
+- Mayor frecuencia de reuniones.
+
+
+¿Qué queremos mejorar y cómo lo vamos a hacer?
+- Repartir las tareas de manera anticipada y con un cronograma estable.

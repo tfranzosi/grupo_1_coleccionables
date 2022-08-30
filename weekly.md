@@ -222,3 +222,26 @@ MV
 **Qué hizo esta semana:** Implementación de los métodos de creación, edición y borrado de productos en conjunto con MV.
 **Si se encontró con algún impedimento:** No.
 **Qué va a hacer la semana entrante:**  Armado de métodos de creación y edición de usuarios en conjunto con MV.
+
+## Weekly S07W01 - 29/08/2022
+
+SC
+**Qué hizo esta semana:** Revisión del CSS de forms de creación y edición de productos y usuarios en conjunto con PG.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Validaciones del back end en conjunto con PG.
+
+TF
+**Qué hizo esta semana:** Armado de métodos de creación y edición de usuarios en conjunto con MV. Armado de Modelos, relaciones y métodos para agregar productos al carrito, actualizar el carrito y órdenes junto con MV.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Validaciones del front end en conjunto con MV.
+
+PG
+**Qué hizo esta semana:** Revisión del CSS de forms de creación y edición de productos y usuarios en conjunto con PG. Actualización de weekly.md. Actualización del CSS y vistas de formulario de producto.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Validaciones del back end en conjunto con SC.
+
+
+MV
+**Qué hizo esta semana:** Armado de métodos de creación y edición de usuarios en conjunto con TF. Armado de Modelos, relaciones y métodos para agregar productos al carrito, actualizar el carrito y órdenes junto con TF.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:**  Validaciones del back end en conjunto con MV.
