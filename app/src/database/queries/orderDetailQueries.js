@@ -41,16 +41,46 @@ module.exports = {
 
         create: async (orderId, productId) =>{
             let product = await queries.Product.find(productId);
-            if (product.discount > 0) product.regular_price *= 1 + (product.discount / 100);
+            if (product.discount > 0) product.regular_price *= 1 - (parseInt(product.discount) / 100);
 
             let isProductAdded = await queries.OrderDetail.findMatch(orderId, productId);
 
+            //Agrego el produco en la tabla intermedia orders_details
             if( isProductAdded === null) await db.OrderDetail.create({
                 order_id: orderId,
                 product_id: productId,
                 price: product.regular_price,
                 quantity: 1
             })
+
+            //Me fijo la cantidad de items y el precio de la orden
+            let {items_q,ammount} = await db.Order.findOne({
+                where: {
+                    id: orderId
+                }
+            })
+
+            items_q += 1;
+
+            console.log('ammount1',ammount,' - regularprice: ',product.regular_price);
+
+            ammount = parseFloat(ammount) + product.regular_price;
+            console.log('ammount2',ammount);
+
+
+            //Agrego el producto y precio en la tabla orders
+            await db.Order.update(
+                {
+                    items_q,
+                    ammount
+                },
+                {
+                    where:
+                    {
+                        id: orderId
+                    }
+                }
+            )
         },
 
         update: async (productDetail) => await db.OrderDetail.update(
