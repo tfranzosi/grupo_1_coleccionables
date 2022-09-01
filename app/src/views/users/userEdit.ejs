@@ -61,7 +61,7 @@
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="nombre" class="datos">Nombre</label>
-                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.first_name : user.first_name %>">
+                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= user ? user.first_name : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.first_name) { %>
                                     <%= errors.first_name.msg %>
                                 <% } %> </div>
@@ -71,7 +71,7 @@
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="apellido" class="datos">Apellido</label>
-                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.last_name : user.last_name %>">
+                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= user ? user.last_name : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.last_name) { %>
                                     <%= errors.last_name.msg %>
                                 <% } %> </div>
@@ -82,7 +82,7 @@
                     <div class="colform">
                         <div class="categoria">
                             <label for="usuario" class="datos">Nombre de usuario</label>
-                            <input type="text" name="user" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.user : user.user %>" >
+                            <input type="text" name="user" id="user" placeholder=" Usuario" value="<%= user ? user.user : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.user) { %>
                                 <%= errors.user.msg %>
                             <% } %> </div>
@@ -98,12 +98,12 @@
                             </div>
                             <div class="telefonos">
                                 <span>
-                                    <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : user.phone_country %>"></span>
-                                    <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
+                                    <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= user ? user.phone_country : "" %>"></span>
+                                    <div class="danger">  <% if (locals.errors && errors.phone_country) { %>>
                                         <%= errors.phone_country.msg %>
                                     <% } %> </div>
                                 <span> 
-                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : user.phone_number %>">
+                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= user ? user.phone_number : "" %>">
                                 </span>
                                 <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
                                     <%= errors.phone_number.msg %>
@@ -116,7 +116,7 @@
                     <div class="colform">   
                         <div class="categoria">
                             <label for="mail" class="datos">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : user.email %>">
+                            <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= user ? user.email : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.email) { %>
                                 <%= errors.email.msg %>
                             <% } %> </div>
@@ -125,7 +125,7 @@
                     <div class="colform">                     
                         <div class="categoria">
                             <label for="nacimiento" class="datos">Fecha de nacimiento</label>
-                            <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.birth_date : user.birth_date %>">
+                            <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= user ? user.birth_date : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.birth_date) { %>
                                 <%= errors.birth_date.msg %>
                             <% } %> </div>
@@ -136,7 +136,7 @@
                     <div class="colform">      
                         <div class="categoria">
                             <label for="domicilio" class="datos">Domicilio</label>
-                            <input type="text" name="address" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.address : user.address %>">
+                            <input type="text" name="address" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= user ? user.address : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.address) { %>
                                 <%= errors.address.msg %>
                             <% } %> </div>
@@ -147,23 +147,23 @@
                             <div class="generos">
                                 <label for="varon">Varon</label>
                                 <input type="radio" name="gender" value="1" id="varon"
-                                <% if (user.gender===1){ %> <%= checked="checked" %> <%}%>>
+                                <% if (user.gender==1){ %> <%= checked="checked" %> <%}%>>
                             </div>
                             <div class="generos">
                                 <label for="mujer">Mujer</label>
                                 <input type="radio" name="gender" value="2" id="mujer"
-                                <% if (user.gender===2){ %> <%= checked="checked" %> <%}%>>
+                                <% if (user.gender==2){ %> <%= checked="checked" %> <%}%>>
                             </div>
                             <div class="generos">
                                 <label for="otro">Otro</label>
                                 <input type="radio" name="gender" value="3" id="otro"
-                                <% if (user.gender===3){ %> <%= checked="checked" %> <%}%>>
+                                <% if (user.gender==3){ %> <%= checked="checked" %> <%}%>>
                             </div>
                             <br>
                             <br>
                             <br>
                             <div class="danger">  <% if (locals.errors && errors.gender) { %>
-                                <%= errors.genero.msg %>
+                                <%= errors.gender.msg %>
                             <% } %> </div>
                         </div>
                     </div>
@@ -173,9 +173,9 @@
                             <h4>Intereses</h4>
                             <% for (let interest of interests){%>
                             <div>
-                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.id%>"
+                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="<%=interest.name%>"
                                 <%if (user.interests.includes(interest.id) ){%><%= checked="checked" %><%}%> >
-                                <label for="<%=interest.id%>"><%=interest.name%></label>
+                                <label for="<%=interest.name%>"><%=interest.name%></label>
                             </div>
                             <%}%>
                         </div>

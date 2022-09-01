@@ -144,6 +144,10 @@ userController={
                 console.log('error: ',e);
                 res.send(e); 
             });
+            console.log("--------INTERESTS")
+            console.log(interests)
+            console.log("--------REQ.BODY")
+            console.log(req.body)
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
             return res.render('users/userEdit', {
