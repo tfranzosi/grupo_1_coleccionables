@@ -53,11 +53,17 @@
                 <form action="/usuarios/inicioSesion" method="POST">
                     <div>
                         <label for="usuario" class="feedback"></label>
-                        <input type="text" class="text" name="user" placeholder="Nombre de usuario" required>
+                        <input type="text" class="text" name="user" placeholder="Nombre de usuario" >
+                        <div class="danger">  <% if (locals.errors && errors.user) { %>
+                            <%= errors.user.msg %>
+                        <% } %> </div>
                     </div>
                     <div>
                         <label for="contrasenia" class="feedback"></label>
-                        <input type="password" class="text" name="password" placeholder="Contraseña" required>
+                        <input type="password" class="text" name="password" placeholder="Contraseña" >
+                        <div class="danger">  <% if (locals.errors && errors.password) { %>
+                            <%= errors.password.msg %>
+                        <% } %> </div>
                     </div>
                     <a href="#" class="olvide">Olvidé mi contraseña</a>
                     <div>

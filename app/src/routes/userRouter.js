@@ -33,7 +33,7 @@ router.post('/registro', upload.single('urlImagen'), userZones.invitedOnly, vali
 
 //FORMULARIO DE LOGIN USUARIO
 router.get('/inicioSesion', userZones.invitedOnly, userController.loginForm);
-router.post('/inicioSesion', userZones.invitedOnly, userController.login);
+router.post('/inicioSesion', userZones.invitedOnly, validations.login, userController.login);
 
 //PERFIL USUARIO
 router.get('/perfil', userZones.loggedOnly, userController.profile);
@@ -53,7 +53,7 @@ router.get('/:id', userZones.adminOnly, userController.detail);
 
 //EDICION DE USUARIO
 router.get("/:id/editar", userZones.loggedOnly, userController.editForm);
-router.put("/:id", userZones.loggedOnly, upload.single('image_url'), userController.edit);
+router.put("/:id", userZones.loggedOnly, upload.single('image_url'), validations.register, userController.edit);
 
 //BORRAR USUARIO
 router.delete('/:id', userZones.loggedOnly, userController.delete);

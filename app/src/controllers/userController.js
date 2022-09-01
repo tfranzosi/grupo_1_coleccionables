@@ -31,6 +31,17 @@ userController={
     },
 
     login: async (req, res) => {
+        
+        //Validación desde el middleware
+        const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/userLogin', {
+				errors: resultValidation.mapped(),
+                usuario: req.session.usuario,
+            errorInicioSesion: false
+			});
+		}
+
         // Busco el usuario por usuario o email
         const user = await queries.User.findByUser(req.body.user);
         if (user !== null && bcrypt.compareSync(req.body.password,user.password)){
@@ -128,11 +139,17 @@ userController={
     },
 
     edit: async (req,res) => {
+        const interests = await queries.Interest.getAll()
+            .catch(function(e){
+                console.log('error: ',e);
+                res.send(e); 
+            });
         const resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0) {
             return res.render('users/userEdit', {
                 errors: resultValidation.mapped(),
-				oldData: req.body
+				user: req.body,
+                interests
 			});
 		}
         

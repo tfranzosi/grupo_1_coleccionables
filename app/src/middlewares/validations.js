@@ -67,22 +67,23 @@ module.exports = {
         */
     ],
     login: [
-        body('user').notEmpty().withMessage('Tenes que escribir un usuario').bail()
-        .custom(user => {
-            let userDB = queries.User.findByUser(user);
-            if (userDB == null) {
-                throw new Error('El usuario o email no se encuentra en la base de datos');
-            }
-            return true
-        }),
-        body('password').notEmpty().withMessage('Tenes que escribir una contraseña').bail()
-        .custom(password => {
-            let passwordDB = queries.User.findByPass(password);
-            if (passwordDB == null) {
-                throw new Error('La contraseña no se encuentra en la base de datos');
-            }
-            return true
-        })
+        body('user').notEmpty().withMessage('Tenes que escribir un usuario o email'),
+        // .bail()
+        // .custom(user => {
+        //     let userDB = queries.User.findByUser(user);
+        //     if (userDB == null) {
+        //         throw new Error('El usuario o email no se encuentra en la base de datos');
+        //     }
+        //     return true
+        // }),
+        body('password').notEmpty().withMessage('Tenes que escribir una contraseña')
+        // .custom(password => {
+        //     let passwordDB = queries.User.findByPass(password);
+        //     if (passwordDB == null) {
+        //         throw new Error('La contraseña no se encuentra en la base de datos');
+        //     }
+        //     return true
+        // })
 
     ]
 }
