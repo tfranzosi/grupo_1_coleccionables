@@ -4,7 +4,7 @@
 <head>
     <%- include('../partials/all_head.ejs')%>
     <link rel="stylesheet" href="/css/register.css">
-    
+    <script src = "/js/userValidations.js"> </script>
     <title>GamePlay - Registro</title>
 </head>
 
@@ -64,7 +64,7 @@
                                 <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.first_name) { %>
                                     <%= errors.first_name.msg %>
-                                <% } %> </div>
+                                <% } %> </div> <small class="invalid" id="errorName" ></small>
                             </div>
                             
                         </div>
@@ -74,7 +74,7 @@
                                 <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.last_name) { %>
                                     <%= errors.last_name.msg %>
-                                <% } %> </div>
+                                <% } %> </div> <small class="invalid" id="errorLast_name" ></small>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                             <input type="text" name="user" id="user" placeholder=" Usuario" value="<%= locals.oldData ? oldData.user : "" %>" >
                             <div class="danger">  <% if (locals.errors && errors.user) { %>
                                 <%= errors.user.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorUser" ></small>
                         </div>
                     </div>
                     <div class="colform">
@@ -101,13 +101,13 @@
                                     <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : "" %>"></span>
                                     <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
                                         <%= errors.phone_country.msg %>
-                                    <% } %> </div>
+                                    <% } %> </div> <small class="invalid" id="errorPhone_country" ></small>
                                 <span> 
                                     <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : "" %>">
                                 </span>
                                 <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
                                     <%= errors.phone_number.msg %>
-                                <% } %> </div>
+                                <% } %> </div> <small class="invalid" id="errorPhone_number" ></small>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             <input type="email" name="email" id="email" placeholder=" juan@gameplay.com" value="<%= locals.oldData ? oldData.email : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.email) { %>
                                 <%= errors.email.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorEmail" ></small>
                         </div><br>
                     </div>
                     <div class="colform">                     
@@ -128,7 +128,7 @@
                             <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.birth_date : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.birth_date) { %>
                                 <%= errors.birth_date.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorBirth_date" ></small>
                         </div><br>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                             <input type="text" name="address" id="domicilio" placeholder=" Av. Gameplay 150" value="<%= locals.oldData ? oldData.address : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.address) { %>
                                 <%= errors.address.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorAddress" ></small>
                         </div><br>
                     </div>
                     <div class="colform"> 
@@ -163,7 +163,7 @@
                                 <%= errors.gender.msg %>
                             <% } %> </div>
                         </div>
-                    </div>
+                    </div> <small class="invalid" id="errorGender" ></small>
                 </div>                            <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
                         <div class="intereses">
@@ -177,7 +177,7 @@
                         </div>
                         <div class="danger">  <% if (locals.errors && errors.interests) { %>
                             <%= errors.interests.msg %>
-                        <% } %> </div>
+                        <% } %> </div> <small class="invalid" id="errorInterests" ></small>
                     </section>
                 <div class="rowform">
                     <div class="colform">
@@ -186,7 +186,7 @@
                             <input type="password" name="password" id="contrasenia" placeholder=" ********">
                             <div class="danger">  <% if (locals.errors && errors.password) { %>
                                 <%= errors.password.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorPassword" ></small>
                         </div><br>
                     </div>
                     <div class="colform">
@@ -195,7 +195,7 @@
                             <input type="password" name="password2" id="contrasenia2" placeholder=" ********">
                             <div class="danger">  <% if (locals.errors && errors.password2) { %>
                                 <%= errors.password2.msg %>
-                            <% } %> </div><br>
+                            <% } %> </div> <small class="invalid" id="errorPassword2" ></small> <br>
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="danger">  <% if (locals.errors && errors.conditions) { %>
                         <%= errors.conditions.msg %>
-                    <% } %> </div><br><br>
+                    <% } %> </div> <small class="invalid" id="errorConditions" ></small> <br><br>
                 </div>
                     <div>
                         <button type="submit" class="registerbutton">REGISTRATE</button>

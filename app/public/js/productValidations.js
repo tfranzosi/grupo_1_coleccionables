@@ -102,22 +102,6 @@ window.addEventListener('load', () => {
         }
     })
 
-    inputLongDescription.addEventListener("blur",()=>{
-
-        if (inputLongDescription.value == ""){
-            errores.push("La descripción no puede estar vacía")
-            errorLongDescription.classList.add("danger")
-            errorLongDescription.innerHTML="La descripción no puede estar vacía"
-        }else{
-            if (inputLongDescription.value.length < 20){
-                errores.push("La descripción no puede tener menos de 20 caracteres")
-                errorLongDescription.classList.add("danger")
-                errorLongDescription.innerHTML="La descripción no puede tener menos de 20 caracteres"
-            }else{
-                errorLongDescription.style.display="none"
-            }
-        }
-    })
 
     inputRegularPrice.addEventListener("blur",()=>{
 
