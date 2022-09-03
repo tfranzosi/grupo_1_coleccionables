@@ -23,9 +23,9 @@ window.addEventListener('load', () => {
     const errorGender= document.querySelector("#errorGender")
     const inputInterests= document.querySelector("#interests")
     const errorInterests= document.querySelector("#errorInterests")
-    const inputPassword= document.querySelector("#password")
+    const inputPassword= document.querySelector("#contrasenia")
     const errorPassword= document.querySelector("#errorPassword")
-    const inputPassword2= document.querySelector("#password2")
+    const inputPassword2= document.querySelector("#contrasenia2")
     const errorPassword2= document.querySelector("#errorPassword2")
     const inputConditions= document.querySelector("#conditions")
     const errorConditions= document.querySelector("#errorConditions")
@@ -93,14 +93,14 @@ window.addEventListener('load', () => {
     inputPhone_country.addEventListener("blur",()=>{
 
         if (inputPhone_country.value == ""){
-            errores.push("El codigo de pais no puede estar vacío")
+            errores.push("El código de país no puede estar vacío")
             errorPhone_country.classList.add("danger")
-            errorPhone_country.innerHTML="El codigo de pais no puede estar vacío"
+            errorPhone_country.innerHTML="El código de país no puede estar vacío"
         }else{
             if (parseInt(inputPhone_country.value) < 0){
-                errores.push("El codigo de pais no puede ser negativo")
+                errores.push("El código de país no puede ser negativo")
                 errorPhone_country.classList.add("danger")
-                errorPhone_country.innerHTML="El codigo de pais no puede ser negativo"
+                errorPhone_country.innerHTML="El código de país no puede ser negativo"
             }else{
                 errorPhone_country.style.display="none"
             }
@@ -110,14 +110,14 @@ window.addEventListener('load', () => {
     inputPhone_number.addEventListener("blur",()=>{
 
         if (inputPhone_number.value == ""){
-            errores.push("El numero de telefono no puede estar vacío")
+            errores.push("El número de teléfono no puede estar vacío")
             errorPhone_number.classList.add("danger")
-            errorPhone_number.innerHTML="El numero de telefono no puede estar vacío"
+            errorPhone_number.innerHTML="El número de teléfono no puede estar vacío"
         }else{
             if (parseInt(inputPhone_number.value) < 0){
-                errores.push("El numero de telefono no puede ser negativo")
+                errores.push("El número de teléfono no puede ser negativo")
                 errorPhone_number.classList.add("danger")
-                errorPhone_number.innerHTML="El numero de telefono no puede ser negativo"
+                errorPhone_number.innerHTML="El número de teléfono no puede ser negativo"
             }else{
                 errorPhone_number.style.display="none"
             }
@@ -198,36 +198,36 @@ window.addEventListener('load', () => {
             errorPassword.classList.add("danger")
             errorPassword.innerHTML="Debes escribir una contraseña"
         }
-
-        if (inputPassword.length < 8){ 
-            errores.push("Debe contener al menos 8 caracteres")
-            errorPassword.classList.add("danger")
-            errorPassword.innerHTML="Debe contener al menos 8 caracteres"
-        }
+        // else if (inputPassword.length < 8){ 
+        //     errores.push("Debe contener al menos 8 caracteres")
+        //     errorPassword.classList.add("danger")
+        //     errorPassword.innerHTML="Debe contener al menos 8 caracteres"
+        // } 
         
-        if (!(inputPassword.match(/[A-z]/)) ){ 
-            errores.push("Debe contener letras minúsculas")
-            errorPassword.classList.add("danger")
-            errorPassword.innerHTML="Debe contener letras minúsculas"
-        }
+        // else if (!(inputPassword.match(/[A-z]/)) ){ 
+        //     errores.push("Debe contener letras minúsculas")
+        //     errorPassword.classList.add("danger")
+        //     errorPassword.innerHTML="Debe contener letras minúsculas"
+        // }
 
-        if (!(inputPassword.match(/[A-Z]/)) ){ 
-            errores.push("Debe contener letras mayusculas")
-            errorPassword.classList.add("danger")
-            errorPassword.innerHTML="Debe contener letras mayusculas"
-        }
+        // else if (!(inputPassword.match(/[A-Z]/)) ){ 
+        //     errores.push("Debe contener letras mayusculas")
+        //     errorPassword.classList.add("danger")
+        //     errorPassword.innerHTML="Debe contener letras mayusculas"
+        // }
         
-        if (!(inputPassword.match(/\d/)) ){ 
-            errores.push("Debe contener al menos un numero")
-            errorPassword.classList.add("danger")
-            errorPassword.innerHTML="Debe contener al menos un numero"
-        } else {
+        // else if (!(inputPassword.match(/\d/)) ){ 
+        //     errores.push("Debe contener al menos un numero")
+        //     errorPassword.classList.add("danger")
+        //     errorPassword.innerHTML="Debe contener al menos un numero"
+        // } 
+        else {
             errorPassword.style.display="none"
         }
             
         })
 
-    inputPassword2.addEventListener("blur",()=>{
+    inputPassword2.addEventListener("change",()=>{
 
             if (inputPassword2.value == ""){
                 errores.push("Debes escribir una contraseña")
@@ -235,7 +235,7 @@ window.addEventListener('load', () => {
                 errorPassword2.innerHTML="Debes escribir una contraseña"
             }
             
-            if (inputPassword.value !== inputPassword2.value){
+            else if (inputPassword.value !== inputPassword2.value){
                 errores.push("Las contraseñas deben coincidir")
                 errorPassword2.classList.add("danger")
                 errorPassword2.innerHTML="Las contraseñas deben coincidir"

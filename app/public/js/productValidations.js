@@ -22,8 +22,10 @@ window.addEventListener('load', () => {
     const inputIs_physical= document.querySelector("#esFisico")
     const inputIs_digital= document.querySelector("#esDigital")
     const errorIs_physical= document.querySelector("#errorIs_physical")
-    const inputCategories= document.querySelector("#category.name")
+    const inputCategories= document.querySelector(".categories")
     const errorCategories= document.querySelector("#errorCategories")
+    const inputImage_url= document.querySelector("#fotoPerfil")
+    const errorImage_url= document.querySelector("#errorImage_url")
 
 
 
@@ -41,10 +43,10 @@ window.addEventListener('load', () => {
             errorSku.classList.add("danger")
             errorSku.innerHTML="El SKU no puede estar vacío"
         }else{
-            if (inputSku.value.length < 8){
-                errores.push("El SKU no puede tener menos de 8 caracteres")
+            if (inputSku.value.length < 6){
+                errores.push("El SKU no puede tener menos de 6 caracteres")
                 errorSku.classList.add("danger")
-                errorSku.innerHTML="El SKU no puede tener menos de 8 caracteres"
+                errorSku.innerHTML="El SKU no puede tener menos de 6 caracteres"
             }else{
                 errorSku.style.display="none"
             }
@@ -152,6 +154,30 @@ window.addEventListener('load', () => {
             errorTags.style.display="none"
             }
     })
+
+    //Para validar checkboxes con el evento submit
+    var checkBoxes = form.querySelectorAll('input[type="checkbox"]'); // get all the check box
+    // document.getElementById('submit').addEventListener('click', getData); //add a click event to the save button
+    inputImage_url.addEventListener('click', getData); //add a click event to the save button
+
+    let errorCat = true;
+
+    function getData() { // this function will get called when the save button is clicked
+        checkBoxes.forEach(item => { // loop all the checkbox item
+            if (item.checked) {  //if the check box is checked
+                errorCat = false;
+            }
+        });
+        
+        if (errorCat) {
+            errores.push("Debes seleccionar al menos una categoría")
+            errorCategories.classList.add("danger")
+            errorCategories.innerHTML="Debes seleccionar al menos una categoría"
+        }else{
+            errorCategories.style.display="none"
+            }
+    }
+
 
     //PENDIENTES
     //VALIDAR CATEGORIAS ("Debes seleccionar al menos una categoría")
