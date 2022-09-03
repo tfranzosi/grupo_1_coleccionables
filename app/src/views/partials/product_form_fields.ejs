@@ -7,7 +7,7 @@
                             value="<%= locals.oldData ? oldData.sku : product.sku%>" >
                             <div class="danger"> <% if (locals.errors && errors.sku) { %>
                                 <%= errors.sku.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorSku" ></small>
                         </div>
                     </div>
                     <div class="colform">
@@ -17,7 +17,7 @@
                             value="<%=product.product_name%>" >
                             <div class="danger"> <% if (locals.errors && errors.product_name) { %>
                                 <%= errors.product_name.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorTitle" ></small>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                             <textarea type="textarea" name="short_description" id="descripcionCorta" ><%=product.short_description%></textarea>
                             <div class="danger"> <% if (locals.errors && errors.short_description) { %>
                                 <%= errors.short_description.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorShortDescription" ></small>
                         </div>
                     </div>
                     <div class="colform">
@@ -37,7 +37,7 @@
                             <textarea name="long_description" id="descripcionLarga" ><%=product.long_description%></textarea>
                             <div class="danger"> <% if (locals.errors && errors.long_description) { %>
                                 <%= errors.long_description.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorLongDescription" ></small>
                         </div>
                     </div>    
                 </div>
@@ -49,7 +49,7 @@
                             value="<%=product.regular_price%>" >
                             <div class="danger"> <% if (locals.errors && errors.regular_price) { %>
                                 <%= errors.regular_price.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorRegularPrice" ></small>
                         </div>
                     </div>
                     <div class="colform">
@@ -59,7 +59,7 @@
                             value="<%=product.discount%>">
                             <div class="danger"> <% if (locals.errors && errors.discount) { %>
                                 <%= errors.discount.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorDiscount" ></small>
                         </div>
                     </div>    
                 </div>
@@ -71,7 +71,7 @@
                             value="<%=product.fee_q%>">
                             <div class="danger"> <% if (locals.errors && errors.fee_q) { %>
                                 <%= errors.fee_q.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorFee_q" ></small>
                         </div>
                     </div>
                     <div class="colform"> 
@@ -81,7 +81,7 @@
                             value="<%=product.tags%>">
                             <div class="danger"> <% if (locals.errors && errors.tags) { %>
                                 <%= errors.tags.msg %>
-                            <% } %> </div>
+                            <% } %> </div> <small class="invalid" id="errorTags" ></small>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <label for="esDigital">Digital</label>
                         <div class="danger"> <% if (locals.errors && errors.is_physical) { %>
                             <%= errors.is_physical.msg %>
-                        <% } %> </div>
+                        <% } %> </div> <small class="invalid" id="errorIs_physical" ></small>
                     </div>
                 </div>
                                             <!-- Div abajo de los datos -->
@@ -113,7 +113,7 @@
                                         <%if (product.categories > 0 && product.categories.includes(category.id) ){%>
                                         <%= checked="checked" %><%}%> >
                                     <label for="<%= category.name %>"><%= category.name %> </label>
-                                </div>
+                                </div> <small class="invalid" id="errorCategories" ></small>
                             <%}%>                       
                         </div>
                     </section>
@@ -130,5 +130,5 @@
                             </label><br>
                             <%}%>
                         <input type="file" accept=".jpg, .png" id="fotoPerfil" name="image_url" onchange="showUpload()">
-                    </div>
+                    </div> <small class="invalid" id="errorImage_url" ></small>
                     <br>
