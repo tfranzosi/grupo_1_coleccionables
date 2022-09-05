@@ -245,3 +245,26 @@ MV
 **Qué hizo esta semana:** Armado de métodos de creación y edición de usuarios en conjunto con TF. Armado de Modelos, relaciones y métodos para agregar productos al carrito, actualizar el carrito y órdenes junto con TF.
 **Si se encontró con algún impedimento:** No.
 **Qué va a hacer la semana entrante:**  Validaciones del back end en conjunto con MV.
+
+## Weekly S07W02 - 05/09/2022
+
+SC
+**Qué hizo esta semana:** Validaciones del back end en conjunto con PG.
+**Si se encontró con algún impedimento:** Algunos campos de tipo multiple checkbox y radio para validaciones del front end.
+**Qué va a hacer la semana entrante:**  Investigar para cerrar validaciones del front end en conjunto con PG.
+
+TF
+**Qué hizo esta semana:** Validaciones del front end en conjunto con MV. Manejo de eventos en el front con alertas de ejecución en botones en distintas vistas.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
+
+PG
+**Qué hizo esta semana:** Validaciones del back end en conjunto con SC.
+**Si se encontró con algún impedimento:** Algunos campos de tipo multiple checkbox y radio para validaciones del front end.
+**Qué va a hacer la semana entrante:**  Investigar para cerrar validaciones del front end en conjunto con SC.
+
+
+MV
+**Qué hizo esta semana:** Validaciones back end junto con PG y SC.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
