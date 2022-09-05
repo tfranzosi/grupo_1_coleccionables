@@ -62,10 +62,7 @@ module.exports = {
 
             items_q += 1;
 
-            console.log('ammount1',ammount,' - regularprice: ',product.regular_price);
-
             ammount = parseFloat(ammount) + product.regular_price;
-            console.log('ammount2',ammount);
 
 
             //Agrego el producto y precio en la tabla orders
