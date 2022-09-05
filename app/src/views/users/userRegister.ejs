@@ -63,7 +63,7 @@
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="nombre" class="datos">Nombre</label>
-                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
+                                <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.first_name : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.first_name) { %>
                                     <%= errors.first_name.msg %>
                                     <% } %>
@@ -75,7 +75,7 @@
                         <div class="colform">
                             <div class="categoria"> 
                                 <label for="apellido" class="datos">Apellido</label>
-                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
+                                <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.last_name : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.last_name) { %>
                                     <%= errors.last_name.msg %>
                                 <% } %> </div> <small class="invalid" id="errorLastName" ></small>
@@ -148,18 +148,18 @@
                     </div>
                     <div class="colform"> 
                         <div class="categoria">
+
+                            <% for (let gender of genders) {%> 
                             <div class="generos">
-                                <label for="varon">Varon</label>
-                                <input type="radio" name="gender" value="1" id="varon">
+                                <label for="<%= gender.name %>"><%= gender.name %></label>
+                                <input type="radio" name="gender" value="<%= gender.id %>"" id="<%= gender.name %>"
+                                    <% if (locals.oldData && locals.oldData.gender == gender.id.toString()){%>
+                                        checked="checked"
+                                    <%}%>
+                                >
                             </div>
-                            <div class="generos">
-                                <label for="mujer">Mujer</label>
-                                <input type="radio" name="gender" value="2" id="mujer">
-                            </div>
-                            <div class="generos">
-                                <label for="otro">Otro</label>
-                                <input type="radio" name="gender" value="3" id="otro">
-                            </div>
+                            <% } %> 
+
                             <br>
                             <br>
                             <br>
@@ -174,7 +174,11 @@
                             <h4>Intereses</h4>
                             <% for (let interest of interests){%>
                             <div>
-                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="interest<%=interest.id%>">
+                                <input type="checkbox" name="interests" value="<%=interest.id%>" id="interest<%=interest.id%>"
+                                    <% if (locals.oldData && locals.oldData.interests.includes(interest.id.toString()) ){%>
+                                        checked="checked"
+                                    <%}%>
+                                >
                                 <label for="interest<%=interest.id%>"><%=interest.name%></label>
                             </div>
                             <%}%>
@@ -187,7 +191,7 @@
                     <div class="colform">
                         <div class="categoria">
                             <label for="contrasenia">Contraseña</label>
-                            <input type="password" name="password" id="contrasenia" placeholder=" ********">
+                            <input type="password" name="password" id="contrasenia" value="<%= locals.oldData ? oldData.password : "" %>" placeholder=" ********">
                             <div class="danger">  <% if (locals.errors && errors.password) { %>
                                 <%= errors.password.msg %>
                             <% } %> <small class="invalid" id="errorPassword" ></small> </div> 
@@ -196,7 +200,7 @@
                     <div class="colform">
                         <div class="categoria">
                             <label for="contrasenia2">Confirme contraseña</label>
-                            <input type="password" name="password2" id="contrasenia2" placeholder=" ********">
+                            <input type="password" name="password2" id="contrasenia2" value="<%= locals.oldData ? oldData.password2 : "" %>" placeholder=" ********">
                             <div class="danger">  <% if (locals.errors && errors.password2) { %>
                                 <%= errors.password2.msg %>
                             <% } %> <small class="invalid" id="errorPassword2" ></small> </div> <br>

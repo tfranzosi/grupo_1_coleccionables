@@ -61,6 +61,8 @@ module.exports = {
         }
     }),
     
-    getInterests: async () => await db.Interest.findAll()
+    getInterests: async () => await db.Interest.findAll(),
+
+    getGenders: async () => await db.Gender.findAll()
 
 }

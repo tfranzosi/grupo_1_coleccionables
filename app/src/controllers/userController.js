@@ -68,26 +68,42 @@ userController={
     registerForm: async (req, res) => {
         let user = null;
         const interests = await queries.Interest.getAll()
-            .catch(function(e){
-                console.log('error: ',e);
-                res.send(e); 
-            });
-        res.render('users/userRegister',{user,interests});
+        .catch(function(e){
+            console.log('error: ',e);
+            res.send(e); 
+        });        
+        
+        const genders = await queries.User.getGenders()
+        .catch(function(e){
+            console.log('error: ',e);
+            res.send(e); 
+        });
+            
+        res.render('users/userRegister',{user,interests,genders});
     },
 
     store: async (req, res) => {
-        const interests = await queries.Interest.getAll()
+        
+        const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+            
+            const interests = await queries.Interest.getAll()
             .catch(function(e){
                 console.log('error: ',e);
                 res.send(e); 
             });
 
-        const resultValidation = validationResult(req);
-		if (resultValidation.errors.length > 0) {
-			return res.render('users/userRegister', {
+            const genders = await queries.User.getGenders()
+            .catch(function(e){
+                console.log('error: ',e);
+                res.send(e); 
+            });
+
+            console.log('oldData\n',req.body);
+            return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
 				oldData: req.body,
-                interests
+                interests, genders
 			});
 		}
         
@@ -96,7 +112,8 @@ userController={
 
             let user = userController.validateUser(req.body,req.file);
             let newUser = await queries.User.create(user);
-            newUser.interests = user.interests;
+            newUser.interests = [...user.interests];
+            console.log('intereses: ',newUser.interests);
             await queries.UserInterest.create(newUser);
 
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })
