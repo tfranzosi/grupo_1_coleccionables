@@ -1,260 +1,181 @@
+let validations = {
+    image: (inputItem, messageItem) => {
+    let imageAllowed = inputItem.value.match(/(\.jpg|\.jpeg|\.png|\.gif)$/) !== null;
+        if ( !imageAllowed && inputItem.value !== '' ) displayMessage(messageItem,'La imagen debe ser en formato .jpeg, .jpg, .gif o .png');
+        else deleteError(messageItem);
+    },
+
+    firstName: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'El nombre no puede estar vacío');
+        else if (inputItem.value.length < 2) displayMessage(messageItem,'El nombre no puede tener menos de 2 caracteres');
+        else deleteError(messageItem);
+    },
+
+    lastName: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'El apellido no puede estar vacío');
+        else if (inputItem.value.length < 2) displayMessage(messageItem,'El apellido no puede tener menos de 2 caracteres');
+        else deleteError(messageItem);
+    },
+
+    user: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'El usuario no puede estar vacío');
+        else if (inputItem.value.length < 2) displayMessage(messageItem,'El usuario no puede tener menos de 2 caracteres');
+        else deleteError(messageItem);
+    },
+
+    phone: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'El número no puede estar vacío');
+        else if (parseInt(inputItem.value) < 0) displayMessage(messageItem,'El número no puede ser negativo');
+        else deleteError(messageItem);
+    },
+
+    address: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'La dirección no puede estar vacía');
+        else deleteError(messageItem);
+    },
+
+    email: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'El usuario no puede estar vacío');
+        else if (!inputItem.value.includes("@") || !inputItem.value.includes(".com")) displayMessage(messageItem,'El formato del correo es incorrecto');
+        else deleteError(messageItem);
+    },
+
+    birthDate: (inputItem, messageItem) => {
+        let birthday = new Date(inputItem.value);
+        let age = (Date.now() - birthday) / (365*24*60*60*1000);
+
+        if (inputItem.value == '' ) displayMessage(messageItem,'La fecha no puede estar vacía');
+        else if ( age < 18 ) displayMessage(messageItem,'El usuario debe ser mayor de edad');
+        else deleteError(messageItem);
+    },
+
+    multiple: (inputItem, messageItem) => {
+        let isChecked = false;
+        inputItem.forEach( select => {
+                if ( select.checked ) isChecked = true
+            } );
+        if (!isChecked) displayMessage(messageItem,'Debes seleccionar un item');
+        else deleteError(messageItem);
+    },
+    
+    password: (inputItem, messageItem) => {
+        if (inputItem.value == "") displayMessage(messageItem,'Debes escribir una contraseña');
+        else if (inputItem.value.length < 8) displayMessage(messageItem,'Debe contener al menos 8 caracteres');
+        else if (!(inputItem.value.match(/[a-z]/)) ) displayMessage(messageItem,'Debe contener una letra minúscula');
+        else if (!(inputItem.value.match(/[A-Z]/)) ) displayMessage(messageItem,'Debe contener una letra mayúscula');
+        else if (!(inputItem.value.match(/\d/)) ) displayMessage(messageItem,'Debe contener un número');
+        else deleteError(messageItem);
+    },
+
+    password2: (firstPassword, secondPassword, messageItem) => {
+        if (secondPassword.value == "") displayMessage(messageItem,'Debes escribir una contraseña');
+        else if (firstPassword.value !== secondPassword.value) displayMessage(messageItem,'Las contraseñas deben coincidir');
+        else deleteError(messageItem);
+    }
+}
+
 window.addEventListener('load', () => {
     //Capturamos el formulario
-    const form = document.querySelector("form .registro")
-
+    const form = document.querySelector("form.registro")
+    
     //Capturamos los campos del formulario y los "smalls" que mostraran los mensajes de error
+    const inputImage = document.getElementById('urlImagen');
+    const errorImage = document.querySelector("#errorImage");
+
     const inputName= document.querySelector("#nombre")
-    const errorName= document.querySelector("#errorName")
+    const errorFirstName= document.querySelector("#errorFirstName")
+
     const inputLast_name= document.querySelector("#apellido")
-    const errorLast_name= document.querySelector("#errorLast_name")
+    const errorLastName= document.querySelector("#errorLastName")
+
     const inputUser= document.querySelector("#user")
     const errorUser= document.querySelector("#errorUser")
-    const inputPhone_country= document.querySelector("#telefono_pais")
-    const errorPhone_country= document.querySelector("#errorPhone_country")
-    const inputPhone_number= document.querySelector("#telefono")
-    const errorPhone_number= document.querySelector("#errorPhone_number")
+
+    const inputPhoneCountry= document.querySelector("#telefono_pais")
+    const errorPhoneCountry= document.querySelector("#errorPhoneCountry")
+
+    const inputPhoneNumber= document.querySelector("#telefono")
+    const errorPhoneNumber= document.querySelector("#errorPhoneNumber")
+
     const inputEmail= document.querySelector("#email")
     const errorEmail= document.querySelector("#errorEmail")
-    const inputBirth_date= document.querySelector("#nacimiento")
-    const errorBirth_date= document.querySelector("#errorBirth_date")
+
+    const inputBirthDate= document.querySelector("#nacimiento")
+    const errorBirthDate= document.querySelector("#errorBirthDate")
+
     const inputAddress= document.querySelector("#domicilio")
     const errorAddress= document.querySelector("#errorAddress")
-    const inputGender= document.querySelector("#gender")
+
+    const inputGender = document.getElementsByName('gender');
     const errorGender= document.querySelector("#errorGender")
-    const inputInterests= document.querySelector("#interests")
+
+    const inputInterests= document.getElementsByName('interests');
     const errorInterests= document.querySelector("#errorInterests")
+
     const inputPassword= document.querySelector("#contrasenia")
     const errorPassword= document.querySelector("#errorPassword")
+
     const inputPassword2= document.querySelector("#contrasenia2")
     const errorPassword2= document.querySelector("#errorPassword2")
-    const inputConditions= document.querySelector("#conditions")
+
+    const inputConditions= document.querySelector("#condiciones")
     const errorConditions= document.querySelector("#errorConditions")
 
-
+    const allInputs = document.querySelectorAll('form.registro input');
 
     //Primer campo donde queremos que se posicione el usuario al cargar la página
     inputName.focus()
 
-    //  Array para capturar todos los errores
-    let errores= [];
-
     //Acción para validar el campo título al dejar el campo
-    inputName.addEventListener("blur",()=>{
 
-        if (inputName.value == ""){
-            errores.push("El nombre no puede estar vacío")
-            errorName.classList.add("danger")
-            errorName.innerHTML="El nombre no puede estar vacío"
-        }else{
-            if (inputName.value.length < 2){
-                errores.push("El nombre no puede tener menos de 2 caracteres")
-                errorName.classList.add("danger")
-                errorName.innerHTML="El nombre no puede tener menos de 2 caracteres"
-            }else{
-                errorName.style.display="none"
-            }
-        }
-    })
-
-    inputLast_name.addEventListener("blur",()=>{
-
-        if (inputLast_name.value == ""){
-            errores.push("El apellido no puede estar vacío")
-            errorLast_name.classList.add("danger")
-            errorLast_name.innerHTML="El apellido no puede estar vacío"
-        }else{
-            if (inputLast_name.value.length < 2){
-                errores.push("El apellido no puede tener menos de 2 caracteres")
-                errorLast_name.classList.add("danger")
-                errorLast_name.innerHTML="El apellido no puede tener menos de 2 caracteres"
-            }else{
-                errorLast_name.style.display="none"
-            }
-        }
-    })
-
-    inputUser.addEventListener("blur",()=>{
-
-        if (inputUser.value == ""){
-            errores.push("El usuario no puede estar vacío")
-            errorUser.classList.add("danger")
-            errorUser.innerHTML="El usuario no puede estar vacío"
-        }else{
-            if (inputUser.value.length < 2){
-                errores.push("El usuario no puede tener menos de 2 caracteres")
-                errorUser.classList.add("danger")
-                errorUser.innerHTML="El usuario no puede tener menos de 2 caracteres"
-            }else{
-                errorUser.style.display="none"
-            }
-        }
-    })
-
-    inputPhone_country.addEventListener("blur",()=>{
-
-        if (inputPhone_country.value == ""){
-            errores.push("El código de país no puede estar vacío")
-            errorPhone_country.classList.add("danger")
-            errorPhone_country.innerHTML="El código de país no puede estar vacío"
-        }else{
-            if (parseInt(inputPhone_country.value) < 0){
-                errores.push("El código de país no puede ser negativo")
-                errorPhone_country.classList.add("danger")
-                errorPhone_country.innerHTML="El código de país no puede ser negativo"
-            }else{
-                errorPhone_country.style.display="none"
-            }
-        }
-    })
-
-    inputPhone_number.addEventListener("blur",()=>{
-
-        if (inputPhone_number.value == ""){
-            errores.push("El número de teléfono no puede estar vacío")
-            errorPhone_number.classList.add("danger")
-            errorPhone_number.innerHTML="El número de teléfono no puede estar vacío"
-        }else{
-            if (parseInt(inputPhone_number.value) < 0){
-                errores.push("El número de teléfono no puede ser negativo")
-                errorPhone_number.classList.add("danger")
-                errorPhone_number.innerHTML="El número de teléfono no puede ser negativo"
-            }else{
-                errorPhone_number.style.display="none"
-            }
-        }
-    })
-
-    inputEmail.addEventListener("blur",()=>{
-
-        if (inputEmail.value == ""){
-            errores.push("El usuario no puede estar vacío")
-            errorEmail.classList.add("danger")
-            errorEmail.innerHTML="El usuario no puede estar vacío"
-        }else{
-            if ((!inputEmail.value.include("@")) || (!inputEmail.value.include(".com")) ){
-                errores.push("El formato del correo es incorrecto")
-                errorEmail.classList.add("danger")
-                errorEmail.innerHTML="El formato del correo es incorrecto"
-            }else{
-                errorEmail.style.display="none"
-            }
-        }
-    })
-
-    inputBirth_date.addEventListener("blur",()=>{
-
-        if (inputBirth_date.value == ""){
-            errores.push("La fecha no puede estar vacía")
-            errorBirth_date.classList.add("danger")
-            errorBirth_date.innerHTML="La fecha no puede estar vacía"
-        }else{
-            if (inputBirth_date.value > (now.year - 18)){ //Acá quisiéramos validar año de nac. vs. año actual - 18 años)
-                errores.push("El usuario debe ser mayor de edad")
-                errorBirth_date.classList.add("danger")
-                errorBirth_date.innerHTML="El usuario debe ser mayor de edad"
-            }else{
-                errorBirth_date.style.display="none"
-            }
-        }
-    })
-
-    inputAddress.addEventListener("blur",()=>{
-
-        if (inputAddress.value == ""){
-            errores.push("La dirección no puede estar vacía")
-            errorAddress.classList.add("danger")
-            errorAddress.innerHTML="El dirección no puede estar vacía"
-        }else{
-            errorAddress.style.display="none"
-            }
+    inputImage.addEventListener('blur', () => validations.image(inputImage, errorImage));
+    inputName.addEventListener("blur",() => validations.firstName(inputName,errorFirstName))
+    inputLast_name.addEventListener("blur",() => validations.lastName(inputLast_name,errorLastName))
+    inputUser.addEventListener("blur",() => validations.user(inputUser, errorUser))
+    inputPhoneCountry.addEventListener("blur",() => validations.phone(inputPhoneCountry, errorPhoneCountry))
+    inputPhoneNumber.addEventListener("blur", () => validations.phone(inputPhoneNumber, errorPhoneNumber))
+    inputEmail.addEventListener("blur",() => validations.email(inputEmail,errorEmail))
+    inputBirthDate.addEventListener("blur",() => validations.birthDate(inputBirthDate,errorBirthDate))
+    inputAddress.addEventListener("blur",() => validations.address(inputAddress, errorAddress))
+    inputGender.forEach( item => {
+        // let isChecked = false;
+        item.addEventListener("blur",() => {
+            validations.multiple(inputGender, errorGender)
         })
-    
-    inputGender.addEventListener("blur",()=>{
-
-        if (inputGender.value == ""){
-            errores.push("Debes seleccionar un género")
-            errorGender.classList.add("danger")
-            errorGender.innerHTML="Debes seleccionar un género"
-        }else{
-            errorGenders.style.display="none"
-            }
+    })
+    inputInterests.forEach( item => {
+        // let isChecked = false;
+        item.addEventListener('blur', () => {
+            validations.multiple(inputInterests, errorInterests);
         })
+    }),
+    inputPassword.addEventListener("keyup",() => validations.password(inputPassword, errorPassword))
+    inputPassword.addEventListener("blur",() => validations.password(inputPassword, errorPassword))
+    inputPassword2.addEventListener("blur",() => validations.password2(inputPassword,inputPassword2, errorPassword2))
 
-    inputInterests.addEventListener("focus",()=>{
 
-        if (inputInterests.length === 0){ //Quisiéramos comprobar si seleccionó al menos un interés
-            errores.push("Debes seleccionar al menos un interes")
-            errorInterests.classList.add("danger")
-            errorInterests.innerHTML="Debes seleccionar al menos un interes"
-        }else{
-            errorInterests.style.display="none"
-            }
-        })
-
-    inputPassword.addEventListener("blur",()=>{
-
-        if (inputPassword.value == ""){
-            errores.push("Debes escribir una contraseña")
-            errorPassword.classList.add("danger")
-            errorPassword.innerHTML="Debes escribir una contraseña"
-        }
-        // else if (inputPassword.length < 8){ 
-        //     errores.push("Debe contener al menos 8 caracteres")
-        //     errorPassword.classList.add("danger")
-        //     errorPassword.innerHTML="Debe contener al menos 8 caracteres"
-        // } 
+    form.addEventListener("submit",e => {
+        //Validamos si esta de acuerdo con las TyC
+        if ( !inputConditions.checked ) displayMessage(errorConditions,'Tenes que estar de acuerdo con los Términos y Condiciones')
+        else deleteError(errorConditions);
         
-        // else if (!(inputPassword.match(/[A-z]/)) ){ 
-        //     errores.push("Debe contener letras minúsculas")
-        //     errorPassword.classList.add("danger")
-        //     errorPassword.innerHTML="Debe contener letras minúsculas"
-        // }
+        //Reccoremos todos los campos para ver su validacion
+        allInputs.forEach( inputElement => inputElement.focus());
 
-        // else if (!(inputPassword.match(/[A-Z]/)) ){ 
-        //     errores.push("Debe contener letras mayusculas")
-        //     errorPassword.classList.add("danger")
-        //     errorPassword.innerHTML="Debe contener letras mayusculas"
-        // }
-        
-        // else if (!(inputPassword.match(/\d/)) ){ 
-        //     errores.push("Debe contener al menos un numero")
-        //     errorPassword.classList.add("danger")
-        //     errorPassword.innerHTML="Debe contener al menos un numero"
-        // } 
-        else {
-            errorPassword.style.display="none"
-        }
-            
-        })
+        const allErrors = document.querySelectorAll('small.danger');
+        if ( allErrors.length > 0 ) e.preventDefault();
 
-    inputPassword2.addEventListener("change",()=>{
-
-            if (inputPassword2.value == ""){
-                errores.push("Debes escribir una contraseña")
-                errorPassword2.classList.add("danger")
-                errorPassword2.innerHTML="Debes escribir una contraseña"
-            }
-            
-            else if (inputPassword.value !== inputPassword2.value){
-                errores.push("Las contraseñas deben coincidir")
-                errorPassword2.classList.add("danger")
-                errorPassword2.innerHTML="Las contraseñas deben coincidir"
-            } else {
-                errorPassword.style.display="none"
-            }
-                
-            })
-    
-    form.addEventListener("submit",()=>{
-
-            if (inputConditions.value == ""){ //Quisiéramos que muestre error si no hace check en TyC
-                errores.push("Debes aceptar los términos y condiciones")
-                errorConditions.classList.add("danger")
-                errorConditions.innerHTML="Debes escribir una contraseña"
-            } else {
-                errorPassword.style.display="none"
-            }
-            })
-        
-
+    })
 })
+
+function displayMessage( item, message ) {
+    item.style.display = "block";
+    item.classList.add("danger");
+    item.innerHTML = message;
+}
+
+function deleteError(item){
+    item.classList.remove('danger');
+    item.style.display = "none";
+}
+

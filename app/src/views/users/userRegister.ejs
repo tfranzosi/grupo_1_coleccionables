@@ -55,7 +55,9 @@
 
                         <div class="danger">  <% if (locals.errors && errors.image_url) { %>
                             <%= errors.image_url.msg %>
-                        <% } %> </div>
+                            <% } %> 
+                            <small class="invalid" id="errorImage" ></small>
+                        </div>
                     </div>
                     <div class="rowform">
                         <div class="colform">
@@ -64,7 +66,9 @@
                                 <input type="text" name="first_name" id="nombre" placeholder=" Juan" value="<%= locals.oldData ? oldData.nombre : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.first_name) { %>
                                     <%= errors.first_name.msg %>
-                                <% } %> </div> <small class="invalid" id="errorName" ></small>
+                                    <% } %>
+                                    <small class="invalid" id="errorFirstName" ></small>
+                                 </div> 
                             </div>
                             
                         </div>
@@ -74,7 +78,7 @@
                                 <input type="text" name="last_name" id="apellido" placeholder=" Gameplayer" value="<%= locals.oldData ? oldData.apellido : "" %>">
                                 <div class="danger">  <% if (locals.errors && errors.last_name) { %>
                                     <%= errors.last_name.msg %>
-                                <% } %> </div> <small class="invalid" id="errorLast_name" ></small>
+                                <% } %> </div> <small class="invalid" id="errorLastName" ></small>
                             </div>
                         </div>
                     </div>
@@ -101,13 +105,13 @@
                                     <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : "" %>"></span>
                                     <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
                                         <%= errors.phone_country.msg %>
-                                    <% } %> <small class="invalid" id="errorPhone_country" ></small> </div> 
+                                    <% } %> <small class="invalid" id="errorPhoneCountry" ></small> </div> 
                                 <span> 
                                     <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : "" %>">
                                 </span>
                                 <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
                                     <%= errors.phone_number.msg %>
-                                <% } %> <small class="invalid" id="errorPhone_number" ></small> </div> 
+                                <% } %> <small class="invalid" id="errorPhoneNumber" ></small> </div> 
                             </div>
                         </div>
                     </div>
@@ -128,7 +132,7 @@
                             <input type="date" name="birth_date" id="nacimiento" min="1900-01-01" value="<%= locals.oldData ? oldData.birth_date : "" %>">
                             <div class="danger">  <% if (locals.errors && errors.birth_date) { %>
                                 <%= errors.birth_date.msg %>
-                            <% } %> </div> <small class="invalid" id="errorBirth_date" ></small>
+                            <% } %> </div> <small class="invalid" id="errorBirthDate" ></small>
                         </div><br>
                     </div>
                 </div>
