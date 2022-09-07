@@ -121,13 +121,13 @@ window.addEventListener('load', () => {
 
     inputImage_url.addEventListener('blur', () => validations.image(inputImage_url, errorImage_url))
 
-    form.addEventListener("submit",e => {
-        
-        //Reccoremos todos los campos para ver su validacion
-        allInputs.forEach( inputElement => inputElement.focus());
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        allInputs.forEach(inputElement => inputElement.focus());
 
         const allErrors = document.querySelectorAll('small.danger');
-        if ( allErrors.length > 0 ) e.preventDefault();
+        if (allErrors.length === 0) form.submit();
 
         // allTextAreas.forEach( inputElement => inputElement.focus());
 

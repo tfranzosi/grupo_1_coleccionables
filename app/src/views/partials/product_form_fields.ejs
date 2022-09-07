@@ -55,7 +55,7 @@
                     <div class="colform">
                         <div class="categoria"> 
                             <label for="descuento" class="datos">Descuento</label>
-                            <input type="number" min="1" step="any" name="discount" id="descuento" 
+                            <input type="number" step="any" name="discount" id="descuento" 
                             value="<%=product.discount%>">
                             <div class="danger"> <% if (locals.errors && errors.discount) { %>
                                 <%= errors.discount.msg %>
