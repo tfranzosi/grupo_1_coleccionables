@@ -5,32 +5,15 @@ let validations = {
         else deleteError(messageItem);
     },
 
-    firstName: (inputItem, messageItem) => {
-        if (inputItem.value == "") displayMessage(messageItem,'El nombre no puede estar vacío');
-        else if (inputItem.value.length < 2) displayMessage(messageItem,'El nombre no puede tener menos de 2 caracteres');
-        else deleteError(messageItem);
-    },
-
-    lastName: (inputItem, messageItem) => {
-        if (inputItem.value == "") displayMessage(messageItem,'El apellido no puede estar vacío');
-        else if (inputItem.value.length < 2) displayMessage(messageItem,'El apellido no puede tener menos de 2 caracteres');
-        else deleteError(messageItem);
-    },
-
-    user: (inputItem, messageItem) => {
-        if (inputItem.value == "") displayMessage(messageItem,'El usuario no puede estar vacío');
-        else if (inputItem.value.length < 2) displayMessage(messageItem,'El usuario no puede tener menos de 2 caracteres');
+    text: (inputItem, messageItem, itemName) => {
+        if (inputItem.value == "") displayMessage(messageItem,`${itemName} no puede estar vacío`);
+        else if (inputItem.value.length < 2) displayMessage(messageItem,`${itemName} no puede tener menos de 2 caracteres`);
         else deleteError(messageItem);
     },
 
     phone: (inputItem, messageItem) => {
         if (inputItem.value == "") displayMessage(messageItem,'El número no puede estar vacío');
         else if (parseInt(inputItem.value) < 0) displayMessage(messageItem,'El número no puede ser negativo');
-        else deleteError(messageItem);
-    },
-
-    address: (inputItem, messageItem) => {
-        if (inputItem.value == "") displayMessage(messageItem,'La dirección no puede estar vacía');
         else deleteError(messageItem);
     },
 
@@ -129,14 +112,14 @@ window.addEventListener('load', () => {
     //Acción para validar el campo título al dejar el campo
 
     inputImage.addEventListener('blur', () => validations.image(inputImage, errorImage));
-    inputName.addEventListener("blur",() => validations.firstName(inputName,errorFirstName))
-    inputLast_name.addEventListener("blur",() => validations.lastName(inputLast_name,errorLastName))
-    inputUser.addEventListener("blur",() => validations.user(inputUser, errorUser))
+    inputName.addEventListener("blur",() => validations.text(inputName,errorFirstName,'El nombre'))
+    inputLast_name.addEventListener("blur",() => validations.text(inputLast_name,errorLastName,'El apellido'))
+    inputUser.addEventListener("blur",() => validations.text(inputUser, errorUser,'El usuario'))
     inputPhoneCountry.addEventListener("blur",() => validations.phone(inputPhoneCountry, errorPhoneCountry))
     inputPhoneNumber.addEventListener("blur", () => validations.phone(inputPhoneNumber, errorPhoneNumber))
     inputEmail.addEventListener("blur",() => validations.email(inputEmail,errorEmail))
     inputBirthDate.addEventListener("blur",() => validations.birthDate(inputBirthDate,errorBirthDate))
-    inputAddress.addEventListener("blur",() => validations.address(inputAddress, errorAddress))
+    inputAddress.addEventListener("blur",() => validations.text(inputAddress, errorAddress,'La dirección'))
     inputGender.forEach( item => {
         // let isChecked = false;
         item.addEventListener("blur",() => {

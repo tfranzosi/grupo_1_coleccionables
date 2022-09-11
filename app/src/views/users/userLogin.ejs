@@ -53,17 +53,17 @@
                 <form action="/usuarios/inicioSesion" method="POST">
                     <div>
                         <label for="usuario" class="feedback"></label>
-                        <input type="text" class="text" name="user" placeholder="Nombre de usuario" >
+                        <input type="text" class="text" name="user" id="user" placeholder="Nombre de usuario" >
                         <div class="danger">  <% if (locals.errors && errors.user) { %>
                             <%= errors.user.msg %>
-                        <% } %> </div>
+                        <% } %> </div> <small class="invalid" id="errorUser" ></small>
                     </div>
                     <div>
                         <label for="contrasenia" class="feedback"></label>
-                        <input type="password" class="text" name="password" placeholder="Contraseña" >
-                        <div class="danger">  <% if (locals.errors && errors.password) { %>
-                            <%= errors.password.msg %>
-                        <% } %> </div>
+                        <input type="password" class="text" name="password" id="password" placeholder="Contraseña" >
+                            <div class="danger">  <% if (locals.errors && errors.password) { %>
+                                <%= errors.password.msg %>
+                            <% } %> <small class="invalid" id="errorPassword" ></small> </div> 
                     </div>
                     <a href="#" class="olvide">Olvidé mi contraseña</a>
                     <div>
@@ -79,6 +79,7 @@
     </main>
 
     <%- include ('../partials/all_footer.ejs') %>
+    <script src="/js/userLoginValidations.js"></script>
 </body>
 
 </html>

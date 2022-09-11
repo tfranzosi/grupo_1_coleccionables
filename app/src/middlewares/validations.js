@@ -69,7 +69,7 @@ module.exports = {
                              }
                              return true;
                          }),
-        body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones')/*,
+        body('conditions').notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones'),
         body('image_url').custom((value, { req }) => {
         	let file = req.file;
             let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -80,8 +80,8 @@ module.exports = {
                 }
             }
         	return true;
-        })}
-        */
+        })
+        
     ],
 
     login: [
