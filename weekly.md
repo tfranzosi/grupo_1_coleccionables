@@ -268,3 +268,26 @@ MV
 **Qué hizo esta semana:** Validaciones back end junto con PG y SC.
 **Si se encontró con algún impedimento:** No. 
 **Qué va a hacer la semana entrante:**  Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
+
+## Weekly S07W02 - 12/09/2022
+
+SC
+**Qué hizo esta semana:** Investigar para cerrar validaciones del front end en conjunto con PG.
+**Si se encontró con algún impedimento:** Algunos campos de tipo multiple checkbox y radio para validaciones del front end.
+**Qué va a hacer la semana entrante:**  Testing de validaciones front y repaso conceptos para sprint 8.
+
+TF
+**Qué hizo esta semana:** Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Testing de validaciones front y repaso conceptos para sprint 8.
+
+PG
+**Qué hizo esta semana:** Investigar para cerrar validaciones del front end en conjunto con SC.
+**Si se encontró con algún impedimento:** Algunos campos de tipo multiple checkbox y radio para validaciones del front end.
+**Qué va a hacer la semana entrante:** Testing de validaciones back y repaso conceptos para sprint 8.
+
+
+MV
+**Qué hizo esta semana:** Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Testing de validaciones back y repaso conceptos para sprint 8.
