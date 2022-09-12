@@ -55,14 +55,15 @@ let validations = {
 
     image: (inputItem, messageItem) => {
         let imageAllowed = inputItem.value.match(/(\.jpg|\.jpeg|\.png|\.gif)$/) !== null;
-            if ( !imageAllowed && inputItem.value !== '' ) displayMessage(messageItem,'La imagen debe ser en formato .jpeg, .jpg, .gif o .png');
-            else deleteError(messageItem);
-        },
+        if (inputItem.value == '') displayMessage(messageItem,'Subí una imagen del producto');
+        else if ( !imageAllowed && inputItem.value !== '' ) displayMessage(messageItem,'La imagen debe ser en formato .jpeg, .jpg, .gif o .png');
+        else deleteError(messageItem);
+    },
 }
 
 window.addEventListener('load', () => {
     //Capturamos el formulario
-    const form = document.querySelector("form")
+    const form = document.querySelector("form.registro")
 
     //Capturamos los campos del formulario y los "smalls" que mostraran los mensajes de error
     const inputSku= document.querySelector("#sku")
@@ -89,14 +90,14 @@ window.addEventListener('load', () => {
     const inputTags= document.querySelector("#etiquetas")
     const errorTags= document.querySelector("#errorTags")
 
-    const inputCategories= document.querySelector(".categories")
-    const errorCategories= document.querySelector("#errorCategories")
+    const inputCategories= document.querySelectorAll(".categories");
+    const errorCategories= document.querySelector("#errorCategories");
 
     const inputImage_url= document.querySelector("#fotoPerfil")
     const errorImage_url= document.querySelector("#errorImage_url")
 
-    const allInputs = document.querySelectorAll('form input');
-    // const allTextAreas = document.querySelectorAll('form.registro textarea');
+    const allInputs = document.querySelectorAll('form.registro input');
+    const allTextAreas = document.querySelectorAll('form.registro textarea');
 
 
     //Primer campo donde queremos que se posicione el usuario al cargar la página
@@ -125,14 +126,10 @@ window.addEventListener('load', () => {
         e.preventDefault();
 
         allInputs.forEach(inputElement => inputElement.focus());
+        allTextAreas.forEach( inputElement => inputElement.focus());
 
         const allErrors = document.querySelectorAll('small.danger');
         if (allErrors.length === 0) form.submit();
-
-        // allTextAreas.forEach( inputElement => inputElement.focus());
-
-        // const allErrors2 = document.querySelectorAll('small.danger');
-        // if ( allErrors2.length > 0 ) e.preventDefault();
 
     })
 

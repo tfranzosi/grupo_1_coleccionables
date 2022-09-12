@@ -122,13 +122,13 @@
                         <h4>Foto de producto</h4><br>
                         <% if (product.id==='' || product.id === undefined) {%>
                             <label for="fotoPerfil" class="fotoPerfil">
-                                <i id="plus" class="fa fa-plus" aria-hidden="true"></i>
+                                <i id="plus" class="fa fa-plus" aria-hidden="true"></i><img id="preview" src="" width="120px">
                             </label><br>
                             <%}else{%>
                             <label for="fotoPerfil" class="fotoPerfil2">
-                                <img src= "<%=product.image_url%>" class="fotoPerfil2">
+                                <img src= "<%=product.image_url%>" class="fotoPerfil2" id="fotoPerfil2">
                             </label><br>
                             <%}%>
-                        <input type="file" accept=".jpg, .png" id="fotoPerfil" name="image_url" onchange="showUpload()">
+                        <input type="file" accept=".jpg, .jpeg, .gif, .png" id="fotoPerfil" name="image_url" onchange="showUpload()">
                         <small class="invalid" id="errorImage_url" ></small> </div> 
                     <br>
