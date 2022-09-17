@@ -12,6 +12,12 @@ module.exports = {
         limit,
         offset: limit * page
     }),
+    
+    showAll: async () => await db.User.findAll({
+        include: [
+            { association: 'interests' }
+        ]
+    }),
 
     findById: async (id) => await db.User.findByPk(id,{
         include: [

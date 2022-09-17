@@ -18,7 +18,6 @@ const apiProductController = {
 
             })
 
-
             return res.status(200).json({
                 count: productCount,
                 countByCategory: categoryCount,
@@ -29,6 +28,9 @@ const apiProductController = {
             console.log('error,' , e);
             return res.status(400).json(e);
         }
+    },
+    detail: async (req,res) => {
+        res.send("hola products")
     }
 }
 
