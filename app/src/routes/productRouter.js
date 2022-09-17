@@ -8,6 +8,8 @@ const userZones = require('../middlewares/userZones');
 const validations = require('../middlewares/validations');
 const products = require('../middlewares/products');
 const shoppingCartController = require('../controllers/shoppingCartController');
+// const productApi = require('../database/queries/productApi');
+
 
 
 //MULTER REQUIRE
@@ -44,5 +46,7 @@ router.delete("/:id", userZones.loggedOnly, productController.delete)
 //FORMULARIO AGREGAR PRODUCTO A CARRITO
 router.post('/:id/agregar', userZones.loggedOnly, shoppingCartController.addProduct)
 
+// //MOSTRAR TODOS LOS PRODUCTOS - API
+// router.get('/api', productApi.list);
 
 module.exports = router;

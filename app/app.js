@@ -9,6 +9,7 @@ const session = require('express-session');
 const authMiddleware = require('./src/middlewares/authMiddleware')
 
 // Routers
+const apiRouter = require('./src/routes/apiRouter');
 const mainRouter = require('./src/routes/mainRouter');
 const productRouter = require('./src/routes/productRouter');
 const userRouter = require('./src/routes/userRouter');
@@ -40,4 +41,4 @@ app.set('views', path.join(__dirname,'/src/views'));
 app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/usuarios', userRouter);
-
+app.use('/api', apiRouter);

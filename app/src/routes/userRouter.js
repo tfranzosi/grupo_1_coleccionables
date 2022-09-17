@@ -59,6 +59,4 @@ router.put("/:id", userZones.loggedOnly, upload.single('image_url'), validations
 router.delete('/:id', userZones.loggedOnly, userController.delete);
 
 
-
-
 module.exports = router;

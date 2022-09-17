@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator');
 const queries = require('../database/queries/index');
 
 
-productController={
+productController = {
     //Muestra vista de todos los productos
     showAll: async (req, res) => {
         try {
