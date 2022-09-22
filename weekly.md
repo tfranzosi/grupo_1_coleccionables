@@ -291,3 +291,26 @@ MV
 **Qué hizo esta semana:** Revisar validaciones front end para cerrar sprint junto con el resto del equipo.
 **Si se encontró con algún impedimento:** No. 
 **Qué va a hacer la semana entrante:**  Testing de validaciones back y repaso conceptos para sprint 8.
+
+## Weekly S08W01 - 19/09/2022
+
+SC
+**Qué hizo esta semana:** Testing de validaciones front y repaso conceptos para sprint 8.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Trabajar en los endpoints de productos.
+
+TF
+**Qué hizo esta semana:** Testing de validaciones front y repaso conceptos para sprint 8.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Trabajar en los endpoints de usuarios.
+
+PG
+**Qué hizo esta semana:** Testing de validaciones back y repaso conceptos para sprint 8.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Trabajar en los endpoints de productos.
+
+
+MV
+**Qué hizo esta semana:** Testing de validaciones back y repaso conceptos para sprint 8.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Trabajar en los endpoints de usuarios.
