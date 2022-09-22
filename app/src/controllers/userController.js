@@ -162,6 +162,8 @@ userController={
                 res.send(e); 
             });
         const resultValidation = validationResult(req);
+        console.log("REQ.BODY:",req.body);
+        console.log("VALIDATIONSSSS",resultValidation.mapped());
 		if (resultValidation.errors.length > 0) {
             return res.render('users/userEdit', {
                 errors: resultValidation.mapped(),

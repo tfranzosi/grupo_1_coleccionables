@@ -49,7 +49,7 @@
                     <div class="contenedor-fotoperfil">
                         <p>Foto de perfil</p><br>
                         
-                        <label for="urlImagen" class="fotoPerfil"><img id="preview" src="<%=user.image_url%>" width="120px"></label><br>
+                        <label for="urlImagen" accept=".jpg, .jpeg, .gif, .png" class="fotoPerfil"><img id="preview" src="<%=user.image_url%>" width="120px"></label><br>
                         
                         <input type="file" id="urlImagen" name="urlImagen" onchange="showUpload()">
 
@@ -92,19 +92,20 @@
                         <div class="categoria">
                             <div class="telefonos">
                                 <span class = "telefonos">
-                                    <label for="telefono_pais" class="datos">Telefono</label>
+                                    <label for="telefono_pais" class="datos">Codigo de pais</label>
                                 </span>
-                                
-                            </div>
-                            <div class="telefonos">
-                                <span>
                                     <input type="tel" name="phone_country" id="telefono_pais" placeholder=" +54" value="<%= locals.oldData ? oldData.phone_country : user.phone_country %>"></span>
                                     <div class="danger">  <% if (locals.errors && errors.phone_country) { %>
                                         <%= errors.phone_country.msg %>
                                     <% } %> <small class="invalid" id="errorPhone_country" ></small> </div>
-                                <span> 
-                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : user.phone_number %>">
+                            </div>
+                        </div>
+                        <div class="categoria">
+                            <div class="telefonos">
+                                <span class = "telefonos">
+                                    <label for="telefono_pais" class="datos">Telefono</label>
                                 </span>
+                                    <input type="tel" name="phone_number" id="telefono" placeholder=" 1234 5678" value="<%= locals.oldData ? oldData.phone_number : user.phone_number %>">
                                 <div class="danger">  <% if (locals.errors && errors.phone_number) { %>
                                     <%= errors.phone_number.msg %>
                                 <% } %> <small class="invalid" id="errorPhone_number" ></small> </div>
@@ -169,6 +170,8 @@
                     </div>
                 </div>                            <!-- Div abajo de los datos -->
                     <section class="perfilusuario">
+                        <div class="rowform">
+                        <div class="colform"> 
                         <div class="intereses">
                             <h4>Intereses</h4>
                             <% for (let interest of interests){%>
@@ -182,11 +185,15 @@
                         <div class="danger">  <% if (locals.errors && errors.interests) { %>
                             <%= errors.interests.msg %>
                         <% } %> <small class="invalid" id="errorInterests" ></small> </div>
+                    </div>
+                    <div class="colform">
+
+                    </div> 
+                </div>
                     </section>
                     <div>
                         <button type="submit" class="registerbutton">EDITAR</button>
                     </div><br>
-                    
                 </form>
         </div>
     </div>

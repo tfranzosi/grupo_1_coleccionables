@@ -10,7 +10,9 @@
     --altura-header-logo2: 100px;
     --altura-footer: 250px;
 }
-      
+* {
+    outline:red 1px solid;
+}
 
 /*    ----------------  FORMULARIO DE REGISTRO    ---------------     */
 
@@ -236,7 +238,8 @@ section.perfilusuario{
     .rowform {
         display:flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
+
         
     }
     .form-registro .categoria{
@@ -261,7 +264,6 @@ section.perfilusuario{
 @media(min-width: 992px){
     .form-registro .categoria{
         display: block;
-        width: 120%;
         /* padding-left: 3vh;
         padding-right: 3vh; */
         /* float: left; */
