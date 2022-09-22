@@ -10,7 +10,7 @@ const apiUserController = {
             const allUsers = users.map( user => {
                 return {
                     id: user.id,
-                    name: user.first_name,
+                    name: `${user.first_name} ${user.last_name}`,
                     email: user.email,
                     detail: `/usuarios/${user.id}`
                 }
@@ -57,7 +57,24 @@ const apiUserController = {
             return res.status(400).json(e);
         }
     },
+    lastUser: async (req,res) => {
+        try {
+            const user = await queries.User.lastUser();
+            console.log(user)
+            return res.status(200).json({
+                first_name: user.dataValues.first_name,
+                last_name: user.dataValues.last_name,
+                user: user.dataValues.user,
+                birdth_date: user.dataValues.birdth_date,
+                gender: user.dataValues.genders.name,
+                image_url: user.dataValues.image_url
+            })
+        } catch (e) {
+            console.log('error,' , e);
+            return res.status(400).json(e);
+        }
     }
+}
 
 
 module.exports = apiUserController;

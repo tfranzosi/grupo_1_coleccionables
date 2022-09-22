@@ -178,5 +178,15 @@ module.exports = {
             product_id: productId,
             last_visited: Date.now()
         })
-    }
+    },
+
+    lastProduct: async () => 
+        db.Product.findOne({
+                include: { 
+                    association: 'categories'
+                },
+                order: [
+                    ['id','DESC']
+                ]
+        })
 }
