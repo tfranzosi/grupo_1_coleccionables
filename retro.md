@@ -148,3 +148,19 @@ Orden de prioridades y coordinación de las tareas entre los miembros del equipo
 
 ¿Qué queremos mejorar y cómo lo vamos a hacer?
 - Repartir las tareas de manera anticipada y con un cronograma estable.
+
+## Retrospectiva Sprint 7 - 21/09/2022
+
+- ¿Qué problemas tuvimos?
+- Retrabajo de las validaciones, nos retrasó un poco.
+
+
+¿Qué hicimos bien?
+- Nos pudimos adaptar a realizar tareas con código de otro compañero.
+- Más funcionalidades  que las requeridas obligatorio y opcional.
+- Mayor frecuencia de reuniones.
+- Finalizamos antes del deadline.
+
+
+¿Qué queremos mejorar y cómo lo vamos a hacer?
+- Repartir las tareas de manera anticipada y con un cronograma estable.

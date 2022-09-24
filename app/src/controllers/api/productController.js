@@ -84,6 +84,28 @@ const apiProductController = {
             return res.status(400).json(e);
         }
     },
+
+    lastProduct: async (req,res) => {
+        try {
+            const product = await queries.Product.lastProduct();
+            console.log(product);
+            return res.status(200).json({
+                sku: product.dataValues.sku,
+                product_name: product.dataValues.product_name,
+                short_description: product.dataValues.short_description,
+                regular_price: product.dataValues.regular_price,
+                discount: product.dataValues.discount,
+                tags: product.dataValues.tags,
+                is_offer: product.dataValues.is_offer?true:false,
+                is_physical: product.dataValues.is_physical?true:false,
+                image_url: `http://localhost:3000${product.dataValues.image_url}`,
+                categories: product.categories.map( category => category.name)
+            })
+        } catch (e) {
+            console.log('error,' , e);
+            return res.status(400).json(e);
+        }
+    }
 }
 
 module.exports = apiProductController;

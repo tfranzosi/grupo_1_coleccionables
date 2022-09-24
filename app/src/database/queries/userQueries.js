@@ -69,6 +69,18 @@ module.exports = {
     
     getInterests: async () => await db.Interest.findAll(),
 
-    getGenders: async () => await db.Gender.findAll()
+    getGenders: async () => await db.Gender.findAll(),
 
+    lastUser: async () => 
+            await db.User.findOne({
+                    include: [
+                        { association: 'interests' },
+                        { association: 'genders' },
+                        { association: 'roles' }
+                    ],
+                    order: [
+                        ['id','DESC']
+                    ]
+            }
+        )
 }
