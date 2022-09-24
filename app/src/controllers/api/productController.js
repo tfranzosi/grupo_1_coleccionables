@@ -37,11 +37,11 @@ const apiProductController = {
                     categories: product.categories.map( category => category.name),
                     detail: `http://localhost:3000/api/products/${product.id}`
                 }
-
             })
 
             return res.status(200).json({
-                count: productCount,
+                productCount: productCount,
+                categoryCount: Object.keys(categoryCount).length,
                 countByCategory: categoryCount,
                 previousPage,
                 nextPage,
