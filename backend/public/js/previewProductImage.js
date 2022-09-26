@@ -1,6 +1,5 @@
 function showUpload(){
     const preview = document.getElementById('preview');
-    console.log(preview);
     const uploadedPic = document.getElementById('fotoPerfil').files[0];
     const plusSign = document.getElementById('plus');
     const reader = new FileReader();

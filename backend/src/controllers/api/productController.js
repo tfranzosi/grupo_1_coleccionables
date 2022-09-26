@@ -16,26 +16,30 @@ const apiProductController = {
             const pageCount = Math.ceil(productCount/itemsPerPage);
             const products = await queries.Product.search('',itemsPerPage,pageNumber - 1);
 
-            let previousPage = `http://localhost:3000/api/products?page=${pageNumber - 1}`;
+            let previousPage = `http://localhost:3001/api/products?page=${pageNumber - 1}`;
             if (itemsPerPage != 6) previousPage += `&limit=${itemsPerPage}`;
             if (pageNumber <= 1) previousPage = null;
             
-            let nextPage = `http://localhost:3000/api/products?page=${pageNumber + 1}`;
-            if (pageNumber >= pageCount) nextPage = null;
+            let nextPage = `http://localhost:3001/api/products?page=${pageNumber + 1}`;
             if (itemsPerPage != 6) nextPage += `&limit=${itemsPerPage}`;
+            if (pageNumber >= pageCount) nextPage = null;
             
 
             // const productCount = await queries.Product.searchCount('');
             const categoryCount = await queries.Category.countProductByCategory();
+
             // const products = await queries.Product.showAll();
             const allProducts = products.map( product => {
+                if (product.discount > 0) product.regular_price *= (1 - (product.discount / 100));
                 return {
                     id: product.id,
+                    sku: product.sku,
                     name: product.product_name,
                     price: product.regular_price,               //Ver logica por los descuentos
                     description: product.short_description,
                     categories: product.categories.map( category => category.name),
-                    detail: `http://localhost:3000/api/products/${product.id}`
+                    detail: `http://localhost:3001/api/products/${product.id}`,
+                    view: `http://localhost:3001/productos/${product.id}`
                 }
             })
 
@@ -88,7 +92,6 @@ const apiProductController = {
     lastProduct: async (req,res) => {
         try {
             const product = await queries.Product.lastProduct();
-            console.log(product);
             return res.status(200).json({
                 sku: product.dataValues.sku,
                 product_name: product.dataValues.product_name,
@@ -98,8 +101,9 @@ const apiProductController = {
                 tags: product.dataValues.tags,
                 is_offer: product.dataValues.is_offer?true:false,
                 is_physical: product.dataValues.is_physical?true:false,
-                image_url: `http://localhost:3000${product.dataValues.image_url}`,
-                categories: product.categories.map( category => category.name)
+                image_url: `http://localhost:3001${product.dataValues.image_url}`,
+                categories: product.categories.map( category => category.name),
+                view: `http://localhost:3001/productos/${product.dataValues.id}`
             })
         } catch (e) {
             console.log('error,' , e);

@@ -1,6 +1,6 @@
 const db = require('../models');
 const sequelize = db.sequelize;
-const queries = require('../queries')
+const queries = require('.')
 const { Op } = require("sequelize");
 
 

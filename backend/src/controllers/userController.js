@@ -99,7 +99,6 @@ userController={
                 res.send(e); 
             });
 
-            console.log('oldData\n',req.body);
             return res.render('users/userRegister', {
 				errors: resultValidation.mapped(),
 				oldData: req.body,
@@ -113,7 +112,6 @@ userController={
             let user = userController.validateUser(req.body,req.file);
             let newUser = await queries.User.create(user);
             newUser.interests = [...user.interests];
-            console.log('intereses: ',newUser.interests);
             await queries.UserInterest.create(newUser);
 
             res.cookie('usuario',req.body.user,{ maxAge: 1000*3600, httpOnly: true })

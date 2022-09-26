@@ -11,6 +11,11 @@
 electrónica de consumo y servicios inalámbricos)
 - Programa de compra-venta-intercambio que proporciona un valor sustancial a clientes que buscan intercambiar hardware de videojuegos y software que ya no usan o juegan
 
+##Instalar y correr la App
+- Correr los comandos "npm install" en las dos carpetar "/frontend" y "/backend".
+- Iniciar servidor de backend: Dentro de la carpeta "/backend" correr comando "npm start".
+- Iniciar servidor de frontend: Dentro de la carpeta "/frontend" correr comando "npm start".
+
 ## GamePlay / Propuesta de valor 
 - La accesibilidad – Las tiendas GamePlay generalmente se encuentran en centros comerciales de alto tráfico en las principales áreas metropolitanas.
 - Innovación – a través del GamePlay Technology Institute, la empresa se asocia con instituciones académicas y empresas de tecnología para desarrollar soluciones innovadoras.

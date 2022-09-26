@@ -1,4 +1,4 @@
-const PUERTO = 3000;
+const PUERTO = 3001;
 
 //Modulos
 const express = require('express');
@@ -7,6 +7,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const authMiddleware = require('./src/middlewares/authMiddleware')
+const cors = require('cors');
 
 // Routers
 const apiRouter = require('./src/routes/apiRouter');
@@ -26,6 +27,8 @@ saveUninitialized: false
 }));
 app.use(cookieParser());
 app.use(authMiddleware);
+app.use(cors({origin: '*'}));
+
 
 // Inicio Servidor
 app.listen(process.env.PORT || PUERTO, () => {
