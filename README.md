@@ -15,6 +15,9 @@ electrónica de consumo y servicios inalámbricos)
 - Correr los comandos "npm install" en las dos carpetar "/frontend" y "/backend".
 - Iniciar servidor de backend: Dentro de la carpeta "/backend" correr comando "npm start".
 - Iniciar servidor de frontend: Dentro de la carpeta "/frontend" correr comando "npm start".
+- Correr script "/Users/tomifranzosi/Documents/Digital_House/Trabajo_final/backend/coleccionables_create.sql".
+- Correr script "/Users/tomifranzosi/Documents/Digital_House/Trabajo_final/backend/coleccionables_dump.sql".
+- Iniciar servidor SQL (MAMP).
 
 ## GamePlay / Propuesta de valor 
 - La accesibilidad – Las tiendas GamePlay generalmente se encuentran en centros comerciales de alto tráfico en las principales áreas metropolitanas.
