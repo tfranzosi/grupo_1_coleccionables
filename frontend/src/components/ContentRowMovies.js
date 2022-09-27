@@ -6,7 +6,7 @@ import SmallCard from './SmallCard';
 
 
 
-function ContentRowMovies(){
+function ContentRowMovies(props){
 
     let [products, setProducts] = useState({})
     let [users, setUsers] = useState({})

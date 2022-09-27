@@ -1,12 +1,6 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
-import ContentWrapper from './ContentWrapper';
-import CategoriesCount from './CategoriesCount';
-import LastCreatedinDB from './LastCreatedinDB';
-import ContentRowMovies from './ContentRowMovies';
-import NotFound from './NotFound';
-import {Link, Route, Switch} from 'react-router-dom';
-import SearchMovies from './SearchMovies';
+import {Link} from 'react-router-dom';
 
 function SideBar(){
     return(
@@ -69,43 +63,6 @@ function SideBar(){
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
-            {/*<!-- End of Sidebar -->*/}
-
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/CategoriesCount">
-                <CategoriesCount />
-            </Route>
-            <Route path="/LastCreatedinDB">
-                <LastCreatedinDB />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
-            <Switch>
-                <Route exact path="/">
-                    <ContentWrapper />
-                </Route>
-                <Route path="/CategoriesCount">
-                    <CategoriesCount />
-                </Route>
-                <Route path="/LastCreatedinDB">
-                    <LastCreatedinDB />
-                </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
-                </Route>
-                <Route path="/Search">
-                    <SearchMovies />
-                </Route>
-                <Route component={NotFound} />
-            </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
         </React.Fragment>
     )
 }
