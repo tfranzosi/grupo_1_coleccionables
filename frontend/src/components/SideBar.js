@@ -22,7 +22,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - GAMPEPLAY</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -35,7 +35,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesCount">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Productos por categorias</span>
                     </Link>
                 </li>
 
@@ -43,21 +43,21 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastCreatedinDB">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Ultimos agregados</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Totales</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Search -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/Search">
+                <Link className="nav-link" to="/Login">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Search</span></Link>
+                        <span>Login</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}

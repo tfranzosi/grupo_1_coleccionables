@@ -7,7 +7,7 @@ import CategoriesCount from './CategoriesCount';
 import LastCreatedinDB from './LastCreatedinDB';
 import ContentRowMovies from './ContentRowMovies';
 import NotFound from './NotFound';
-import SearchMovies from './SearchMovies';
+import Login from './Login';
 
 function App() {
   let [products, setProducts] = useState({})
@@ -34,7 +34,7 @@ function App() {
                     <ContentWrapper products={products} users={users}/>
                 </Route>
                 <Route path="/CategoriesCount">
-                    <CategoriesCount />
+                    <CategoriesCount products={products} />
                 </Route>
                 <Route path="/LastCreatedinDB">
                     <LastCreatedinDB />
@@ -42,8 +42,8 @@ function App() {
                 <Route path="/ContentRowMovies">
                     <ContentRowMovies products={products} users={users}/>
                 </Route>
-                <Route path="/Search">
-                    <SearchMovies />
+                <Route path="/Login">
+                    <Login />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
