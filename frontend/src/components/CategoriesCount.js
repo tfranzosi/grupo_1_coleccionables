@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-function CategoriesCount() {
+function CategoriesCount({products}) {
 
   let [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3001/api/products')
-      .then(response => response.json())
-      .then(json => {
-        setCategories(Object.entries(json.countByCategory))
-      })
-  },[])
+   useEffect(() => {
+    if(Object.keys(products).length > 0){
+      setCategories(Object.entries(products.countByCategory))
+    }
+  },[products]) 
 
   return (
     <div className="col-lg-4 mb-3">

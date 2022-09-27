@@ -14,16 +14,15 @@ function App() {
   let [users, setUsers] = useState({})
 
   useEffect(() => {
-    products = fetch('http://localhost:3001/api/products')
+    fetch('http://localhost:3001/api/products')
     .then(response => response.json())
     .then(json => setProducts(json))
 
-    users = fetch('http://localhost:3001/api/users')
+    fetch('http://localhost:3001/api/users')
     .then(response => response.json())
     .then(json =>{
         setUsers(json)
     })
-
   },[])
 
   return (
@@ -32,7 +31,7 @@ function App() {
           <SideBar />
           <Switch>
                 <Route exact path="/">
-                    <ContentWrapper />
+                    <ContentWrapper products={products} users={users}/>
                 </Route>
                 <Route path="/CategoriesCount">
                     <CategoriesCount />
@@ -41,7 +40,7 @@ function App() {
                     <LastCreatedinDB />
                 </Route>
                 <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
+                    <ContentRowMovies products={products} users={users}/>
                 </Route>
                 <Route path="/Search">
                     <SearchMovies />

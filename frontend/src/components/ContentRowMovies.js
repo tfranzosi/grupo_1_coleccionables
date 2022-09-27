@@ -3,21 +3,13 @@ import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
-
-
-
-function ContentRowMovies(props){
-
-    let [products, setProducts] = useState({})
-    let [users, setUsers] = useState({})
-
-
+function ContentRowMovies({products, users}){
 
     //TOTAL DE PRODUCTOS EN DB
 let productCount = {
     title: 'Cantidad de productos',
     color: 'primary', 
-    cuantity: products.productCount,
+    cuantity: products ? products.productCount : 'Cargando...',
     icon: 'fa-gamepad'
 }
 
@@ -25,7 +17,7 @@ let productCount = {
 let userCount = {
     title:'Cantidad de usuarios', 
     color:'primary', 
-    cuantity: users.count,
+    cuantity: users ? users.count : 'Cargando...',
     icon:'fa-user'
 }
 
@@ -33,7 +25,7 @@ let userCount = {
 let categoryCount = {
     title:'Cantidad de categorias de productos' ,
     color:'primary',
-    cuantity:products.categoryCount,
+    cuantity: products ? products.categoryCount : 'Cargando...',
     icon:'fa-flag'
 }
 
@@ -47,23 +39,10 @@ let salesCount = {
 
 let cartProps = [productCount, userCount, categoryCount,salesCount];
 
-    useEffect(() => {
-        products = fetch('http://localhost:3001/api/products')
-        .then(response => response.json())
-        .then(json => setProducts(json))
 
-        users = fetch('http://localhost:3001/api/users')
-        .then(response => response.json())
-        .then(json =>{
-            setUsers(json)
-        })
-
-    },[])
 
     return (
- 
         <div className="row">
-            
             {cartProps.map( (movie, i) => {
 
                 return <SmallCard {...movie} key={i}/>

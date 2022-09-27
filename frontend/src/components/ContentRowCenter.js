@@ -2,7 +2,7 @@ import React from 'react';
 import LastCreatedinDB from './LastCreatedinDB';
 import CategoriesCount from './CategoriesCount';
 
-function ContentRowCenter(){
+function ContentRowCenter({products}){
     return (
         <div className="row">
             
@@ -11,7 +11,7 @@ function ContentRowCenter(){
             {/*<!-- End content row last movie in Data Base -->*/}
 
             {/*<!-- Genres in DB -->*/}
-            <CategoriesCount />
+            <CategoriesCount products={products}/>
 
         </div>
     )
