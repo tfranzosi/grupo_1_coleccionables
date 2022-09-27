@@ -309,8 +309,29 @@ PG
 **Si se encontró con algún impedimento:** No.
 **Qué va a hacer la semana entrante:** Trabajar en los endpoints de productos.
 
-
 MV
 **Qué hizo esta semana:** Testing de validaciones back y repaso conceptos para sprint 8.
 **Si se encontró con algún impedimento:** No. 
 **Qué va a hacer la semana entrante:**  Trabajar en los endpoints de usuarios.
+
+## Weekly S08W02 - 26/09/2022
+
+SC
+**Qué hizo esta semana:** Trabajar en los endpoints de productos.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Trabajar en el Tablero y preparar la presentación final.
+
+TF
+**Qué hizo esta semana:** Trabajar en los endpoints de usuarios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Trabajar en el Tablero y preparar la presentación final.
+
+PG
+**Qué hizo esta semana:** Trabajar en los endpoints de productos.
+**Si se encontró con algún impedimento:** No.
+**Qué va a hacer la semana entrante:** Trabajar en el Tablero y preparar la presentación final.
+
+MV
+**Qué hizo esta semana:** Trabajar en los endpoints de usuarios.
+**Si se encontró con algún impedimento:** No. 
+**Qué va a hacer la semana entrante:**  Trabajar en el Tablero y preparar la presentación final.
