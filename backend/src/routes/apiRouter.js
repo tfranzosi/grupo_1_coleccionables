@@ -24,5 +24,8 @@ router.get('/users/last', apiUserController.lastUser);
 //MOSTRAR DETALLE DE USUARIOS - API
 router.get('/users/:id', apiUserController.detail);
 
+//BORRAR PRODUCTO
+router.delete('/products/:id',apiProductController.delete);
+
 
 module.exports = router;

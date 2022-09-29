@@ -8,6 +8,8 @@ import LastCreatedinDB from './LastCreatedinDB';
 import ContentRowMovies from './ContentRowMovies';
 import NotFound from './NotFound';
 import Login from './Login';
+import TopBar from './TopBar';
+import Footer from './Footer';
 
 function App() {
   let [products, setProducts] = useState({})
@@ -28,25 +30,35 @@ function App() {
   return (
     <React.Fragment>
       	<div id="wrapper">
-          <SideBar />
-          <Switch>
-                <Route exact path="/">
-                    <ContentWrapper products={products} users={users}/>
-                </Route>
-                <Route path="/CategoriesCount">
-                    <CategoriesCount products={products} />
-                </Route>
-                <Route path="/LastCreatedinDB">
-                    <LastCreatedinDB />
-                </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies products={products} users={users}/>
-                </Route>
-                <Route path="/Login">
-                    <Login />
-                </Route>
-                <Route component={NotFound} />
-            </Switch>
+            <SideBar />
+            {/*<!-- Content Wrapper -->*/}
+            <div id="content-wrapper" className="d-flex flex-column">
+                {/*<!-- Main Content -->*/}
+                <div id="content">
+                
+                <Switch>
+                        <Route exact path="/">
+                            <TopBar />
+                            <ContentWrapper products={products} users={users}/>
+                            <Footer />
+                        </Route>
+                        <Route path="/CategoriesCount">
+                            <CategoriesCount products={products} />
+                        </Route>
+                        <Route path="/LastCreatedinDB">
+                            <LastCreatedinDB />
+                        </Route>
+                        <Route path="/ContentRowMovies">
+                            <ContentRowMovies products={products} users={users}/>
+                        </Route>
+                        <Route path="/Login">
+                            <Login />
+                        </Route>
+                        <Route component={NotFound} />
+                    </Switch>
+                    
+                </div>
+            </div>    
         </div>
     </React.Fragment>
   );

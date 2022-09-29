@@ -81,6 +81,7 @@ const apiUserController = {
     auth: async (req,res) => {
         try {
             const privateSeed = 'DigitalHouse';
+
             //Desencripto la contraseña
             const hashPassword = crypto.AES.decrypt(req.body.password, privateSeed);
 		    const decryptedPassword = hashPassword.toString(crypto.enc.Utf8);
@@ -103,7 +104,7 @@ const apiUserController = {
                 })
             }
         } catch (e) {
-            
+            console.log(e);
         }
     },
 

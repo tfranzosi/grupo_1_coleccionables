@@ -1,10 +1,12 @@
 const queries = require('../database/queries/index');
+require('dotenv').config();
 
 
 mainController = {
     //Pagina de inicio
     index: async (req, res) => {
         try {
+            console.log(process.env.FRONTEND_URL);
             //Hago los pedidos a la Base de Datos
             let lastViewed = [];
             if (res.locals.isLogged) {
