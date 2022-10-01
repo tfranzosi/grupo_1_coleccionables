@@ -33,7 +33,7 @@ let categoryCount = {
 let salesCount = {
     title:'Total de ventas' ,
     color:'primary',
-    cuantity:'$100.000',
+    cuantity: products ? '$' + parseInt(products.sales).toLocaleString('es-Ar') : 'Cargando...',
     icon:'fa-shopping-cart'
 }
 

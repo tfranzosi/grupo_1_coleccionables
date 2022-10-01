@@ -1,3 +1,4 @@
+const db = require('../../database/models');
 const queries = require('../../database/queries/index');
 
 const apiProductController = {
@@ -43,8 +44,13 @@ const apiProductController = {
                 }
             })
 
+            const [[{sales}]] = await queries.Order.showMeTheMoney();
+
+            console.log('Total de ventas --> ', sales);
+
             return res.status(200).json({
-                productCount: productCount,
+                sales,
+                productCount,
                 categoryCount: Object.keys(categoryCount).length,
                 countByCategory: categoryCount,
                 previousPage,
