@@ -1,0 +1,72 @@
+    <div class="social-media">
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="https://wa.me/3515555555" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="mailto:contacto@gamestop.com.ar"><i class="fa-regular fa-envelope"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="logo-login">
+        <a href="/"><img class="isologotipo" src="/images/imagotipo.png" alt="Gameplay"></a>
+        
+        <form action="/search" method="GET" class="search-bar">
+            <div class="search-bar">
+                <input type="text" name="query" placeholder="Buscá productos, marcas y ofertas..." class="search-bar"></input>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+        
+        <nav>
+            <ul>
+                <li><a href="/usuarios/carrito"><i class="fa-solid fa-cart-shopping"></i><span>&nbsp;Carrito</span></a></li>
+                <% if (locals.isLogged == true) { %> 
+                    <li><a href="/usuarios/perfil">Bienvenido <%= locals.userLogged.first_name %></a> </li>
+                    <li><a href="/usuarios/cerrarSesion"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>&nbsp;Cerrar sesión</span></a></li>
+                    <% } else { %>
+                        <li><a href="/usuarios/registro"><i class="fa-regular fa-id-card"></i><span>&nbsp;Registrate</span></a></li>
+                        <li><a href="/usuarios/inicioSesion"><i class="fa-solid fa-arrow-right-to-bracket"></i><span>&nbsp;Inicia sesión</span></a></li>
+                <% } %>  
+            </ul>
+        </nav>
+    </div>
+    <div class="navegacion-carrito">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><strong>Productos --></strong></li>
+                <li><a href="/productos/">Ver todos</a></li>
+                <% if (locals.isLogged === true) {%> 
+                    <li><a href="/productos/crear">Crear</a></li>
+                <% } %> 
+                <li> </li>
+                <% if (locals.isLogged === true) {%>
+                    <li><strong>Usuarios --></strong></li>
+                    <% if (locals.userLogged.roles.name === 'admin') {%> 
+                        <li><a href="/usuarios">Ver todos</a></li>
+                    <% } %> 
+                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                <% } %> 
+                <li> </li>
+                <% if (locals.isLogged === true) {%>
+                    <li><strong>Ordenes --></strong></li>
+                    <% if (locals.userLogged.roles.name === 'admin') {%> 
+                        <li><a href="/carritos">Ver todas</a></li>
+                    <% } %> 
+                    <li><a href="/usuarios/carrito">Mi Carrito</a></li>
+                    <li><a href="/usuarios/ordenes">Mis ordenes</a></li>
+                <% } %> 
+                <li><strong>Estadisticas --></strong></li>
+                <li><a href="http://localhost:3000/">Generales</a></li>
+            
+                
+            </ul>
+        </nav>
+    </div>
