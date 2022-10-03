@@ -83,7 +83,7 @@
                             <% } %></span>
                         </p>
                     </div>
-                    <% if (locals.userLogged.roles.name === 'admin') {%>
+                    <% if (locals.isLogged && locals.userLogged.roles.name === 'admin') {%>
                         <div class="buttons2">
                             <div class="add-to-cart">
                                 <a href="/productos/<%= product.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
