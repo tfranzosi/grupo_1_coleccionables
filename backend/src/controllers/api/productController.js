@@ -47,8 +47,12 @@ const apiProductController = {
                 }
             })
 
-            const [[{sales}]] = await queries.Order.showMeTheMoney();
-            
+            let sales = await queries.Order.showMeTheMoney();
+            if(sales[0].length===0){
+                sales=0;
+            } else {
+                [[{sales}]] = sales;
+            }
 
             return res.status(200).json({
                 sales,
