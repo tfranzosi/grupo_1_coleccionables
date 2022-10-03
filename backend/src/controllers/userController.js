@@ -169,7 +169,7 @@ userController={
 		}
         
         try{
-            let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file)
+            let user = req.body;
             user.id = req.params.id;
             await queries.UserInterest.delete(user.id);
             await queries.UserInterest.create(user);

@@ -121,16 +121,14 @@ window.addEventListener('load', () => {
         })
     }),
 
-    inputImage_url.addEventListener('blur', () => validations.image(inputImage_url, errorImage_url))
+    //inputImage_url.addEventListener('blur', () => validations.image(inputImage_url, errorImage_url))
 
     form.addEventListener("submit", e => {
-        e.preventDefault();
-
         allInputs.forEach(inputElement => inputElement.focus());
         allTextAreas.forEach( inputElement => inputElement.focus());
 
         const allErrors = document.querySelectorAll('small.danger');
-        if (allErrors.length === 0) form.submit();
+        if (allErrors.length > 0) e.preventDefault();
 
     })
 

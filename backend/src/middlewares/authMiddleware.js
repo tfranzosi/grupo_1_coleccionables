@@ -13,6 +13,7 @@ async function authMiddleware(req, res, next) {
     } else if (userLogged === undefined) {
         next();
     } else {
+        req.session.usuario = userLogged.user;
         res.locals.isLogged = true;
         res.locals.userLogged = userLogged;
         next();
