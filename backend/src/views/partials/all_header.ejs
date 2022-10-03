@@ -47,7 +47,7 @@
                     <li><strong>Productos</strong>
                         <ul id="nav2-productos" class="desplegable">
                             <li><a href="/productos/">Ver todos</a></li>
-                            <% if (locals.isLogged === true) {%> 
+                            <% if (locals.userLogged.roles.name === 'admin') {%>  
                                 <li><a href="/productos/crear">Crear</a></li>
                             <% } %> 
                         </ul>
