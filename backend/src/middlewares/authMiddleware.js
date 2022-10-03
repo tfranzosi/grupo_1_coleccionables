@@ -7,7 +7,6 @@ async function authMiddleware(req, res, next) {
 
     let userLogged = undefined;
     if (req.session.usuario !== undefined) userLogged = await queries.User.findByUser(req.session.usuario);
-    console.log('usuarios en DB:',userLogged);
     
     if(userLogged === null){
         res.render('error',{error: 'Hubo un problema y no encontramos tu usuarios en la Base de Datos'});
