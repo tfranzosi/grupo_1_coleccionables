@@ -1,12 +1,6 @@
 import React from 'react';
 import image from '../assets/images/logo-DH.png';
-import ContentWrapper from './ContentWrapper';
-import CategoriesCount from './CategoriesCount';
-import LastCreatedinDB from './LastCreatedinDB';
-import ContentRowMovies from './ContentRowMovies';
-import NotFound from './NotFound';
-import {Link, Route, Switch} from 'react-router-dom';
-import SearchMovies from './SearchMovies';
+import {Link} from 'react-router-dom';
 
 function SideBar(){
     return(
@@ -28,7 +22,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - GAMPEPLAY</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -41,7 +35,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesCount">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Productos por categorias</span>
                     </Link>
                 </li>
 
@@ -49,63 +43,26 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastCreatedinDB">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Ultimos agregados</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Totales</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Search -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/Search">
+                <Link className="nav-link" to="/Login">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Search</span></Link>
+                        <span>Login</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
-            {/*<!-- End of Sidebar -->*/}
-
-            {/*<!-- Microdesafio 1 -->*/}
-            {/*<!--<Route exact path="/">
-                <ContentWrapper />
-            </Route>
-            <Route path="/CategoriesCount">
-                <CategoriesCount />
-            </Route>
-            <Route path="/LastCreatedinDB">
-                <LastCreatedinDB />
-            </Route>
-            <Route path="/ContentRowMovies">
-                <ContentRowMovies />
-            </Route>*/}
-            {/*<!-- End Microdesafio 1 -->*/}
-
-            {/*<!-- End Microdesafio 2 -->*/}
-            <Switch>
-                <Route exact path="/">
-                    <ContentWrapper />
-                </Route>
-                <Route path="/CategoriesCount">
-                    <CategoriesCount />
-                </Route>
-                <Route path="/LastCreatedinDB">
-                    <LastCreatedinDB />
-                </Route>
-                <Route path="/ContentRowMovies">
-                    <ContentRowMovies />
-                </Route>
-                <Route path="/Search">
-                    <SearchMovies />
-                </Route>
-                <Route component={NotFound} />
-            </Switch>
-            {/*<!-- End Microdesafio 2 -->*/}
         </React.Fragment>
     )
 }

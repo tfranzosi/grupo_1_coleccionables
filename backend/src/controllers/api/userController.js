@@ -1,4 +1,6 @@
 const queries = require('../../database/queries/index');
+const crypto = require("crypto-js");
+const bcrypt = require('bcryptjs');
 
 const apiUserController = {
     list: async (req, res) => {
@@ -22,13 +24,6 @@ const apiUserController = {
             if (itemsPerPage != 6) nextPage += `&limit=${itemsPerPage}`;
             if (pageNumber >= pageCount) nextPage = null;
 
-
-
-/*             //Hago los pedidos a la Base de Datos
-            
-            // const categoryCount = await queries.Category.countProductByCategory();
-            const users = await queries.User.showAll(); */
-
             const allUsers = users.map( user => {
                 return {
                     id: user.id,
@@ -50,6 +45,7 @@ const apiUserController = {
             return res.status(400).json(e);
         }
     },
+
     detail: async (req,res) => {
         try {
             //Hago los pedidos a la Base de Datos
@@ -81,6 +77,37 @@ const apiUserController = {
             return res.status(400).json(e);
         }
     },
+
+    auth: async (req,res) => {
+        try {
+            const privateSeed = 'DigitalHouse';
+
+            //Desencripto la contraseña
+            const hashPassword = crypto.AES.decrypt(req.body.password, privateSeed);
+		    const decryptedPassword = hashPassword.toString(crypto.enc.Utf8);
+
+            const user = await queries.User.findByUser(req.body.username);
+            if (user !== null && bcrypt.compareSync(decryptedPassword,user.password)){
+                res.status(200).json({
+                    access: "Granted",
+                     user: {
+                        username: user.user,
+                        name: `${user.first_name} ${user.last_name}`,
+                        gender: user.genders.name,
+                        image: `http://localhost:3001${user.image_url}`
+                    } 
+                })
+            } else {
+                res.status(401).json({
+                    access: "Denied",
+                    detail: "Wrong user or password"
+                })
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    },
+
     lastUser: async (req,res) => {
         try {
             const user = await queries.User.lastUser();

@@ -62,6 +62,7 @@ let validations = {
 }
 
 window.addEventListener('load', () => {
+
     //Capturamos el formulario
     const form = document.querySelector("form.registro")
 

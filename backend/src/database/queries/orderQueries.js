@@ -45,7 +45,7 @@ module.exports = {
         date: Date.now()
     }),
     
-    update: async (order) => db.Order.update({
+    update: async (order) => await db.Order.update({
             items_q: order.totalQuantity,
             status_id: 3,  
             ammount: order.ammount
@@ -54,6 +54,7 @@ module.exports = {
             where: {
                 id: order.id
             }
-        }
-    )
+    }),
+
+    showMeTheMoney: async () => await sequelize.query('SELECT SUM(ammount) AS sales FROM orders WHERE status_id=3 GROUP BY status_id')
 }

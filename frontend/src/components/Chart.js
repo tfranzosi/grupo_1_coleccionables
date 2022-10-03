@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ChartRow from './ChartRow';
 
 
-function Chart (){
+function Chart ({products}){
 
     let[tableRowsData, setTableRowsData] = useState([]);
     let[previousPage, setPreviousPage] = useState('');
@@ -24,8 +24,12 @@ function Chart (){
     }
 
     useEffect( () => {
-        fetchApi('http://localhost:3001/api/products');
-    },[])
+        if (Object.keys(products).length > 0){
+            setTableRowsData(products.products)
+            setPreviousPage(products.previousPage);
+            setNextPage(products.nextPage);
+        }
+    },[products])
 
     return (
         /* <!-- DataTales Example --> */

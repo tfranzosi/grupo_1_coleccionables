@@ -1,3 +1,4 @@
+const db = require('../../database/models');
 const queries = require('../../database/queries/index');
 
 const apiProductController = {
@@ -43,8 +44,13 @@ const apiProductController = {
                 }
             })
 
+            const [[{sales}]] = await queries.Order.showMeTheMoney();
+
+            console.log('Total de ventas --> ', sales);
+
             return res.status(200).json({
-                productCount: productCount,
+                sales,
+                productCount,
                 categoryCount: Object.keys(categoryCount).length,
                 countByCategory: categoryCount,
                 previousPage,
@@ -109,7 +115,28 @@ const apiProductController = {
             console.log('error,' , e);
             return res.status(400).json(e);
         }
-    }
+    },
+
+     //Elimina de la DB
+     delete: async (req, res) => {
+        try{
+            const product = await queries.Product.find(req.params.id)
+            if(product){
+                await queries.Product.delete(req.params.id);
+                res.status(200).json({
+                    status: 'Deleted',
+                    deletedProduct: product
+                })
+            } else {
+                res.status(200).json({
+                    status: 'Product not found'
+                })
+            }
+        } catch (e) {
+            //Si hay algun error, los atajo y muestro todo vacio
+            res.status(400).json(e);
+        }
+     }
 }
 
 module.exports = apiProductController;
