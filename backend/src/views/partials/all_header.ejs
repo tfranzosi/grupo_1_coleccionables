@@ -39,34 +39,56 @@
     </div>
     <div class="navegacion-carrito">
         <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><strong>Productos --></strong></li>
-                <li><a href="/productos/">Ver todos</a></li>
-                <% if (locals.isLogged === true) {%> 
-                    <li><a href="/productos/crear">Crear</a></li>
-                <% } %> 
-                <li> </li>
+            <ul class="nav2">
+                <div class="nav-box">
+                    <li><a href="/">Home</a></li>
+                </div>
+                <div class="nav-box">
+                    <li><strong>Productos</strong>
+                        <ul id="nav2-productos" class="desplegable">
+                            <li><a href="/productos/">Ver todos</a></li>
+                            <% if (locals.isLogged === true) {%> 
+                                <li><a href="/productos/crear">Crear</a></li>
+                            <% } %> 
+                        </ul>
+                    </li>
+                </div>
                 <% if (locals.isLogged === true) {%>
-                    <li><strong>Usuarios --></strong></li>
-                    <% if (locals.userLogged.roles.name === 'admin') {%> 
-                        <li><a href="/usuarios">Ver todos</a></li>
-                    <% } %> 
-                    <li><a href="/usuarios/perfil">Mi perfil</a></li>
-                <% } %> 
-                <li> </li>
-                <% if (locals.isLogged === true) {%>
-                    <li><strong>Ordenes --></strong></li>
-                    <% if (locals.userLogged.roles.name === 'admin') {%> 
-                        <li><a href="/carritos">Ver todas</a></li>
-                    <% } %> 
-                    <li><a href="/usuarios/carrito">Mi Carrito</a></li>
-                    <li><a href="/usuarios/ordenes">Mis ordenes</a></li>
-                <% } %> 
-                <li><strong>Estadisticas --></strong></li>
-                <li><a href="http://localhost:3000/">Generales</a></li>
-            
-                
+                    <div class="nav-box">
+                        <li><strong>Usuarios</strong>
+                            <ul id="nav2-usuarios" class="desplegable">
+                                <% if (locals.userLogged.roles.name === 'admin') {%> 
+                                    <li><a href="/usuarios">Ver todos</a></li>
+                                <% } %> 
+                                <li><a href="/usuarios/perfil">Mi perfil</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="nav-box">
+                        <li><strong>Ordenes</strong>
+                            <ul id="nav2-ordenes" class="desplegable">
+                                <% if (locals.userLogged.roles.name === 'admin') {%> 
+                                    <li><a href="/carritos">Ver todas</a></li>
+                                <% } %> 
+                                <li><a href="/usuarios/ordenes">Mis ordenes</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="nav-box">
+                        <li><strong>Carrito</strong>
+                            <ul id="nav2-carrito" class="desplegable">
+                                <li><a href="/usuarios/carrito">Mi Carrito</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                <% } %>
+                <div class="nav-box">
+                    <li><strong>Estadisticas</strong>
+                        <ul id="nav2-estadisticas" class="desplegable">
+                            <li><a href ="http://localhost:3000/">Generales</a></li>
+                        </ul>
+                    </li>
+                </div>
             </ul>
         </nav>
     </div>
