@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+const BACKEND_ADDRESS = 'http://localhost:3001';
 
 function LastCreatedinDB(){
 
@@ -6,13 +7,13 @@ function LastCreatedinDB(){
     let [user, setUser] = useState({});
 
     useEffect( () => {
-        fetch('http://localhost:3001/api/products/last')
+        fetch(`${BACKEND_ADDRESS}/api/products/last`)
         .then(response => response.json())
         .then(json => {
             setProduct(json)
         })
 
-        fetch('http://localhost:3001/api/users/last')
+        fetch(`${BACKEND_ADDRESS}/api/users/last`)
         .then(response => response.json())
         .then(json => {
             setUser(json)

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Redirect } from 'react-router-dom';
 const crypto = require("crypto-js");
+const BACKEND_ADDRESS = 'http://localhost:3001';
 
 function Login(){
 	const privateSeed = 'DigitalHouse';
@@ -36,7 +37,7 @@ function Login(){
 			}
 		}
 
-		fetch('http://localhost:3001/api/users/auth', {
+		fetch(`${BACKEND_ADDRESS}/api/users/auth`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

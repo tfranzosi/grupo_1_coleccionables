@@ -1,6 +1,8 @@
 const queries = require('../../database/queries/index');
 const crypto = require("crypto-js");
 const bcrypt = require('bcryptjs');
+require('dotenv').config();
+
 
 const apiUserController = {
     list: async (req, res) => {
@@ -16,11 +18,11 @@ const apiUserController = {
             const pageCount = Math.ceil(userCount/itemsPerPage);
             const users = await queries.User.search('',itemsPerPage,pageNumber - 1);
 
-            let previousPage = `http://localhost:3001/api/users?page=${pageNumber - 1}`;
+            let previousPage = `${process.env.BACKEND_ADDRESS}/api/users?page=${pageNumber - 1}`;
             if (itemsPerPage != 6) previousPage += `&limit=${itemsPerPage}`;
             if (pageNumber <= 1) previousPage = null;
             
-            let nextPage = `http://localhost:3001/api/users?page=${pageNumber + 1}`;
+            let nextPage = `${process.env.BACKEND_ADDRESS}/api/users?page=${pageNumber + 1}`;
             if (itemsPerPage != 6) nextPage += `&limit=${itemsPerPage}`;
             if (pageNumber >= pageCount) nextPage = null;
 
@@ -94,7 +96,7 @@ const apiUserController = {
                         username: user.user,
                         name: `${user.first_name} ${user.last_name}`,
                         gender: user.genders.name,
-                        image: `http://localhost:3001${user.image_url}`
+                        image: `${process.env.BACKEND_ADDRESS}${user.image_url}`
                     } 
                 })
             } else {
@@ -117,7 +119,7 @@ const apiUserController = {
                 user: user.dataValues.user,
                 birth_date: user.dataValues.birth_date,
                 gender: user.dataValues.genders.name,
-                image_url: `http://localhost:3001${user.dataValues.image_url}`
+                image_url: `${process.env.BACKEND_ADDRESS}${user.dataValues.image_url}`
             })
         } catch (e) {
             console.log('error,' , e);

@@ -1,5 +1,8 @@
 const db = require('../../database/models');
 const queries = require('../../database/queries/index');
+require('dotenv').config();
+
+
 
 const apiProductController = {
 
@@ -17,11 +20,11 @@ const apiProductController = {
             const pageCount = Math.ceil(productCount/itemsPerPage);
             const products = await queries.Product.search('',itemsPerPage,pageNumber - 1);
 
-            let previousPage = `http://localhost:3001/api/products?page=${pageNumber - 1}`;
+            let previousPage = `${process.env.BACKEND_ADDRESS}/api/products?page=${pageNumber - 1}`;
             if (itemsPerPage != 6) previousPage += `&limit=${itemsPerPage}`;
             if (pageNumber <= 1) previousPage = null;
             
-            let nextPage = `http://localhost:3001/api/products?page=${pageNumber + 1}`;
+            let nextPage = `${process.env.BACKEND_ADDRESS}/api/products?page=${pageNumber + 1}`;
             if (itemsPerPage != 6) nextPage += `&limit=${itemsPerPage}`;
             if (pageNumber >= pageCount) nextPage = null;
             
@@ -39,14 +42,13 @@ const apiProductController = {
                     price: product.regular_price,               //Ver logica por los descuentos
                     description: product.short_description,
                     categories: product.categories.map( category => category.name),
-                    detail: `http://localhost:3001/api/products/${product.id}`,
-                    view: `http://localhost:3001/productos/${product.id}`
+                    detail: `${process.env.BACKEND_ADDRESS}/api/products/${product.id}`,
+                    view: `${process.env.BACKEND_ADDRESS}/productos/${product.id}`
                 }
             })
 
             const [[{sales}]] = await queries.Order.showMeTheMoney();
-
-            console.log('Total de ventas --> ', sales);
+            
 
             return res.status(200).json({
                 sales,
@@ -107,9 +109,9 @@ const apiProductController = {
                 tags: product.dataValues.tags,
                 is_offer: product.dataValues.is_offer?true:false,
                 is_physical: product.dataValues.is_physical?true:false,
-                image_url: `http://localhost:3001${product.dataValues.image_url}`,
+                image_url: `${process.env.BACKEND_ADDRESS}${product.dataValues.image_url}`,
                 categories: product.categories.map( category => category.name),
-                view: `http://localhost:3001/productos/${product.dataValues.id}`
+                view: `${process.env.BACKEND_ADDRESS}/productos/${product.dataValues.id}`
             })
         } catch (e) {
             console.log('error,' , e);
