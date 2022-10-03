@@ -11,7 +11,7 @@ INSERT INTO products (sku, product_name, short_description, long_description, re
 INSERT INTO products (sku, product_name, short_description, long_description, regular_price, discount, fee_q, tags, is_offer, is_physical, image_url, visits_q, sales_q, best_seller) VALUES ('GPC002', 'Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth', 'Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth', 'Figura de acción Saint Seiya Capricorn Shura de Bandai Myth Cloth', 38500, 0, 12, 'coleccionables,gameplay,bandai,saint seya,caballeros del zodiaco,muñecos de juguete, figura de acción', 0, 1, '/images/products/GPC002-Figura-de-acción-Saint-Seiya-Capricorn-Shura-de-Bandai-Myth-Cloth.jpeg', 0, 0, 0);
 INSERT INTO products (sku, product_name, short_description, long_description, regular_price, discount, fee_q, tags, is_offer, is_physical, image_url, visits_q, sales_q, best_seller) VALUES ('GPC003', 'Figura de acción Dragon Ball Broly BAN91047 de Bandai S.H. Figuarts', 'Figura de acción Dragon Ball Broly BAN91047 de Bandai SH Figuarts', 'Figura de acción Dragon Ball Broly BAN91047 de Bandai SH Figuarts', 71500, 0, 12, 'coleccionables,gameplay,bandai,saint seya,dragon ball z,muñecos de juguete, figura de acción', 0, 1, '/images/products/GPC003-Figura-de-acción-Dragon-Ball-Broly-BAN91047-de-Bandai-S.H.-Figuarts.jpeg', 0, 0, 0);
 INSERT INTO products (sku, product_name, short_description, long_description, regular_price, discount, fee_q, tags, is_offer, is_physical, image_url, visits_q, sales_q, best_seller) VALUES ('GPC004', 'Figura de acción Sonic With ring 20146 de Funko Pop! Games', 'Figura de acción Sonic With ring 20146 de Funko Pop! Games', 'Figura de acción Sonic With ring 20146 de Funko Pop! Games', 7000, 0, 12, 'coleccionables,gameplay,bandai,saint seya,sonic,muñecos de juguete, figura de acción, funko pop', 0, 1, '/images/products/GPC004-Figura-de-accion-Sonic-With-ring-20146-de-Funko-Pop-Games.jpeg', 0, 0, 0);
-INSERT INTO products (sku, product_name, short_description, long_description, regular_price, discount, fee_q, tags, is_offer, is_physical, image_url, visits_q, sales_q, best_seller) VALUES ('GPA001', 'Figurita Messi Album Mundial', 'Figurita Messi Album Mundial Panini Qatar 2022', 'Figurita Messi Album Mundial Panini Qatar 2022. Edicion Limitada del mejor jugador del mundo', 5000, 0, 1, 'coleccionables,gameplay,panini,album,qatar,figurita,messi,lionel,dios,figura,campeones', 0, 1, '/images\products\GPA001-MessiQatarFigurita.jpg', 0, 0, 0);
+INSERT INTO products (sku, product_name, short_description, long_description, regular_price, discount, fee_q, tags, is_offer, is_physical, image_url, visits_q, sales_q, best_seller) VALUES ('GPA001', 'Figurita Messi Album Mundial', 'Figurita Messi Album Mundial Panini Qatar 2022', 'Figurita Messi Album Mundial Panini Qatar 2022. Edicion Limitada del mejor jugador del mundo', 5000, 0, 1, 'coleccionables,gameplay,panini,album,qatar,figurita,messi,lionel,dios,figura,campeones', 0, 1, '/images/products/GPA001-MessiQatarFigurita.jpg', 0, 0, 0);
 -- Poblar la tabla OPCIONES DE PRODUCTO
 INSERT INTO options (name) VALUES ('Oferta');
 INSERT INTO options (name) VALUES ('Físico');
@@ -68,8 +68,8 @@ INSERT INTO products_categories (category_id, product_id) VALUES ('5', '12');
 INSERT INTO products_categories (category_id, product_id) VALUES ('6', '12');
 
 -- Poblar la tabla SEXOS DE USUARIO
-INSERT INTO genders (name) VALUES ('Masculino');
-INSERT INTO genders (name) VALUES ('Femenino');
+INSERT INTO genders (name) VALUES ('Varon');
+INSERT INTO genders (name) VALUES ('Mujer');
 INSERT INTO genders (name) VALUES ('Otro');
 
 -- Poblar la tabla ROLES DE USUARIO
@@ -141,7 +141,7 @@ INSERT INTO orders_status (name) VALUES ('Enviado');
 INSERT INTO orders_status (name) VALUES ('Finalizado');
 
 -- Poblar la tabla de ORDENES (CARRITOS)
-INSERT INTO orders (user_id, ammount, items_q, shipping_address, billing_address, email, date, status_id) VALUES (2, 16014, 2,'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'tomas@franzosi.com.ar', '2022-08-08', 1);
+INSERT INTO orders (user_id, ammount, items_q, shipping_address, billing_address, email, date, status_id) VALUES (2, 16014, 2,'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'tomas@franzosi.com.ar', '2022-08-08', 3);
 INSERT INTO orders (user_id, ammount, items_q, shipping_address, billing_address, email, date, status_id) VALUES (1, 12630, 3,'Av. Siempreviva 1945', 'Av. Siempreviva 1945', 'sjchaves97@gmail.com', '2022-08-13', 1);
 
 -- Estructura de la tabla intermedia ORDENES (CARRITOS) - PRODUCTOS

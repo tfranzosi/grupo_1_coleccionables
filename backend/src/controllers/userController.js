@@ -160,6 +160,8 @@ userController={
                 res.send(e); 
             });
         const resultValidation = validationResult(req);
+        console.log("REQ.BODY:",req.body);
+        console.log("VALIDATIONSSSS",resultValidation.mapped());
 		if (resultValidation.errors.length > 0) {
             return res.render('users/userEdit', {
                 errors: resultValidation.mapped(),
@@ -169,7 +171,7 @@ userController={
 		}
         
         try{
-            let user = userController.validateUser(JSON.parse(JSON.stringify(req.body)),req.file)
+            let user = req.body;
             user.id = req.params.id;
             await queries.UserInterest.delete(user.id);
             await queries.UserInterest.create(user);

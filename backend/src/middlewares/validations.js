@@ -1,7 +1,9 @@
+const session = require('express-session');
 const { body } = require('express-validator');
 const path = require('path');
 const queries = require('../database/queries')
 
+const extensions = ['.jpg','.jpeg', '.png', '.gif'];
 
 module.exports = {
     product: [
@@ -19,11 +21,11 @@ module.exports = {
             .isLength({ min: 20 }).withMessage('La descripcion larga debe tener al menos 20 caracteres'),
         body('regular_price')
             .notEmpty().withMessage('Tenes que escribir un precio').bail()
-            .isNumeric({min: 0}).withMessage('Tenes que escribir un número mayor a 0'),
+            .isFloat({min: 0}).withMessage('Tenes que escribir un número mayor a 0'),
         body('discount')
-            .isNumeric({ min: 0, max: 100 }).withMessage('Tenes que escribir un número mayor a 0'),
+            .isInt({ min: 0, max: 99 }).withMessage('Tenes que escribir un número mayor a 0'),
         body('fee_q')
-            .isNumeric({ min: 0 }).withMessage('Tenes que escribir un número mayor a 0'),
+            .isInt({ min: 0 }).withMessage('Tenes que escribir un número mayor a 0'),
         body('tags')
             .notEmpty().withMessage('Tenes que escribir una etiqueta'),
         body('is_physical')
@@ -33,7 +35,7 @@ module.exports = {
         body('image_url')
             .custom((value, { req }) => {
                 let file = req.file;
-                let acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif'];
+                let acceptedExtensions = extensions;
                 if (file !== undefined) {
                     let fileExtension = path.extname(file.originalname);
                     if (!acceptedExtensions.includes(fileExtension)) {
@@ -56,26 +58,33 @@ module.exports = {
             .notEmpty().withMessage('Tenes que escribir un usuario').bail().bail()
             .isLength({ min: 2 }).withMessage('El usuario debe tener al menos 2 caracteres').bail()
             .custom(async (value,{req}) => {
-                const doesExist = await queries.User.findByUser(req.body.user);
-                if (doesExist !== null){
-                    throw new Error('El usuario ya existe en la base de datos')
+                if(req.session.usuario !== req.body.user){
+                    const doesExist = await queries.User.findByUser(req.body.user);
+                    if (doesExist !== null){
+                        throw new Error('El usuario ya existe en la base de datos')
+                    }
                 }
                 return true;
             }),
         body('phone_country')
             .notEmpty().withMessage('Tenes que escribir un código de país').bail()
-            .isNumeric().withMessage('Tenes que escribir un número'),
+            .isInt().withMessage('Tenes que escribir un número'),
         body('phone_number')
             .notEmpty().withMessage('Tenes que escribir un teléfono').bail()
-            .isNumeric().withMessage('Tenes que escribir un número'),
+            .isInt().withMessage('Tenes que escribir un número'),
         body('email')
             .notEmpty().withMessage('Tienes que escribir un correo electrónico').bail()
             .isEmail().withMessage('Debes escribir un formato de correo válido').bail()
+            .if(({ req }) => queries.User.findByUser(req.session.usuario)
+                .then(user => user.email !== req.body.email))
             .custom(async (value,{req}) => {
-                const doesExist = await queries.User.findByUser(req.body.email);
-                if (doesExist !== null){
-                    throw new Error('El email ya existe en la base de datos')
-                }
+                //const sessionUser = await queries.User.findByUser(req.session.usuario);  ESTE O EL IF, CHEQUEAR
+                //if (sessionUser.email !== req.body.email){
+                    const doesExist = await queries.User.findByUser(req.body.email);
+                    if (doesExist !== null){
+                        throw new Error('El email ya existe en la base de datos')
+                    }
+                //}
                 return true;
             }),
         body('birth_date')
@@ -102,7 +111,7 @@ module.exports = {
         body('image_url')
             .custom((value, { req }) => {
                 let file = req.file;
-                let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+                let acceptedExtensions = extensions;
                 if (file !== undefined) {
                     let fileExtension = path.extname(file.originalname);
                     if (!acceptedExtensions.includes(fileExtension)) {
@@ -111,9 +120,40 @@ module.exports = {
                 }
                 return true;
             })
-        
     ],
-
+    /*
+    userRegister: [
+        body('user')
+            .custom(async (value,{req}) => {
+                const doesExist = await queries.User.findByUser(req.body.user);
+                if (doesExist !== null){
+                    throw new Error('El usuario ya existe en la base de datos')
+                }
+                return true;
+            }),
+        body('email')
+            .custom(async (value,{req}) => {
+                const doesExist = await queries.User.findByUser(req.body.email);
+                console.log("Session: ", req.session)
+                if (doesExist !== null && doesExist.email!== req.session.email){
+                    throw new Error('El email ya existe en la base de datos')
+                }
+                return true;
+            }),
+        body('password')
+            .trim().notEmpty().withMessage('Tienes que escribir una contraseña'),
+        body('password2')
+            .trim().notEmpty().withMessage('Tienes que escribir una contraseña').bail()
+            .custom((value,{req}) =>{
+                if(value !== req.body.password){
+                    throw new Error('Las contraseñas no coinciden')
+                }
+                return true;
+            }),
+        body('conditions')
+            .notEmpty().withMessage('Debes estar de acuerdo con los Términos y Condiciones'),
+    ],*/
+ 
     login: [
         body('user')
             .notEmpty().withMessage('Tenes que escribir un usuario o email'),

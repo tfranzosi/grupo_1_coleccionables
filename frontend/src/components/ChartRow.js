@@ -1,5 +1,5 @@
 import React from 'react';
-
+const BACKEND_ADDRESS = 'http://localhost:3001';
 
 function ChartRow(props){
     let user = JSON.parse(sessionStorage.getItem('usuario'));
@@ -10,7 +10,7 @@ function ChartRow(props){
         if (user.name !== undefined) {
             alert('Estas por borrar chango!')
 
-            fetch(`http://localhost:3001/api/products/${props.id}`, {
+            fetch(`${BACKEND_ADDRESS}/api/products/${props.id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

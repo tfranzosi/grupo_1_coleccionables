@@ -62,7 +62,7 @@ module.exports = {
 
             items_q += 1;
 
-            ammount = parseFloat(ammount) + product.regular_price;
+            ammount = parseFloat(ammount) + parseFloat(product.regular_price);
 
 
             //Agrego el producto y precio en la tabla orders

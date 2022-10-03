@@ -38,7 +38,7 @@ module.exports = {
                 user_id: userId
             },
             order: [
-                ['last_visited','DESC']
+                ['created_at','DESC']
             ],
             limit: 3
         }),
@@ -73,7 +73,8 @@ module.exports = {
             [Op.or]: [
                 {product_name: { [Op.like]: '%' + query + '%' }},
                 {short_description: { [Op.like]: '%' + query + '%' }},
-                {long_description: { [Op.like]: '%' + query + '%' }}
+                {long_description: { [Op.like]: '%' + query + '%' }},
+                {tags: { [Op.like]: '%' + query + '%' }}
 
             ]
         }

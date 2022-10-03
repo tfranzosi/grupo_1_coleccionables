@@ -11,16 +11,19 @@ import Login from './Login';
 import TopBar from './TopBar';
 import Footer from './Footer';
 
+const BACKEND_ADDRESS = 'http://localhost:3001';
+
+
 function App() {
   let [products, setProducts] = useState({})
   let [users, setUsers] = useState({})
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/products')
+    fetch(`${BACKEND_ADDRESS}/api/products`)
     .then(response => response.json())
     .then(json => setProducts(json))
 
-    fetch('http://localhost:3001/api/users')
+    fetch(`${BACKEND_ADDRESS}/api/users`)
     .then(response => response.json())
     .then(json =>{
         setUsers(json)

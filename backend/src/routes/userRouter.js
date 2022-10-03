@@ -53,7 +53,7 @@ router.get('/:id', userZones.adminOnly, userController.detail);
 
 //EDICION DE USUARIO
 router.get("/:id/editar", userZones.loggedOnly, userController.editForm);
-router.put("/:id", userZones.loggedOnly, upload.single('image_url'), validations.register, userController.edit);
+router.put("/:id", userZones.loggedOnly, upload.single('image_url'), userController.edit);
 
 //BORRAR USUARIO
 router.delete('/:id', userZones.loggedOnly, userController.delete);

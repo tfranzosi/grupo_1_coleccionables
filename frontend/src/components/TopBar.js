@@ -1,5 +1,5 @@
 import React from 'react';
-import foto from '../assets/images/jordan-walke.png';
+import foto from '../assets/images/t-franzosi.png';
 
 function TopBar(){
 	const useSessionStorage = (keyName, defaultValue) => {

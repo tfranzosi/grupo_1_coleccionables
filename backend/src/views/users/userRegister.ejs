@@ -26,7 +26,7 @@
         <h3 class="tituloregistro">REGISTRO</h3>
         <div class="contenedor-registro">
             <div class="social-registro">
-                <button class="facebookbutton">
+                <button class="facebookbutton" onclick="location.href='http://localhost:3001/auth/facebook'">
                     <span class="facebook"><i class="fa-brands fa-facebook-square"></i></span>
                     <span class="textofacebook">Registrate con Facebook</span>
                 </button>
@@ -51,7 +51,7 @@
                         
                         <label for="urlImagen" class="fotoPerfil"><i class="fa fa-plus" id="plus" aria-hidden="true"></i><img id="preview" src="" width="120px"></label><br>
                         
-                        <input type="file" id="urlImagen" name="urlImagen" onchange="showUpload()">
+                        <input type="file" accept=".jpg, .jpeg, .gif, .png" id="urlImagen" name="urlImagen" onchange="showUpload()">
 
                         <div class="danger">  <% if (locals.errors && errors.image_url) { %>
                             <%= errors.image_url.msg %>
@@ -152,7 +152,7 @@
                             <% for (let gender of genders) {%> 
                             <div class="generos">
                                 <label for="<%= gender.name %>"><%= gender.name %></label>
-                                <input type="radio" name="gender" value="<%= gender.id %>"" id="<%= gender.name %>"
+                                <input type="radio" name="gender" value="<%= gender.id %>" id="<%= gender.name %>"
                                     <% if (locals.oldData && locals.oldData.gender == gender.id.toString()){%>
                                         checked="checked"
                                     <%}%>

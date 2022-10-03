@@ -100,7 +100,8 @@ productController = {
         const categories = await queries.Category.getAll();
         //Realizo las validaciones
         const resultValidation = validationResult(req);
-        (resultValidation.errors);
+        console.log('Hoolas');
+        console.log(resultValidation);
 		if (resultValidation.errors.length > 0) {
 			return res.render('products/productCreate', {
 				errors: resultValidation.mapped(),

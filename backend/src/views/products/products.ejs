@@ -26,6 +26,11 @@
             <% } %> 
         <% } %>
         </section>
+        <span>- 
+            <% for (let page = 1; page <= pageCount; page++) { %>
+                <a href="<%= url %>&page=<%= page %> "><%= page %></a> - 
+            <% } %> 
+        </span>
     </section>
 
     <%- include ('../partials/all_footer') %>
