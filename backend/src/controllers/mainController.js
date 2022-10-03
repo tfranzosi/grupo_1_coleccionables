@@ -8,7 +8,11 @@ mainController = {
             let lastViewed = [];
             if (res.locals.isLogged) {
                 lastViewed = await queries.Product.showLastVisited(res.locals.userLogged.id);
-                lastViewed = lastViewed.map( visit => visit.Product['dataValues']);
+                console.clear();
+                console.log("\n\n\n---------------------\n");
+                // console.log(lastViewed)
+                //lastViewed = lastViewed.map( visit => visit.Product['dataValues']);
+                lastViewed = lastViewed.map( visit => console.log(visit['dataValues']));
             }
             const onSale = await queries.Product.showOnSale();
             const bestSellers = await queries.Product.showBestSellers();

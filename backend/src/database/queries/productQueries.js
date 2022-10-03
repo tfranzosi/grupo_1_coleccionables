@@ -1,5 +1,6 @@
 const db = require('../models');
 const Sequelize = db.sequelize;
+const queries = require('.')
 const { Op } = require("sequelize");
 
 module.exports = {
@@ -29,11 +30,12 @@ module.exports = {
         ]
     }),
 
-    showLastVisited: async (userId) => await db.UserVisitedProduct.findAll({
-            include: [{ 
-                model: db.Product,
-                include: { association: 'categories'}
-            }],
+    showLastVisited: async (userId) => {
+
+        let productsId = await db.UserVisitedProduct.findAll({
+            attributes: [
+                [Sequelize.fn('DISTINCT', Sequelize.col('product_id')), 'id']
+            ],
             where: {
                 user_id: userId
             },
@@ -41,7 +43,13 @@ module.exports = {
                 ['created_at','DESC']
             ],
             limit: 3
-        }),
+        })
+        
+        let products = productsId.map(product => console.log(product['dataValues']));
+        console.log(products)
+        console.log(Date.now())
+        return products;
+    },
 
     find: async (id) =>  await db.Product.findOne({
         where: {
