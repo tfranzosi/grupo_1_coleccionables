@@ -83,7 +83,6 @@
                             <% } %></span>
                         </p>
                     </div>
-<<<<<<< Updated upstream
                     <% if (locals.userLogged.roles.name === 'admin') {%>
                         <div class="buttons2">
                             <div class="add-to-cart">
@@ -96,20 +95,6 @@
                             </div>
                         </div>
                     <% } %>
-=======
-                    <% if (locals.userLogged.roles.name === 'admin') {%> 
-                    <div class="buttons2">
-                        <div class="add-to-cart">
-                            <a href="/productos/<%= product.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
-                        </div>
-                        <div class="buy-now">
-                            <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="buy-now-button" id="delete-button">ELIMINAR</button>
-                            </form>
-                        </div>
-                    </div>
-                    <% } %> 
->>>>>>> Stashed changes
                 </div> 
                 <!-- Cierre del product-detail-right     -->
             </div>
