@@ -20,6 +20,9 @@ module.exports = {
         ,
 
     create: async (user) => {
+        if(user.interests.length == 1){
+            user.interests = Array.of(user.interests)
+        }
         let interests = user.interests.map(interest => {
             return {
                 user_id: user.id,

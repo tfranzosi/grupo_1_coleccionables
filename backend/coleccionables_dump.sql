@@ -68,8 +68,8 @@ INSERT INTO products_categories (category_id, product_id) VALUES ('5', '12');
 INSERT INTO products_categories (category_id, product_id) VALUES ('6', '12');
 
 -- Poblar la tabla SEXOS DE USUARIO
-INSERT INTO genders (name) VALUES ('Masculino');
-INSERT INTO genders (name) VALUES ('Femenino');
+INSERT INTO genders (name) VALUES ('Varon');
+INSERT INTO genders (name) VALUES ('Mujer');
 INSERT INTO genders (name) VALUES ('Otro');
 
 -- Poblar la tabla ROLES DE USUARIO

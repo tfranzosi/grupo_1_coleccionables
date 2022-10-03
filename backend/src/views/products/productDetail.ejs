@@ -83,16 +83,18 @@
                             <% } %></span>
                         </p>
                     </div>
-                    <div class="buttons2">
-                        <div class="add-to-cart">
-                            <a href="/productos/<%= product.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
+                    <% if (locals.userLogged.roles.name === 'admin') {%>
+                        <div class="buttons2">
+                            <div class="add-to-cart">
+                                <a href="/productos/<%= product.id %>/editar"><button class="add-to-cart-button">EDITAR</button></a>
+                            </div>
+                            <div class="buy-now">
+                                <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="buy-now-button" id="delete-button">ELIMINAR</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="buy-now">
-                            <form class="registro" action="/productos/<%= product.id %>?_method=DELETE" method="POST">
-                                    <button type="submit" class="buy-now-button" id="delete-button">ELIMINAR</button>
-                            </form>
-                        </div>
-                    </div>
+                    <% } %>
                 </div> 
                 <!-- Cierre del product-detail-right     -->
             </div>
