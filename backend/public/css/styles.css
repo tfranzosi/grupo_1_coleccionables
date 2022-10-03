@@ -239,7 +239,11 @@ footer .subscripcion{
 }
 
 /*  ---     Media Queries     ---- */
-
+@media(max-width: 575px){
+    header div{
+        justify-content: space-around;
+    }
+}
 @media(min-width: 576px){
     
     
@@ -287,8 +291,4 @@ footer .subscripcion{
         justify-content: flex-start;
     
     } 
-}
-
-@media(min-width: 1200){
-    
 }

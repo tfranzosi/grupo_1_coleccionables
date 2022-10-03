@@ -9,8 +9,9 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const authMiddleware = require('./src/middlewares/authMiddleware')
 const cors = require('cors');
-const passport = require('passport');
 
+const passport = require('passport');
+const FacebookStrategy = require('passport-facebook').Strategy;
 
 // Routers
 const apiRouter = require('./src/routes/apiRouter');
@@ -59,3 +60,27 @@ app.get('/auth/success',
     req.session.usuario = user.emails[0].value;
     res.redirect('/');
   });
+// SOCIAL LOGIN 
+    // FACEBOOK
+    /*
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_ID,
+    clientSecret: process.env.FACEBOOK_SECRET,
+    callbackURL: "http://localhost:3001/"
+  },
+  //NO ENTIENDO QUE HACER CON LO DE FACEBOOK ID Y DE DONDE SALE User.findOrCreate
+  function(accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook'));
+
+app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/usuarios/inicioSesion' }),
+  function(req, res) {
+      res.redirect('/');
+  });
+*/
