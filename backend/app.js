@@ -1,4 +1,5 @@
-const PUERTO = 3001;
+require('dotenv').config();
+require('./src/middlewares/auth');
 
 //Modulos
 const express = require('express');
@@ -8,6 +9,8 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const authMiddleware = require('./src/middlewares/authMiddleware')
 const cors = require('cors');
+const passport = require('passport');
+
 
 // Routers
 const apiRouter = require('./src/routes/apiRouter');
@@ -22,17 +25,19 @@ app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(session( {secret: 'gamestore2022',resave:false,
+app.use(session( {secret: process.env.SESSION_SECRET,resave:false,
 saveUninitialized: false
 }));
 app.use(cookieParser());
 app.use(authMiddleware);
 app.use(cors({origin: '*'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 // Inicio Servidor
-app.listen(process.env.PORT || PUERTO, () => {
-    console.log(`Up & Running en http://127.0.0.1:${PUERTO}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Up & Running en ${process.env.BACKEND_ADDRESS}`);
 });
 
 // View Engine
@@ -45,3 +50,12 @@ app.use('/', mainRouter);
 app.use('/productos', productRouter);
 app.use('/usuarios', userRouter);
 app.use('/api', apiRouter);
+
+app.get('/auth', passport.authenticate('google',{scope: ['profile','email']}));
+app.get('/auth/success', 
+  passport.authenticate('google', { failureRedirect: '/' }),
+  function(req, res) {
+    let user = req.session.passport.user
+    req.session.usuario = user.emails[0].value;
+    res.redirect('/');
+  });
