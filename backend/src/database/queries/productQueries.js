@@ -38,7 +38,7 @@ module.exports = {
                 user_id: userId
             },
             order: [
-                ['last_visited','DESC']
+                ['created_at','DESC']
             ],
             limit: 3
         }),
